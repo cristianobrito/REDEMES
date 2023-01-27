@@ -1,0 +1,379 @@
+                   [ DARTH VADER ]
+
+
+
+
+
+
+
+
+NOTA:
+    Se digitarmos o numero do gateway padrão 
+    no navegador podemos configura-lo.
+
+    EX: Gateway Padrão. . . . . . . . . . . . . . . : fe80::6802:b8ff:fe62:6535%9
+                                                      192.168.0.1
+
+
+
+
+
+CONSEGUINDO:
+    
+C:\>ipconfig
+
+Configuração de IP do Windows
+
+
+Adaptador Ethernet Ethernet:
+
+   Estado da mídia. . . . . . . . . . . . . .  : mídia desconectada
+   Sufixo DNS específico de conexão. . . . . . :
+
+Adaptador de Rede sem Fio Conexão Local* 1:
+
+   Estado da mídia. . . . . . . . . . . . . .  : mídia desconectada
+   Sufixo DNS específico de conexão. . . . . . :
+
+Adaptador de Rede sem Fio Conexão Local* 2:
+
+   Estado da mídia. . . . . . . . . . . . . .  : mídia desconectada
+   Sufixo DNS específico de conexão. . . . . . :
+
+Adaptador Ethernet VMware Network Adapter VMnet1:
+
+   Sufixo DNS específico de conexão. . . . . . :
+   Endereço IPv6 de link local . . . . . . . . : fe80::50a9:919b:260:f77a%6
+   Endereço IPv4. . . . . . . .  . . . . . . . : 192.168.239.1
+   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.255.0
+   Gateway Padrão. . . . . . . . . . . . . . . :
+
+Adaptador Ethernet VMware Network Adapter VMnet8:
+
+   Sufixo DNS específico de conexão. . . . . . :
+   Endereço IPv6 de link local . . . . . . . . : fe80::40d2:72f9:f598:6d83%15
+   Endereço IPv4. . . . . . . .  . . . . . . . : 192.168.85.1
+   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.255.0
+   Gateway Padrão. . . . . . . . . . . . . . . :
+
+Adaptador de Rede sem Fio Wi-Fi:
+
+   Sufixo DNS específico de conexão. . . . . . : box
+   Endereço IPv6 . . . . . . . . . . : 2804:14d:5c64:8bb7::8bf2
+   Endereço IPv6 . . . . . . . . . . : 2804:14d:5c64:8bb7:c0b3:c52e:f21d:9fa1
+   Endereço IPv6 Temporário. . . . . . . . : 2804:14d:5c64:8bb7:8800:db54:2ec:83aa
+   Endereço IPv6 de link local . . . . . . . . : fe80::c0b3:c52e:f21d:9fa1%9
+   Endereço IPv4. . . . . . . .  . . . . . . . : 192.168.0.87
+   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.255.0
+   Gateway Padrão. . . . . . . . . . . . . . . : fe80::6802:b8ff:fe62:6535%9
+                                                 192.168.0.1
+
+C:\>
+
+
+
+
+
+
+
+
+COISAS UTEIS:
+    Mudar cor do console:
+    C:\>color c
+
+    C:\>
+
+
+
+    AJUDA:
+    C:\>color/?
+    Configura as cores padrão de primeiro plano e tela de fundo do console.
+
+    COLOR [attr]
+
+    attr        Especifica os atributos de cor da saída do console
+
+    Atributos de cor são especificados por DOIS dígitos hexadecimais. O primeiro
+    corresponde à cor de tela de fundo; o segundo à cor de primeiro plano. Cada
+    dígito pode ter apenas um dos seguintes valores:
+
+    0 = Preto        8 = Cinza
+    1 = Azul         9 = Azul claro
+    2 = Verde        A = Verde claro
+    3 = Verde-água   B = Verde-água claro
+    4 = Vermelho     C = Vermelho claro
+    5 = Roxo         D = Lilás
+    6 = Amarelo      E = Amarelo claro
+    7 = Branco       F = Branco brilhante
+
+    Caso nenhum argumento seja passado, este comando restaurará a cor de
+    antes do CMD.EXE ser executado. Este valor vem ou da janela atual do
+    console, ou da opção /T da linha de comando, ou do valor de DefaultColor
+    no Registro.
+
+    O comando COLOR altera ERRORLEVEL para 1 se for tentado se executar o
+    comando COLOR com as mesmas cores de primeiro plano e de tela de
+    fundo.
+
+    Exemplo: "COLOR fc" gera o vermelho claro na tela de fundo branca brilhante
+
+    C:\>
+
+
+    DEPOIS DE LER AS EXPLICAÇÕES ACIMA:
+    C:\>COLOR 6D
+
+    C:\>
+
+
+
+
+
+
+
+
+OUTRAS COISAAS UTEIS:
+    Noip só o ultimo numero varia.
+    Ex: 192.168.239.1 vai do 1 até 255 
+    sendo que o 255 o ultimo é reservado
+    ao broadcast.
+    realizei os testes abaixo:
+
+C:\>ping recodepro.org
+
+Disparando recodepro.org [103.224.182.242] com 32 bytes de dados:
+Resposta de 103.224.182.242: bytes=32 tempo=187ms TTL=45
+Resposta de 103.224.182.242: bytes=32 tempo=212ms TTL=45
+Resposta de 103.224.182.242: bytes=32 tempo=212ms TTL=45
+Resposta de 103.224.182.242: bytes=32 tempo=223ms TTL=45
+
+Estatísticas do Ping para 103.224.182.242:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 187ms, Máximo = 223ms, Média = 208ms
+
+C:\>ping 103.224.182.243
+
+Disparando 103.224.182.243 com 32 bytes de dados:
+Resposta de 103.224.182.243: bytes=32 tempo=184ms TTL=45
+Resposta de 103.224.182.243: bytes=32 tempo=191ms TTL=45
+Resposta de 103.224.182.243: bytes=32 tempo=178ms TTL=45
+Resposta de 103.224.182.243: bytes=32 tempo=176ms TTL=45
+
+Estatísticas do Ping para 103.224.182.243:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 176ms, Máximo = 191ms, Média = 182ms
+
+C:\>ping 103.224.182.244
+
+Disparando 103.224.182.244 com 32 bytes de dados:
+Resposta de 103.224.182.244: bytes=32 tempo=180ms TTL=43
+Resposta de 103.224.182.244: bytes=32 tempo=173ms TTL=43
+Resposta de 103.224.182.244: bytes=32 tempo=175ms TTL=43
+Resposta de 103.224.182.244: bytes=32 tempo=181ms TTL=43
+
+Estatísticas do Ping para 103.224.182.244:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 173ms, Máximo = 181ms, Média = 177ms
+
+C:\>ping 103.224.182.245
+
+Disparando 103.224.182.245 com 32 bytes de dados:
+Resposta de 103.224.182.245: bytes=32 tempo=173ms TTL=45
+Resposta de 103.224.182.245: bytes=32 tempo=169ms TTL=45
+Resposta de 103.224.182.245: bytes=32 tempo=173ms TTL=45
+Resposta de 103.224.182.245: bytes=32 tempo=169ms TTL=45
+
+Estatísticas do Ping para 103.224.182.245:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 169ms, Máximo = 173ms, Média = 171ms
+
+C:\>ping 103.224.182.241
+
+Disparando 103.224.182.241 com 32 bytes de dados:
+Resposta de 103.224.182.241: bytes=32 tempo=171ms TTL=45
+Resposta de 103.224.182.241: bytes=32 tempo=169ms TTL=45
+Resposta de 103.224.182.241: bytes=32 tempo=170ms TTL=45
+Resposta de 103.224.182.241: bytes=32 tempo=170ms TTL=45
+
+Estatísticas do Ping para 103.224.182.241:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 169ms, Máximo = 171ms, Média = 170ms
+
+C:\>ping 103.224.182.240
+
+Disparando 103.224.182.240 com 32 bytes de dados:
+Resposta de 103.224.182.240: bytes=32 tempo=170ms TTL=43
+Resposta de 103.224.182.240: bytes=32 tempo=205ms TTL=43
+Resposta de 103.224.182.240: bytes=32 tempo=169ms TTL=43
+Resposta de 103.224.182.240: bytes=32 tempo=172ms TTL=43
+
+Estatísticas do Ping para 103.224.182.240:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 169ms, Máximo = 205ms, Média = 179ms
+
+C:\>ping 103.224.182.239
+
+Disparando 103.224.182.239 com 32 bytes de dados:
+Resposta de 103.224.182.239: bytes=32 tempo=172ms TTL=43
+Resposta de 103.224.182.239: bytes=32 tempo=170ms TTL=43
+Resposta de 103.224.182.239: bytes=32 tempo=171ms TTL=43
+Resposta de 103.224.182.239: bytes=32 tempo=167ms TTL=43
+
+Estatísticas do Ping para 103.224.182.239:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 167ms, Máximo = 172ms, Média = 170ms
+
+C:\>
+
+    
+
+
+
+    TRAZENDO O NOME DO HOST:
+    C:\>ping -a 103.224.182.242
+
+Disparando lb-182-242.above.com [103.224.182.242] com 32 bytes de dados:
+Resposta de 103.224.182.242: bytes=32 tempo=177ms TTL=45
+Resposta de 103.224.182.242: bytes=32 tempo=171ms TTL=45
+Resposta de 103.224.182.242: bytes=32 tempo=169ms TTL=45
+Resposta de 103.224.182.242: bytes=32 tempo=168ms TTL=45
+
+Estatísticas do Ping para 103.224.182.242:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 168ms, Máximo = 177ms, Média = 171ms
+
+C:\>
+
+
+    esse é o nome do hsot lb-182-242.above.com
+    pode tentar isso com cada uma combinação de
+    1 até 255.
+
+
+
+
+
+
+
+
+    USANDO O FTP:
+    C:\>FTP
+    ftp> 
+
+
+    ABRINDO:
+    C:\>FTP
+    ftp> OPEN
+    Para recodepro.org
+    > ftp: connect :Conexão recusada
+    ftp>
+
+    se conectar
+    ftp> quote user ftp
+    Não conectado.
+    ftp>
+
+
+    
+
+
+
+
+
+
+    VERIFICANDO ONDE EXISTE PERDA DE PACOTES:
+    C:\>PATHPING recodepro.org
+
+Rastreando a rota para recodepro.org [103.224.182.242]
+com no máximo 30 saltos:
+  0  DESKTOP-R5KRUP6.box [192.168.0.87]
+  1  192.168.0.1
+  2  10.24.192.1
+  3  201.17.9.81
+  4  201.17.5.70
+  5  embratel-T0-6-0-0-uacc04.rjoen.embratel.net.br [189.87.140.81]
+  6     *     ebt-H0-0-0-0-tcore01.rjoen.embratel.net.br [200.244.211.213]
+  7     *     ebt-B12261-intl02.atl.embratel.net.br [200.230.220.222]
+  8     *        *        *
+Calculando estatísticas para 175 segundos...
+            Origem aqui      Este nó/Vínculo
+            Perdido/Enviado  Perdido/Enviado
+Salto RTT        = Pct            = Pct       Endereço
+  0                                           DESKTOP-R5KRUP6.box [192.168.0.87]
+                                0/ 100 =  0%   |
+  1    8ms     0/ 100 =  0%     0/ 100 =  0%  192.168.0.1
+                                0/ 100 =  0%   |
+  2   13ms    99/ 100 = 99%    99/ 100 = 99%  10.24.192.1
+                                0/ 100 =  0%   |
+  3   16ms     1/ 100 =  1%     1/ 100 =  1%  201.17.9.81
+                                0/ 100 =  0%   |
+  4   17ms     0/ 100 =  0%     0/ 100 =  0%  201.17.5.70
+                                0/ 100 =  0%   |
+  5   20ms     0/ 100 =  0%     0/ 100 =  0%  embratel-T0-6-0-0-uacc04.rjoen.embratel.net.br [189.87.140.81]
+                                0/ 100 =  0%   |
+  6   22ms     0/ 100 =  0%     0/ 100 =  0%  ebt-H0-0-0-0-tcore01.rjoen.embratel.net.br [200.244.211.213]
+                                0/ 100 =  0%   |
+  7  135ms     0/ 100 =  0%     0/ 100 =  0%  ebt-B12261-intl02.atl.embratel.net.br [200.230.220.222]
+
+Rastreamento concluído.
+
+C:\>
+
+
+
+
+
+
+
+
+    INFO DO SERVIDOR:
+    C:\>nslookup recodepro.org
+Servidor:  UnKnown
+Address:  2804:14d:1:0:181:213:132:2
+
+Não é resposta autoritativa:
+Nome:    recodepro.org
+Address:  103.224.182.242
+
+
+C:\>
+
+
+
+    
+
+
+
+    
+
+    
+    
+
+_____________________________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+    https://www.youtube.com/watch?v=rurs7cdT5cc
+    https://www.youtube.com/watch?v=UobTie6jxGs
+    https://www.youtube.com/channel/UCrOWq3S0RqOwIO9l1GlD_RA/videos
+    https://datatracker.ietf.org/doc/html/rfc959
+    https://blog.clusterweb.com.br/?p=4094
+    https://blog.clusterweb.com.br/?p=4094
+    
+
+
+

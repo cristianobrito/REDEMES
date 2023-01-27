@@ -1,0 +1,142 @@
+==================== PASSO A PASSO ============================================
+https://dev.to/brunolipea/react-api-por-que-te-adoro-1598
+===============================================================================
+ [ Instale esse pacote globalmente ]
+1. npm install -g json-server
+
+ [ Crie um arquivo json na raiz do projeto ]
+2.{
+  "transactions": [
+    {
+      "id": "1",
+      "category": { "title": "Venda" },
+      "title": "Desenvolvimento de site",
+      "type": "income",
+      "value": 12000,
+      "created_at": "2020-04-13T00:00:00"
+    },
+    {
+      "id": "2",
+      "category": { "title": "Alimentação" },
+      "title": "Hamburger",
+      "type": "outcome",
+      "value": 59,
+      "created_at": "2020-04-10T00:00:00"
+    },
+    {
+      "id": "3",
+      "category": { "title": "Casa" },
+      "title": "Aluguel do apartamento",
+      "type": "outcome",
+      "value": 1200,
+      "created_at": "2020-03-27T00:00:00"
+    },
+    {
+      "id": "4",
+      "category": { "title": "Venda" },
+      "title": "Computador",
+      "type": "income",
+      "value": 5400,
+      "created_at": "2020-03-15T00:00:00"
+    }
+  ]
+}
+
+ [ para acessar abra um terminal e rode ]
+3. json-server --watch db.json --port 3333
+
+ [ http://localhost:3333/transactions ]
+
+===============================================================================
+CONSUMINDO API
+
+1. nom install axios
+ 
+2.[ src/services/api.js ] 
+import axios from 'axios';
+
+const api = axios.create({
+  baseURL: 'http://localhost:3333',
+});
+
+export default api;
+
+3. [ pages/Home/index.js ]
+const [balance, setBalance] = useState<Balance>({
+    income: 0,
+    outcome: 0,
+    total: 0,
+  });
+
+  const [transactions, setTransactions] = useState<Transaction[]>([]);
+
+4.[ pages/Home/index.js ]
+ import { useEffect, useState } from "react";
+
+// adicionar abaixo dos useState
+
+useEffect(() => {
+    setBalance({
+      income: 10,
+      outcome: 0,
+      total: 10,
+    });
+  }, []);
+
+5. [ outro ]
+// pages/Home/index.tsx
+
+import { useEffect, useState } from "react";
+
+import Header from "../../components/Header";
+
+import Cards, { Balance } from "../../components/Cards";
+import TransactionList, { Transaction } from "../../components/TransactionList";
+
+import { Container } from "./styles";
+
+import api from "../../services/api";
+
+function Home() {
+  const [balance, setBalance] = useState<Balance>({
+    income: 0,
+    outcome: 0,
+    total: 0,
+  });
+
+  const [transactions, setTransactions] = useState<Transaction[]>([]);
+
+  // AQUI
+  useEffect(() => {
+    const newBalance: Balance = transactions.reduce(
+      (acc, val) => {
+        acc[val.type] += val.value;
+
+        return acc;
+      },
+      { income: 0, outcome: 0, total: 0 }
+    );
+
+    newBalance.total = newBalance.income - newBalance.outcome;
+
+    setBalance(newBalance);
+  }, [transactions]);
+
+  useEffect(() => {
+    api.get<Transaction[]>("transactions").then(({ data }) => {
+      setTransactions(data);
+    });
+  }, []);
+
+  return (
+    <>
+      <Header />
+      <Container>
+        <Cards balance={balance} />
+        <TransactionList transactions={transactions} />
+      </Container>
+    </>
+  );
+}
+
+export default Home;

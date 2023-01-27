@@ -1,0 +1,124 @@
+                      [SOCKETS EM C]
+
+
+SERVER.C
+===========================================================
+// importando as bibliotecas
+#include <stdio.h>
+#include <sys/socket.h>   // chama a função socket
+#include <arpa/inet.h>    // converte ips e portas
+
+/*
+    SOCKETS:
+         Criando um socket
+         link de referencia: https://www.youtube.com/watch?v=dgLiXvtqI9A
+         saddr é o nome da nossa variavel tipo struct
+         -obs: baixei e instalei a lib socket.h e a inet.h
+         instalei na pasta include do mingw:
+         C:\Program Files\CodeBlocks\MinGW\include
+         e tambem na pasta abaixo tambem dentro do mingw
+         para as versões 32 e 64 bits
+         C:\Program Files\CodeBlocks\MinGW\x86_64-w64-mingw32\include
+
+         -lembrar que no codeblocks em linker libraries
+         devemos colocar os arquivos .a dentro de lib
+
+         -no windows é necessario usar a função winsok
+         leia a documentação:
+         https://docs.microsoft.com/pt-br/windows/win32/winsock/creating-a-basic-winsock-application
+
+         OBS: 
+             -esse programa não funcionou no windows
+             -salvei esse codigo em um arquivo .c
+              server.c na maquina virtual kali linux
+             -depois de salvar dei o comando ls
+              para saber onde o arquivo estava
+             -usei o comando para compilar:
+              gcc -o server server.c
+             -dei outro ls para ver se o arquivo 
+              aparece
+             -executei com o comando:
+              ./server
+
+*/
+
+int main()
+{
+    // recebe parametros de conexão do socket
+    struct sockaddr_in caddr;
+    struct sockaddr_in saddr = {
+          .sin_family       = AF_INET,
+          .sin_addr.s_addr  =  htonl(INADDR_ANY),
+          .sin_port         =  htons(5000)
+    };
+
+    int server = socket(AF_INET, SOCK_STREAM, 0);
+    bind(server, (struct sockaddr *) &saddr, sizeof saddr);
+
+    listen(server, 5);
+
+    int csize = sizeof caddr;
+    int cliente;
+    char buff[150];
+
+    while(1){
+       cliente = accept(server, (struct sockaddr *) &caddr, &csize);
+       recv(cliente, buff, sizeof buff, 0);
+
+       printf("\nMensagem recebida: %s", buff);
+
+       //close(cliente);
+    }
+
+    return 0;
+}
+
+
+
+
+===========================================================
+                                                      [FIM]
+
+
+
+
+    EXPLICAÇÕES:
+         Para testar a conexão no linux 
+         -execute o ./server
+         -abra outro terminal:
+          telnet localhost 5000
+         -deixando os dois terminais lado a lado
+          digite algo no terminal telnet e veja 
+          a resposta no outro.
+          
+
+         Isso é uma explicação básica procure outras.
+         consulte a man page do linux.
+         man page socket
+         vamos testar a mesma coisa utilizando o 
+         winsock do windows.
+
+
+
+
+    __________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+    http://doc.novsu.ac.ru/c_unix/libc_11.html
+    http://doc.novsu.ac.ru/c_unix/libc_11.html#SEC220
+    https://pubs.opengroup.org/onlinepubs/7908799/xns/arpainet.h.html
+    https://pubs.opengroup.org/onlinepubs/7908799/xns/syssocket.h.html
+    https://pubs.opengroup.org/onlinepubs/7908799/xns/shutdown.html
+    https://pubs.opengroup.org/onlinepubs/7908799/xns/inet_addr.html
+    https://pubs.opengroup.org/onlinepubs/7908799/xns/htonl.html
+    https://pubs.opengroup.org/onlinepubs/7908799/xsh/inttypes.h.html
+
+
+    
+
+
+ 
+                         Autor:
+                   Cristiano Oliveira
+                  britonano@gmnail.com
+                       21/03/2022
+

@@ -1,0 +1,109 @@
+                                    [ NODEJS ]
+                                [ MONGOOSE MODELS]
+___________________________________________________________________________________________________
+1. ESTRUTURA DE DIRETORIOS
+   .
+   CONECTAR
+   |——— conectando.js
+   |——— package.json
+   |——— package-lock.json
+   |——— node_modules
+___________________________________________________________________________________________________
+2. REALIZANDO A CONEXÃO E CRIANDO UM MODELL.
+   
+   const mongoose = require('mongoose')
+
+   // obs se esse bd não existir ele será criado
+   mongoose.connect('mongodb://127.0.0.1/loja')
+    .then(() => {
+        console.log("CONECTADO AO BD LOJA")
+    }).catch((err) => {
+        console.log("OCORREU UM ERRO")
+    })
+
+   // MODELS usuarios
+   // DEFININDO UM MODEL
+   const UsuarioSchema = mongoose.Schema({
+    nome: {
+        type:    String,
+        require: true                  // torna o campo obrigatorio
+    },
+    sobrenome: {
+        type:    String,
+        require: true
+    },
+    email: {
+        tyep:    String,
+    },
+    idade: {
+        type:    Number,
+        require: true
+    },
+    pais: {
+        type:    String
+    }
+    })
+
+   // COLLECTION
+   mongoose.model('usuarios', UsuarioSchema)
+   const Cristiano = mongoose.model("usuarios")
+
+   // CRIANDO USUARIOS NESSA COLLECTION
+   new Cristiano({
+    nome:      "Cristiano",
+    sobrenome: "Oliveira",
+    email:     "britonano@gmail.com",
+    idade:     40,
+    pais:      "Brasil"
+   }).save()                                        // .save() essa função salva esse usuario
+   .then(() => {
+      console.log('USUARIO SALVO NO BD LOJA')       // OBS: O THEN E CATCH SÃO OPCIONAIS 
+   })
+   .catch(() => {
+      console.log('USUARIO NÃO FOI SALVO')
+   })
+
+___________________________________________________________________________________________________
+3. CRIANDO UM NOVO USUARIO É SO TROCAR OS DADOS DO PRIMEIRO USUARIO E NÃO ALTERAR MAIS NADA
+
+   // CRIANDO USUARIOS NESSA COLLECTION
+   new Cristiano({
+    nome:      "Akilles",
+    sobrenome: "Victor",
+    email:     "Akilles@gmail.com",
+    idade:     10,
+    pais:      "Brasil"
+   }).save()                                        // .save() essa função salva esse usuario
+   .then(() => {
+      console.log('USUARIO SALVO NO BD LOJA')       // OBS: O THEN E CATCH SÃO OPCIONAIS 
+   })
+   .catch(() => {
+      console.log('USUARIO NÃO FOI SALVO')
+   })
+___________________________________________________________________________________________________
+4. abra um cmd 
+   mongo                                         [ entra no mongo ]
+   show databases                                [ mostra os bds ]
+   use loja                                      [ seleciona esse bd ]
+   show collections                              [ mostra as tabelas ]
+   db.usuarios.find().pretty()                   [ encontra um id ou dados ]
+
+___________________________________________________________________________________________________
+5. EXECUTANDO
+   node conectando.js
+
+___________________________________________________________________________________________________
+
+
+___________________________________________________________________________________________________
+BIBLIOGRAFIA:
+https://mongoosejs.com/docs/guide.html#definition
+https://www.npmjs.com/package/mongoose?activeTab=readme
+
+                                +————————————+
+                                | 16/02/2022 |
+                                |    FIM     |
+                                +————————————+
+                             *********************
+                             * DEUS SEJA LOUVADO *
+                             *********************

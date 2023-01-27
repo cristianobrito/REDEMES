@@ -1,0 +1,117 @@
+                     CONTROLE DE AULAS
+
+
+
+    CANAL: Programação descomplicada em linguagem c  
+    ASSISTIDAS: 5
+    AULA: aula 05 operador de atribuição
+    TITULO: 
+    DATA: 
+         Inicio:  19/03/2022
+         termino:
+    TOTAL: 123
+
+ 
+    CANAL: Programe seu futuro
+    ASSISTIDAS: 0
+    AULA:
+    TITULO: 
+    DATA: 
+         Inicio: 
+         termino:
+    TOTAL:
+
+
+    CANAL:
+    ASSISTIDAS: 0
+    AULA:
+    TITULO: 
+    DATA: 
+         Inicio:  
+         termino:
+    TOTAL:
+
+
+    CANAL:
+    ASSISTIDAS: 0
+    AULA:
+    TITULO: 
+    DATA: 
+         Inicio:  
+         termino:
+    TOTAL:
+
+
+
+===========================================================
+
+    LISTA DE LIVROS LIDOS:
+    
+    NOME: C comnpleto c total
+    FORMATO: pdf
+    ANO: 2022
+    DATA:
+         Inicio: 17/03/2022
+         Fim:    aguardando
+    PAGINAS: 
+            do pdf:   101
+            do livro: 88
+            capítulo: 03
+            total:    816
+            titulo: A Função exit()
+
+
+    NOME: 
+    FORMATO: 
+    ANO: 
+    DATA:
+         Inicio: 
+         Fim:    
+    PAGINAS: 
+            do pdf:   
+            do livro: 
+            capítulo:
+            total:    
+            titulo: 
+
+
+    NOME: 
+    FORMATO: 
+    ANO: 
+    DATA:
+         Inicio: 
+         Fim:    
+    PAGINAS: 
+            do pdf:   
+            do livro: 
+            capítulo:
+            total:    
+            titulo: 
+
+
+    NOME: 
+    FORMATO: 
+    ANO: 
+    DATA:
+         Inicio: 
+         Fim:    
+    PAGINAS: 
+            do pdf:   
+            do livro: 
+            capítulo:
+            total:    
+            titulo: 
+
+
+===========================================================
+
+
+
+
+
+    __________________________________________________
+         
+                         Autor:
+                  Cristiano Oliveira
+                       19/03/2022
+    

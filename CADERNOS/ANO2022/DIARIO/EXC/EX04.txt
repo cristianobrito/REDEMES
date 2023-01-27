@@ -1,0 +1,39 @@
+
+                      EXEMPLOS DE CÓDIGO C
+                             [EX04]
+
+EX04
+===========================================================
+#include <stdio.h>
+#include <stdlib.h>
+/*
+    EX04:
+         TIPO CHAR
+         SINTAXE: tipo nome;
+         onde char é o tipo e o nome nos escolhemos
+         execute o codigo abaixo e tire suas
+         conclusões analise até cansar
+         mais vale o conceito do que decorar
+
+*/
+
+int main()
+{
+    char sexo = 'm';
+    printf("Valor da variavel sexo: %c\n", sexo);
+    printf("Digite seu sexo: (F, M, f ou m) ");
+    scanf("%c", &sexo);
+
+    printf("Valor da variavel sexo: %c\n", sexo);
+    return 0;
+}
+===========================================================
+                                                      [FIM]
+
+
+
+
+    _______________________________________________________
+                             Autor:
+                       Cristiano Oliveira
+                           17/03/2022

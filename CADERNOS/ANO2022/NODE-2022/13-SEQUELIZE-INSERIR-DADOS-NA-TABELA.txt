@@ -1,0 +1,182 @@
+                                  [ NODEJS ]   
+                                     ORM
+                                SEQUELIZE MODELS2
+___________________________________________________________________________________________________
+   ESTRUTURA:
+        .
+     AULA-NODE
+     |
+     |————— app.js
+     |
+     |————— app2.js
+     |
+     |————— html
+     |      |————— index.html
+     |      |————— home.js
+     |
+     |————— node_modules
+     |————— package-lock.json
+     |————— package.json
+ 
+     [ 3 diretorios e 6 arquivos ]
+___________________________________________________________________________________________________
+   package.json
+
+   {
+   "dependencies": {
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.16.2"
+   }
+   }    
+   
+   // ignore as outras dependencias preste atenção apenas ao sequelize
+
+___________________________________________________________________________________________________
+   app2.js
+
+   const Sequelize = require('sequelize')
+   // 'nome do banco de dados', 'usuario', 'senha'
+   const sequelize = new Sequelize('sistemaDeCadastro', 'root', '', {
+    host:    'localhost',
+    dialect: 'mysql'
+   })
+
+   sequelize.authenticate()
+   .then(function(){
+      console.log("CONECTADO AO BD")
+   })
+   .catch(function(erro){
+      console.log("FALHA NÃO CONECTADO"+erro)
+   })
+
+   // define um modelo uma tabela
+   const Postagem = sequelize.define('postagens', {
+    titulo: {
+        type: Sequelize.STRING
+    },
+    conteudo: {
+        type: Sequelize.TEXT
+    }
+   })
+
+   // inserir uma postagem chame o objeto Postagem a função create gera uma nova postagem
+   Postagem.create({
+    titulo:   "LIVROS NODEJS",
+    conteudo: "um livro usado na amazon"
+   })
+
+   // definindo outro modelo
+   const Usuario = sequelize.define('usuarios', {
+    nome: {
+        type: Sequelize.STRING
+    },
+    sobrenome: {
+       type: Sequelize.TEXT
+    },
+    idade: {
+       type: Sequelize.INTEGER
+    },
+    email: {
+       type: Sequelize.STRING
+        
+    }
+   })
+
+   Usuario.sync({force: true})
+___________________________________________________________________________________________________
+   EXECUTANDO:
+   C:\Users\brito\Desktop\AULA-NODE>nodemon app2.js
+   [nodemon] 2.0.15
+   [nodemon] to restart at any time, enter `rs`
+   [nodemon] watching path(s): *.*
+   [nodemon] watching extensions: js,mjs,json
+   [nodemon] starting `node app2.js`
+   Executing (default): SELECT 1+1 AS result
+   Executing (default): DROP TABLE IF EXISTS `usuarios`;
+   CONECTADO AO BD
+   Executing (default): CREATE TABLE IF NOT EXISTS `usuarios` (`id` INTEGER NOT NULL auto_increment , `nome` VARCHAR(255), `sobrenome` TEXT, `idade` INTEGER, `email` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+   Executing (default): SHOW INDEX FROM `usuarios`
+___________________________________________________________________________________________________
+   NO PROMPT DO MYSQL:
+   
+   mysql> show tables;
+   +-----------------------------+
+   | Tables_in_sistemadecadastro |
+   +-----------------------------+
+   | postagens                   |
+   | usuarios                    |
+   +-----------------------------+
+   2 rows in set (0.00 sec)
+
+======================================================================
+   mysql> desc usuarios;
+   +-----------+--------------+------+-----+---------+----------------+
+   | Field     | Type         | Null | Key | Default | Extra          |
+   +-----------+--------------+------+-----+---------+----------------+
+   | id        | int(11)      | NO   | PRI | NULL    | auto_increment |
+   | nome      | varchar(255) | YES  |     | NULL    |                |
+   | sobrenome | text         | YES  |     | NULL    |                |
+   | idade     | int(11)      | YES  |     | NULL    |                |
+   | email     | varchar(255) | YES  |     | NULL    |                |
+   | createdAt | datetime     | NO   |     | NULL    |                |
+   | updatedAt | datetime     | NO   |     | NULL    |                |
+   +-----------+--------------+------+-----+---------+----------------+
+   7 rows in set (0.01 sec)
+
+   mysql>
+==========================================================================
+   mysql> select * from postagens;
+   +----+---------------+--------------------------+---------------------+---------------------+
+   | id | titulo        | conteudo                 | createdAt           | updatedAt           |
+   +----+---------------+--------------------------+---------------------+---------------------+
+   |  1 | LIVROS NODEJS | um livro usado na amazon | 2022-02-18 19:52:23 | 2022-02-18 19:52:23 |
+   |  2 | LIVROS NODEJS | um livro usado na amazon | 2022-02-18 19:52:29 | 2022-02-18 19:52:29 |
+   |  3 | LIVROS NODEJS | um livro usado na amazon | 2022-02-18 19:53:01 | 2022-02-18 19:53:01 |
+   +----+---------------+--------------------------+---------------------+---------------------+
+   3 rows in set (0.00 sec)
+
+   mysql>
+
+___________________________________________________________________________________________________
+   EXPLICAÇOES:
+   
+   // Usuario.sync({force: true}) 
+   assim que voce acabar de executar o comando de criação comente ou 
+   apague essa linha pois se não ele recriará a tabela.
+
+   NOTE:
+   o nodemon nesse ponto reconhece o novo comando sem precisar atualizar.
+   [nodemon] clean exit - waiting for changes before restart
+   [nodemon] restarting due to changes...
+   [nodemon] starting `node app2.js`
+   Executing (default): SELECT 1+1 AS result
+   Executing (default): DROP TABLE IF EXISTS `usuarios`;
+   Executing (default): INSERT INTO `postagens` (`id`,`titulo`,`conteudo`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?);
+   CONECTADO AO BD
+   Executing (default): CREATE TABLE IF NOT EXISTS `usuarios` (`id` INTEGER NOT NULL auto_increment , `nome` VARCHAR(255), `sobrenome` TEXT, `idade` INTEGER, `email` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+   Executing (default): SHOW INDEX FROM `usuarios`
+   [nodemon] clean exit - waiting for changes before restart
+
+   obs:
+   se quiser criar um usuario seque o mesmo exemplo da postagem.
+   Usuario.create({
+       nome:       "Sandra",
+       sobrenome:  "brito",
+       idade:      64,
+       email:      "brito@gmail.com"
+   })
+   
+___________________________________________________________________________________________________
+  
+***************************************************************************************************
+                           
+                    *******************************
+                    *     CRISTIANO OLIVEIRA      *
+                    *        18/02/2022           *
+                    *            DEUS             *
+                    *        SEJA LOUVADO         *
+                    *******************************
+
+***************************************************************************************************
+                                      

@@ -1,0 +1,58 @@
+                          [ANOTAÇÕES]
+
+
+
+                LINKS CANAIS E PAGINAS DE ESTUDO
+    
+    Notas em CFD, engenharia e outras coisas: esse canal é da escola de quimica da ufrj
+    https://www.youtube.com/playlist?list=PLlpgBFnHvvRB-KEqDLC5hjRx3izJTR2UE
+    
+    
+    Programe seu futuro
+    https://www.youtube.com/playlist?list=PLqJK4Oyr5WSjjEQCKkX6oXFORZX7ro3DA
+
+    Programação Descomplicada Linguagem C
+    https://www.youtube.com/user/progdescomplicada/playlists
+    https://www.youtube.com/playlist?list=PL8iN9FQ7_jt4DJbeQqv--jpTy-2gTA3Cp
+    https://www.youtube.com/playlist?list=PL8iN9FQ7_jt6H5m4Gm0H89sybzR9yaaka
+
+
+    Hacking The World
+    https://www.youtube.com/channel/UCqRkFKG74h_zlQa0qdBzk7g
+    https://www.youtube.com/channel/UCqRkFKG74h_zlQa0qdBzk7g/playlists
+
+
+    PAPO BINÁRIO:
+    https://www.youtube.com/c/PapoBin%C3%A1rio/playlists
+    https://www.youtube.com/watch?v=Ps3mZWQz01s&list=PLIfZMtpPYFP4MaQhy_iR8uM0mJEs7P7s3
+    https://www.youtube.com/watch?v=oZeezrNHxVo&list=PLIfZMtpPYFP5qaS2RFQxcNVkmJLGQwyKE
+    https://www.youtube.com/watch?v=IkUfXfnnKH4&list=PLIfZMtpPYFP6zLKlnyAeWY1I85VpyshAA
+    https://www.youtube.com/watch?v=RF3-qDy-xMs&list=PLIfZMtpPYFP6_YOrfX79YX79I5V6mS0ci
+    https://www.youtube.com/watch?v=DH1Bznu1HPY&list=PLIfZMtpPYFP6ODjFqtpeC1r1LdxsHh25t
+
+
+    AlgoritmosAZ-C/C++
+    https://www.youtube.com/watch?v=MGL5OLkV2j8&list=PLyCB0KujIBc9pRdEABwxPM4I81Ptd5Poi&index=6
+    https://www.youtube.com/watch?v=UqukbOmS76Q&list=PLyCB0KujIBc8y_X50zANQxfOyMkZhk_Tf
+    https://www.youtube.com/watch?v=S5OQnCMl73w&list=PLyCB0KujIBc-Av5GXQQJjuihrJ9PfwjGv
+    https://www.youtube.com/watch?v=BCFECsKyKVQ&list=PLyCB0KujIBc-isFllHfAHwSvCn1jKOGeG
+    https://www.youtube.com/watch?v=MlgUOfnbguQ&list=PLyCB0KujIBc8y_X50zANQxfOyMkZhk_Tf&index=3
+    https://www.youtube.com/watch?v=S5OQnCMl73w&list=PLyCB0KujIBc-Av5GXQQJjuihrJ9PfwjGv
+    https://www.youtube.com/watch?v=BCFECsKyKVQ&list=PLyCB0KujIBc-isFllHfAHwSvCn1jKOGeG
+    ESTUDAR E PROCURAR PARA COMPLEMENTAR C:
+         opencv
+         2dcanvas
+         gtk
+         wsys2
+         qualquer lib que trabalhe com graficos em c
+         sockets e manipulação de arquivos
+         c interface grafica
+         
+
+                                                [Página 00]
+    _______________________________________________________
+    
+
+                         Autor:
+                   Cristiano Oliveira
+                       19/03/2022

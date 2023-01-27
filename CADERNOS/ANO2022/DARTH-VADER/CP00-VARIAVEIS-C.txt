@@ -1,0 +1,56 @@
+                    [ DARTH VADER ]
+
+                   cristiano oliveira                                                 
+                       07.03.2022
+       
+
+
+
+
+                     VARIAVEIS EM C
+
+    AS VARIAVEIS EM C GUARDAM TIPOS BASICOS.
+    
+    QUAIS SAO OS TIPOS BASICOS:
+         char, int, float, double.
+
+    DECLARACAO:
+    SINTAXE:
+         tipo nome-da-variavel;
+         EX: int n;
+
+    ATRIBUIR VALOR A VARIAVEL:
+    SINTAXE:
+         variavel = valor;
+         n = 1; 
+
+    UM EXEMPLO PARA LEMBRAR DO MARCADOR DE POSICAO:
+    #include <stdio.h>
+    
+    int main()
+    {
+      char c;
+      int i;
+      float f;
+      double d;
+
+      c = 'a';
+      i =  1;
+      f = 19.0;
+      d = 20000.009;
+
+      printf("%c\n", c);
+      printf("%d\n", i);
+      printf("%f\n", f);
+      printf("%f\n", d);
+
+      return 0;
+    }         
+
+
+
+
+
+
+    DE NOME MONTE E EXECUTE.
+    

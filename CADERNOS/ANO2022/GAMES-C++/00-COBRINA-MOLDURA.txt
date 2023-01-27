@@ -1,0 +1,89 @@
+                        [ C++ ]
+                   [ GAME COBRINHA ]
+___________________________________________________________________________________________________
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <conio.h>
+#include <time.h>
+
+// PROTOTIPO DA FUNÇÃO O QUE A FUNÇÃO RECEBE E O QUE RETORNA
+void gotoxy(int x, int y);
+
+int main()
+{
+    int i;
+
+    for(;;)
+    {
+    //=================[ LINHA SUPERIOR ]===============
+    for(i=0; i<50; i++)
+    {
+        gotoxy(i,0);
+        printf("%c",219);
+        Sleep(5);              // Pausa 5 milissegunos
+    }
+    //=================[ COLUNA DIREITA ]===============
+    for(i=0; i<20; i++)
+    {
+        gotoxy(50,i);
+        printf("%c",219);
+        Sleep(5);
+    }
+    //=================[ LINHA INFERIOR ]===============
+    for(i=50; i>=0; i--)
+    {
+        gotoxy(i,20);
+        printf("%c",219);
+        Sleep(5);
+    }
+    //=================[ COLUNA ESQUERDA ]===============
+    for(i=20; i>0; i--)
+    {
+        gotoxy(0,i);
+        printf("%c",219);
+        Sleep(5);
+    }
+    //=================[ FIM COLUNAS ]===================
+
+    //=================[ INICIO COLUNAS2 ]===============
+    //=================[ LINHA SUPERIOR ]================
+    for(i=0; i<100; i++)
+    {
+        gotoxy(i,0);
+        printf("%c",178);
+        Sleep(10);              // Pausa 5 milissegunos
+    }
+    //=================[ COLUNA DIREITA ]===============
+    for(i=0; i<20; i++)
+    {
+        gotoxy(100,i);
+        printf("%c",178);
+        Sleep(10);
+    }
+    //=================[ LINHA INFERIOR ]===============
+    for(i=100; i>=0; i--)
+    {
+        gotoxy(i,20);
+        printf("%c",178);
+        Sleep(10);
+    }
+    //=================[ COLUNA ESQUERDA ]===============
+    for(i=20; i>0; i--)
+    {
+        gotoxy(0,i);
+        printf("%c",178);
+        Sleep(10);
+    }
+    //=================[ FIM COLUNAS ]===================
+    }
+
+    return 0;
+}
+
+// DEFINIÇÃO DA FUNÇÃO O QUE ELA FAZ
+void gotoxy(int x, int y)
+{
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),(COORD){x,y});
+}
+  

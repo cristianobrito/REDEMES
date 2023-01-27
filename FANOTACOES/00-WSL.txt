@@ -1,0 +1,35 @@
+                           [WSL2] 
+
+
+
+    INSTALAÇÃO:
+         rode o powershell como administrador
+         de o comando:
+         wsl --install
+         depois de baixado reinicie a maquina
+         para usar o ubuntu.
+
+    INSTALAÇÃO UBUNTU:
+         UNIX USERNAME: cristiano
+         NEW PASSWORD:  akilles101
+
+
+    instalando o kali
+    No powershell como administrador:
+         wsl --install --distribution kali-linux
+         username: kali
+         password: kali
+
+
+
+
+    ESSE É O FUTURO DAS MAQUINAS VIRTUAIS
+
+
+
+
+    __________________________________________________
+
+                        Autor:
+                  cristiano oliveira
+                       19/03/2022

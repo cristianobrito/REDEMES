@@ -1,0 +1,19 @@
+├── public            # Pasta para conteúdo js e css
+├── server            # Configuração do servidor
+│ └── server          # Estamos aqui
+├── src               # Arquivos do sistema
+│ ├── service         # Camada de serviço do app
+│ └── routes-web      # Rotas de api
+├── views             # Onde ficarão os HTML
+│ └── routes-views    # Rotas de exibição de paginas 
+├── Dockerfile        # Construção do ambiente
+└── package.json      # Gerenciamento dependências
+
+├── service       # Arquivos do sistema
+│ ├── test        # Rotas test
+│ └── material    # Rotas material
+└── routes-web    # Estamos aqui
+
+|————— CAPS LOCK ATIVADA ALT + 0151 TRAVESSAO
+   |——— TESTS
+   |––– 0150

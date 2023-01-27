@@ -1,0 +1,67 @@
+                                    [ NODEJS ]
+                                [ MONGOOSE2 MODELOS MEUS]
+___________________________________________________________________________________________________
+1. ESTRUTURA DE DIRETORIOS
+   .
+   CONECTAR
+   |——— conectando.js
+   |——— package.json
+   |——— package-lock.json
+   |——— node_modules
+___________________________________________________________________________________________________
+2. REALIZANDO A CONEXÃO E CRIANDO UM MODELL.
+   
+   const mongoose = require('mongoose')
+
+   // obs se esse bd não existir ele será criado
+   mongoose.connect('mongodb://127.0.0.1/lojaBangu')
+    .then(() => {
+        console.log("CONECTADO AO BD LOJA BANGU")
+    }).catch((err) => {
+        console.log("OCORREU UM ERRO")
+    })
+
+   // DEFININDO UM ESQUEMA
+   const GerenteSchema = new mongoose.Schema({
+    nome:        String,
+    sobrenome:   String,
+    loja:        Number
+   })
+
+   // CRIANDO UM MODELO
+   mongoose.model('Gerente', GerenteSchema)
+   const Gerente = mongoose.model('Gerente')
+
+   // CRIANDO USUARIOS NESSA COLLECTION
+   const Funcionario     = new Gerente;
+   Funcionario.nome      = "Sandra";
+   Funcionario.sobrenome = "Brito";
+   Funcionario.loja      = 64;
+   Funcionario.save();
+___________________________________________________________________________________________________
+3. abra um cmd 
+   mongo                                         [ entra no mongo ]
+   show databases                                [ mostra os bds ]
+   use lojaBangu                                 [ seleciona esse bd ]
+   show collections                              [ mostra as tabelas ]
+   db.gerentes.find().pretty()                   [ encontra um id ou dados ]
+
+___________________________________________________________________________________________________
+5. EXECUTANDO
+   node conectando.js
+
+___________________________________________________________________________________________________
+
+
+___________________________________________________________________________________________________
+BIBLIOGRAFIA:
+https://mongoosejs.com/docs/guide.html#definition
+https://www.npmjs.com/package/mongoose?activeTab=readme
+
+                                +————————————+
+                                | 16/02/2022 |
+                                |    FIM     |
+                                +————————————+
+                             *********************
+                             * DEUS SEJA LOUVADO *
+                             *********************

@@ -1,0 +1,37 @@
+        
+	[ haker ]
+         SOCKETS
+
+
+ler e estudar segunda feira
+
+	https://blog.pantuza.com/artigos/programando-um-protocolo-utilizando-sockets
+	http://www.dicas-l.com.br/arquivo/programando_socket_em_c++_sem_segredo.php#.YiVGr3rMLIU
+	https://pessoal.dainf.ct.utfpr.edu.br/jeansimao/Fundamentos2/APITCPIP/Tutorial%20-%20Programacao%20C++%20TCP-IP%20-%20Marcelo%20Hiroshi%20Sugita.pdf
+	https://www.youtube.com/watch?v=dgLiXvtqI9A
+	https://www.youtube.com/watch?v=GaxjJvMnz-I
+	https://www.youtube.com/watch?v=b5mEe6hdRxY
+	https://www.youtube.com/watch?v=GaxjJvMnz-I
+	https://student.dei.uc.pt/~hpcosta/rc/rcMod7BAula2.pdf
+	https://blog.pantuza.com/artigos/programando-um-protocolo-utilizando-sockets
+	https://www.hardware.com.br/comunidade/programacao-sockets/664940/
+	https://www.gta.ufrj.br/~miguel/docs/progredes/aula12.pdf
+	http://www.cesarkallas.net/arquivos/apostilas/programacao/c_c%2B%2B/c/PL11IPCsock.PDF
+	https://www.99freelas.com.br/project/implementacao-de-sockets-em-c-c-219909
+	https://www.big-meter.com/opensource/pt/61c97ac599ba2e19d8769054.html
+        https://www.gta.ufrj.br/ensino/eel878/sockets/sockaddr_inman.html
+        http://underpop.online.fr/w/windows/tcpipw/sag_tcpip_add_standards.htm 
+        https://www.ime.usp.br/~ueda/ldoc/notastcp.html
+        http://www.inf.ufes.br/~zegonc/material/Redes_de_Computadores/O%20Protocolo%20TCP.pdf
+
+
+
+
+         RFC:
+         https://datatracker.ietf.org/doc/html/rfc793
+         https://datatracker.ietf.org/doc/html/rfc1180
+
+
+         MANPAGE:
+         https://pubs.opengroup.org/onlinepubs/7908799/xns/syssocket.h.html
+         https://man7.org/linux/man-pages/man2/socket.2.html

@@ -1,0 +1,6 @@
+estudar o v8 
+ele foi escrito em c++
+links:
+ https://v8.dev/docs
+ https://v8.dev/docs/ports
+ https://v8.dev/docs/build 

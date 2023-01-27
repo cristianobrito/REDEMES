@@ -1,0 +1,225 @@
+                                  [ NODEJS ]   
+                        [ ESTRUTURANDO BANCO DE DADOS ]   
+
+    Daqui em diante não vou mostrar todo o processo coisas como o package json 
+    e outras coisas que eu ja mostrei e documentei nos exemplos anteriores.
+___________________________________________________________________________________________________
+     ESTRUTURA:
+        .
+     AULA-NODE
+     |
+     |————— bars.js
+     |
+     |————— models
+     |      |————— db.js
+     |      |————— Post.js
+     |
+     |
+     |————— views
+     |       |———— layouts
+     |       |        |————— main.handlebars
+     |       |
+     |       |————— formulario.hsndlebars
+     |
+     |————— node_modules
+     |————— package-lock.json
+     |————— package.json
+ 
+     [ 5 diretorios e 7 arquivos ]
+___________________________________________________________________________________________________
+    MYSQL:
+
+    inicie o xampp
+    
+    C:\Users\brito>mysql -h localhost -u root -p
+    Enter password:
+    Welcome to the MySQL monitor.  Commands end with ; or \g.
+    Your MySQL connection id is 8
+    Server version: 5.5.5-10.4.19-MariaDB mariadb.org binary distribution
+
+    Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+    Oracle is a registered trademark of Oracle Corporation and/or its
+    affiliates. Other names may be trademarks of their respective
+    owners.
+
+    Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+    mysql>
+___________________________________________________________________________________________________
+    Criando um banco de dados:
+     
+    mysql> show databases;             [ verificando bds existentes ]
+
+    mysql> CREATE DATABASE postapp;
+    Query OK, 1 row affected (0.00 sec) 
+
+    mysql> use postapp;
+    Database changed
+    mysql>
+___________________________________________________________________________________________________
+    db.js
+
+    const Sequelize  = require('sequelize')
+
+    // conexão ao banco de dados:
+    // 'nome do banco de dados', 'usuario', 'senha'
+    const sequelize = new Sequelize('postapp', 'root', '', {
+    host:    'localhost',
+    dialect: 'mysql'
+    }) 
+
+    // exportando
+    module.exports = {
+      Sequelize: Sequelize,
+      sequelize: sequelize
+    }
+___________________________________________________________________________________________________
+    Post.js
+
+    const db = require('./db')
+
+    const Post = db.sequelize.define('postagens', {
+    titulo: {
+        type: db.Sequelize.STRING
+    },
+    conteudo: {
+        type: db.Sequelize.TEXT
+    }
+    })
+
+    //Post.sync({force: true})
+    module.exports = Post
+___________________________________________________________________________________________________
+    VERIFICANDO SE A TABELA FOI CRIADA:
+
+    mysql> show tables;
+    +-------------------+
+    | Tables_in_postapp |
+    +-------------------+
+    | postagens         |
+    +-------------------+
+    1 row in set (0.00 sec)
+
+    mysql>
+
+    mysql> describe postagens;
+    +-----------+--------------+------+-----+---------+----------------+
+    | Field     | Type         | Null | Key | Default | Extra          |
+    +-----------+--------------+------+-----+---------+----------------+
+    | id        | int(11)      | NO   | PRI | NULL    | auto_increment |
+    | titulo    | varchar(255) | YES  |     | NULL    |                |
+    | conteudo  | text         | YES  |     | NULL    |                |
+    | createdAt | datetime     | NO   |     | NULL    |                |
+    | updatedAt | datetime     | NO   |     | NULL    |                |
+    +-----------+--------------+------+-----+---------+----------------+
+    5 rows in set (0.15 sec)
+
+    mysql>
+___________________________________________________________________________________________________
+
+___________________________________________________________________________________________________
+    EXECUTANDO:
+
+    C:\Users\brito\Desktop\AULA-NODE>cd models
+
+    C:\Users\brito\Desktop\AULA-NODE\models>nodemon Post.js
+    [nodemon] 2.0.15
+    [nodemon] to restart at any time, enter `rs`
+    [nodemon] watching path(s): *.*
+    [nodemon] watching extensions: js,mjs,json
+    [nodemon] starting `node Post.js`
+    Executing (default): DROP TABLE IF EXISTS `postagens`;
+    Executing (default): CREATE TABLE IF NOT EXISTS `postagens` (`id` INTEGER NOT NULL auto_increment , `titulo` VARCHAR(255), `conteudo` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+    Executing (default): SHOW INDEX FROM `postagens`
+    [nodemon] clean exit - waiting for changes before restart
+    
+___________________________________________________________________________________________________
+    DEPENDENCIAS:
+
+___________________________________________________________________________________________________
+
+___________________________________________________________________________________________________
+    bars.js
+
+    const express    = require('express')
+    const app        = express()
+    const handlebars = require('express-handlebars')
+    const bodyParser = require('body-parser')
+
+   // config
+   // template engine
+   app.engine('handlebars', handlebars.engine({defaultLayout: 'main'}))
+   app.set('view engine', 'handlebars')
+   
+   // body-parser
+   app.use(bodyParser.urlencoded({extended: false}))
+   app.use(bodyParser.json())
+
+   //ROTAS:
+   app.get('/cad', function(req, res){
+       res.render('formulario')
+   })
+
+   app.post('/add', function(req, res){
+       res.send("Texto: "+ req.body.titulo+" Conteudo: "+ req.body.conteudo)
+   })
+
+    app.listen(3000, function(){
+    console.log('SERVIDOR ATIVO')
+    })
+___________________________________________________________________________________________________
+    formulario.handlebars
+
+    <form action="/add" method="POST" style="text-align: center;">
+    <p>TITULO: </p>
+    <input type="text" name="titulo">
+    <p>CONTEUDO: </p>
+    <textarea name="conteudo"></textarea><br>
+    <hr>
+    <button type="submit">Cadastrar postagens</button>
+    </form>
+
+___________________________________________________________________________________________________
+    main.handlebars
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANDLEBARS</title>
+    </head>
+    <body>
+    {{{ body }}}
+    </body>
+    </html>
+___________________________________________________________________________________________________
+    EXECUTANDO:
+
+___________________________________________________________________________________________________
+    NA URL:
+
+___________________________________________________________________________________________________
+    EXPLICAÇÕES:
+    
+    Post.sync({force: true}) depois de fazer a primeira sincronização commene essa linha para não criar 
+    e recriar o banco de dados.ou seja sempre que for chamado o post ele vai apagar e recriar a tabela
+    e voce perderá os dados.portanto sync só é usado uma vez na hora de ccriar o model.
+    substitua a linha do sync pela module.exports = Post
+    
+___________________________________________________________________________________________________
+
+  
+***************************************************************************************************
+                           
+                    *******************************
+                    *     CRISTIANO OLIVEIRA      *
+                    *        23/02/2022           *
+                    *            DEUS             *
+                    *        SEJA LOUVADO         *
+                    *******************************
+
+***************************************************************************************************
+      

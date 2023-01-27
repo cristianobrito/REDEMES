@@ -1,0 +1,387 @@
+================== ATALHOS TECLADO =======================
+https://support.microsoft.com/pt-br/windows/atalhos-do-teclado-no-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec
+
+TECLA WIN + NUMEROS DE 1 ATÉ 10     | ABRIR JANELA DE PROGRAMA DA BARRA DE TAREFAS DA ESQUERDA PRA DIREITA
+
+SHIFT + WINDOWS + 9                 | nova janela
+
+ 
+ctrl + windows + 0 ou o             | nova janela
+
+
+windows + b e usar as setas         | area de notificação
+
+windows + x                         | power menu e use as primeiras letras para ir ao programa
+  
+alt + f4                            | fechar programa
+
+============================================================================
+Pressione esta tecla                | Para fazer isto
+
+Ctrl + X                            | Recortar o item selecionado.
+
+Ctrl + C (ou Ctrl + Insert)         | Copie o item selecionado.
+
+Ctrl + V (ou Shift + Insert)        | Colar o item selecionado.
+
+Ctrl + Z                            | Desfazer uma ação.
+
+Alt + Tab                           | Alterne entre aplicativos abertos.
+
+Alt + F4                            | Feche o item ativo ou sair do aplicativo ativo.
+
+Tecla do logotipo do Windows  + L   | Bloquear seu computador.
+
+Tecla do logotipo do Windows  + D   | Mostrar e ocultar a área de trabalho.
+
+F2                                  |Renomeie o item selecionado.
+
+F3                                  | Procure um arquivo ou uma pasta no Explorador de Arquivos.
+
+F4                                  | Mostrar a lista da barra de endereços no Explorador de Arquivos.
+
+F5                                  | Atualize a janela ativa.
+
+F6                                  | Percorrer os elementos da tela de uma janela ou da área de trabalho.
+
+F10                                 | Ativar a Barra de Menus no aplicativo ativo.
+
+Alt + F8                            | Exibir sua senha na tela de credenciais.
+
+Alt + Esc                           | Percorrer os itens na ordem em que foram abertos.
+
+Alt + letra sublinhada              | Execute o comando referente a essa letra.
+
+Alt + Enter                         | Mostrar as propriedades do item selecionado.
+
+Alt + Barra de espaços              | Abra o menu de atalho da janela ativa.
+
+Alt + Seta para a esquerda          | Voltar.
+
+Alt + Seta para a direita           | Avançar.
+
+Alt + Page Up                       | Mova uma tela para cima.
+
+Alt + Page Down                     | Mova uma tela para baixo.
+
+Ctrl + F4                           | Feche o documento ativo (em aplicativos que sejam de tela inteira e permitam vários documentos abertos ao mesmo tempo).
+
+Ctrl + A                            | Selecione todos os itens em um documento ou em uma janela.
+
+Ctrl + D (ou Delete)                | Apagar o item selecionado e movê-lo para a Lixeira.
+
+Ctrl + E                            | Abra a Pesquisa (na maioria dos aplicativos).
+
+Ctrl + R (ou F5)                    | Atualize a janela ativa.
+
+Ctrl + Y                            | Refazer uma ação.
+
+Ctrl + Seta para a direita          | Mova o cursor para o início da próxima palavra.
+
+Ctrl + Seta para a esquerda         | Mova o cursor para o início da palavra anterior.
+
+Ctrl + Seta para baixo              | Mova o cursor para o início do próximo parágrafo.
+
+Ctrl + Seta para cima               | Mova o cursor para o início do parágrafo anterior.
+
+Ctrl + Alt + Tab                    | Usar as teclas de direção para alternar entre todos os aplicativos abertos.
+
+Alt + Shift + teclas de direção     | Quando um grupo ou bloco está em foco no menu Iniciar, movê-lo na direção especificada.
+
+Ctrl + Shift + teclas de direção    | Quando um bloco estiver em foco no menu Iniciar, mova-o para outro bloco para criar uma pasta.
+
+Ctrl + teclas de direção            | Redimensione o menu Iniciar quando ele estiver aberto.
+
+Ctrl + tecla de direção (para ir até um item) + Barra de espaços | Selecione vários itens separadamente em uma janela ou na área de trabalho.
+
+Ctrl + Shift com uma tecla de direção | Selecione um bloco de texto.
+
+Ctrl + Esc                          | Abra Iniciar.
+
+Ctrl + Shift + Esc                  | Abra o Gerenciador de Tarefas.
+
+Ctrl + Shift                        | Mude o layout do teclado quando houver vários layouts de teclado disponíveis.
+
+Ctrl + Barra de espaços             | Ativar ou desativar o IME do idioma chinês.
+
+Shift + F10                         | Mostrar o menu de atalho do item selecionado.
+
+Shift com qualquer tecla de direção | Selecione mais de um item em uma janela ou na área de trabalho, ou selecionar texto em um documento.
+
+Shift + Delete                      | Apagar o item selecionado sem movê-lo para a Lixeira primeiro.
+
+Seta para a direita                 | Abra o próximo menu à direita ou abra um submenu.
+
+Seta para a esquerda                | Abra o próximo menu à esquerda ou fechar um submenu.
+
+Esc                                 | Parar ou encerrar a tarefa atual.
+
+PrtScn                              | Faça uma captura da tela inteira e copiá-la para a sua área de transferência. 
+
+===================================================================================
+
+Pressione esta tecla Para fazer isto tecla do 
+
+logotipo do Windows                 | Abra ou fechar Iniciar.
+
+Tecla do logotipo do Windows  + A   | Abra Configurações Rápidas. Atualizado no Windows 11.
+
+Tecla do logotipo do Windows  + B   | Defina o foco para o primeiro ícone no canto da Barra de tarefas.
+
+Tecla do logotipo do Windows  + C   | Conversa aberta do Microsoft Teams. Atualizado no Windows 11.
+
+Tecla do logotipo do Windows  + Shift + C | Abra o menu de botões.
+
+Tecla do logotipo do Windows  + Ctrl + C  | Ligue os filtros coloridos (ative este atalho primeiro nas configurações de Filtros cores).
+
+Tecla do logotipo do Windows  + D   | Mostrar e ocultar a área de trabalho.
+
+Tecla do logotipo do Windows  + E   | Abra o Explorador de Arquivos.
+
+Tecla do logotipo do Windows  + F   | Abra o Hub de Feedback e tirar uma captura de tela.
+
+Tecla do logotipo do Windows  + G   | Abra a Xbox Game Bar quando um jogo estiver aberto.
+
+Tecla do logotipo do Windows  + Alt + B | Ative ou desative o HDR. Observação: Aplica-se ao Xbox Game Bar versão 5.721.7292.0 ou mais recente. Para atualizar seu Xbox Game Bar, acesse o aplicativo Microsoft Store e verifique se há atualizações.
+
+Tecla do logotipo do Windows  + H   | Iniciar a digitação por voz. Atualizado no Windows 11.
+
+Tecla do logotipo do Windows  + I   | Abra Configurações.
+
+Tecla do logotipo do Windows  + J   | Definir o foco para uma dica do Windows quando houver uma disponível. Quando uma dica do Windows aparecer, leve o foco para a dica.  Pressione os atalhos de teclado novamente leva o foco para o elemento na tela ao qual a dica do Windows está ancorada.
+
+Tecla do logotipo do Windows  + K   | Cast aberto a partir de Configurações Rápidas. Atualizado no Windows 11.
+
+Tecla do logotipo do Windows  + L   | Bloquear seu computador ou mudar de conta.
+
+Tecla do logotipo do Windows  + M   | Minimizar todas as janelas.
+
+Tecla do logotipo do Windows  + Shift + M | Restaurar as janelas minimizadas na área de trabalho.
+
+Tecla do logotipo do Windows  + N   | Abrir centro de notificação e calendário. Atualizado no Windows 11.
+
+Tecla do logotipo do Windows  + O   | Bloquear a orientação do dispositivo.
+
+Tecla do logotipo do Windows  + P   | Escolha um modo de exibição da apresentação.
+
+Tecla do logotipo do Windows  + Ctrl + Q  | Abra a Assistência Rápida.
+
+Tecla do logotipo do Windows  + R   | Abra a caixa de diálogo Executar.
+
+Tecla do logotipo do Windows  + Alt + R | Gravar vídeo da janela do jogo em foco (usando Xbox Game Bar).
+
+Tecla do logotipo do Windows  + S   | Abra a pesquisa.
+
+Tecla do logotipo do Windows  + Shift + S  | Tire uma captura de tela de parte de sua tela.
+
+Tecla do logotipo do Windows  + T   | Percorrer os aplicativos na barra de tarefas..
+
+Tecla do logotipo do Windows  + U   | Abra as Configurações de Acessibilidade.
+
+Tecla do logotipo do Windows  + V   | Abra o histórico da área de transferência.
+
+Tecla do logotipo do Windows  + Shift + V | Definir para uma notificação.
+
+Tecla do logotipo do Windows‌  + W  | Abra o Widgets. Atualizado no Windows 11.
+
+Tecla do logotipo do Windows  + X  | Abra o menu Link Rápido.
+
+Tecla do logotipo do Windows  + Y  | Alterne a entrada entre o Windows Mixed Reality e a área de trabalho.
+
+Tecla do logotipo do Windows  + Z  | Abra o ajuste de layouts. Atualizado no Windows 11.
+
+Tecla do logotipo do Windows  + ponto (.) ou ponto e vírgula (;)  | Abra painel de emojis.
+
+Tecla do logotipo do Windows  + vírgula (,) | Espiar temporariamente a área de trabalho.
+
+Tecla do logotipo do Windows  + Pause | Abra Configurações  > Sistema   > Sobre.
+
+Tecla do logotipo do Windows  + Ctrl + F | Procurar por computadores (se você estiver em uma rede).
+
+Tecla do logotipo do Windows  + número | Abra a área de trabalho e iniciar o aplicativo fixado na barra de tarefas, na posição indicada pelo número. Se o aplicativo já estiver em execução, mudar para esse aplicativo.
+
+Tecla do logotipo do Windows  + Shift + número | Abra a área de trabalho e iniciar uma nova instância do aplicativo fixado na barra de tarefas, na posição indicada pelo número.
+
+Tecla do logotipo do Windows  + Ctrl + número  | Abrir a área de trabalho e mudar para a última janela ativa do aplicativo fixado na barra de tarefas, na posição indicada pelo número.
+
+Tecla do logotipo do Windows  + Alt + número   | Abra a área de trabalho e abrir a Lista de Atalhos do aplicativo fixado na barra de tarefas, na posição indicada pelo número.
+
+Tecla do logotipo do Windows  + Ctrl + Shift + número | Abra a área de trabalho e abrir uma nova instância do aplicativo localizado na posição especificada, na barra de tarefas, como um administrador.
+
+Tecla do logotipo do Windows  + Tab | Abra a Visão de tarefas.
+
+Tecla do logotipo do Windows  + Seta para cima | Maximizar a janela.
+
+Tecla do logotipo do Windows  + Alt + Seta para cima | Ajuste a janela em foco na metade superior da tela. Novo com Windows 11.
+
+Tecla do logotipo do Windows  + Seta para baixo      | Remova o aplicativo atual da tela ou minimizar a janela da área de trabalho.
+
+Tecla do logotipo do Windows  + Alt + Seta ´para baixo | Ajuste a janela em foco na metade inferior da tela. Novo com Windows 11.
+
+Tecla do logotipo do Windows  + Seta para a esquerda   | Maximizar a janela do aplicativo ou da área de trabalho, no lado esquerdo da tela.
+
+Tecla do logotipo do Windows  + Seta para a direita    | Maximizar a janela do aplicativo ou da área de trabalho, no lado direito da tela.
+
+Tecla do logotipo do Windows  + Home                   | Minimizar todas as janelas da área de trabalho, exceto a ativa (restaura todas as janelas com um segundo pressionamento).
+
+Tecla do logotipo do Windows  + Shift + Seta para cima | Alongar a janela da área de trabalho até as partes superior e inferior da tela.
+
+Tecla do logotipo do Windows  + Shift + Seta para baixo | Restaure/minimize as janelas ativas da área de trabalho verticalmente, mantendo a largura.
+
+Tecla do logotipo do Windows  + Shift + Seta para a esquerda ou Seta para a direita  | Mova um aplicativo ou uma janela na área de trabalho, de um monitor para outro.
+
+Tecla do logotipo do Windows  + Shift + Barra de espaços | Percorrer os elementos através do idioma e do layout do teclado.
+
+Tecla do logotipo do Windows  + Barra de espaços | Alterne o idioma de entrada e o layout do teclado.
+
+Tecla do logotipo do Windows  + Ctrl + Barra de espaços  | Altere para uma entrada selecionada anteriormente.
+
+Tecla do logotipo do Windows  + Ctrl + Enter             | Ligar o Narrador.
+
+Tecla do logotipo do Windows  + Sinal de Adição (+)      | Abrir lupa e ampliar.
+
+Tecla do logotipo do Windows  + Subtração (-)            | Ampliar o zoom na lupa.
+
+Tecla do logotipo do Windows‌  + Esc                      | Fechar Lupa.
+
+Tecla do logotipo do Windows  + barra dianteira (/)      | Comece a reconversão IME.
+
+Tecla do logotipo do Windows  + Ctrl + Shift + B         | Ative o PC a partir de uma tela em branco ou preta.
+
+Tecla do logotipo do Windows  + PrtScn                   | Salvar captura de tela inteira para arquivar.
+
+Tecla do logotipo do Windows  + Alt + PrtScn             | Salvar captura de tela da janela do jogo em foco para arquivar (usando Xbox Game Bar).
+
+================================================================================
+atalhos do teclado prompt de comando 
+
+Ctrl + C (ou Ctrl + Insert)        | Copie o texto selecionado.
+
+Ctrl + V (ou Shift + Insert)       | Colar o texto selecionado.
+
+Ctrl + M                           | Entrar em modo de Marca.
+
+Alt + tecla de seleção             | Comece seleção no modo de bloqueio.
+
+Teclas de direção                  | Mova o cursor na direção especificada.
+
+Page Up                            | Mova o cursor uma página acima.
+
+Page Down                          | Mova o cursor uma página abaixo.
+
+Ctrl + Home (modo de marca)        | Mova o cursor para o início do próximo buffer.
+
+Ctrl + End (modo de marca)         | Mova o cursor para o final do próximo buffer.
+
+Ctrl + Seta para cima              | Mova uma linha acima no histórico de saída.
+
+Ctrl + Seta para baixo             | Mova uma linha abaixo no histórico de saída.
+
+Ctrl + Home (navegação no Histórico) | Se a linha de comando estiver vazia, mova o visor para o início do buffer. Do contrário, exclua todos os caracteres à esquerda do cursor na linha de comando.
+
+Ctrl + End (navegação no Histórico)  | Se a linha de comando estiver vazia, mova o visor para a linha de comando. Do contrário, exclua todos os caracteres à direita do cursor na linha de comando.
+
+==============================================================================================
+atalhos do teclado de caixas de dialogo
+
+F4                                 | Mostrar os itens na lista ativa.
+
+Ctrl + Tab                         | Avançar entre as guias.
+
+Ctrl + Shift + Tab                 | Voltar nas guias.
+
+Ctrl + número (número de 1 a 9)    | Mova para a enésima guia.
+
+Tab                                | Avançar entre as opções.
+
+Shift + Tab                        | Voltar nas opções.
+
+Alt + letra sublinhada             | Execute o comando (ou selecionar a opção) que é usada com essa letra.
+
+Barra de espaçoss                  | Marque ou desmarque a caixa de seleção caso a opção ativa seja uma caixa de seleção.
+
+Backspace                          | Abra uma pasta um nível acima caso uma pasta esteja selecionada na caixa de diálogo Salvar Como ou Abra.
+
+Teclas de direção                  | Selecione um botão caso a opção ativa seja um grupo de botões de opção.
+
+=============================================================================================
+atalhos do teclado explorador de arquivos
+
+Alt + D                            | Selecione a barra de endereços.
+
+Ctrl + E                           | Selecione a caixa de pesquisa.
+
+Ctrl + F                           | Selecione a caixa de pesquisa.
+
+Ctrl + N                           | Abra uma nova janela.
+
+Ctrl + W                           | Feche a janela ativa.
+
+Ctrl + roda de rolagem do mouse    | Altere o tamanho e a aparência dos ícones de arquivo e pasta.
+
+Ctrl + Shift + E                   | Mostrar todas as pastas acima da pasta selecionada.
+
+Ctrl + Shift + N                   | Crie uma nova pasta.
+
+Num Lock + asterisco (*)           | Mostrar todas as subpastas da pasta selecionada.
+
+Num Lock + tecla adição (+)        | Mostrar o conteúdo da pasta selecionada.
+
+Num Lock + tecla subtração (-)     | Recolha a pasta selecionada.
+
+Alt + P                            | Mostrar o painel de visualização.
+
+Alt + Enter                        | Abra a caixa de diálogo Propriedades do item selecionado.
+
+Alt + Seta para a direita          | Mostrar a próxima pasta.
+
+Alt + Seta para cima               | Mostrar a pasta na qual a pasta estava.
+
+Alt + Seta para a esquerda         | Mostrar a pasta anterior.
+
+Backspace                          | Mostrar a pasta anterior.
+
+Seta para a direita                | Mostrar a seleção atual (se estiver recolhida) ou selecionar a primeira subpasta.
+
+Seta para a esquerda               | Recolha a seleção atual (se estiver expandida) ou selecionar a pasta na qual a pasta atual estava.
+
+End                                | Mostrar a parte inferior da janela ativa.
+
+Home                               | Mostrar a parte superior da janela ativa.
+
+F11                                | Maximizar ou minimizar a janela ativa.
+
+=========================================================================================
+atalho do teclado areas de trabalhos virtuais
+
+Tecla do logotipo do Windows  + Tab         | Abra a Visão de tarefas.
+
+Tecla do logotipo do Windows  + Ctrl + D    | Adicione uma área de trabalho virtual.
+
+Tecla do logotipo do Windows  + Ctrl + Seta para a direita  | Alterne entre áreas de trabalho virtuais criadas à direita.
+
+Tecla do logotipo do Windows  + Ctrl + Seta para a esquerda | Alterne entre áreas de trabalho virtuais criadas à esquerda.
+
+Tecla do logotipo do Windows  + Ctrl + F4   | Feche a área de trabalho virtual que você está usando.
+
+===================================================================================
+atalhos do teclado barra de tarfas
+
+Shift + clique em um botão da barra de tarefas             | Abra um aplicativo ou abrir rapidamente outra instância de um aplicativo.
+
+Ctrl + Shift + clique em um botão da barra de tarefas      | Abra um aplicativo como um administrador.
+
+Shift + clique com o botão direito do mouse em um botão da barra de tarefas   | Exibir o menu da janela do aplicativo.
+
+Shift + clique com o botão direito do mouse em um botão da barra de tarefas agrupado   | Exibir o menu da janela do grupo.
+
+Ctrl + clique em um botão agrupado da barra de tarefas     | Alternar as janelas do grupo.
+
+=============================================================
+atalhos do teclado configurações
+
+Tecla do logotipo do Windows  + I      | Abra configurações.
+
+Backspace                              | Voltar para a página inicial de configurações.
+
+Digitar em qualquer página com a caixa de pesquisa   | Configurações de pesquisa.

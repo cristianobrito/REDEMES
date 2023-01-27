@@ -1,0 +1,102 @@
+                                  [ NODEJS ]   
+                                [ HANDLEBARS ]   
+___________________________________________________________________________________________________
+    ESTRUTURA:
+        .
+     AULA-NODE
+     |
+     |————— bars.js
+     |
+     |
+     |
+     |————— views
+     |       |————— layouts
+     |               |————— main.handlebars
+     |
+     |————— node_modules
+     |————— package-lock.json
+     |————— package.json
+ 
+     [ 3 diretorios e 5 arquivos ]
+___________________________________________________________________________________________________
+    DEPENDENCIAS:
+    C:\Users\brito\Desktop\AULA-NODE>npm install --save express-handlebars
+
+    added 18 packages, and audited 102 packages in 9s
+
+    4 packages are looking for funding
+    run `npm fund` for details
+
+    found 0 vulnerabilities
+
+    C:\Users\brito\Desktop\AULA-NODE>
+___________________________________________________________________________________________________
+    bars.js
+  
+    const express    = require('express')
+    const app        = express()
+    const handlebars = require('express-handlebars')
+    const Sequelize  = require('sequelize')
+
+   // config
+      // template engine
+      app.engine('handlebars', handlebars({defaultLayout: 'main'}))
+      app.set('view engine', 'handlebars')
+
+      // conexão ao banco de dados:
+      // 'nome do banco de dados', 'usuario', 'senha'
+      const sequelize = new Sequelize('sistemaDeCadastro', 'root', '', {
+      host:    'localhost',
+      dialect: 'mysql'
+      }) 
+
+      app.listen(3000, function(){
+      console.log('SERVIDOR ATIVO')
+      })
+___________________________________________________________________________________________________
+    main.hendlebars
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANDLEBARS</title>
+   </head>
+   <body>
+    {{{ body }}}
+   </body>
+   </html>
+___________________________________________________________________________________________________
+    package.json
+
+    {
+    "dependencies": {
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.16.2"
+    }
+    }
+___________________________________________________________________________________________________
+    EXPLICAÇÕES:
+
+    app.engine('handlebars', handlebars({defaultLayout: 'main'}))
+    {defaultLayout: 'main'} o 'main' deve ser o nome do nosso arquivo .handlebars
+    podemos usar home.handlebars olhe a documentação de referencia:
+    https://handlebarsjs.com/
+    https://www.npmjs.com/package/express-handlebars
+___________________________________________________________________________________________________
+  
+***************************************************************************************************
+                           
+                    *******************************
+                    *     CRISTIANO OLIVEIRA      *
+                    *        22/02/2022           *
+                    *            DEUS             *
+                    *        SEJA LOUVADO         *
+                    *******************************
+
+***************************************************************************************************
+                                      

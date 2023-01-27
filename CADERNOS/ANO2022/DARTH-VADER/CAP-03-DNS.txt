@@ -1,0 +1,360 @@
+                        [ DARTH VADER ]
+
+                  
+
+
+
+                         escrito por: 
+                      Cristiano Oliveira
+                         26.02.2022
+
+
+
+
+            Em plena guerra da Russia com a Ucrania.
+      O mundo evoluiu e a tecnologia pode mudar o rumo da 
+                          guera.
+            A guerra tecnologica chegou e o pós guerra é
+     uma realidade tendo isso como um cânone inicio aqui
+     o estudo para segurança futura.
+
+            " QUE DEUS TENHA PIEDADE DAS NAÇÕES "  
+
+
+
+
+
+
+
+
+
+
+                               DNS
+
+
+
+    O comando nslookup obtem informações sobres registros dns.
+    C:\Users\brito>nslookup www.gaveanews.com
+    Servidor:  UnKnown
+    Address:  2804:14d:1:0:181:213:132:2
+
+    Não é resposta autoritativa:
+    Nome:    www.gaveanews.com
+    Addresses:  170.82.173.10
+          170.82.174.10
+
+
+    C:\Users\brito>    
+
+
+
+
+
+    C:\Users\brito>nslookup -type-NS gaveanews.com
+    Servidor:  UnKnown
+    Address:  2804:14d:1:0:181:213:132:2
+
+    Não é resposta autoritativa:
+    Nome:    gaveanews.com
+    Addresses:  170.82.173.10
+          170.82.174.10
+
+
+
+   
+
+
+    C:\Users\brito>nslookup gaveanews.com WHOIS.ENOM.COM
+    DNS request timed out.
+    timeout was 2 seconds.
+    Servidor:  UnKnown
+    Address:  2604:4000:2000:2000:98:124:224:8
+
+    DNS request timed out.
+    timeout was 2 seconds.
+    DNS request timed out.
+    timeout was 2 seconds.
+    DNS request timed out.
+    timeout was 2 seconds.
+    DNS request timed out.
+    timeout was 2 seconds.
+    *** O tempo limite da solicitação para UnKnown expirou
+
+    C:\Users\brito>
+
+
+
+    whois para saber o dns do site conhecido como name server
+    C:\WhoIs>whois gaveanews.com
+    
+
+
+
+  
+
+
+
+
+    C:\Users\brito>nslookup -type=NS WHOIS.ENOM.COM
+    Servidor:  UnKnown
+    Address:  2804:14d:1:0:181:213:132:2
+
+    ENOM.COM
+        primary name server = ns1.ENOM.COM
+        responsible mail addr = hostmaster.ENOM.COM
+        serial  = 2021021605
+        refresh = 43200 (12 hours)
+        retry   = 120 (2 mins)
+        expire  = 604800 (7 days)
+        default TTL = 120 (2 mins)
+
+    C:\Users\brito>
+
+
+
+
+
+
+    C:\Users\brito>nslookup -type=NS JET.NS.GOCACHE.COM.BR
+    Servidor:  UnKnown
+    Address:  2804:14d:1:0:181:213:132:2
+
+    GOCACHE.COM.BR
+        primary name server = deck.NS.GOCACHE.COM.BR
+        responsible mail addr = dns.GOCACHE.COM.BR
+        serial  = 2022021601
+        refresh = 900 (15 mins)
+        retry   = 2400 (40 mins)
+        expire  = 604800 (7 days)
+        default TTL = 86400 (1 day)
+
+    C:\Users\brito>
+
+
+
+
+
+
+    C:\Users\brito>nslookup JET.NS.GOCACHE.COM.BR WHOIS.ENOM.COM
+DNS request timed out.
+    timeout was 2 seconds.
+Servidor:  UnKnown
+Address:  2604:4000:2000:2000:98:124:224:8
+
+DNS request timed out.
+    timeout was 2 seconds.
+DNS request timed out.
+    timeout was 2 seconds.
+DNS request timed out.
+    timeout was 2 seconds.
+DNS request timed out.
+    timeout was 2 seconds.
+*** O tempo limite da solicitação para UnKnown expirou
+
+C:\Users\brito>
+
+
+
+
+
+
+
+
+    Para ver os registros armazenados em cache, 
+    digite o seguinte comando: ipconfig /displaydns 
+
+
+
+    Para limpar o cache, digite ipconfig /flushdns
+
+
+
+ 
+
+
+
+
+
+    Por exemplo, iremos consultar o servidor dns ns1.servidordns.com pelo domínio nomedomeudominio.com:
+
+    nslookup  nomedomeudominio.com  ns1.servidordns.com
+
+
+    C:\Users\brito>nslookup -type=NS gaveanews.com
+    Servidor:  UnKnown
+    Address:  2804:14d:1:0:181:213:132:2
+
+    Não é resposta autoritativa:
+    gaveanews.com   nameserver = deck.ns.gocache.com.br
+    gaveanews.com   nameserver = jet.ns.gocache.com.br
+
+    jet.ns.gocache.com.br   internet address = 35.247.192.164
+    deck.ns.gocache.com.br  internet address = 170.82.172.2
+
+    C:\Users\brito>
+
+
+
+
+ 
+    C:\Users\brito>nslookup gaveanew.com deck.ns.gocache.com.br
+    Servidor:  UnKnown
+    Address:  170.82.172.2
+
+    *** UnKnown não encontrou gaveanew.com: Query refused
+
+    C:\Users\brito>nslookup gaveanew.com jet.ns.gocache.com.br
+    Servidor:  UnKnown
+    Address:  35.247.192.164
+
+    *** UnKnown não encontrou gaveanew.com: Query refused
+
+    C:\Users\brito>
+    
+
+
+
+
+
+
+    C:\Users\brito>telnet gaveanews.com 21
+    Conectando-se a gaveanews.com...Não foi possível abrir conexão com host, na porta 21: conexão falhou
+
+    C:\Users\brito>telnet gaveanews.com 23
+    Conectando-se a gaveanews.com...Não foi possível abrir conexão com host, na porta 23: conexão falhou
+
+    C:\Users\brito>
+
+
+
+
+
+
+
+
+    C:\Users\brito>telnet gaveanews.com 80
+    HTTP/1.1 400 Bad Request
+    Date: Sun, 27 Feb 2022 16:05:22 GMT
+    Content-Type: text/html
+    Content-Length: 154
+    Connection: close
+    Server: gocache
+
+    <html>
+    <head><title>400 Bad Request</title></head>
+    <body>
+    <center><h1>400 Bad Request</h1></center>
+    <hr><center>openresty</center>
+    </body>
+    </html>
+    i
+    
+
+
+
+
+
+
+
+ 
+    C:\WhoIs>whois gaveanews.com.br
+
+Whois v1.21 - Domain information lookup
+Copyright (C) 2005-2019 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+Connecting to BR.whois-servers.net...
+
+domain:      gaveanews.com.br
+owner:       Hugo Nogueira Pinto
+ownerid:     104.952.716-08
+country:     BR
+owner-c:     HUNPI3
+tech-c:      HUNPI3
+nserver:     a.auto.dns.br
+nsstat:      20220217 AA
+nslastaa:    20220217
+nserver:     b.auto.dns.br
+nsstat:      20220217 AA
+nslastaa:    20220217
+dsrecord:    33150 ECDSA-SHA-256 D2AD536383325E1228CF9161B3792A47DCCE37540DC52D03DF9B7E2E26E7C92A
+dsstatus:    20220223 DSOK
+dslastok:    20220223
+saci:        yes
+created:     20180626 #18514024
+changed:     20210626
+expires:     20220626
+status:      published
+
+nic-hdl-br:  HUNPI3
+person:      Hugo Nogueira Pinto
+e-mail:      hnogjf@gmail.com
+country:     BR
+created:     20180626
+changed:     20190528
+
+% Security and mail abuse issues should also be addressed to
+% cert.br, http://www.cert.br/ , respectivelly to cert@cert.br
+% and mail-abuse@cert.br
+%
+% whois.registro.br accepts only direct match queries. Types
+% of queries are: domain (.br), registrant (tax ID), ticket,
+% provider, CIDR block, IP and ASN.
+
+Connecting to aveanews.com.br...
+Este host nÒo Ú conhecido.
+
+C:\WhoIs>
+
+
+
+
+
+
+
+    C:\Users\brito>nslookup www.gaveanews.com.br a.auto.dns.br
+    Servidor:  UnKnown
+    Address:  2001:12ff:0:2::88
+
+    *** UnKnown não encontrou www.gaveanews.com.br: Non-existent domain
+
+    C:\Users\brito>nslookup www.gaveanews.com.br b.auto.dns.br
+    Servidor:  UnKnown
+    Address:  2001:12ff:0:2::89
+
+    *** UnKnown não encontrou www.gaveanews.com.br: Non-existent domain
+
+    C:\Users\brito>
+
+
+
+
+
+
+
+                                FTP
+
+    pesquiar por ftp como enviar e receber arquivos
+    C:\>ftp gaveanews.com.br
+    Host desconhecido gaveanews.com.br.
+    ftp> dir
+    Não conectado.
+    ftp> get materia.txt
+    Não conectado.
+    ftp> put futebol.txt
+    Não conectado.
+    ftp>
+    ftp> bye
+
+    
+________________________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+    https://www.infowester.com/dns.php
+    https://canaltech.com.br/internet/guia-como-mudar-dns/
+    https://www.hostgator.com.br/blog/o-que-e-dns-para-internet/
+    https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/dnscmd
+    https://tecnoblog.net/responde/o-servidor-dns-nao-esta-respondendo-saiba-resolver/
+    https://www.homehost.com.br/blog/dominio/como-resolver-problema-de-dns/
+    https://br.ccm.net/faq/1319-comandos-ip-de-redes-no-windows
+    https://docs.microsoft.com/pt-br/troubleshoot/developer/webapps/iis/ftp-authentication-authorization/how-to-use-ftp-utility
+  

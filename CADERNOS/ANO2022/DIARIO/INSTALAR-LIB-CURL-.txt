@@ -1,0 +1,120 @@
+                             [ C++ ]
+                          instalar libs
+
+1. baixe a lib pretendida. pesquise no google libcurl
+   https://curl.se/libcurl/
+   https://github.com/curl/curl
+   https://curl.se/
+
+2. na pagina de download do curl
+   Windows 64 bits	Win64
+   Windows 64 bits	7.81.0	binário	o projeto curl
+   entre varias versões escolhi essa.
+   curl para 64 bits
+
+3. ja no codeblocks crie um projeto c++ do tipo console application
+
+4. considerações na hora de criar um projeto
+   Project title
+   libCurl
+
+   Folder to create project in:
+   C:\Users\brito\Desktop\C++
+
+   Project filename:
+   libCurl.cbp
+
+   Resulting filename:
+   C:\Users\brito\Desktop\C++\libCurl\libCurl.cbp
+
+5. nesse ponto precisamos extrair a pasta do libcurl dentro da mesma pasta do projeto
+   precisaremos da pasta bin, include e lib e elas precisam estar na mesma raiz do nosso 
+   projeto onde estão os arquivos libCurl.cbp e main.cpp 
+   
+   Nossa estrutura fica assim:
+   .
+  C++
+  |
+  |——— libCurl
+        |
+        |——— bin
+        |——— include
+        |——— lib 
+        |——— libCurl.cbp
+        |——— main.cpp
+
+   [ 5 diretorios 2 arquivos ]
+
+6. voce pode ver exemplos na pagina de exemplos
+   https://curl.se/libcurl/c/example.html
+   e pegue um exemplo simples
+   https://curl.se/libcurl/c/simplessl.html
+___________________________________________________________________________________________________
+7. main.cpp
+
+#include <iostream>
+#include "include/curl/curl.h"
+
+using namespace std;
+
+int main()
+{
+   CURL *curl;
+   CURLcode res;
+   
+   curl = curl_easy_init();
+   if(curl) {
+    curl_easy_setopt(curl, CURLOPT_URL, "http://rickandmortyapi.com/api/character/1");
+    curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
+    
+    res = curl_easy_perform(curl);
+    if(res != CURLE_OK)
+       fprintf(stderr, "curl_easy_perform() failed: %s\n",
+               curl_easy_strerror(res));
+
+      curl_easy_cleanup(curl);
+    }
+    return 0;
+}
+___________________________________________________________________________________________________
+    FAZENDO AS CONFIGURAÇÕES:
+
+    no codeblocks na area Managment/Projects/libCurl
+    click com o direito no nome do projeto libCurl e va em build options
+    
+    na janela que se abre Project build options click no nome do seu projeto libCurl
+    libCurl
+     |——— Debug
+     |——— Realease
+
+    agora va em Linker settings
+    Add procure pela pasta libcurl que colocamos dentro da raiz do projeto e adicione os 
+    dois arquivos que estão dentro dela são eles 
+    lib\libcurl.a e lib\libcurl.dll.a
+     
+___________________________________________________________________________________________________
+8.  COMPLETEI ESSA PARTE COM FOTOS
+    consegui acessar a api rick and morty
+
+    https://status.rickandmortyapi.com/
+    https://rickandmortyapi.com/api/character/1
+
+    no codigo removi o s do https ficando http devemos prestar atenção nisso
+
+    EXECUTANDO:
+    {"id":1,"name":"Rick Sanchez","status":"Alive","species":"Human","type":"","gender":"Male","origin":{"name":"Earth (C-137)","url":"https://rickandmortyapi.com/api/location/1"},"location":{"name":"Citadel of Ricks","url":"https://rickandmortyapi.com/api/location/3"},"image":"https://rickandmortyapi.com/api/character/avatar/1.jpeg","episode":["https://rickandmortyapi.com/api/episode/1","https://rickandmortyapi.com/api/episode/2","https://rickandmortyapi.com/api/episode/3","https://rickandmortyapi.com/api/episode/4","https://rickandmortyapi.com/api/episode/5","https://rickandmortyapi.com/api/episode/6","https://rickandmortyapi.com/api/episode/7","https://rickandmortyapi.com/api/episode/8","https://rickandmortyapi.com/api/episode/9","https://rickandmortyapi.com/api/episode/10","https://rickandmortyapi.com/api/episode/11","https://rickandmortyapi.com/api/episode/12","https://rickandmortyapi.com/api/episode/13","https://rickandmortyapi.com/api/episode/14","https://rickandmortyapi.com/api/episode/15","https://ri    ckandmortyapi.com/api/episode/16","https://rickandmortyapi.com/api/episode/17","https://rickandmortyapi.com/api/episode/18","https://rickandmortyapi.com/api/episode/19","https://rickandmortyapi.com/api/episode/20","https://rickandmortyapi.com/api/episode/21","https://rickandmortyapi.com/api/episode/22","https://rickandmortyapi.com/api/episode/23","https://rickandmortyapi.com/api/episode/24","https://rickandmortyapi.com/api/episode/25","https://rickandmortyapi.com/api/episode/26","https://rickandmortyapi.com/api/episode/27","https://rickandmortyapi.com/api/episode/28","https://rickandmortyapi.com/api/episode/29","https://rickandmortyapi.com/api/episode/30","https://rickandmortyapi.com/api/episode/31","https://rickandmortyapi.com/api/episode/32","https://rickandmortyapi.com/api/episode/33","https://rickandmortyapi.com/api/episode/34","https://rickandmortyapi.com/api/episode/35","https://rickandmortyapi.com/api/episode/36","https://rickandmortyapi.com/api/episode/37","https://rickandmortyapi.com/api/episode/    38","https://rickandmortyapi.com/api/episode/39","https://rickandmortyapi.com/api/episode/40","https://rickandmortyapi.com/api/episode/41","https://rickandmortyapi.com/api/episode/42","https://rickandmortyapi.com/api/episode/43","https://rickandmortyapi.com/api/episode/44","https://rickandmortyapi.com/api/episode/45","https://rickandmortyapi.com/api/episode/46","https://rickandmortyapi.com/api/episode/47","https://rickandmortyapi.com/api/episode/48","https://rickandmortyapi.com/api/episode/49","https://rickandmortyapi.com/api/episode/50","https://rickandmortyapi.com/api/episode/51"],"url":"https://rickandmortyapi.com/api/character/1","created":"2017-11-04T18:48:46.250Z"}
+    Process returned 0 (0x0)   execution time : 0.167 s
+    Press any key to continue.
+
+___________________________________________________________________________________________________
+    REFERENCIAS:
+    https://www.youtube.com/watch?v=AYtgYH4eV-A
+    https://curl.se/libcurl/
+    https://curl.se/libcurl/using/
+    https://github.com/curl/curl
+    https://curl.se/windows/
+    https://rickandmortyapi.com/
+    https://status.rickandmortyapi.com/
+
+    
+     

@@ -1,0 +1,9 @@
+    AULAS QT
+
+    https://www.youtube.com/watch?v=pJukFTLKIGM&list=PLx4x_zx8csUhzAyii9-cY-IJwo00p_5AC&index=3
+
+
+    procurar softwares livres feitos em qt 
+    procurar por comunidades
+    procurar o canal oficial no youtube
+    audacity foi feito em qt

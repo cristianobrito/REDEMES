@@ -1,0 +1,507 @@
+                        [ DARTH VADER ]
+
+                  
+
+
+
+                         escrito por: 
+                      Cristiano Oliveira
+                         26.02.2022
+
+
+
+
+            Em plena guerra da Russia com a Ucrania.
+      O mundo evoluiu e a tecnologia pode mudar o rumo da 
+                          guera.
+            A guerra tecnologica chegou e o pós guerra é
+     uma realidade tendo isso como um cânone inicio aqui
+     o estudo para segurança futura.
+
+            " QUE DEUS TENHA PIEDADE DAS NAÇÕES "  
+
+
+
+                    
+
+
+
+
+
+
+
+                        PREFÁCIO
+
+Topologia de redes .......................................... 01
+DNS                .......................................... 02
+
+
+
+
+
+
+
+
+
+
+                        TOPOLOGIA DE REDES 
+
+    aqui escreva
+   
+
+
+                          VERIFICANDO DNS
+
+    Como funciona um dns:
+    Basicamente, um servidor DNS serve para responder a uma
+    pergunta: Qual o endereço IP do domínio XXX ?
+    Em seguida, o servidor DNS retorna com a resposta: O endereço IP é YYY.
+
+
+    Como descobrir o endereço dns de um dominio
+    Todo domínio na internet precisa ter pelo menos 
+    dois endereços DNS configurados.
+    Então, eles são DNS primário e DNS secundário. 
+    Ainda, é possível ter um terceiro,
+    A forma para se descobrir o endereço DNS de um domínio, 
+    é realizar uma consulta WHOIS. Dessa forma, dentro da consulta WHOIS 
+    você encontra os endereços DNS do domínio.
+    
+
+    C:\>cd whois
+    C:\WhoIs>whois gaveanews.com
+
+    SAIDA:
+
+Whois v1.21 - Domain information lookup
+Copyright (C) 2005-2019 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+Connecting to COM.whois-servers.net...
+
+WHOIS Server: whois.enom.com
+   Registrar URL: http://www.enomdomains.com
+   Updated Date: 2021-08-18T13:32:01Z
+   Creation Date: 2015-08-17T16:02:48Z
+   Registry Expiry Date: 2022-08-17T16:02:48Z
+   Registrar: eNom, LLC
+   Registrar IANA ID: 48
+   Registrar Abuse Contact Email:
+   Registrar Abuse Contact Phone:
+   Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+   Name Server: DECK.NS.GOCACHE.COM.BR
+   Name Server: JET.NS.GOCACHE.COM.BR
+   DNSSEC: unsigned
+   URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of whois database: 2022-02-26T23:02:02Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+NOTICE: The expiration date displayed in this record is the date the
+registrar's sponsorship of the domain name registration in the registry is
+currently set to expire. This date does not necessarily reflect the expiration
+date of the domain name registrant's agreement with the sponsoring
+registrar.  Users may consult the sponsoring registrar's Whois database to
+view the registrar's reported date of expiration for this registration.
+
+TERMS OF USE: You are not authorized to access or query our Whois
+database through the use of electronic processes that are high-volume and
+automated except as reasonably necessary to register domain names or
+modify existing registrations; the Data in VeriSign Global Registry
+Services' ("VeriSign") Whois database is provided by VeriSign for
+information purposes only, and to assist persons in obtaining information
+about or related to a domain name registration record. VeriSign does not
+guarantee its accuracy. By submitting a Whois query, you agree to abide
+by the following terms of use: You agree that you may use this Data only
+for lawful purposes and that under no circumstances will you use this Data
+to: (1) allow, enable, or otherwise support the transmission of mass
+unsolicited, commercial advertising or solicitations via e-mail, telephone,
+or facsimile; or (2) enable high volume, automated, electronic processes
+that apply to VeriSign (or its computer systems). The compilation,
+repackaging, dissemination or other use of this Data is expressly
+prohibited without the prior written consent of VeriSign. You agree not to
+use electronic processes that are automated and high-volume to access or
+query the Whois database except as reasonably necessary to register
+domain names or modify existing registrations. VeriSign reserves the right
+to restrict your access to the Whois database in its sole discretion to ensure
+operational stability.  VeriSign may restrict or terminate your access to the
+Whois database for failure to abide by these terms of use. VeriSign
+reserves the right to modify these terms at any time.
+
+The Registry database contains ONLY .COM, .NET, .EDU domains and
+Registrars.
+
+Connecting to whois.enom.com...
+
+WHOIS Server: WHOIS.ENOM.COM
+Registrar URL: WWW.ENOM.COM
+Updated Date: 2021-08-18T13:32:01.00Z
+Creation Date: 2015-08-17T16:02:00.00Z
+Registrar Registration Expiration Date: 2022-08-17T16:02:48.00Z
+Registrar: ENOM, INC.
+Registrar IANA ID: 48
+Domain Status: clientTransferProhibited https://www.icann.org/epp#clientTransferProhibited
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization: REDACTED FOR PRIVACY
+Registrant Street: REDACTED FOR PRIVACY
+Registrant Street:
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: MG
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: BR
+Registrant Phone: REDACTED FOR PRIVACY
+Registrant Phone Ext:
+Registrant Fax: REDACTED FOR PRIVACY
+Registrant Email: https://tieredaccess.com/contact/e43cfc65-25a9-4864-a502-59b07066d9fe
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY
+Admin Street:
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: REDACTED FOR PRIVACY
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: REDACTED FOR PRIVACY
+Admin Phone: REDACTED FOR PRIVACY
+Admin Phone Ext:
+Admin Fax: REDACTED FOR PRIVACY
+Admin Email: REDACTED FOR PRIVACY
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY
+Tech Street:
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: REDACTED FOR PRIVACY
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: REDACTED FOR PRIVACY
+Tech Phone: REDACTED FOR PRIVACY
+Tech Phone Ext:
+Tech Fax: REDACTED FOR PRIVACY
+Tech Email: REDACTED FOR PRIVACY
+Name Server: DECK.NS.GOCACHE.COM.BR
+Name Server: JET.NS.GOCACHE.COM.BR
+DNSSEC: unsigned
+Registrar Abuse Contact Email: ABUSE@ENOM.COM
+Registrar Abuse Contact Phone: +1.4259744689
+URL of the ICANN WHOIS Data Problem Reporting System: HTTP://WDPRS.INTERNIC.NET/
+>>> Last update of WHOIS database: 2022-02-26T23:02:16.00Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+
+The data in this whois database is provided to you for information
+purposes only, that is, to assist you in obtaining information about or
+related to a domain name registration record. We make this information
+available "as is," and do not guarantee its accuracy. By submitting a
+whois query, you agree that you will use this data only for lawful
+purposes and that, under no circumstances will you use this data to: (1)
+enable high volume, automated, electronic processes that stress or load
+this whois database system providing you this information; or (2) allow,
+enable, or otherwise support the transmission of mass unsolicited,
+commercial advertising or solicitations via direct mail, electronic
+mail, or by telephone. The compilation, repackaging, dissemination or
+other use of this data is expressly prohibited without prior written
+consent from us.
+
+We reserve the right to modify these terms at any time. By submitting
+this query, you agree to abide by these terms.
+Version 6.3 4/3/2002
+
+Connecting to WHOIS.ENOM.COM...
+
+WHOIS Server: WHOIS.ENOM.COM
+Registrar URL: WWW.ENOM.COM
+Updated Date: 2021-08-18T13:32:01.00Z
+Creation Date: 2015-08-17T16:02:00.00Z
+Registrar Registration Expiration Date: 2022-08-17T16:02:48.00Z
+Registrar: ENOM, INC.
+Registrar IANA ID: 48
+Domain Status: clientTransferProhibited https://www.icann.org/epp#clientTransferProhibited
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization: REDACTED FOR PRIVACY
+Registrant Street: REDACTED FOR PRIVACY
+Registrant Street:
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: MG
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: BR
+Registrant Phone: REDACTED FOR PRIVACY
+Registrant Phone Ext:
+Registrant Fax: REDACTED FOR PRIVACY
+Registrant Email: https://tieredaccess.com/contact/54e01303-2e94-42ba-a981-ecf02d20f5d3
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY
+Admin Street:
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: REDACTED FOR PRIVACY
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: REDACTED FOR PRIVACY
+Admin Phone: REDACTED FOR PRIVACY
+Admin Phone Ext:
+Admin Fax: REDACTED FOR PRIVACY
+Admin Email: REDACTED FOR PRIVACY
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY
+Tech Street:
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: REDACTED FOR PRIVACY
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: REDACTED FOR PRIVACY
+Tech Phone: REDACTED FOR PRIVACY
+Tech Phone Ext:
+Tech Fax: REDACTED FOR PRIVACY
+Tech Email: REDACTED FOR PRIVACY
+Name Server: DECK.NS.GOCACHE.COM.BR
+Name Server: JET.NS.GOCACHE.COM.BR
+DNSSEC: unsigned
+Registrar Abuse Contact Email: ABUSE@ENOM.COM
+Registrar Abuse Contact Phone: +1.4259744689
+URL of the ICANN WHOIS Data Problem Reporting System: HTTP://WDPRS.INTERNIC.NET/
+>>> Last update of WHOIS database: 2022-02-26T23:02:18.00Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+
+The data in this whois database is provided to you for information
+purposes only, that is, to assist you in obtaining information about or
+related to a domain name registration record. We make this information
+available "as is," and do not guarantee its accuracy. By submitting a
+whois query, you agree that you will use this data only for lawful
+purposes and that, under no circumstances will you use this data to: (1)
+enable high volume, automated, electronic processes that stress or load
+this whois database system providing you this information; or (2) allow,
+enable, or otherwise support the transmission of mass unsolicited,
+commercial advertising or solicitations via direct mail, electronic
+mail, or by telephone. The compilation, repackaging, dissemination or
+other use of this data is expressly prohibited without prior written
+consent from us.
+
+We reserve the right to modify these terms at any time. By submitting
+this query, you agree to abide by these terms.
+Version 6.3 4/3/2002
+
+
+
+
+Domain Name: GAVEANEWS.COM
+Registry Domain ID: 1953572241_DOMAIN_COM-VRSN
+Registrar WHOIS Server: WHOIS.ENOM.COM
+Registrar URL: WWW.ENOM.COM
+Updated Date: 2021-08-18T13:32:01.00Z
+Creation Date: 2015-08-17T16:02:00.00Z
+Registrar Registration Expiration Date: 2022-08-17T16:02:48.00Z
+Registrar: ENOM, INC.
+Registrar IANA ID: 48
+Domain Status: clientTransferProhibited https://www.icann.org/epp#clientTransferProhibited
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization: REDACTED FOR PRIVACY
+Registrant Street: REDACTED FOR PRIVACY
+Registrant Street:
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: MG
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: BR
+Registrant Phone: REDACTED FOR PRIVACY
+Registrant Phone Ext:
+Registrant Fax: REDACTED FOR PRIVACY
+Registrant Email: https://tieredaccess.com/contact/54e01303-2e94-42ba-a981-ecf02d20f5d3
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY
+Admin Street:
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: REDACTED FOR PRIVACY
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: REDACTED FOR PRIVACY
+Admin Phone: REDACTED FOR PRIVACY
+Admin Phone Ext:
+Admin Fax: REDACTED FOR PRIVACY
+Admin Email: REDACTED FOR PRIVACY
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY
+Tech Street:
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: REDACTED FOR PRIVACY
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: REDACTED FOR PRIVACY
+Tech Phone: REDACTED FOR PRIVACY
+Tech Phone Ext:
+Tech Fax: REDACTED FOR PRIVACY
+Tech Email: REDACTED FOR PRIVACY
+Name Server: DECK.NS.GOCACHE.COM.BR    [ ENDEREÇO DNS ]
+Name Server: JET.NS.GOCACHE.COM.BR     [ ENDEREÇO DNS ]
+DNSSEC: unsigned
+Registrar Abuse Contact Email: ABUSE@ENOM.COM
+Registrar Abuse Contact Phone: +1.4259744689
+URL of the ICANN WHOIS Data Problem Reporting System: HTTP://WDPRS.INTERNIC.NET/
+>>> Last update of WHOIS database: 2022-02-26T23:02:18.00Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+
+The data in this whois database is provided to you for information
+purposes only, that is, to assist you in obtaining information about or
+related to a domain name registration record. We make this information
+available "as is," and do not guarantee its accuracy. By submitting a
+whois query, you agree that you will use this data only for lawful
+purposes and that, under no circumstances will you use this data to: (1)
+enable high volume, automated, electronic processes that stress or load
+this whois database system providing you this information; or (2) allow,
+enable, or otherwise support the transmission of mass unsolicited,
+commercial advertising or solicitations via direct mail, electronic
+mail, or by telephone. The compilation, repackaging, dissemination or
+other use of this data is expressly prohibited without prior written
+consent from us.
+
+We reserve the right to modify these terms at any time. By submitting
+this query, you agree to abide by these terms.
+Version 6.3 4/3/2002
+
+
+C:\WhoIs>
+
+
+
+
+
+    ESSA OPÇÃO SE MOSTROU MELHOR PARA VERIFICAR OS NAMESERVERS
+    C:\>nslookup -type=ns gaveanews.com
+    Servidor:  UnKnown
+    Address:   2804:14d:1:0:181:213:132:2
+
+    Não é resposta autoritativa:
+    gaveanews.com   nameserver = deck.ns.gocache.com.br
+    gaveanews.com   nameserver = jet.ns.gocache.com.br
+
+    jet.ns.gocache.com.br   internet address = 35.247.192.164
+    deck.ns.gocache.com.br  internet address = 170.82.172.2
+
+    C:\>
+
+
+    
+
+
+
+    
+    
+
+    TESTE 1:      
+    C:\>nslookup gaveanews.com
+    Servidor:  UnKnown
+    Address:  2804:14d:1:0:181:213:132:2
+
+    Não é resposta autoritativa:
+    Nome:    gaveanews.com
+    Addresses:  170.82.174.10
+                170.82.173.10
+
+    
+    TESTE 2:
+    C:\>nslookup gaveanews.com 170.82.173.10
+    Servidor:  UnKnown
+    Address:  170.82.173.10
+
+    Nome:    gaveanews.com
+    Addresses:  170.82.174.10
+                170.82.173.10
+
+
+    TESTE 4:
+    C:\>nslookup
+    Servidor PadrÒo:  UnKnown
+    Address:  2804:14d:1:0:181:213:132:2
+
+    >
+
+  
+    TESTE 5:
+    > server 170.82.173.10
+    Servidor PadrÒo:  [170.82.173.10]
+    Address:  170.82.173.10
+
+    >
+
+    Para sair:
+    > quit
+
+    C:\>
+
+
+                        VERIFICANDO OS SERVIDORES DNS 
+
+
+    C:\>ipconfig /all
+
+    procure por: (procure por servidores dns)
+    Servidores DNS. . . . . . . . . . . . . . . : 2804:14d:1:0:181:213:132:2
+                                                  2804:14d:1:0:181:213:132:3
+                                                  181.213.132.2
+                                                  181.213.132.3
+    
+    
+    
+
+
+
+
+                               IPCONFIG
+    C:\>ipconfig ?/                    [ abrir a ajuda ]
+
+
+
+
+
+                               TRACER
+
+    O Tracert é uma ferramenta de diagnóstico que mapeia a rota dos pacotes de
+    sua máquina até o destino, normalmente um endereço de IP ou domínio.
+
+    C:\>tracert gaveanews.com
+
+Rastreando a rota para gaveanews.com [170.82.173.10]
+com no máximo 30 saltos:
+
+  1     3 ms     2 ms     2 ms  192.168.0.1
+  2    15 ms     *       14 ms  10.24.192.1
+  3    15 ms     *       15 ms  201.17.9.81
+  4    15 ms     *       17 ms  201.17.5.70
+  5    19 ms     *       16 ms  embratel-T0-6-3-0-tacc01.rjoen.embratel.net.br [201.73.51.53]
+  6    17 ms     *       21 ms  ebt-T1-10-0-9-tcore01.rjoen.embratel.net.br [200.244.216.164]
+  7    17 ms     *       15 ms  ebt-H0-1-0-0-agg04.rjo.embratel.net.br [200.244.18.22]
+  8    17 ms     *       15 ms  peer-B59-agg04.rjo.embratel.net.br [200.211.219.42]
+  9    22 ms     *       24 ms  ae1.3502.edge2.SaoPaulo1.level3.net [4.69.220.14]
+ 10    25 ms     *       22 ms  8.243.148.86
+ 11    26 ms     *       22 ms  170.82.173.10
+
+Rastreamento concluído.
+
+C:\>
+
+
+
+
+
+
+
+
+
+
+
+_____________________________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+    http://wiki.foz.ifpr.edu.br/wiki/index.php/Laborat%C3%B3rio:_Descobrindo_o_endere%C3%A7amento_IP_e_a_topologia_de_uma_rede
+    https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/ipconfig
+    https://pt.wikipedia.org/wiki/Topologia_de_rede
+    https://docs.microsoft.com/pt-br/windows-server/networking/dns/troubleshoot/troubleshoot-dns-server
+    https://ajuda.lumiun.com/como-saber-quais-servidores-dns-o-computador-esta-utilizando/
+    https://www.ietf.org/rfc/rfc1035.txt
+    https://datatracker.ietf.org/doc/html/rfc3912
+    https://www.homehost.com.br/blog/dominio/whois-ip/
+    https://treinamento24.com/library/lecture/read/306620-como-saber-o-servidor-dns-da-minha-rede
+    https://www.hostinger.com.br/tutoriais/verificar-nome-do-servidor-dominio
+    https://www.hostinger.com.br/tutoriais/como-verificar-traceroute-comando-ping
+    
+   

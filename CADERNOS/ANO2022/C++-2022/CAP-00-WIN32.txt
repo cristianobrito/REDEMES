@@ -1,0 +1,318 @@
+                            [ Criando janela básica em C++!!! ]
+                    [ Aprendendo a programar em C++ usando a API Win32!!!! ]
+___________________________________________________________________________________________________
+1 - passo:
+    Baixe e instale o Dev C++ versão 4.9.9.2 
+
+2 - passo:
+    Inicie um novo projeto
+
+3 - passo:
+#include <windows.h>                                                         
+
+/* Declare o Windows procedimento */
+LRESULT CALLBACK WindowProcedure (HWND, UINT, WPARAM, LPARAM);
+
+/* Faça o nome da classe em uma variável global */
+char szClassName[ ] = "WindowsApp";
+
+int WINAPI WinMain (HINSTANCE hThisInstance,
+                    HINSTANCE hPrevInstance,
+                    LPSTR lpszArgument,
+                    int nFunsterStil)
+
+{
+    HWND hwnd;               /* Este é o identificador para a nossa janela */
+    MSG messages;            /* Aqui mensagens para o aplicativo são salvos */
+    WNDCLASSEX wincl;        /* Estrutura de dados para o WindowClass */
+
+    /* A estrutura Janela */
+    wincl.hInstance = hThisInstance;
+    wincl.lpszClassName = szClassName;
+    wincl.lpfnWndProc = WindowProcedure;      /* Esta função é chamada pelo Windows */
+    wincl.style = CS_DBLCLKS;                 /* Pegar clique duas vezes */
+    wincl.cbSize = sizeof (WNDCLASSEX);
+
+    /* Use ícone padrão e ponteiro do mouse */
+    wincl.hIcon = LoadIcon (NULL, IDI_APPLICATION);
+    wincl.hIconSm = LoadIcon (NULL, IDI_APPLICATION);
+    wincl.hCursor = LoadCursor (NULL, IDC_ARROW);
+    wincl.lpszMenuName = NULL;                 /* sem menu */
+    wincl.cbClsExtra = 0;                     
+    wincl.cbWndExtra = 0;                     
+    /* Use a cor padrão do Windows como o plano de fundo da janela */
+    wincl.hbrBackground = (HBRUSH) COLOR_BACKGROUND;
+
+    /* Registrar a classe da janela, e, se falhar sair do programa */
+    if (!RegisterClassEx (&wincl))
+        return 0;
+
+    /* A classe é registrada, vamos criar o programa*/
+    hwnd = CreateWindowEx (
+           0,                  
+           szClassName,             /* Classname */
+           "Teste v1",              /* Titulo da janela */
+           WS_OVERLAPPEDWINDOW,     /* janela padrão */
+           375,                     /* posição horizontal */
+           150,                     /* posição vertical */
+           544,                     /* a largura do programa */
+           200,                     /* a altura do programa */
+           HWND_DESKTOP,            /* A janela é uma janela filho para o desktop */
+           NULL,                    /* sem menu */
+           hThisInstance,           /* manipulador de instância da janela */
+           NULL                                   
+           );
+
+    /* Mostra a janela */
+    ShowWindow (hwnd, nFunsterStil);
+
+    /* Executar o loop de mensagem. Ele será executado até GetMessage () retorna 0 */
+    while (GetMessage (&messages, NULL, 0, 0))
+    {
+        /* Traduzir mensagens virtual-chave em mensagens de caráter */
+        TranslateMessage(&messages);
+        /* Enviar mensagem para WindowProcedure */
+        DispatchMessage(&messages);
+    }
+
+    /* O programa valor de retorno é 0 - O valor que PostQuitMessage () deu */
+    return messages.wParam;
+}
+
+
+/*  Esta função é chamada pela função DispatchMessage Windows ()  */
+
+LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
+{
+    switch (message)                   /* lidar com as mensagens */
+    {
+        case WM_DESTROY:
+            PostQuitMessage (0);       /* enviar uma WM_QUIT para a fila de mensagens */
+            break;
+        default:                     
+            return DefWindowProc (hwnd, message, wParam, lParam);
+    }
+
+    return 0;
+}
+
+___________________________________________________________________________________________________
+4 - passo:
+    F9 para compilar e executar
+
+5 - passo:
+    explicação de algumas funções. 
+    A include <windows.h> te dá o acesso ao API do Windows (sem ela não há nenhuma janela). 
+    Todo programa WINDOWS deve incluir este header.
+
+    int WINAPI WinMain (HINSTANCE hThisInstance, HINSTANCE hPrevInstance, LPSTR lpszArgument, int nFunsterStil).
+    A função WinMain configura, cria e deixa visível a janela. 
+    Dentro dessa função precisamos definir uma variável HWND para a janela, 
+    uma variável MSG para armazenar as ações do usuário e da janela 
+    e uma variável WNDCLASSEX para configurar e criar a janela. 
+    A seguir podemos ver a variável wincl que definimos antes chamando variáveis de configuração. 
+    Entre elas, podemos ver:
+
+    hInstance - Identificador para a instância que o procedimento de janela desta classe está dentro.
+
+    lpszClassName - Que define o nome da classe da janela.
+
+    lpfnWndProc - Ponteiro para o procedimento janela.
+
+    style - Especifica a classe style(s), podem ser combinados usando o bit a bit.
+
+    cbSize - Especifica o tamanho, em bytes, dessa estrutura.
+
+    hIcon -  Identificador para o ícone de classe. 
+             Este membro deve ser um identificador de um recurso de ícone. 
+             Se esse membro é NULL, um aplicativo deve desenhar um ícone sempre que 
+             o usuário minimiza a janela do aplicativo.
+
+    hIconSm -  Identificador para um pequeno ícone que está associado com a classe de janela. 
+               Se esse membro é NULL, o sistema procura o recurso de ícone especificado pelo 
+               hIcon membro para um ícone de tamanho apropriado para usar como o pequeno ícone.
+
+    hCursor - Identificador para o cursor classe. 
+              Este membro deve ser um identificador de um recurso de cursor. 
+              Se esse membro é NULL, um aplicativo deve definir explicitamente a forma cursor sempre que 
+              o mouse é movido para a janela do aplicativo. 
+              Coloquei alguns estilos de cursores no final.
+
+   lpszMenuName - Ponteiro para uma Cadeia de caracteres terminada por caractere nulo que
+                  especifica o nome de recurso do menu de classe, como o nome aparece no arquivo de recurso. 
+                  Se você usar um número inteiro para identificar o menu, use o MAKEINTRESOURCE macro. 
+                  Se esse membro é NULL, janelas que pertencem a essa classe não tem nenhum menu padrão.
+  
+   cbClsExtra - Especifica o número de adicional bytes para alocar seguindo a estrutura de classe de janela. 
+                O sistema inicializa os bytes para zero.
+
+   cbWndExtra - Especifica o número de adicional bytes para alocar após a instância de janela. 
+                O sistema inicializa os bytes para zero. 
+                Se um aplicativo usa WNDCLASSEX para registrar uma caixa de diálogo criada usando 
+                a diretiva de classe no arquivo de recurso, ele deve definir esse membro para DLGWINDOWEXTRA.
+
+   hbrBackground - Identificador para o pincel de plano de fundo de classe. 
+                   Esse membro pode ser um identificador para o pincel físico a ser usado para pintura de segundo plano, 
+                   ou pode ser um valor de cor. 
+                   Um valor de cor deve ser uma das seguintes cores padrão do sistema 
+                   (o valor 1 deve ser adicionado para a cor escolhida). 
+                   Se for fornecido um valor de cor. Coloquei alguns estilos de cores no final.
+
+   RegisterClassEx:
+   A função de RegisterClassEx registra uma classe de janela para uso subsequente em chamadas para o 
+   CreateWindow ou CreateWindowEx função.
+
+   Depois de registrada vou explicar os componentes da janela criada:
+
+   dwExStyle - Especifica o estilo estendido da janela.
+
+   boolean - Ponteiro para uma Cadeia de caracteres terminada por caractere nulo ou é um átomo inteiro.
+
+   lpWindowName - Ponteiro para uma sequência de caracteres null-terminated que especifica o nome da janela.
+
+   dwStyle - Especifica o estilo da janela que está sendo criado. Este parâmetro pode ser uma combinação 
+   de vários estilos de janela. Coloquei alguns estilos de janela no final.
+
+   x - Especifica a posição horizontal inicial da janela.
+
+   y - Especifica a posição vertical inicial da janela.
+
+   nWidth - Especifica a largura, em unidades dispositivo, da janela.
+
+   nHeight - Especifica a altura, em unidades dispositivo, da janela.
+
+   hWndParent - Identificador para a janela pai ou proprietário da janela que está sendo criada. 
+   Para criar uma janela filho ou uma janela de proprietário, fornece um válido identificador janela. 
+   Este parâmetro é opcional para janelas pop-up.
+
+   hMenu - Identificador para um menu, ou especifica um filho identificador janela, 
+   depending on o estilo de janela. Para um sobreposta uma janela pop-up, hMenu identifica o menu a ser usado com a janela; 
+   pode ser NULL se o menu de classe é para ser usado. Para um janela filho, hMenu especifica o identificador da janela filho, 
+   um valor inteiro usado por um controle de caixa de diálogo para notificar seu pai sobre eventos. 
+   O aplicativo determina o identificador da janela filho; Ele deve ser exclusivo para Tudo as janelas filho com a mesma janela de pai.
+
+   hInstance - Identificador para a instância do módulo a ser associado com a janela.
+
+   lpParam - Um ponteiro para um valor a serem passados para a janela através da estrutura CREATESTRUCT passada na lParam parâmetro da mensagem WM_CREATE . 
+   Se um aplicativo chama CreateWindow para criar uma janela de cliente de interface (MDI) documento várias, lpParam deve apontar para uma estrutura CLIENTCREATESTRUCT.
+
+   #Outras funções importantes:
+
+   ShowWindow(hwnd, SW_SHOW); - Mostra a janela.
+
+   while (GetMessage (&messages, NULL, 0, 0)){ - Serve para ficar recebendo mensagens.
+
+   TranslateMessage(&messages); - Traduz a mensagem, para que possa ser lida.
+
+   DispatchMessage(&messages);} - Envia a mensagem para a função WindowProcedure.
+
+   return messages.wParam;} - Retorna um valor, quando o loop é interrompido.
+
+
+   #Agora vamos falar da função WindowProcedure, leia abaixo:
+
+   LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
+
+   WindowProcedure Esta função, recebe as mensagens enviadas pelo programa e executa uma determinada ação para cada tipo.
+
+   Parâmetros:
+
+   hwnd - Identificador para a janela.
+   uMsg - Especifica a mensagem.
+   wParam - Especifica informações mensagem adicionais. O conteúdo deste parâmetro depende o valor de uMsg parâmetro. 
+   lParam - Especifica informações mensagem adicionais. O conteúdo deste parâmetro depende o valor de uMsg parâmetro.
+
+
+   Algumas explicações peguei de uma fonte que pode ser acessada a partir deste link, porque sinceramente é coisa pra caramba....kkkkkkkkkkkkkk.
+
+   poderá encontra mais explicação em MSDN que é um site muito bom para iniciantes.
+
+   Extras:
+   Colocarei alguns estilos de componentes abaixo para vocês:
+
+   JANELA:
+
+   WS_BORDER -> Borda fina
+   WS_CAPTION -> Barra de título e borda fina
+   WS_CHILD/WS_CHILDWINDOW -> Janela filha
+   WS_DISABLED -> Desabilitada
+   WS_DLGFRAME -> Borda usada em dialogs.
+   WS_HSCROLL/WS_VSCROLL -> Adiciona barra de rolagem horizontal(HSCROLL) e vertical(VSCROLL)
+   WS_MAXIMIZE -> Janela maximizada
+   WS_MAXIMIZEBOX /WS_MINIMIZEBOX -> Botões maximizar e minimizar
+   WS_MINIMIZE -> Janela minimizada
+   WS_OVERLAPPED -> Borda fixa e barra de título
+   WS_OVERLAPPEDWINDOW -> Padrão
+   WS_POPUP -> Janela POPUP
+   WS_SIZEBOX -> Janela que pode ser redimensionada
+   WS_SYSMENU -> Define a janela com o menu comum.
+   WS_TABSTOP -> Define o possível recebimento de focus, pela tecla TAB
+   WS_VISIBLE -> Janela iniciamente visível
+
+
+   CURSORES:
+
+   IDC_ARROW -> Padrão
+   IDC_CROSS -> Cruz
+   IDC_IBEAM -> Cursor editando
+   IDC_ICON -> Ícone
+   IDC_NO -> Sem cursor
+   IDC_SIZE -> Redimesionar
+   IDC_SIZEALL -> Mover/Redimesionar
+   IDC_SIZENESW -> Redimensionar
+   IDC_SIZENS -> Redimensionar
+   IDC_SIZENWSE -> Redimensionar
+   IDC_SIZEWE -> Redimensionar
+   IDC_UPARROW -> Seta para cima
+   IDC_WAIT -> Ocupado
+   IDC_HAND
+   IDC_APPSTARTING
+   IDC_ARROW
+
+   ÍCONES:
+
+   Código: Selecionar tudo
+   IDI_APPLICATION -> Padrão
+   IDI_ASTERISK -> Informação
+   IDI_EXCLAMATION -> Exclamação
+   IDI_HAND ->HiperLink
+   IDI_QUESTION -> Ajuda
+   IDI_WINLOGO -> Logon
+
+  CORES:
+
+  COLOR_ACTIVEBORDER
+  COLOR_ACTIVECAPTION
+  COLOR_APPWORKSPACE
+  COLOR_BACKGROUND
+  COLOR_BTNFACE
+  COLOR_BTNSHADOW
+  COLOR_BTNTEXT
+  COLOR_CAPTIONTEXT
+  COLOR_GRAYTEXT
+  COLOR_HIGHLIGHT
+  COLOR_HIGHLIGHTTEXT
+  COLOR_INACTIVEBORDER
+  COLOR_INACTIVECAPTION
+  COLOR_MENU
+  COLOR_MENUTEXT
+  COLOR_SCROLLBAR
+  COLOR_WINDOW
+  COLOR_WINDOWFRAME
+  COLOR_WINDOWTEXT.
+
+
+___________________________________________________________________________________________________
+  REFERENCIAS BIBLIOGRAFICAS:
+  http://www.kydsoft.com/winui/pt/index.htm
+  http://programadorgenio.blogspot.com/2014/11/criando-botoes-em-c.html
+  https://docs.microsoft.com/pt-br/cpp/mfc/window-objects?view=msvc-170
+  
+
+===================================================================================================
+                           ********************************
+                           *         CRISTIANO            *
+                           *         12/02/2022           *
+                           *      DEUS SEJA LOUVADO       * 
+                           ********************************
+===================================================================================================

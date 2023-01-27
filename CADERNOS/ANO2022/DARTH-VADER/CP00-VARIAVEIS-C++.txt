@@ -1,0 +1,52 @@
+                   [ CAPITULO 00 ]
+
+                    C++ INTRODUCAO 
+
+                     
+
+
+
+ 
+                     VARIAVEIS C++
+
+    DECLARANDO UMA VARIAVEL:
+    SINTAXE:
+         int nome-da-variavel;
+         EX: int minhaVariavel;
+
+    REGRAS DE DECLARAÇÃO:
+    1.   A primeira letra deve ser um caracter de
+         a ate Z ou sublinhado '_' .
+   
+    2.   cada letra depois da primeira pode ser
+         um caracter de a ate Z, ou sublinhado '_'
+         ou numero de 0 ate 9.
+
+    EXEMPLOS:
+         int MinhaVariavel2;
+         int _minhaVariavel;
+
+    DANDO VALOR A UMA VARIAVEL:
+         int n;         // declara a variavel
+         n = 1;         // da o valor 1 a variavel
+         n = n + 1;     // incrementa a variavel
+         
+    INICIALIZANDO UMA VARIAVEL NA CRIACAO:
+         int n = 1;     // declara e inicializa a var
+
+ 
+
+
+    O QUE É UMA CONSTANTE INTEIRA:
+         so contem numeros.
+         EX: 123;
+               1;
+             256;
+
+    DIFERENCA ENTRE DECLARACAO E EXPRESSAO:
+         int n;         // declaracao
+         n = 1;         // expressao
+         as expressoes devem ter operadores =, +, 
+         - etc...
+    
+                            

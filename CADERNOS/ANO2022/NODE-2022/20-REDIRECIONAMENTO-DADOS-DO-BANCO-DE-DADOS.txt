@@ -1,0 +1,220 @@
+                                  [ NODEJS ]   
+                  [ REDIRECIONAMENTO DADOS DO BANCO DE DADOS ]   
+
+    Daqui em diante não vou mostrar todo o processo coisas como o package json 
+    e outras coisas que eu ja mostrei e documentei nos exemplos anteriores.
+___________________________________________________________________________________________________
+     ESTRUTURA:
+        .
+     AULA-NODE
+     |
+     |————— index.js
+     |
+     |————— models
+     |      |————— db.js
+     |      |————— Post.js
+     |
+     |
+     |————— views
+     |       |———— layouts
+     |       |        |————— main.handlebars
+     |       |      
+     |       |
+     |       |————— home.handlebars
+     |       |————— formulario.hsndlebars
+     |
+     |————— node_modules
+     |————— package-lock.json
+     |————— package.json
+ 
+     [ 5 diretorios e 8 arquivos ]
+___________________________________________________________________________________________________
+    MYSQL:
+    inicie o xampp
+    C:\Users\brito>mysql -h localhost -u root -p
+
+___________________________________________________________________________________________________
+    Criando um banco de dados:   
+    mysql> show databases;            
+    mysql> CREATE DATABASE postapp;
+    mysql> use postapp;
+
+___________________________________________________________________________________________________
+    db.js
+
+    const Sequelize  = require('sequelize')
+
+    // conexão ao banco de dados:
+    // 'nome do banco de dados', 'usuario', 'senha'
+    const sequelize = new Sequelize('postapp', 'root', '', {
+    host:    'localhost',
+    dialect: 'mysql'
+    }) 
+
+    // exportando
+    module.exports = {
+      Sequelize: Sequelize,
+      sequelize: sequelize
+    }
+___________________________________________________________________________________________________
+    Post.js
+
+    const db = require('./db')
+
+    const Post = db.sequelize.define('postagens', {
+    titulo: {
+        type: db.Sequelize.STRING
+    },
+    conteudo: {
+        type: db.Sequelize.TEXT
+    }
+    })
+
+    //Post.sync({force: true})
+    module.exports = Post
+___________________________________________________________________________________________________
+    VERIFICANDO SE A TABELA FOI CRIADA:
+    mysql> show tables;
+    mysql> describe postagens;
+
+___________________________________________________________________________________________________
+    index.js 
+
+    const express    = require('express')
+    const app        = express()
+    const handlebars = require('express-handlebars')
+    const bodyParser = require('body-parser')
+    const Post       = require('./models/Post')
+
+    // config
+    // template engine
+    app.engine('handlebars', handlebars.engine({defaultLayout: 'main'}))
+    app.set('view engine', 'handlebars')
+   
+    // body-parser
+    app.use(bodyParser.urlencoded({extended: false}))
+    app.use(bodyParser.json())
+
+    //ROTAS:
+    app.get('/', function(req, res){
+     res.render('home')
+    })
+
+    app.get('/cad', function(req, res){
+       res.render('formulario')
+    })
+
+    app.post('/add', function(req, res){
+      Post.create({
+          titulo: req.body.titulo,
+          conteudo: req.body.conteudo
+      }).then(function(){
+          res.redirect('/')
+      }).catch(function(erro){
+          res.send("Houve um erro: " + erro)
+      })
+    })
+
+    app.listen(3000, function(){
+    console.log('SERVIDOR ATIVO')
+    })
+___________________________________________________________________________________________________
+    home.handlebars
+
+    <h1 style="text-align: center;">LISTA DE POST</h1>
+___________________________________________________________________________________________________
+    EXECUTANDO:
+
+    C:\Users\brito\Desktop\AULA-NODE>nodemon index.js
+    [nodemon] 2.0.15
+    [nodemon] to restart at any time, enter `rs`
+    [nodemon] watching path(s): *.*
+    [nodemon] watching extensions: js,mjs,json
+    [nodemon] starting `node index.js`
+    SERVIDOR ATIVO
+
+    
+___________________________________________________________________________________________________
+    DEPENDENCIAS:
+
+___________________________________________________________________________________________________
+ 
+___________________________________________________________________________________________________
+    formulario.handlebars
+
+    <form action="/add" method="POST" style="text-align: center;">
+    <p>TITULO: </p>
+    <input type="text" name="titulo">
+    <p>CONTEUDO: </p>
+    <textarea name="conteudo"></textarea><br>
+    <hr>
+    <button type="submit">Cadastrar postagens</button>
+    </form>
+
+___________________________________________________________________________________________________
+    main.handlebars
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANDLEBARS</title>
+    </head>
+    <body>
+    {{{ body }}}
+    </body>
+    </html>
+___________________________________________________________________________________________________
+    EXECUTANDO:
+
+    C:\Users\brito\Desktop\AULA-NODE>nodemon index.js
+    [nodemon] 2.0.15
+    [nodemon] to restart at any time, enter `rs`
+    [nodemon] watching path(s): *.*
+    [nodemon] watching extensions: js,mjs,json
+    [nodemon] starting `node index.js`
+    SERVIDOR ATIVO
+    Executing (default): INSERT INTO `postagens` (`id`,`titulo`,`conteudo`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?);
+    [nodemon] restarting due to changes...
+    [nodemon] starting `node index.js`
+    SERVIDOR ATIVO
+___________________________________________________________________________________________________
+    MYSQL:
+
+    mysql> select * from postagens;
+    +----+-------------------+--------------------------------------------------+---------------------+---------------------+
+    | id | titulo            | conteudo                                         | createdAt           | updatedAt           |
+    +----+-------------------+--------------------------------------------------+---------------------+---------------------+
+    |  1 | mil exemplos node | livro que contem mais de 100 exemplos de node js | 2022-02-23 16:47:09 | 2022-02-23 16:47:09 |
+    |  2 | node2             | servidores ativos                                | 2022-02-23 17:05:51 | 2022-02-23 17:05:51 |
+    |  3 | node em foco      | livro feito por cristiano                        | 2022-02-23 17:11:11 | 2022-02-23 17:11:11 |
+    +----+-------------------+--------------------------------------------------+---------------------+---------------------+
+    3 rows in set (0.00 sec)
+
+    mysql>
+
+___________________________________________________________________________________________________
+    NA URL:
+    http://localhost:3000/cad
+___________________________________________________________________________________________________
+    EXPLICAÇÕES:
+    
+    preencha o formulario e ele deve te enviar para a rota certa e aparece lista de post
+    atenção na primeira vez errei porque coloquei o arquivo home.handlebars dentro da pasta layouts
+    quando na verdade ele deve ficar dentro da pasta views confira a documentação
+___________________________________________________________________________________________________
+
+  
+***************************************************************************************************
+                           
+                    *******************************
+                    *     CRISTIANO OLIVEIRA      *
+                    *        23/02/2022           *
+                    *            DEUS             *
+                    *        SEJA LOUVADO         *
+                    *******************************
+
+***************************************************************************************************
+      

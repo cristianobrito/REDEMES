@@ -1,0 +1,226 @@
+                       LINUX KALI
+
+
+
+                    COMANDOS BÁSICOS
+
+
+
+
+                                                                            
+┌──(kali㉿kali)-[~]
+└─$ mkdir pasta1   
+                                                                            
+┌──(kali㉿kali)-[~]
+└─$ cd pasta1/
+                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ touch arq1.txt       
+                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ mkdir pasta2
+                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ ls
+arq1.txt  pasta2
+                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ ls -l
+total 4
+-rw-r--r-- 1 kali kali    0 Mar 24 11:59 arq1.txt
+drwxr-xr-x 2 kali kali 4096 Mar 24 11:59 pasta2
+                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ cp arq1.txt arq2.txt
+                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ ls -l
+total 12
+-rw-r--r-- 1 kali kali    9 Mar 24 12:03 arq1.txt
+-rw-r--r-- 1 kali kali    9 Mar 24 12:04 arq2.txt
+drwxr-xr-x 2 kali kali 4096 Mar 24 11:59 pasta2
+                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ cat arq1.txt        
+ola mundo                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ cat arq2.txt 
+ola mundo                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ mv arq1.txt arq3.txt
+                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ ls -l
+total 12
+-rw-r--r-- 1 kali kali    9 Mar 24 12:04 arq2.txt
+-rw-r--r-- 1 kali kali    9 Mar 24 12:03 arq3.txt
+drwxr-xr-x 2 kali kali 4096 Mar 24 11:59 pasta2
+                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ cp arq2.txt pasta2  
+                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ cp arq2.txt pasta2/arq4.txt
+                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ mv arq3.txt pasta2  
+                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ cd pasta2/                 
+                                                                            
+┌──(kali㉿kali)-[~/pasta1/pasta2]
+└─$ ls -l
+total 12
+-rw-r--r-- 1 kali kali 9 Mar 24 12:08 arq2.txt
+-rw-r--r-- 1 kali kali 9 Mar 24 12:03 arq3.txt
+-rw-r--r-- 1 kali kali 9 Mar 24 12:08 arq4.txt
+                                                                            
+┌──(kali㉿kali)-[~/pasta1/pasta2]
+└─$ touch documento.txt
+                                                                            
+┌──(kali㉿kali)-[~/pasta1/pasta2]
+└─$ ls -l
+total 12
+-rw-r--r-- 1 kali kali 9 Mar 24 12:08 arq2.txt
+-rw-r--r-- 1 kali kali 9 Mar 24 12:03 arq3.txt
+-rw-r--r-- 1 kali kali 9 Mar 24 12:08 arq4.txt
+-rw-r--r-- 1 kali kali 0 Mar 24 12:13 documento.txt
+                                                                            
+┌──(kali㉿kali)-[~/pasta1/pasta2]
+└─$ rm arq2.txt
+                                                                            
+┌──(kali㉿kali)-[~/pasta1/pasta2]
+└─$ ls -l      
+total 8
+-rw-r--r-- 1 kali kali 9 Mar 24 12:03 arq3.txt
+-rw-r--r-- 1 kali kali 9 Mar 24 12:08 arq4.txt
+-rw-r--r-- 1 kali kali 0 Mar 24 12:13 documento.txt
+                                                                            
+┌──(kali㉿kali)-[~/pasta1/pasta2]
+└─$ rm arq*    
+                                                                            
+┌──(kali㉿kali)-[~/pasta1/pasta2]
+└─$ ls -l      
+total 0
+-rw-r--r-- 1 kali kali 0 Mar 24 12:13 documento.txt
+                                                                            
+┌──(kali㉿kali)-[~/pasta1/pasta2]
+└─$ cd ..     
+                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ ls -l
+total 8
+-rw-r--r-- 1 kali kali    9 Mar 24 12:04 arq2.txt
+drwxr-xr-x 2 kali kali 4096 Mar 24 12:14 pasta2
+                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ rm pasta2/
+rm: cannot remove 'pasta2/': Is a directory
+                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ rm -r pasta2/
+                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ ls -l        
+total 4
+-rw-r--r-- 1 kali kali 9 Mar 24 12:04 arq2.txt
+                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ mkdir pasta2      
+                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ cd pasta2/
+                                                                            
+┌──(kali㉿kali)-[~/pasta1/pasta2]
+└─$ touch midocu.txt   
+                                                                            
+┌──(kali㉿kali)-[~/pasta1/pasta2]
+└─$ cp midocu.txt ../midocu2.txt
+                                                                            
+┌──(kali㉿kali)-[~/pasta1/pasta2]
+└─$ mv midocu.txt ..  
+                                                                            
+┌──(kali㉿kali)-[~/pasta1/pasta2]
+└─$ cd ..                       
+                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ ls -l
+total 8
+-rw-r--r-- 1 kali kali    9 Mar 24 12:04 arq2.txt
+-rw-r--r-- 1 kali kali    0 Mar 24 12:19 midocu2.txt
+-rw-r--r-- 1 kali kali    0 Mar 24 12:18 midocu.txt
+drwxr-xr-x 2 kali kali 4096 Mar 24 12:19 pasta2
+                                                                            
+┌──(kali㉿kali)-[~/pasta1]
+└─$ cd ..
+                                                                            
+┌──(kali㉿kali)-[~]
+└─$ cd / 
+                                                                            
+┌──(kali㉿kali)-[/]
+└─$ ls -l
+total 68
+lrwxrwxrwx   1 root root     7 Feb 11 01:53 bin -> usr/bin
+drwxr-xr-x   3 root root  4096 Feb 11 02:06 boot
+drwxr-xr-x  17 root root  3260 Mar 24 11:52 dev
+drwxr-xr-x 158 root root 12288 Mar 24 11:52 etc
+drwxr-xr-x   3 root root  4096 Feb 11 02:05 home
+lrwxrwxrwx   1 root root    34 Feb 11 01:54 initrd.img -> boot/initrd.img-5.15.0-kali3-amd64
+lrwxrwxrwx   1 root root    34 Feb 11 01:54 initrd.img.old -> boot/initrd.img-5.15.0-kali3-amd64
+lrwxrwxrwx   1 root root     7 Feb 11 01:53 lib -> usr/lib
+lrwxrwxrwx   1 root root     9 Feb 11 01:53 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root     9 Feb 11 01:53 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root    10 Feb 11 01:53 libx32 -> usr/libx32
+drwx------   2 root root 16384 Feb 11 01:53 lost+found
+drwxr-xr-x   3 root root  4096 Feb 11 01:53 media
+drwxr-xr-x   2 root root  4096 Feb 11 01:53 mnt
+drwxr-xr-x   3 root root  4096 Feb 11 01:59 opt
+dr-xr-xr-x 256 root root     0 Mar 24 11:52 proc
+drwx------   5 root root  4096 Mar 21 11:43 root
+drwxr-xr-x  34 root root   820 Mar 24 11:53 run
+lrwxrwxrwx   1 root root     8 Feb 11 01:53 sbin -> usr/sbin
+drwxr-xr-x   3 root root  4096 Feb 11 02:00 srv
+dr-xr-xr-x  13 root root     0 Mar 24 11:52 sys
+drwxrwxrwt  15 root root  4096 Mar 24 12:09 tmp
+drwxr-xr-x  14 root root  4096 Feb 11 01:53 usr
+drwxr-xr-x  12 root root  4096 Feb 11 01:55 var
+lrwxrwxrwx   1 root root    31 Feb 11 01:54 vmlinuz -> boot/vmlinuz-5.15.0-kali3-amd64
+lrwxrwxrwx   1 root root    31 Feb 11 01:54 vmlinuz.old -> boot/vmlinuz-5.15.0-kali3-amd64
+                                                                            
+┌──(kali㉿kali)-[/]
+└─$ cd ~
+                                                                            
+┌──(kali㉿kali)-[~]
+└─$ pwd
+/home/kali
+                                                                            
+┌──(kali㉿kali)-[~]
+└─$ cd /
+                                                                            
+┌──(kali㉿kali)-[/]
+└─$ pwd 
+/
+                                                                            
+┌──(kali㉿kali)-[/]
+└─$ cd ~
+                                                                            
+┌──(kali㉿kali)-[~]
+└─$ pwd 
+/home/kali
+                                                                            
+┌──(kali㉿kali)-[~]
+└─$ 
+
+
+
+
+
+
+
+    __________________________________________________
+
+
+                        Autor:
+                   Cristiano Oliveira
+                  britonano@gmail.com
+                      24/03/2022

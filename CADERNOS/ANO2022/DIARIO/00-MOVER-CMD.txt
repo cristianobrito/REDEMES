@@ -1,0 +1,590 @@
+                   [ DARTH VADER ]
+                         CMD
+                   MOVENDO ARQUIVOS
+
+
+
+                   cristiano oliveira
+                       06.03.2022
+
+
+
+
+
+
+	C:\Users\brito>copy con v8.txt
+	estudar o v8
+	ele foi escrito em c++
+	links:
+ 		https://v8.dev/docs
+ 		https://v8.dev/docs/ports
+ 		https://v8.dev/docs/build ^Z
+        	1 arquivo(s) copiado(s).
+
+	C:\Users\brito>dir
+ 	O volume na unidade C é OS
+ 	O Número de Série do Volume é 004C-F115
+
+	 Pasta de C:\Users\brito
+
+	06/03/2022  13:29    <DIR>          .
+	06/03/2022  13:29    <DIR>          ..
+	12/07/2021  16:51             7.144 -1.14-windows.xml
+	29/11/2021  17:04    <DIR>          .android
+	30/08/2021  17:48                90 .angular-config.json
+	11/02/2022  20:44    <DIR>          .atom
+	08/12/2021  20:08                47 .bash_history
+	05/05/2021  15:04    <DIR>          .cache
+	07/12/2021  17:48    <DIR>          .config
+	03/03/2022  14:04             4.969 .dbshell
+	19/08/2021  10:56    <DIR>          .designer
+	26/01/2022  15:20    <DIR>          .dotnet
+	05/05/2021  15:04    <DIR>          .eclipse
+	10/07/2021  23:23                16 .emulator_console_auth_token
+	12/11/2021  22:12    <DIR>          .expo
+	19/01/2022  12:57               168 .gitconfig
+	10/07/2021  22:47    <DIR>          .gradle
+	06/05/2021  16:25    <DIR>          .idlerc
+	06/12/2021  13:37                20 .lesshst
+	20/09/2021  16:17    <DIR>          .m2
+	18/01/2022  02:11                 0 .mongorc.js
+	20/09/2021  15:50    <DIR>          .nbi
+	22/02/2022  14:19               342 .node_repl_history
+	05/01/2022  16:28    <DIR>          .nuget
+	13/08/2021  15:32    <DIR>          .omnisharp
+	24/11/2021  22:42    <DIR>          .p2
+	18/04/2021  02:46    <DIR>          .thumbnails
+	17/11/2021  15:19    <DIR>          .vscode
+	08/12/2021  22:14               121 .yarnrc
+	18/04/2021  00:58    <DIR>          3D Objects
+	24/11/2021  16:39    <DIR>          AndroidStudioProjects
+	18/04/2021  00:58    <DIR>          Contacts
+	10/02/2022  12:36               243 db.json
+	04/03/2022  17:21    <DIR>          Desktop
+	19/02/2022  16:24    <DIR>          Documents
+	05/03/2022  18:23    <DIR>          Downloads
+	05/05/2021  14:46    <DIR>          eclipse
+	24/11/2021  22:43    <DIR>          eclipse-workspace
+	18/04/2021  00:58    <DIR>          Favorites
+	10/01/2022  12:50    <DIR>          LingvanexTranslator
+	18/04/2021  00:58    <DIR>          Links
+	29/10/2021  17:04    <DIR>          Music
+	02/05/2021  02:05    <DIR>          MyFirstGame
+	27/02/2022  12:30                 0 nslookup
+	08/08/2021  21:33    <DIR>          OneDrive
+	21/11/2021  02:21    <DIR>          Pictures
+	09/02/2022  21:27    <DIR>          Postman
+	28/12/2021  13:32    <DIR>          PycharmProjects
+	18/04/2021  00:58    <DIR>          Saved Games
+	18/04/2021  01:01    <DIR>          Searches
+	01/05/2021  22:41    <DIR>          source
+	06/03/2022  13:30               124 v8.txt
+	01/12/2021  21:12    <DIR>          Videos
+              13 arquivo(s)         13.284 bytes
+              40 pasta(s)   301.815.504.896 bytes disponíveis
+
+	C:\Users\brito>copy v8.txt d:
+        1 arquivo(s) copiado(s).
+
+	C:\Users\brito>dir
+ 	O volume na unidade C é OS
+ 	O Número de Série do Volume é 004C-F115
+
+	 Pasta de C:\Users\brito
+
+	06/03/2022  13:29    <DIR>          .
+	06/03/2022  13:29    <DIR>          ..
+	12/07/2021  16:51             7.144 -1.14-windows.xml
+	29/11/2021  17:04    <DIR>          .android
+	30/08/2021  17:48                90 .angular-config.json
+	11/02/2022  20:44    <DIR>          .atom
+	08/12/2021  20:08                47 .bash_history
+	05/05/2021  15:04    <DIR>          .cache
+	07/12/2021  17:48    <DIR>          .config
+	03/03/2022  14:04             4.969 .dbshell
+	19/08/2021  10:56    <DIR>          .designer
+	26/01/2022  15:20    <DIR>          .dotnet
+	05/05/2021  15:04    <DIR>          .eclipse
+	10/07/2021  23:23                16 .emulator_console_auth_token
+	12/11/2021  22:12    <DIR>          .expo
+	19/01/2022  12:57               168 .gitconfig
+	10/07/2021  22:47    <DIR>          .gradle
+	06/05/2021  16:25    <DIR>          .idlerc
+	06/12/2021  13:37                20 .lesshst
+	20/09/2021  16:17    <DIR>          .m2
+	18/01/2022  02:11                 0 .mongorc.js
+	20/09/2021  15:50    <DIR>          .nbi
+	22/02/2022  14:19               342 .node_repl_history
+	05/01/2022  16:28    <DIR>          .nuget
+	13/08/2021  15:32    <DIR>          .omnisharp
+	24/11/2021  22:42    <DIR>          .p2
+	18/04/2021  02:46    <DIR>          .thumbnails
+	17/11/2021  15:19    <DIR>          .vscode
+	08/12/2021  22:14               121 .yarnrc
+	18/04/2021  00:58    <DIR>          3D Objects
+	24/11/2021  16:39    <DIR>          AndroidStudioProjects
+	18/04/2021  00:58    <DIR>          Contacts
+	10/02/2022  12:36               243 db.json
+	04/03/2022  17:21    <DIR>          Desktop
+	19/02/2022  16:24    <DIR>          Documents
+	05/03/2022  18:23    <DIR>          Downloads
+	05/05/2021  14:46    <DIR>          eclipse
+	24/11/2021  22:43    <DIR>          eclipse-workspace
+	18/04/2021  00:58    <DIR>          Favorites
+	10/01/2022  12:50    <DIR>          LingvanexTranslator
+	18/04/2021  00:58    <DIR>          Links
+	29/10/2021  17:04    <DIR>          Music
+	02/05/2021  02:05    <DIR>          MyFirstGame
+	27/02/2022  12:30                 0 nslookup
+	08/08/2021  21:33    <DIR>          OneDrive
+	21/11/2021  02:21    <DIR>          Pictures
+	09/02/2022  21:27    <DIR>          Postman
+	28/12/2021  13:32    <DIR>          PycharmProjects
+	18/04/2021  00:58    <DIR>          Saved Games
+	18/04/2021  01:01    <DIR>          Searches
+	01/05/2021  22:41    <DIR>          source
+	06/03/2022  13:30               124 v8.txt
+	01/12/2021  21:12    <DIR>          Videos
+              13 arquivo(s)         13.284 bytes
+              40 pasta(s)   301.815.631.872 bytes disponíveis
+
+	C:\Users\brito>move v8.txt d:
+	O arquivo já existe.
+        0 arquivo(s) movido(s).
+
+	C:\Users\brito>move v8.txt d:
+        1 arquivo(s) movido(s).
+
+	C:\Users\brito>dir
+ 	O volume na unidade C é OS
+ 	O Número de Série do Volume é 004C-F115
+
+ 	Pasta de C:\Users\brito
+
+	06/03/2022  13:35    <DIR>          .
+	06/03/2022  13:35    <DIR>          ..
+	12/07/2021  16:51             7.144 -1.14-windows.xml
+	29/11/2021  17:04    <DIR>          .android
+	30/08/2021  17:48                90 .angular-config.json
+	11/02/2022  20:44    <DIR>          .atom
+	08/12/2021  20:08                47 .bash_history
+	05/05/2021  15:04    <DIR>          .cache
+	07/12/2021  17:48    <DIR>          .config
+	03/03/2022  14:04             4.969 .dbshell
+	19/08/2021  10:56    <DIR>          .designer
+	26/01/2022  15:20    <DIR>          .dotnet
+	05/05/2021  15:04    <DIR>          .eclipse
+	10/07/2021  23:23                16 .emulator_console_auth_token
+	12/11/2021  22:12    <DIR>          .expo
+	19/01/2022  12:57               168 .gitconfig
+	10/07/2021  22:47    <DIR>          .gradle
+	06/05/2021  16:25    <DIR>          .idlerc
+	06/12/2021  13:37                20 .lesshst
+	20/09/2021  16:17    <DIR>          .m2
+	18/01/2022  02:11                 0 .mongorc.js
+	20/09/2021  15:50    <DIR>          .nbi
+	22/02/2022  14:19               342 .node_repl_history
+	05/01/2022  16:28    <DIR>          .nuget
+	13/08/2021  15:32    <DIR>          .omnisharp
+	24/11/2021  22:42    <DIR>          .p2
+	18/04/2021  02:46    <DIR>          .thumbnails
+	17/11/2021  15:19    <DIR>          .vscode
+	08/12/2021  22:14               121 .yarnrc
+	18/04/2021  00:58    <DIR>          3D Objects
+	24/11/2021  16:39    <DIR>          AndroidStudioProjects
+	18/04/2021  00:58    <DIR>          Contacts
+	10/02/2022  12:36               243 db.json
+	04/03/2022  17:21    <DIR>          Desktop
+	19/02/2022  16:24    <DIR>          Documents
+	05/03/2022  18:23    <DIR>          Downloads
+	05/05/2021  14:46    <DIR>          eclipse
+	24/11/2021  22:43    <DIR>          eclipse-workspace
+	18/04/2021  00:58    <DIR>          Favorites
+	10/01/2022  12:50    <DIR>          LingvanexTranslator
+	18/04/2021  00:58    <DIR>          Links
+	29/10/2021  17:04    <DIR>          Music
+	02/05/2021  02:05    <DIR>          MyFirstGame
+	27/02/2022  12:30                 0 nslookup
+	08/08/2021  21:33    <DIR>          OneDrive
+	21/11/2021  02:21    <DIR>          Pictures
+	09/02/2022  21:27    <DIR>          Postman
+	28/12/2021  13:32    <DIR>          PycharmProjects
+	18/04/2021  00:58    <DIR>          Saved Games
+	18/04/2021  01:01    <DIR>          Searches
+	01/05/2021  22:41    <DIR>          source
+	01/12/2021  21:12    <DIR>          Videos
+              12 arquivo(s)         13.160 bytes
+              40 pasta(s)   301.811.531.776 bytes disponíveis
+
+	C:\Users\brito>d:
+
+	D:\>dir
+ 	O volume na unidade D é OS
+ 	O Número de Série do Volume é 76DE-463A
+
+	 Pasta de D:\
+
+	06/02/2022  13:35    <DIR>          API-FAKE
+	09/01/2022  23:56    <DIR>          ASCII
+	16/01/2022  12:19    <DIR>          ASSEMBLY
+	24/01/2022  20:54    <DIR>          BDloja
+	10/02/2022  16:09    <DIR>          C
+	03/03/2022  18:52    <DIR>          C++PDF
+	05/03/2022  16:15    <DIR>          CADERNO-2022
+	27/02/2022  22:02                 0 cls
+	08/02/2022  23:31               243 db.json
+	22/09/2020  14:47    <DIR>          DOCUMENTOS
+	08/02/2022  16:01    <DIR>          EXERCICIOS
+	26/01/2022  10:25    <DIR>          EXERCICIOS-C++
+	28/02/2022  09:54                25 FAZEDOR.bat
+	15/01/2022  17:18    <DIR>          JUDSON
+	01/02/2022  15:18    <DIR>          JUDSON-PDFS
+	08/12/2020  17:39     2.514.515.149 kali-linux-2020.4-vmware-amd64 - Copia.7z
+	05/07/2021  14:34     2.697.398.327 kali-linux-2021.2-vmware-amd64.7z
+	31/05/2021  19:22    <DIR>          Kali-Linux-2021.2-vmware-amd64.vmwarevm
+	03/03/2022  11:17    <DIR>          LINUX-PDF
+	02/03/2022  23:30    <DIR>          LIVRONANU
+	09/12/2021  22:10            11.311 NODE.odt
+	09/02/2022  11:55         1.127.876 OPENCV.pdf
+	09/02/2022  12:14         1.148.183 OpenCV2.pdf
+	04/02/2022  17:33    <DIR>          pasta-material-auxiliar-do-livro-react-do-maujor
+	04/02/2022  17:33        13.724.074 pasta-material-auxiliar-do-livro-react-do-maujor.zip
+	03/03/2022  11:58    <DIR>          PENTEST
+	05/02/2022  22:47    <DIR>          SEGURANCA
+	22/02/2022  22:52        17.350.368 SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit.zip
+	09/12/2021  20:28            25.595 SITES.pdf
+	15/01/2022  12:39        33.280.684 snapshot_2022-01-14_15-51.zip
+	06/03/2022  13:30               124 v8.txt
+              13 arquivo(s)  5.278.581.959 bytes
+              18 pasta(s)   86.082.723.840 bytes disponíveis
+
+	D:\>move v8.txt d:\scripts
+        1 arquivo(s) movido(s).
+
+	D:\>dir
+ 	O volume na unidade D é OS
+ 	O Número de Série do Volume é 76DE-463A
+
+	 Pasta de D:\
+
+	06/02/2022  13:35    <DIR>          API-FAKE
+	09/01/2022  23:56    <DIR>          ASCII
+	16/01/2022  12:19    <DIR>          ASSEMBLY
+	24/01/2022  20:54    <DIR>          BDloja
+	10/02/2022  16:09    <DIR>          C
+	03/03/2022  18:52    <DIR>          C++PDF
+	05/03/2022  16:15    <DIR>          CADERNO-2022
+	27/02/2022  22:02                 0 cls
+	08/02/2022  23:31               243 db.json
+	22/09/2020  14:47    <DIR>          DOCUMENTOS
+	08/02/2022  16:01    <DIR>          EXERCICIOS
+	26/01/2022  10:25    <DIR>          EXERCICIOS-C++
+	28/02/2022  09:54                25 FAZEDOR.bat
+	15/01/2022  17:18    <DIR>          JUDSON
+	01/02/2022  15:18    <DIR>          JUDSON-PDFS
+	08/12/2020  17:39     2.514.515.149 kali-linux-2020.4-vmware-amd64 - Copia.7z
+	05/07/2021  14:34     2.697.398.327 kali-linux-2021.2-vmware-amd64.7z
+	31/05/2021  19:22    <DIR>          Kali-Linux-2021.2-vmware-amd64.vmwarevm
+	03/03/2022  11:17    <DIR>          LINUX-PDF
+	02/03/2022  23:30    <DIR>          LIVRONANU
+	09/12/2021  22:10            11.311 NODE.odt
+	09/02/2022  11:55         1.127.876 OPENCV.pdf
+	09/02/2022  12:14         1.148.183 OpenCV2.pdf
+	04/02/2022  17:33    <DIR>          pasta-material-auxiliar-do-livro-react-do-maujor
+	04/02/2022  17:33        13.724.074 pasta-material-auxiliar-do-livro-react-do-maujor.zip
+	03/03/2022  11:58    <DIR>          PENTEST
+	06/03/2022  13:30               124 scripts
+	05/02/2022  22:47    <DIR>          SEGURANCA
+	22/02/2022  22:52        17.350.368 SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit.zip
+	09/12/2021  20:28            25.595 SITES.pdf
+	15/01/2022  12:39        33.280.684 snapshot_2022-01-14_15-51.zip
+              13 arquivo(s)  5.278.581.959 bytes
+              18 pasta(s)   86.082.723.840 bytes disponíveis
+
+
+	D:\>cd caderno-2022
+
+	D:\CADERNO-2022>cd scripts
+
+	D:\CADERNO-2022\SCRIPTS>dir
+ 	O volume na unidade D é OS
+ 	O Número de Série do Volume é 76DE-463A
+
+	 Pasta de D:\CADERNO-2022\SCRIPTS
+
+	05/03/2022  19:36    <DIR>          .
+	05/03/2022  19:36    <DIR>          ..
+	05/03/2022  19:32               918 anima.cpp
+	05/03/2022  19:36            57.907 anima.exe
+	04/03/2022  20:50                50 animacao.txt
+	04/03/2022  15:07               635 celular.c
+	04/03/2022  15:09            54.826 celular.exe
+	04/03/2022  14:48               747 datas.c
+	04/03/2022  14:48            54.728 datas.exe
+	04/03/2022  22:42                73 kali-instalacao.txt
+	04/03/2022  23:43             1.701 LER.txt
+	04/03/2022  19:36               684 nanu.cpp
+	04/03/2022  19:36            85.114 nanu.exe
+	02/03/2022  12:50               140 STAR-WAR.bat
+              12 arquivo(s)        257.523 bytes
+               2 pasta(s)   86.082.723.840 bytes disponíveis
+
+	D:\CADERNO-2022\SCRIPTS>cd ..
+
+	D:\CADERNO-2022>dir
+ 	O volume na unidade D é OS
+ 	O Número de Série do Volume é 76DE-463A
+
+	 Pasta de D:\CADERNO-2022
+
+	05/03/2022  16:15    <DIR>          .
+	05/03/2022  16:15    <DIR>          ..
+	02/03/2022  22:32    <DIR>          C++-2022
+	05/03/2022  16:36             1.214 CP01-RESUMO.txt
+	05/03/2022  14:22             3.314 CP02-CLASSES-C++.txt
+	04/03/2022  19:28    <DIR>          DARTH-VADER
+	19/02/2022  16:44    <DIR>          ELETRONICA-BASICA
+	24/02/2022  15:35    <DIR>          INSTALAR-LIB
+	24/02/2022  15:34             6.290 INSTALAR-LIB-CURL-.txt
+	24/02/2022  21:30            13.339 LIBCURL.txt
+	03/03/2022  11:54    <DIR>          MECANICA-BASICA
+	04/03/2022  17:20    <DIR>          NODE-2022
+	02/03/2022  23:28    <DIR>          ORGANIZADOS
+	05/03/2022  19:36    <DIR>          SCRIPTS
+               4 arquivo(s)         24.157 bytes
+              10 pasta(s)   86.082.723.840 bytes disponíveis
+
+	D:\CADERNO-2022>cd ..
+
+	D:\>dir
+ 	O volume na unidade D é OS
+ 	O Número de Série do Volume é 76DE-463A
+
+	 Pasta de D:\
+
+	06/02/2022  13:35    <DIR>          API-FAKE
+	09/01/2022  23:56    <DIR>          ASCII
+	16/01/2022  12:19    <DIR>          ASSEMBLY
+	24/01/2022  20:54    <DIR>          BDloja
+	10/02/2022  16:09    <DIR>          C
+	03/03/2022  18:52    <DIR>          C++PDF
+	05/03/2022  16:15    <DIR>          CADERNO-2022
+	27/02/2022  22:02                 0 cls
+	08/02/2022  23:31               243 db.json
+	22/09/2020  14:47    <DIR>          DOCUMENTOS
+	08/02/2022  16:01    <DIR>          EXERCICIOS
+	26/01/2022  10:25    <DIR>          EXERCICIOS-C++
+	28/02/2022  09:54                25 FAZEDOR.bat
+	15/01/2022  17:18    <DIR>          JUDSON
+	01/02/2022  15:18    <DIR>          JUDSON-PDFS
+	08/12/2020  17:39     2.514.515.149 kali-linux-2020.4-vmware-amd64 - Copia.7z
+	05/07/2021  14:34     2.697.398.327 kali-linux-2021.2-vmware-amd64.7z
+	31/05/2021  19:22    <DIR>          Kali-Linux-2021.2-vmware-amd64.vmwarevm
+	03/03/2022  11:17    <DIR>          LINUX-PDF
+	02/03/2022  23:30    <DIR>          LIVRONANU
+	09/12/2021  22:10            11.311 NODE.odt
+	09/02/2022  11:55         1.127.876 OPENCV.pdf
+	09/02/2022  12:14         1.148.183 OpenCV2.pdf
+	04/02/2022  17:33    <DIR>          pasta-material-auxiliar-do-livro-react-do-maujor
+	04/02/2022  17:33        13.724.074 pasta-material-auxiliar-do-livro-react-do-maujor.zip
+	03/03/2022  11:58    <DIR>          PENTEST
+	05/02/2022  22:47    <DIR>          SEGURANCA
+	22/02/2022  22:52        17.350.368 SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit.zip
+	09/12/2021  20:28            25.595 SITES.pdf
+	15/01/2022  12:39        33.280.684 snapshot_2022-01-14_15-51.zip
+	06/03/2022  13:30               124 v8.txt
+              13 arquivo(s)  5.278.581.959 bytes
+              18 pasta(s)   86.082.723.840 bytes disponíveis
+
+	D:\>move v8.txt d:\caderno-2022
+        1 arquivo(s) movido(s).
+
+	D:\>dir
+ 	O volume na unidade D é OS
+ 	O Número de Série do Volume é 76DE-463A
+
+	 Pasta de D:\
+
+	06/02/2022  13:35    <DIR>          API-FAKE
+	09/01/2022  23:56    <DIR>          ASCII
+	16/01/2022  12:19    <DIR>          ASSEMBLY
+	24/01/2022  20:54    <DIR>          BDloja
+	10/02/2022  16:09    <DIR>          C
+	03/03/2022  18:52    <DIR>          C++PDF
+	06/03/2022  13:40    <DIR>          CADERNO-2022
+	27/02/2022  22:02                 0 cls
+	08/02/2022  23:31               243 db.json
+	22/09/2020  14:47    <DIR>          DOCUMENTOS
+	08/02/2022  16:01    <DIR>          EXERCICIOS
+	26/01/2022  10:25    <DIR>          EXERCICIOS-C++
+	28/02/2022  09:54                25 FAZEDOR.bat
+	15/01/2022  17:18    <DIR>          JUDSON
+	01/02/2022  15:18    <DIR>          JUDSON-PDFS
+	08/12/2020  17:39     2.514.515.149 kali-linux-2020.4-vmware-amd64 - Copia.7z
+	05/07/2021  14:34     2.697.398.327 kali-linux-2021.2-vmware-amd64.7z
+	31/05/2021  19:22    <DIR>          Kali-Linux-2021.2-vmware-amd64.vmwarevm
+	03/03/2022  11:17    <DIR>          LINUX-PDF
+	02/03/2022  23:30    <DIR>          LIVRONANU
+	09/12/2021  22:10            11.311 NODE.odt
+	09/02/2022  11:55         1.127.876 OPENCV.pdf
+	09/02/2022  12:14         1.148.183 OpenCV2.pdf
+	04/02/2022  17:33    <DIR>          pasta-material-auxiliar-do-livro-react-do-maujor
+	04/02/2022  17:33        13.724.074 pasta-material-auxiliar-do-livro-react-do-maujor.zip
+	03/03/2022  11:58    <DIR>          PENTEST
+	05/02/2022  22:47    <DIR>          SEGURANCA
+	22/02/2022  22:52        17.350.368 SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit.zip
+	09/12/2021  20:28            25.595 SITES.pdf
+	15/01/2022  12:39        33.280.684 snapshot_2022-01-14_15-51.zip
+              12 arquivo(s)  5.278.581.835 bytes
+              18 pasta(s)   86.082.723.840 bytes disponíveis
+
+	D:\>cd caderno-2022
+
+	D:\CADERNO-2022>dir
+ 	O volume na unidade D é OS
+ 	O Número de Série do Volume é 76DE-463A
+
+	 Pasta de D:\CADERNO-2022
+
+	06/03/2022  13:40    <DIR>          .
+	06/03/2022  13:40    <DIR>          ..
+	02/03/2022  22:32    <DIR>          C++-2022
+	05/03/2022  16:36             1.214 CP01-RESUMO.txt
+	05/03/2022  14:22             3.314 CP02-CLASSES-C++.txt
+	04/03/2022  19:28    <DIR>          DARTH-VADER
+	19/02/2022  16:44    <DIR>          ELETRONICA-BASICA
+	24/02/2022  15:35    <DIR>          INSTALAR-LIB
+	24/02/2022  15:34             6.290 INSTALAR-LIB-CURL-.txt
+	24/02/2022  21:30            13.339 LIBCURL.txt
+	03/03/2022  11:54    <DIR>          MECANICA-BASICA
+	04/03/2022  17:20    <DIR>          NODE-2022
+	02/03/2022  23:28    <DIR>          ORGANIZADOS
+	05/03/2022  19:36    <DIR>          SCRIPTS
+	06/03/2022  13:30               124 v8.txt
+               5 arquivo(s)         24.281 bytes
+              10 pasta(s)   86.082.723.840 bytes disponíveis
+
+	D:\CADERNO-2022>move v8.txt d:\caderno-2022\scripts
+        1 arquivo(s) movido(s).
+
+	D:\CADERNO-2022>dir
+ 	O volume na unidade D é OS
+ 	O Número de Série do Volume é 76DE-463A
+
+	 Pasta de D:\CADERNO-2022
+
+	06/03/2022  13:41    <DIR>          .
+	06/03/2022  13:41    <DIR>          ..
+	02/03/2022  22:32    <DIR>          C++-2022
+	05/03/2022  16:36             1.214 CP01-RESUMO.txt
+	05/03/2022  14:22             3.314 CP02-CLASSES-C++.txt
+	04/03/2022  19:28    <DIR>          DARTH-VADER
+	19/02/2022  16:44    <DIR>          ELETRONICA-BASICA
+	24/02/2022  15:35    <DIR>          INSTALAR-LIB
+	24/02/2022  15:34             6.290 INSTALAR-LIB-CURL-.txt
+	24/02/2022  21:30            13.339 LIBCURL.txt
+	03/03/2022  11:54    <DIR>          MECANICA-BASICA
+	04/03/2022  17:20    <DIR>          NODE-2022
+	02/03/2022  23:28    <DIR>          ORGANIZADOS
+	06/03/2022  13:41    <DIR>          SCRIPTS
+               4 arquivo(s)         24.157 bytes
+              10 pasta(s)   86.082.723.840 bytes disponíveis
+
+	D:\CADERNO-2022>cd scripts
+
+	D:\CADERNO-2022\SCRIPTS>dir
+ 	O volume na unidade D é OS
+ 	O Número de Série do Volume é 76DE-463A
+
+	 Pasta de D:\CADERNO-2022\SCRIPTS
+
+	06/03/2022  13:41    <DIR>          .
+	06/03/2022  13:41    <DIR>          ..
+	05/03/2022  19:32               918 anima.cpp
+	05/03/2022  19:36            57.907 anima.exe
+	04/03/2022  20:50                50 animacao.txt
+	04/03/2022  15:07               635 celular.c
+	04/03/2022  15:09            54.826 celular.exe
+	04/03/2022  14:48               747 datas.c
+	04/03/2022  14:48            54.728 datas.exe
+	04/03/2022  22:42                73 kali-instalacao.txt
+	04/03/2022  23:43             1.701 LER.txt
+	04/03/2022  19:36               684 nanu.cpp
+	04/03/2022  19:36            85.114 nanu.exe
+	02/03/2022  12:50               140 STAR-WAR.bat
+	06/03/2022  13:30               124 v8.txt
+              13 arquivo(s)        257.647 bytes
+               2 pasta(s)   86.082.723.840 bytes disponíveis
+
+	D:\CADERNO-2022\SCRIPTS>
+
+
+
+
+
+    VISUALIZAR HISTORICO DE COMANDOS DO CMD:
+         D:\CADERNO-2022\SCRIPTS>doskey/history
+	 dir
+	 gcc -0 matris.c matris
+	 gcc -o matris.c matris
+         gcc -o matris.c matris.exe
+	 gcc -o matris.c matris
+	 gcc -o matris matris.c
+	 matris
+	 color 3
+	 color ?
+         color 9
+	 color b
+	 color c
+	 color e
+	 color f
+	 cls
+	 dir
+	 cd ..
+	 cd c
+         cd ..
+         cd c
+         dir
+         start c-completo-total.pdf
+         cd .
+         cd ..
+         cd caderno-2022
+         cd scripts
+         dir
+         notepad
+         copy con mostrando
+         #include <stdio.h>
+	 int main()
+	 {
+  		char    a = 'R';
+  		int     b = 2;
+  		float   c = 4.5f;
+  		double  d = 3.14;
+  		printf("size(a) = %ld, location(a) = %p\n",sizeof(a),&a);
+  		printf("size(b) = %ld, location(b) = %p\n",sizeof(b),&b);
+  		printf("size(c) = %ld, location(c) = %p\n",sizeof(c),&c);
+  		printf("size(d) = %ld, location(d) = %p\n",sizeof(d),&d);
+  		return 0;
+	   }↑
+	   →
+	   notepad mostrando
+	   gcc -o mostrando mostrando.c
+	   mostrando
+	   type mostrando
+	   mostrando
+	   doskey / history
+	   doskey/history
+
+	   D:\CADERNO-2022\SCRIPTS>
+
+
+    OU TECLE F7.
+    ESC PARA SAIR 
+    LIMPAR O HISTORICO DE COMANDOS
+    doskey/listsize = 0
+
+
+_____________________________________________________________________
+
+    ctrl + setas para mover de palavra em palavra
+    ctrl + back space apaga onde o cursor estiver

@@ -1,0 +1,111 @@
+                        [ DARTH VADER ]
+
+
+
+    CONCLUSÕES:
+    crie uma pasta chamada include no 
+    mesmo diretorio do arquivo main.cpp
+    e no main.cpp import ela com o include
+    segue abaixo o exemplo.
+
+
+    ARQUIVOS:
+    main.cpp
+    #include <iostream>
+    #include "C:\Users\brito\Desktop\C++\INCLUDE\calculos.cpp"
+    using namespace std;
+
+    int main()
+    {
+         std::cout << add(10, 20) << endl;
+         return 0;
+    }
+
+
+
+
+
+
+
+    calculos.cpp
+    #include <iostream>
+
+    int add(int a, int b)
+    {
+         return a+b;
+    }
+
+    int subb(int a, int b)
+    {
+         return a-b;
+    }
+
+    void output_message(std::string message)
+    {
+         std::cout << message << std::endl;
+    };
+
+
+
+    EXPLICAÇÕES:
+    #include "C:\Users\brito\Desktop\C++\INCLUDE\calculos.cpp"
+    essa linha acima é o caminho completo ate o arquivo .cpp
+    mostrarei abaixo a estrutura:
+     .
+    c++
+     |
+     |——— Treino
+     |     |——— bin
+     |     |——— obj
+     |     |——— main.cpp
+     |     |——— Treino.cbp
+     |
+     |
+     |
+     |——— INCLUDE
+     |     |——— calculos.cpp
+     |     |——— calculos.h
+     |     
+     |
+     |
+    [ 4 diretorios 4 arquivos ]
+
+
+
+
+
+
+    os dois diretorios ficam localizados na mesma pasta c++.
+    
+
+
+
+    calculos.h
+    #include <iostream>
+
+    int add(int, int);
+
+    int subb(int, int);
+
+    void output_message(std::string);
+
+
+
+
+    OBS: o arquivo .h pode ser chamado 
+    pela linha de comando e depois de 
+    gerar o obj ele podera ser compilado
+    
+
+
+
+
+
+
+
+
+
+_____________________________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+    https://www.youtube.com/watch?v=0TCh01BBlrM
+    

@@ -1,0 +1,60 @@
+                        [ DARTH VADER ]
+
+
+
+
+                               C
+
+
+                       Cristiano Oliveira
+                           14/03/2022   
+
+
+
+
+
+                                                [Página ii]
+    _______________________________________________________
+
+                         COMO LER API C
+
+
+    i.0 SINTAXE
+        typedef struct _CONSOLE_CURSOR_INFO {
+          DWORD dwSize;
+          BOOL bVisible;
+        } CONSOLE_CURSOR_INFO, *PCONSOLE_CURSOR_INFO;
+
+        Assim é como aparece na página da microsoft.
+        https://docs.microsoft.com/pt-br/windows/console/console-cursor-info-str
+
+    i.1 uso:
+        CONSOLE_CURSOR_INFO info;
+        criamos a linha acima dentro de qualquer função
+        criamos um objeto do tipo CONSOLE_CURSOR_INFO
+
+    i.2 acessando:
+        info.bVisible = false;
+        e agora podemos acessar seus menbros.
+        essa linha acima torna o cursor invisivel.
+
+    i.3 size:
+        info.dwSize = 100;
+        a linha acima aumenta o tamanho do cursor.
+
+    i.5 usando na função:
+        SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
+        com o &info passamos para função a posição do
+        ponteiro que criamos no caso info.
+
+
+
+                                                [Página 00]
+    _______________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+         https://www.youtube.com/watch?v=y-_-wq08i3E&t=8s
+         esse video às 29:28 mim 
+        
+         link da microsoft:
+         https://docs.microsoft.com/pt-br/windows/console/console-cursor-info-str
+         https://www.cprogressivo.net/2013/03/typedef-Como-declarar-seus-proprios-tipos-em-C.html 

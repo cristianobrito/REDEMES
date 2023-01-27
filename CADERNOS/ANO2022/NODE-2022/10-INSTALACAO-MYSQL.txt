@@ -1,0 +1,328 @@
+                                  [ NODEJS ]   
+                                     MYSQL    
+___________________________________________________________________________________________________
+   INSTALAÇÃO:
+
+   baixe do site
+   https://www.mysql.com/
+
+   baixe a versão da comunidade
+   Downloads da Comunidade MySQL (GPL) »
+
+   depois de baixar e instalar configure as variaveis de ambiente 
+   geralmente é o caminho da pasta bin
+___________________________________________________________________________________________________
+   CONECTAR:
+   
+   inicie o xampp
+   
+   abra um prompt:
+   C:\Users\brito>mysql -h localhost -u root -p
+
+   obs: em enter password: so de enter não coloque nada.
+
+   SAIDA:
+   Enter password:
+   Welcome to the MySQL monitor.  Commands end with ; or \g.
+   Your MySQL connection id is 8
+   Server version: 5.5.5-10.4.19-MariaDB mariadb.org binary distribution
+
+   Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+   Oracle is a registered trademark of Oracle Corporation and/or its
+   affiliates. Other names may be trademarks of their respective
+   owners.
+
+   Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+   mysql>
+
+___________________________________________________________________________________________________
+   COMANDOS:
+   no terminal do mysql.
+
+   mysql> show databases;                    
+
+   SAIDA:
+   +--------------------+
+   | Database           |
+   +--------------------+
+   | crud               |
+   | information_schema |
+   | lojarj             |
+   | mysql              |
+   | performance_schema |
+   | phpmyadmin         |
+   | stone              |
+   | test               |
+   +--------------------+
+   8 rows in set (0.15 sec)
+
+   mysql>
+
+___________________________________________________________________________________________________
+   CRINADO UM BANCO DE DADOS:
+
+   mysql> create database sistemaDeCadastro;
+   Query OK, 1 row affected (0.00 sec)
+
+   mysql>
+
+___________________________________________________________________________________________________
+   USANDO O BANCO DE DADOS:
+
+   mysql> use sistemaDeCadastro;
+   Database changed
+   mysql>
+
+___________________________________________________________________________________________________
+   VERIFICANDO SE EXISTEM TABELAS:
+
+   mysql> show tables;
+   Empty set (0.00 sec)
+
+   mysql>
+___________________________________________________________________________________________________
+   CRIANDO TABELAS:
+
+   em qualquer editor de texto crie um arquivo com a extensão .sql
+   ex: teste.sql
+___________________________________________________________________________________________________
+   teste.sql
+   
+   CREATE TABLE usuarios(
+     nome VARCHAR(50),
+     email VARCHAR(100),
+     idade INT
+   );
+
+   copie esse codigo feito em qualquer editor de texto e cole no prompt do mysql
+___________________________________________________________________________________________________
+   mysql>    CREATE TABLE usuarios(
+    ->      nome VARCHAR(50),
+    ->      email VARCHAR(100),
+    ->      idade INT
+    ->    );
+   Query OK, 0 rows affected (0.48 sec)
+
+   mysql>
+
+___________________________________________________________________________________________________
+   mysql> show tables;
+   +-----------------------------+
+   | Tables_in_sistemadecadastro |
+   +-----------------------------+
+   | usuarios                    |
+   +-----------------------------+
+   1 row in set (0.00 sec)
+
+   mysql>
+
+___________________________________________________________________________________________________
+   VERIFICANDO A ESTRUTURA DA TABELA CRIADA:
+
+   mysql> describe usuarios;
+   +-------+--------------+------+-----+---------+-------+
+   | Field | Type         | Null | Key | Default | Extra |
+   +-------+--------------+------+-----+---------+-------+
+   | nome  | varchar(50)  | YES  |     | NULL    |       |
+   | email | varchar(100) | YES  |     | NULL    |       |
+   | idade | int(11)      | YES  |     | NULL    |       |
+   +-------+--------------+------+-----+---------+-------+
+   3 rows in set (0.01 sec)
+
+   mysql>
+
+___________________________________________________________________________________________________
+   INSERINDO DADOS NA TABELA:
+
+   no arquivo .sql
+
+   INSERT INTO usuarios(nome, email, idade) VALUES(
+      "Cristiano",
+      "britonano@gmail.com",
+      40
+   );
+
+   copie e cole no terminal do mysql
+
+   mysql>    INSERT INTO usuarios(nome, email, idade) VALUES(
+    ->       "Cristiano",
+    ->       "britonano@gmail.com",
+    ->       40
+    ->    );
+   Query OK, 1 row affected (0.27 sec)
+
+   mysql>
+
+___________________________________________________________________________________________________
+   LISTANDO OS DADOS DA TABELA:
+
+   mysql> select * from usuarios;
+   +-----------+---------------------+-------+
+   | nome      | email               | idade |
+   +-----------+---------------------+-------+
+   | Cristiano | britonano@gmail.com |    40 |
+   +-----------+---------------------+-------+
+   1 row in set (0.06 sec)
+
+   mysql>
+___________________________________________________________________________________________________
+   INSERINDO NOVOS USUARIOS:
+   
+   no arquivo .sql
+
+   INSERT INTO usuarios(nome, email, idade) VALUES(
+      "Akilles",
+      "akilles@gmail.com",
+      10
+   );
+
+
+   SAIDA:
+
+   mysql>INSERT INTO usuarios(nome, email, idade) VALUES(
+    ->       "Joyce",
+    ->       "joyce@gmail.com",
+    ->       32
+    ->    );
+   Query OK, 1 row affected (0.08 sec)
+
+   mysql>
+___________________________________________________________________________________________________
+   mysql> select * from usuarios;
+   +-----------+---------------------+-------+
+   | nome      | email               | idade |
+   +-----------+---------------------+-------+
+   | Cristiano | britonano@gmail.com |    40 |
+   | Joyce     | joyce@gmail.com     |    32 |
+   +-----------+---------------------+-------+
+   2 rows in set (0.00 sec)
+
+   mysql>
+___________________________________________________________________________________________________
+   PEGANDO DADOS ESPECIFICOS:
+   
+   mysql> select * from usuarios where idade = 10;
+   +---------+-------------------+-------+
+   | nome    | email             | idade |
+   +---------+-------------------+-------+
+   | Akilles | akilles@gmail.com |    10 |
+   | Akilles | akilles@gmail.com |    10 |
+   +---------+-------------------+-------+
+   2 rows in set (0.07 sec)
+
+   mysql>
+
+___________________________________________________________________________________________________
+   PEGANDO DADOS ESPECIFICOS:
+
+   mysql> select * from usuarios where nome = "Cristiano";
+   +-----------+---------------------+-------+
+   | nome      | email               | idade |
+   +-----------+---------------------+-------+
+   | Cristiano | britonano@gmail.com |    40 |
+   +-----------+---------------------+-------+
+   1 row in set (0.00 sec)
+
+   mysql>
+___________________________________________________________________________________________________
+   PEGANDO DADOS ESPECIFICOS:
+
+   mysql> select * from usuarios where idade >= 10;
+   +-----------+---------------------+-------+
+   | nome      | email               | idade |
+   +-----------+---------------------+-------+
+   | Cristiano | britonano@gmail.com |    40 |
+   | Joyce     | joyce@gmail.com     |    32 |
+   | Akilles   | akilles@gmail.com   |    10 |
+   | Akilles   | akilles@gmail.com   |    10 |
+   +-----------+---------------------+-------+
+   4 rows in set (0.00 sec)
+
+   mysql> select * from usuarios where idade > 10;
+   +-----------+---------------------+-------+
+   | nome      | email               | idade |
+   +-----------+---------------------+-------+
+   | Cristiano | britonano@gmail.com |    40 |
+   | Joyce     | joyce@gmail.com     |    32 |
+   +-----------+---------------------+-------+
+   2 rows in set (0.00 sec)
+
+   mysql>
+___________________________________________________________________________________________________
+   DELETANDO USUARIOS:
+
+   mysql> DELETE FROM usuarios WHERE nome = "Akilles";
+   Query OK, 2 rows affected (0.10 sec)
+
+   mysql>
+
+   ==========================================
+   mysql> select * from usuarios;
+   +-----------+---------------------+-------+
+   | nome      | email               | idade |
+   +-----------+---------------------+-------+
+   | Cristiano | britonano@gmail.com |    40 |
+   | Joyce     | joyce@gmail.com     |    32 |
+   +-----------+---------------------+-------+
+   2 rows in set (0.00 sec)
+
+   mysql>
+
+   os dados de akilles foram deletados
+___________________________________________________________________________________________________
+   ATUALIZANDO DADOS:
+
+   mysql> UPDATE usuarios SET nome = "Joyciane" WHERE nome = "Joyce";
+   Query OK, 1 row affected (0.14 sec)
+   Rows matched: 1  Changed: 1  Warnings: 0
+
+   mysql>
+
+   ==============================================
+   mysql> select * from usuarios;
+   +-----------+---------------------+-------+
+   | nome      | email               | idade |
+   +-----------+---------------------+-------+
+   | Cristiano | britonano@gmail.com |    40 |
+   | Joyciane  | joyce@gmail.com     |    32 |
+   | Akilles   | akilles@gmail.com   |    10 |
+   +-----------+---------------------+-------+
+   3 rows in set (0.00 sec)
+
+   mysql>
+
+   repare que mudamos os dados da joyce para joyciane
+___________________________________________________________________________________________________
+   ATUALIZANDO DADOS:
+
+   mysql> UPDATE usuarios SET idade = 43 WHERE idade = 32;
+   Query OK, 1 row affected (0.09 sec)
+   Rows matched: 1  Changed: 1  Warnings: 0
+
+   mysql> select * from usuarios;
+   +-----------+---------------------+-------+
+   | nome      | email               | idade |
+   +-----------+---------------------+-------+
+   | Cristiano | britonano@gmail.com |    40 |
+   | Joyciane  | joyce@gmail.com     |    43 |
+   | Akilles   | akilles@gmail.com   |    10 |
+   +-----------+---------------------+-------+
+   3 rows in set (0.00 sec)
+
+   mysql>
+___________________________________________________________________________________________________
+
+___________________________________________________________________________________________________
+***************************************************************************************************
+                           
+                    *******************************
+                    *     CRISTIANO OLIVEIRA      *
+                    *        18/02/2022           *
+                    *           DEUS              *
+                    *        SEJA LOUVADO         *
+                    *******************************
+
+***************************************************************************************************
+                                      

@@ -1,0 +1,81 @@
+                              C 
+                           
+
+                             TEXTO
+
+
+
+
+EX00:
+===========================================================
+#include <stdio.h>
+#include <ctype.h>
+/*
+    EX00:
+        LIVRO COMEÇANDO A PROGRAMAR EM C PARA LEIGOS
+        PÁGINA 181 ATÉ 198
+        
+*/
+
+int main()
+{
+    char frase[] = "O que e Lorem Ipsum? Lorem Ipsum e simplesmente um texto ficticio da industria tipografica e de impressao. Lorem Ipsum tem sido o texto ficticio padrao da industria desde os anos 1500, quando um impressor desconhecido pegou uma cozinha de tipos e embaralhou-a para fazer um livro de especimes de tipos. Ele sobreviveu nao apenas cinco seculos, mas tambem o salto para a composicao eletronica, permanecendo essencialmente inalterado. Foi popularizado na decada de 1960 com o lancamento de folhas Letraset contendo passagens de Lorem Ipsum e, mais recentemente, com software de editoracao eletronica como Aldus PageMaker, incluindo versoes de Lorem Ipsum.";
+    int index,alpha,blank,punct,digit,lower,upper;
+     
+    alpha = blank = punct = digit = lower = upper = 0;
+    index = 0;
+
+    while (frase[index])
+    {
+        if(isalpha(frase[index]))
+           alpha++;
+             if(isblank(frase[index]))
+                blank++;
+                   if(ispunct(frase[index]))
+                      punct++;
+                         if(isdigit(frase[index]))
+                            digit++;
+                               if(islower(frase[index]))
+                                  lower++;
+                                     if(isupper(frase[index]))
+                                        upper++;
+                                           index++;
+    }
+
+    printf("\"%s\"\n", frase);
+    puts("estatisticas:");
+    printf("%d letras\n",alpha);
+    printf("%d espacos\n",blank);
+    printf("%d  pontuacao e simbolos\n",punct);   
+    printf("%d   digitos\n",digit);
+    printf("%d Minusculas\n",lower);
+    printf("%d  Maiusculas\n",upper);
+    
+    return 0;
+}
+===========================================================
+
+    SAIDA:
+
+PS E:\CTYPE> cd "e:\CTYPE\" ; if ($?) { gcc TESTE.c -o TESTE } ; if ($?) { .\TESTE }
+"O que e Lorem Ipsum? Lorem Ipsum e simplesmente um texto ficticio da industria tipografica e de impressao. Lorem Ipsum tem sido o texto 
+ficticio padrao da industria desde os anos 1500, quando um impressor desconhecido pegou uma cozinha de tipos e embaralhou-a para fazer um livro de especimes de tipos. Ele sobreviveu nao apenas cinco seculos, mas tambem o salto para a composicao eletronica, permanecendo essencialmente inalterado. Foi popularizado na decada de 1960 com o lancamento de folhas Letraset contendo passagens de Lorem Ipsum e, mais recentemente, com software de editoracao eletronica como Aldus PageMaker, incluindo versoes de Lorem Ipsum."
+estatisticas:
+533 letras
+100 espacos
+12  pontuacao e simbolos
+8   digitos
+516 Minusculas
+17  Maiusculas
+PS E:\CTYPE> 
+===========================================================
+
+
+
+    __________________________________________________
+
+
+                          Autor:
+                    Cristiano Oliveira
+                   britonano@gmail.com
+                        26/03/2022

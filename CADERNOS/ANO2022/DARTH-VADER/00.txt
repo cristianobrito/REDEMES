@@ -1,0 +1,114 @@
+                              [ DARTH VADER ]
+
+
+
+                           CRIAR DESENHOS ASCII
+
+
+    crie um arquivo .cpp
+
+nano.cpp
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
+#include <conio.h>
+#include <stdio.h>
+
+using namespace std;
+
+
+int main()
+{               
+    
+     printf( "       ___    _     ___     ___    _  _______      \n");
+     printf( "      |   \\  | |   / _ \\   |   \\  | ||  ___  |  \n");
+     printf("      | |\\ \\ | |  / / \\ \\  | |\\ \\ | || |   | |\n");
+     printf("      | | \\ \\| | / /   \\ \\ | | \\ \\| || |___| |\n");
+     printf("      |_|  \\___|/_/     \\_\\|_|  \\___||_______|  \n");
+
+     system("color 6");
+     return 0;
+}
+// precisamos colocar \\ como caractere de escape
+// para nao dar erro 
+// printf e do c e nao do c++
+
+
+
+
+
+    Apos criar esse arquivo compile ele.
+    va ate a pasta onde o arquivo se encontra.
+    se tiver duvida de um dir na pasta.
+    e depois o compile:
+    D:\CADERNO-2022\SCRIPTS>g++ nanu.cpp -o nanu  
+
+    
+
+
+
+    EXECUTANDO:
+    D:\CADERNO-2022\SCRIPTS>nanu
+
+
+
+    SAIDA:
+       ___    _     ___     ___    _  _______
+      |   \  | |   / _ \   |   \  | ||  ___  |
+      | |\ \ | |  / / \ \  | |\ \ | || |   | |
+      | | \ \| | / /   \ \ | | \ \| || |___| |
+      |_|  \___|/_/     \_\|_|  \___||_______|
+
+
+
+
+
+
+
+
+
+    para saber as cores do prompt:
+    D:\CADERNO-2022\SCRIPTS>color /?
+Configura as cores padrão de primeiro plano e tela de fundo do console.
+
+COLOR [attr]
+
+  attr        Especifica os atributos de cor da saída do console
+
+Atributos de cor são especificados por DOIS dígitos hexadecimais. O primeiro
+corresponde à cor de tela de fundo; o segundo à cor de primeiro plano. Cada
+dígito pode ter apenas um dos seguintes valores:
+
+    0 = Preto        8 = Cinza
+    1 = Azul         9 = Azul claro
+    2 = Verde        A = Verde claro
+    3 = Verde-água   B = Verde-água claro
+    4 = Vermelho     C = Vermelho claro
+    5 = Roxo         D = Lilás
+    6 = Amarelo      E = Amarelo claro
+    7 = Branco       F = Branco brilhante
+
+Caso nenhum argumento seja passado, este comando restaurará a cor de
+antes do CMD.EXE ser executado. Este valor vem ou da janela atual do
+console, ou da opção /T da linha de comando, ou do valor de DefaultColor
+no Registro.
+
+O comando COLOR altera ERRORLEVEL para 1 se for tentado se executar o
+comando COLOR com as mesmas cores de primeiro plano e de tela de
+fundo.
+
+Exemplo: "COLOR fc" gera o vermelho claro na tela de fundo branca brilhante
+
+
+
+
+    agora voce pode passar essas combinações para a funcao
+    system("color 6");
+    system("color 6");
+
+    abra com o notepad para editar:
+    D:\CADERNO-2022\SCRIPTS>notepad nanu.cpp
+
+_________________________________________________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+    

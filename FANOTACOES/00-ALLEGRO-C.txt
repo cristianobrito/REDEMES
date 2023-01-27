@@ -1,0 +1,171 @@
+                        ALLEGRO C
+
+
+
+    INSTALAÇÃO:
+         
+         0.0 Baixe do site oficial:
+             https://www.allegro.cc/
+
+         0.1 descubra a versão do gcc ou mingw
+             lembre-se gcc e mingw são a mesma
+             coisa no prompt
+             C:\>gcc --version
+
+            -Cada pacote de binários funciona
+             com uma versão especifica do mingw
+              
+  
+         0.2 Na guia files baixe a versão que
+             corresponde ao seu compilador
+             baixei a MinGW 4.7.0 - zip , 7z
+            -OBS:se não conseguir baixar click
+             com o direito sobre o zip e abrir
+             em nova janela. ai o download 
+             inicia.
+
+         0.3 extraia o arquivo zip
+         0.4 Abra o code blocks a versão do 
+             tutorial é a versão 17.12 estou 
+             testando na 20.03 
+            -O allegro é instalado em cada
+             projeto ou seja a cada projeto
+             devemos repetir esse passos.
+
+         0.5 No codeblocks crie um novo projeto
+             do tipo empty project.
+
+         0.6 No codeblocks click direito em cima 
+             do projeto e escolha - build options
+
+         0.7 Na guia que abre click denovo no 
+             nome do projeto e depois em:
+             Search directoties - add - navegue
+             até a pasta onde voce salvou o allegro
+             e selecione a pasta include.
+            -Criei a pasta do allegro na raiz do 
+             meu pc C:\
+             depois de criar o caminho do allegro
+             é esse: C:\allegro-5.0.10-mingw-4.7.0
+            -Confirme a opção que aparece de 
+             incluir a pasta se aparecer.
+
+         0.8 click em OK.
+            -Em seguida click em debug
+             confirme a opção que aparece.
+            -Va em linker settings - Link Libraries
+             - add 
+            -Adicione dentro da pasta lib do allegro
+             o arquivo liballegro-5.0.10-monolith-mt-debug.a
+            -Confirme as opções que aparecem
+
+         0.9 click agora em release e confirme
+            -Em link libraries - add -
+            -Navegue até a pasta lib do allegro
+             e selecione o arquivo:
+             liballegro-5.0.10-monolith-mt.a
+            -Confirme tudo
+
+         1.0 Crie um novo arquivo(new file) vazio
+             salve como main.c
+
+         1.1 Salve na mesma pasta do projeto
+             e nas opções que aparecem marque
+             Debug e Release
+
+         1.2 digite o code de teste:
+
+
+
+MAIN.C
+===========================================================
+#include <allegro5/allegro.h>
+#include <allegro5/allegro_native_dialog.h>
+
+int main()
+{
+    ALLEGRO_DISPLAY* display;
+
+    if(!al_init())
+        al_show_native_message_box(NULL,NULL,NULL, "aLLEGRO COULDNT INITALIZE",NULL,NULL);
+
+        display = al_create_display(1000,720);
+
+        if(!display)
+            al_show_native_message_box(NULL,NULL,NULL,"Couldnt create Screen", NULL,NULL);
+
+        al_rest(2.0);
+
+        return 0;
+}
+===========================================================
+                                                      [FIM]
+
+
+
+         1.3 Resolvendo o erro:
+            -navegue a té a pasta bin - debug do 
+             projeto.
+             
+         1.4 Na pasta bin do allegro copie o arquivo
+             allegro-5.0.10-monolith-mt-debug.dll 
+             e cole na pasta do projeto.
+
+
+         1.5 Volte no code blocks e de build and run
+             o programa abre uma tela em branco fica
+             2 segundos aberta e fecha.
+            -Abaixo detalho possiveis erros e como
+             resolver.
+
+
+
+
+
+    SOLUÇÕES:
+ 
+         2.0 ESTRUTURA:
+             AlegreTeste
+                 .
+                 |——— bin
+                 |     |——— Debug
+                 |           |——— AllegreTeste.exe
+                 |           |——— allegro-5.0.10-monolith-mt-debug.dll               
+                 |
+                 |
+                 |——— obj           
+                 |     |——— Debug
+                 |           |——— main.o
+                 |
+                 |——— AlegreTeste.cbp
+                 |——— AlegreTeste.depend
+                 |——— allegro.log
+                 |——— main.c
+
+
+         arvore de estruturas para se guiar nos 
+         diretorios.
+
+
+         2.1 Instalações adicionais:
+            -instalei a pasta do allegro dentro
+             da pasta mingw dentro do codeblocks
+             C:\Program Files\CodeBlocks\MinGW
+             e depois de colado
+             C:\Program Files\CodeBlocks\MinGW\allegro-5.0.10-mingw-4.7.0
+            -E realizei o procedimento das pastas 
+             igual no começo do tutorial
+            -O compilador usei C:\TDM-GCC-32
+
+
+
+
+
+
+    __________________________________________________
+
+                        Autor:
+                  Cristiano Oliveira
+                 britonano@gmail.com
+                      22/03/2022
+           

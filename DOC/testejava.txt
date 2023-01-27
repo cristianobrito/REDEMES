@@ -1,0 +1,164 @@
+Olá Cristiano,
+
+        Além do conhecimento técnico, o conhecimento lógico é fundamental para um bom programador.
+
+        Como próximo passo da nossa seleção, iremos te propor um desafio lógico. Com isso, poderemos avaliar sua capacidade lógica, de um problema que é de média complexidade.
+
+    Este teste deve ser feito em Java.
+ 
+        Faça uma tela com os seguintes componentes ou semelhantes:
+ 
+    Utilizar DefaultTableModel com JTable.
+
+          1 - JTable chamado HorarioDeTrabalho, com dois campos tipo caracter de tamanho 5 e formato HH:MM, chamados entrada e saida, que pode receber até 3 registros.
+          Coloque os componentes necessários para se cadastrar entrada e saída, (edits, buttons, dbgrid) e visualizá-los na tela.   
+ 
+          2 - JTable chamado MarcacoesFeitas, com dois campos tipo caracter de tamanho 5 e formato HH:MM, chamados entrada e saida, que pode receber até n registros.
+          Coloque os componentes necessários para se cadastrar entrada e saída, (edits, buttons, dbgrid) e visualizá-los na tela.
+ 
+          3 - JTable chamado Atraso com os componentes necessários para se visualizar seus registros na tela, com a mesma estrutura dos demais JTables.
+ 
+          4 - JTable chamado HoraExtra com os componentes necessários para se visualizar seus registros na tela, com a mesma estrutura dos demais JTables.
+ 
+          Crie uma função de subtração entre os registros de JTable do padrão entrada e saída.
+
+Exemplo 1:
+ 
+                JTable-HorarioDeTrabalho:
+                        registros:
+                                08:00  12:00
+ 
+                JTable-MarcacoesFeitas:
+                        registros:
+                                07:00 11:00
+    
+                Se chamarmos a função de subtração passando como parâmetro 1 o  JTable-HorarioDeTrabalho e o 2 JTable-MarcacoesFeitas, a função tem que retornar em um JTable (deve ser passado por referência), os períodos do JTable 1 menos o do 2.
+ 
+                Seria assim:
+              
+                das 08:00 às 12:00 eu devo tirar das 07:00 às 11:00, portanto fica no primeiro período 11:00 às 12:00
+ 
+                Vamos analisar, 11:00 às 12:00 seria o período que o funcionário não cumpriu, então seria o atraso.
+                Quer dizer, para calcular o atraso, nós chamaríamos a função assim:
+            
+                SubtracaoEntreHorarios( JTable-HorarioDeTrabalho , JTable-MarcacoesFeitas, JTable-Atraso);
+ 
+ 
+ 
+ Exemplo 2:
+ 
+                JTable-HorarioDeTrabalho:
+                        registros:
+                                08:00 12:00
+ 
+                JTable-MarcacoesFeitas:
+                        registros:
+                                07:00 11:00
+ 
+                Se chamarmos a função de subtração passando como parâmetro 1 o JTable-MarcacoesFeitas e o 2 JTable-HorarioDeTrabalho, a função tem que retornar em um JTable (deve ser passado por referência), o período do JTable 1 menos o do 2.
+ 
+ 
+                Seria assim:
+                das 07:00 às 11:00 eu devo tirar das 08:00 às 12:00, portanto fica no primeiro período 07:00 às 08:00
+    
+                Vamos analisar, 07:00 às 08:00 seria o período que o funcionário trabalhou fora do horário dele, então seria o hora extra.
+                Quer dizer, para calcular o atraso, nós chamaríamos a função assim:
+ 
+                SubtracaoEntreHorarios( JTable-MarcacoesFeitas, JTable-HorarioDeTrabalho , JTable-HoraExtra);
+ 
+ 
+                Esses dois exemplos¬ foram de 1 registro de marcações e 1 registro de horários, mas pode-se ter n registros de marcações e até 3 registro de horários e a função tem que atender.
+
+
+Exemplo 3:
+
+                JTable-HorarioDeTrabalho:
+
+                        08:00 12:00
+                        13:30 17:30
+
+                Exemplos em marcações e o resultado esperado:
+
+                - Marcações:
+                        06:00 20:00
+
+                                Atraso
+                                   -
+
+                                Hora extra
+                                   06:00 08:00
+                                   12:00 13:30
+                                   17:30 20:00
+
+
+
+                - Marcações
+                        07:00 12:30
+                        14:00 17:00
+
+                                Atrasos:
+                                   13:30 14:00
+                                   17:00 17:30
+
+                                Hora extra:
+                                   07:00 08:00
+                                   12:00 12:30
+
+
+
+Exemplo 4:
+
+                JTable-HorarioDeTrabalho:
+
+                        22:00 05:00
+
+                Exemplos em marcações e o resultado esperado:
+
+                - Marcações:
+                        21:00 04:00
+
+                                Atraso
+                                   04:00 05:00
+
+                                Hora extra
+                                   21:00 22:00
+
+
+                - Marcações
+                        03:00 07:00
+
+                                Atrasos:
+                                   22:00 03:00
+
+                                Hora extra:
+                                   05:00 07:00
+
+
+
+Veja o que consegue fazer em até 7 dias e nos envie os fontes e executável para analisarmos.
+Todos os aspectos do programa serão analisados, sendo muito importante o programa ter um bom lay-out e usabilidade.
+Como faremos pelo menos 50 simulações diferentes entre horários e marcações, é fundamental que se pense em como ajudar ao usuário ter agilidade para digitação e limpeza dos campos.
+
+Por favor, antes de iniciar, nos confirme o recebimento deste, ok?
+
+
+
+
+
+
+Cordialmente.
+_______________________________
+Equipe Insight Informática
+www.insightinfo.com.br
+www.izeus.com.br
+
+_______________________________________________________________________________
+https://www.youtube.com/watch?v=Xs-4S9x_sVs&list=PLbEOwbQR9lqxsTusvu8wfkUECrmcV81MU&index=8
+https://www.youtube.com/playlist?list=PLbEOwbQR9lqxsTusvu8wfkUECrmcV81MU
+https://www.youtube.com/watch?v=srNtqw2LEBU&list=PLbEOwbQR9lqxdW98mY-40IZQ5i8ZZyeQx
+https://www.youtube.com/watch?v=coK4jM5wvko&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk
+https://www.youtube.com/watch?v=kUHQY2O2RPU&list=PLWd_VnthxxLcuMX7LluyGXGYNfWNAFvz2
+https://www.youtube.com/watch?v=eA4WjjkzK3c&list=PLbEOwbQR9lqxsTusvu8wfkUECrmcV81MU
+https://www.youtube.com/watch?v=52soIAnHDvk&list=PLbEOwbQR9lqxVuDWNIrG57_JGcbIL3FWP
+https://www.youtube.com/playlist?list=PLbEOwbQR9lqxVuDWNIrG57_JGcbIL3FWP
+

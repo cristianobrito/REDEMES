@@ -1,0 +1,57 @@
+                        [ DARTH VADER ]
+
+                  
+
+
+
+                         escrito por: 
+                      Cristiano Oliveira
+                         26.02.2022
+
+
+
+
+            Em plena guerra da Russia com a Ucrania.
+      O mundo evoluiu e a tecnologia pode mudar o rumo da 
+                          guera.
+            A guerra tecnologica chegou e o pós guerra é
+     uma realidade tendo isso como um cânone inicio aqui
+     o estudo para segurança futura.
+
+            " QUE DEUS TENHA PIEDADE DAS NAÇÕES "  
+
+
+
+                    
+
+
+
+
+
+
+
+                        PREFÁCIO
+
+Topologia de redes .......................................... 01
+
+
+
+
+
+
+
+
+
+
+                        TOPOLOGIA DE REDES 
+
+
+
+
+_____________________________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+    http://wiki.foz.ifpr.edu.br/wiki/index.php/Laborat%C3%B3rio:_Descobrindo_o_endere%C3%A7amento_IP_e_a_topologia_de_uma_rede
+    https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/ipconfig
+    https://pt.wikipedia.org/wiki/Topologia_de_rede
+     
+   

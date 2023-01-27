@@ -1,0 +1,34 @@
+
+                      EXEMPLOS DE CÓDIGO C
+                             [EX07]
+
+EX07
+===========================================================
+#include <stdio.h>
+#include <stdlib.h>
+/*
+    EX07:
+         Lendo caracteres:
+         função fgetc();
+         f é de file arquivo.
+         qualquer tipo de arquivo.
+
+*/
+
+int main()
+{
+    char letra;
+    printf("Digite um caractere: ");
+    letra = fgetc(stdin);
+    printf("O caractere lido: %c\n", letra);
+    return 0;
+}
+===========================================================
+                                                      [FIM]
+
+
+
+    _______________________________________________________
+                             Autor:
+                       Cristiano Oliveira
+                           17/03/2022

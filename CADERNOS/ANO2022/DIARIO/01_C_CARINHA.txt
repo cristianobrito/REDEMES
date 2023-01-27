@@ -1,0 +1,86 @@
+                        [ DARTH VADER ]
+
+                  
+                           CODIGOS C
+
+
+                         escrito por: 
+                      Cristiano Oliveira
+                          14/03/2022
+
+
+
+
+            Em plena guerra da Russia com a Ucrania.
+      O mundo evoluiu e a tecnologia pode mudar o rumo da 
+                          guerra.
+            A guerra tecnologica chegou e o pós guerra é
+     uma realidade tendo isso como um cânone inicio aqui
+     o estudo para segurança futura.
+
+            " QUE DEUS TENHA PIEDADE DAS NAÇÕES "  
+
+
+
+                    
+
+
+
+
+
+
+
+                           PREFÁCIO
+
+    C graphics ......................................... 01
+
+
+
+
+
+
+
+
+
+
+                                                [Página 00]
+    _______________________________________________________
+                     desenhando uma cara
+
+    INICIO:
+
+         1.0 crie um projeto novo no codeblocks do tipo cpp
+         1.1 salve na pasta que voce quer e faça os ajustes
+             que estão no arquivo 
+             00_SETTINGS_CODEBLOCKS.txt
+
+         1.2 agora digite esse code de exemplo:
+             #include<iostream>
+             #include<graphics.h>
+             using namespace std;
+             int main()
+             {
+                 initwindow(1024, 700);
+                 circle(300, 300, 200);
+                 circle(200, 200, 20);
+                 circle(400, 200, 20);
+                 rectangle(290,220,310,320);
+                 arc(300, 300, 200, 340, 160);
+                 cin.get();
+                 return 0;
+              }
+              
+              SAIDA:
+                   A saida é um rostinho feliz na tela.
+
+
+    
+
+
+
+                                                [Página ii]
+    _______________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+         https://www.youtube.com/watch?v=rma2EYq-CTQ
+     
+   

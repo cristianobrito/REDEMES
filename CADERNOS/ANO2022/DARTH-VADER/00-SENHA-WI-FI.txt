@@ -1,0 +1,41 @@
+                        [ DARTH VADER ]
+
+
+
+    DESCOBRIR SENHA WI-FI:
+
+    Execute o cmd como administrador.
+    de o comando: 
+    netsh wlan export profile name=”nome da rede” folder=C:\ key=clear
+    
+    EXECUTANDO:
+    Microsoft Windows [versão 10.0.19041.1348]
+    (c) Microsoft Corporation. Todos os direitos reservados.
+
+    C:\WINDOWS\system32>netsh wlan export profile name="Mendes289" folder=C:\ key=clear
+
+    O perfil de interface "Mendes289" foi salvo com êxito no arquivo "C:\Wi-Fi-Mendes289.xml".
+
+
+    C:\WINDOWS\system32>
+
+
+
+    A execução do codigo acima mostra onde foi gerado 
+    um arquivo xml no diretorio c:
+    abra ele com o bloco de notas ou chrome ou fire fox e localize a linha.
+    			<sharedKey>
+				<keyType>passPhrase</keyType>
+				<protected>false</protected>
+				<keyMaterial>2210201916</keyMaterial>
+			</sharedKey>
+
+    <keyMaterial>2210201916</keyMaterial> essa é a senha do wi-fi.
+    
+
+
+    
+_____________________________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+    https://www.guia-informatica.com/como-descobrir-a-senha-do-wi-fi-usando-o-prompt-de-comando-cmd-exe/
+    

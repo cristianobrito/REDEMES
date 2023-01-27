@@ -1,0 +1,37 @@
+                        [ DARTH VADER ]
+
+
+
+                           KALI LINUX
+
+
+
+
+    PARTE I
+    Introdução
+
+
+
+    inicie o servidor apache ou xampp.
+    lembre que para acessar um arquivo
+    via web, ele deve estar dentro do
+    diretorio web raiz:  o /var/www/html.
+
+    ter atenção as extensões dos arquivos 
+    como .php, .exe, .html etc...
+
+
+
+    3.5.2
+
+
+    COMO USAR PHP NA LINHA DE COMANDO 
+    
+
+
+_____________________________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+    livro introdução ao pentest by daniel moreno
+
+    onde estou pg 51 
+    3.5.2 phpinfo()

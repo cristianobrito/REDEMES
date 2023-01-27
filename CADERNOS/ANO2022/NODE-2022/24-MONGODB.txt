@@ -1,0 +1,559 @@
+                        CRISTIANO OLIVEIRA
+                            02.03.2022
+                       " GLORIA A O SENHOR "
+
+
+
+
+
+
+                               nodejs     
+
+    
+                             [ MONGODB ]
+
+
+
+    INSTALAÇÃO:
+    baixe e instale o mongodb do site oficial.
+    https://www.mongodb.com/
+    se não conseguir preocure um tutorial na
+    internet.
+   
+
+
+
+
+    CONFIGURAÇÃO:
+    va em:
+    C:\Program Files\MongoDB\Server\5.0\bin
+    copie o caminho até a pasta bin esse ai
+    de cima e configure nas variaveis de 
+    ambiente.
+
+
+    lembrando que primeiro devemos
+    criar uma pasta no disco local c:
+    chamada data.
+    e dentro dela crie outra chamada db.
+    estrutura:
+     .
+     C:
+     |
+     |——— Data
+           |——— db
+
+    [ 2 diretorios ]
+
+    nela ficarão armazenados tudo
+    que criarmos.
+    agora volte no cmd e de o comando:
+    C:\>mongod
+    
+
+
+ 
+    abra outro cmd e de o comando:
+    C:\Users\brito>mongo
+    MongoDB shell version v5.0.6-rc0
+    connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+    Implicit session: session { "id" : UUID("bd651df6-5af7-4640-a349-a074e96d9713") }
+    MongoDB server version: 5.0.6-rc0
+    ================
+    Warning: the "mongo" shell has been superseded by "mongosh",
+    which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+    an upcoming release.
+    For installation instructions, see
+    https://docs.mongodb.com/mongodb-shell/install/
+    ================
+    ---
+    The server generated these startup warnings when booting:
+        2022-03-02T19:03:31.860-03:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+        2022-03-02T19:03:31.860-03:00: This server is bound to localhost. Remote systems will be unable to connect to this server. Start the server with --bind_ip <address> to specify which IP addresses it should serve responses from, or with --bind_ip_all to bind to all interfaces. If this behavior is desired, start the server with --bind_ip 127.0.0.1 to disable this warning
+    ---
+    ---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+    ---
+    >
+
+
+
+
+
+    VENDO OS BANCOS DE DADOS EXISTENTES:
+    > show databases;
+    admin      0.000GB
+    config     0.000GB
+    local      0.000GB
+    loja       0.000GB
+    lojaBangu  0.000GB
+    >
+
+    
+    EXPLICAÇÕES:
+    Até aqui observei que 
+    para usar o mongo temos que abrir
+    2 terminais um com o mongod
+    e outro com o mongo.
+    e não podemos fechar o primeiro terminal 
+    do banco de dados no caso
+    o mongod.
+
+
+                                       MONGOOSE
+
+
+
+    crie um diretorio e abra com o code.
+    use tambem o cmd e va até esse diretorio.
+    C:\>cd users
+
+    C:\Users>cd brito
+
+    C:\Users\brito>cd desktop
+
+    C:\Users\brito\Desktop>mkdir MONGOOSE
+
+    C:\Users\brito\Desktop>CD MONGOOSE
+
+    C:\Users\brito\Desktop\MONGOOSE>
+
+    C:\Users\brito\Desktop\MONGOOSE>CODE .
+
+    C:\Users\brito\Desktop\MONGOOSE>
+
+
+
+    INSTALANDO O MONGOOSE:
+    C:\Users\brito\Desktop\MONGOOSE>npm install --save mongoose
+
+    added 28 packages, and audited 29 packages in 30s
+
+    4 packages are looking for funding
+    run `npm fund` for details
+
+    found 0 vulnerabilities
+
+    C:\Users\brito\Desktop\MONGOOSE>
+
+    
+
+
+    COMO SE CONECTAR A UM BANCO DE DADOS MONGO
+    USANDO O MONGOOSE:
+    primeiro devemos rodar o servidor mongo.
+    C:\>mongod 
+
+    agora abra outro cmd e de os comandos:
+    C:\>mongo
+
+    > show databases;
+    admin      0.000GB
+    config     0.000GB
+    local      0.000GB
+    loja       0.000GB
+    lojaBangu  0.000GB
+    >
+
+
+
+
+
+    ESTRUTURA:
+    C:\Users\brito\Desktop\MONGOOSE>dir/b
+    aprendendo.js
+    node_modules
+    package-lock.json
+    package.json
+
+    C:\Users\brito\Desktop\MONGOOSE>
+
+
+
+    2° FORMA:
+    C:\Users\brito\Desktop\MONGOOSE>TREE
+Listagem de caminhos de pasta para o volume OS
+O número de série do volume é 004C-F115
+C:.
+└───node_modules
+    ├───@types
+    │   ├───node
+    │   │   ├───assert
+    │   │   ├───dns
+    │   │   ├───fs
+    │   │   ├───stream
+    │   │   └───timers
+    │   ├───webidl-conversions
+    │   └───whatwg-url
+    │       ├───dist
+    │       └───ts3.9
+    │           └───dist
+    ├───base64-js
+    ├───bson
+    │   ├───dist
+    │   ├───etc
+    │   ├───lib
+    │   │   ├───parser
+    │   │   └───utils
+    │   └───src
+    │       ├───parser
+    │       └───utils
+    ├───buffer
+    ├───debug
+    │   ├───node_modules
+    │   │   └───ms
+    │   └───src
+    ├───denque
+    ├───ieee754
+    ├───ip
+    │   ├───lib
+    │   └───test
+    ├───kareem
+    │   └───test
+    ├───memory-pager
+    ├───mongodb
+    │   ├───etc
+    │   ├───lib
+    │   │   ├───bulk
+    │   │   ├───cmap
+    │   │   │   ├───auth
+    │   │   │   └───wire_protocol
+    │   │   ├───cursor
+    │   │   ├───gridfs
+    │   │   ├───operations
+    │   │   └───sdam
+    │   └───src
+    │       ├───bulk
+    │       ├───cmap
+    │       │   ├───auth
+    │       │   └───wire_protocol
+    │       ├───cursor
+    │       ├───gridfs
+    │       ├───operations
+    │       └───sdam
+    ├───mongodb-connection-string-url
+    │   └───lib
+    ├───mongoose
+    │   ├───dist
+    │   ├───lib
+    │   │   ├───cast
+    │   │   ├───cursor
+    │   │   ├───drivers
+    │   │   │   ├───browser
+    │   │   │   └───node-mongodb-native
+    │   │   ├───error
+    │   │   ├───helpers
+    │   │   │   ├───aggregate
+    │   │   │   ├───cursor
+    │   │   │   ├───discriminator
+    │   │   │   ├───document
+    │   │   │   ├───indexes
+    │   │   │   ├───model
+    │   │   │   ├───path
+    │   │   │   ├───populate
+    │   │   │   ├───projection
+    │   │   │   ├───query
+    │   │   │   ├───schema
+    │   │   │   ├───schematype
+    │   │   │   ├───timestamps
+    │   │   │   ├───topology
+    │   │   │   └───update
+    │   │   ├───options
+    │   │   ├───plugins
+    │   │   ├───schema
+    │   │   │   └───operators
+    │   │   └───types
+    │   │       ├───array
+    │   │       │   └───methods
+    │   │       └───DocumentArray
+    │   │           └───methods
+    │   ├───tools
+    │   └───types
+    ├───mpath
+    │   ├───lib
+    │   └───test
+    ├───mquery
+    │   ├───lib
+    │   │   └───collection
+    │   └───test
+    │       └───collection
+    ├───ms
+    ├───punycode
+    ├───saslprep
+    │   ├───lib
+    │   └───test
+    ├───sift
+    │   ├───es
+    │   ├───es5m
+    │   ├───lib
+    │   └───src
+    ├───smart-buffer
+    │   ├───build
+    │   ├───docs
+    │   └───typings
+    ├───socks
+    │   ├───build
+    │   │   ├───client
+    │   │   └───common
+    │   ├───docs
+    │   │   └───examples
+    │   │       ├───javascript
+    │   │       └───typescript
+    │   └───typings
+    │       ├───client
+    │       └───common
+    ├───sparse-bitfield
+    ├───tr46
+    │   └───lib
+    ├───webidl-conversions
+    │   └───lib
+    └───whatwg-url
+        └───lib
+
+C:\Users\brito\Desktop\MONGOOSE>
+
+
+
+    3° FORMA:
+    C:\Users\brito\Desktop\MONGOOSE>tree/a
+Listagem de caminhos de pasta para o volume OS
+O número de série do volume é 004C-F115
+C:.
+\---node_modules
+    +---@types
+    |   +---node
+    |   |   +---assert
+    |   |   +---dns
+    |   |   +---fs
+    |   |   +---stream
+    |   |   \---timers
+    |   +---webidl-conversions
+    |   \---whatwg-url
+    |       +---dist
+    |       \---ts3.9
+    |           \---dist
+    +---base64-js
+    +---bson
+    |   +---dist
+    |   +---etc
+    |   +---lib
+    |   |   +---parser
+    |   |   \---utils
+    |   \---src
+    |       +---parser
+    |       \---utils
+    +---buffer
+    +---debug
+    |   +---node_modules
+    |   |   \---ms
+    |   \---src
+    +---denque
+    +---ieee754
+    +---ip
+    |   +---lib
+    |   \---test
+    +---kareem
+    |   \---test
+    +---memory-pager
+    +---mongodb
+    |   +---etc
+    |   +---lib
+    |   |   +---bulk
+    |   |   +---cmap
+    |   |   |   +---auth
+    |   |   |   \---wire_protocol
+    |   |   +---cursor
+    |   |   +---gridfs
+    |   |   +---operations
+    |   |   \---sdam
+    |   \---src
+    |       +---bulk
+    |       +---cmap
+    |       |   +---auth
+    |       |   \---wire_protocol
+    |       +---cursor
+    |       +---gridfs
+    |       +---operations
+    |       \---sdam
+    +---mongodb-connection-string-url
+    |   \---lib
+    +---mongoose
+    |   +---dist
+    |   +---lib
+    |   |   +---cast
+    |   |   +---cursor
+    |   |   +---drivers
+    |   |   |   +---browser
+    |   |   |   \---node-mongodb-native
+    |   |   +---error
+    |   |   +---helpers
+    |   |   |   +---aggregate
+    |   |   |   +---cursor
+    |   |   |   +---discriminator
+    |   |   |   +---document
+    |   |   |   +---indexes
+    |   |   |   +---model
+    |   |   |   +---path
+    |   |   |   +---populate
+    |   |   |   +---projection
+    |   |   |   +---query
+    |   |   |   +---schema
+    |   |   |   +---schematype
+    |   |   |   +---timestamps
+    |   |   |   +---topology
+    |   |   |   \---update
+    |   |   +---options
+    |   |   +---plugins
+    |   |   +---schema
+    |   |   |   \---operators
+    |   |   \---types
+    |   |       +---array
+    |   |       |   \---methods
+    |   |       \---DocumentArray
+    |   |           \---methods
+    |   +---tools
+    |   \---types
+    +---mpath
+    |   +---lib
+    |   \---test
+    +---mquery
+    |   +---lib
+    |   |   \---collection
+    |   \---test
+    |       \---collection
+    +---ms
+    +---punycode
+    +---saslprep
+    |   +---lib
+    |   \---test
+    +---sift
+    |   +---es
+    |   +---es5m
+    |   +---lib
+    |   \---src
+    +---smart-buffer
+    |   +---build
+    |   +---docs
+    |   \---typings
+    +---socks
+    |   +---build
+    |   |   +---client
+    |   |   \---common
+    |   +---docs
+    |   |   \---examples
+    |   |       +---javascript
+    |   |       \---typescript
+    |   \---typings
+    |       +---client
+    |       \---common
+    +---sparse-bitfield
+    +---tr46
+    |   \---lib
+    +---webidl-conversions
+    |   \---lib
+    \---whatwg-url
+        \---lib
+
+C:\Users\brito\Desktop\MONGOOSE>
+
+
+
+
+    4° FORMA:
+    C:\Users\brito\Desktop\MONGOOSE>tree/f
+
+
+
+    5° FORMA:
+    C:\Users\brito\Desktop\MONGOOSE>assoc
+
+
+
+    6° FORMA:
+    minha estrutura:
+     .
+    MONGOOSE
+     |
+     |——— aprendendo.js
+     |——— node_modules
+     |——— package.json
+     |——— package-lock.json
+
+
+    [ 1 diretorio 3 arquivos ]
+
+
+
+    C:\Users\brito\Desktop\MONGOOSE>dir
+    O volume na unidade C é OS
+    O Número de Série do Volume é 004C-F115
+
+    Pasta de C:\Users\brito\Desktop\MONGOOSE
+
+    03/03/2022  13:10    <DIR>          .
+    03/03/2022  13:10    <DIR>          ..
+    03/03/2022  13:28               205 aprendendo.js
+    03/03/2022  13:08    <DIR>          node_modules
+    03/03/2022  13:08            18.967 package-lock.json
+    03/03/2022  13:08                53 package.json
+               3 arquivo(s)         19.225 bytes
+               3 pasta(s)   303.287.889.920 bytes disponíveis
+    
+
+
+
+
+
+    estrutura do arquivo aprendendo.js
+    aprendendo.js
+    const mongose = require('mongoose')
+
+    mongoose.connect('mongodb://localhost/aprendendo')
+      .then(() => { console.log("MONGODB conectado")})
+      .catch((err) => { console.log("ocorreu um erro: " + err)})
+
+
+
+    executando:
+    PS C:\Users\brito\Desktop\MONGOOSE> node aprendendo.js
+    MONGODB conectado
+
+
+    se essa mensagem aparecer siginifica que estamos conectado.
+    atenção se não existir um banco com esse nome o mongoose cria.
+    
+
+
+
+
+
+
+
+    PROXIMA AULA:
+    https://www.youtube.com/watch?v=h4lS9V3FCRQ&list=PLJ_KhUnlXUPtbtLwaxxUxHqvcNQndmI4B&index=30
+
+    
+_____________________________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+    https://www.youtube.com/watch?v=XlvR0_AECoI&list=PLJ_KhUnlXUPtbtLwaxxUxHqvcNQndmI4B&index=28
+     
+
+
+
+    
+
+    
+    
+    
+  
+
+
+    

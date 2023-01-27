@@ -1,0 +1,84 @@
+                     [ DARTH VADER ]
+
+
+                          Autor:
+                     Cristiano Oliveira
+                         19/03/2022
+
+
+                                           [Página II]
+    __________________________________________________
+    INSTALAÇÕES E INSTRUÇÕES:
+         
+         ANO: 2022
+         
+
+
+
+
+
+    Eclipse
+    site: https://www.eclipse.org/
+    opção: ECLIPSE IDE FOR C/C++ DEVELOPERS
+    versão do jdk: 17
+    local: C:\Users\brito\eclipse\cpp-2022-03
+           NOTA: esse é o local padrão da 
+                 instalação.onde está o .exe
+    local do workspace: 
+         C:\Users\brito\eclipse-workspace 
+
+    CONFIGURANDO:
+         window - preferences - General - Workspace
+         na opção Text file enconding 
+                  Default(Cp1252) desmarque
+                  Other(UTF-8) escolha essa
+
+                  New text file line delimiter
+                  Default(Windows) desmarque
+                  Other(Unix) marque essa
+
+                  depois disso click em apply
+                  ou apply and close.
+
+    VERIFICANDO:
+         no eclipse File - new(alt + shift + n) -
+         project - C/C++ - C/C++ Project 
+         click em next
+
+         escolha a opção C Managed Build
+         next
+
+         Project name coloque um nome no projeto
+         Executable empty project deixe essa opção
+         padrão que ja vem marcada
+         Toolchains: MinGW GCC
+         NEXT - FINISH
+
+         Na guia que abre Project Explorer
+         click em cima do nome do projeto
+         new - Source File
+         Source file de nome ao arquivo.c
+         ex: hello.c
+         finish
+         
+
+         Depois de digitar um esqueleto em c
+         va em project - Build All
+
+         depois que ele gera o exe va em
+         run - run - escolha LOcal C/C++ Application
+         OK
+          
+
+
+
+    __________________________________________________
+                                                 [FIM]
+
+
+                          EMAIL:
+                    britonano@gmail.com
+         
+    
+                 
+    

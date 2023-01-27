@@ -1,0 +1,208 @@
+                                  [ DARTH VADER ]
+
+
+
+                          EXECUTAR CODIGO C DO TERMINAL CMD
+
+
+
+
+    temos que ter o mingw instalado na maquina.
+    com o compilador gcc.
+    abra o cmd e digite um codigo em c.
+    ou use o bloco de notas para digitar 
+    o codigo em c.
+
+    exemplo de codigo em c: ola.c
+    #include <stdio.h>
+
+    int main()
+    {
+         printf("ola nano, joyce e akilles");
+    }
+
+
+
+
+    salve esse arquivo com a extenção .c
+    ex: ola.c
+
+
+
+    navegue ate o diretorio onde o arquivo ola.c esta
+    pelo cmd.
+    estando no diretorio digite no cmd.
+    gcc -o nome-que-queremos-dar-ao-arquivo nome-do-arquivo-que-criamos
+    gcc -o teste ola.c
+
+
+
+    EXECUTANDO:
+    C:\>cd users
+
+    C:\Users>cd brito
+
+    C:\Users\brito>cd desktop
+
+    C:\Users\brito\Desktop>gcc -o teste ola.c
+
+    C:\Users\brito\Desktop>teste
+    ola nano, joyce e akilles
+
+    C:\Users\brito\Desktop>
+    
+
+
+    COMO CRIAR ARQUIVO DENTRO DO PROMPT
+    C:\Users\brito\Desktop\script>copy con ola.c
+    #include <stdio.h>
+    int main()
+    {
+         printf("ola cristiano copy con ola.c ");
+    }^Z
+              1 arquivo(s) copiado(s).
+
+    C:\Users\brito\Desktop\script>
+
+    
+
+    use o comando copy con nome-do-arquivo.extensão
+    ex: copy con ola.c
+    tecle enter e digite o codigo que voce quer.
+    para finalizar tecle ctrl + z e depois tecle enter.
+    se quiser cancelar tecle ctrl + c
+
+
+
+
+
+    AGORA VAMOS EXECUTAR.
+    EXECUTANDO DENTRO DE  OUTRA PASTA:
+    entramos na pasta onde esta o codigo .c
+    e damos o comando:
+    C:\Users\brito\Desktop\script>gcc -o teste ola.c
+
+    C:\Users\brito\Desktop\script>
+
+
+
+
+    Com isso o executavel é gerado agora podemos executar.
+    C:\Users\brito\Desktop\script>.\teste
+    ola cristiano copy con ola.c
+    C:\Users\brito\Desktop\script>
+
+
+
+
+
+
+    PARA SABER O CONTEUDO DO ARQUIVO:
+    C:\Users\brito\Desktop\script>more ola.c
+    #include <stdio.h>
+    int main()
+    {
+         printf("ola cristiano copy con ola.c ");
+    }
+
+    C:\Users\brito\Desktop\script>
+    
+
+    usamos o comando more.
+    ou podemos usar o type.
+    C:\Users\brito\Desktop\script>type ola.c
+    #include <stdio.h>
+    int main()
+    {
+         printf("ola cristiano copy con ola.c ");
+    }
+    C:\Users\brito\Desktop\script>
+
+
+
+
+
+    ABRINDO DIRETO COM O NOTEPAD:
+    C:\Users\brito\Desktop\script>notepad ola.c
+
+
+
+
+                             FAZENDO A MESMA COISA COM O C++
+
+
+    crie um arquivo .cpp no prompt e digite 
+    seu conteudo.
+    C:\Users\brito\Desktop\script>copy con olinda.cpp
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+         cout << "ola mundo compilado " << endl;
+    }^Z
+              1 arquivo(s) copiado(s).
+
+    
+    se for preciso editar abra com o notepad.
+    C:\Users\brito\Desktop\script>notepad olinda.cpp
+
+
+
+
+    se ficar na duvida do que tem no diretorio de um dir:
+    C:\Users\brito\Desktop\script>dir
+    O volume na unidade C é OS
+    O Número de Série do Volume é 004C-F115
+
+    Pasta de C:\Users\brito\Desktop\script
+
+    03/03/2022  16:44    <DIR>          .
+    03/03/2022  16:44    <DIR>          ..
+    03/03/2022  16:18                81 ola.c
+    03/03/2022  16:46               104 olinda.cpp
+    03/03/2022  16:23            54.024 teste.exe
+               3 arquivo(s)         54.209 bytes
+               2 pasta(s)   303.160.713.216 bytes disponíveis
+
+    
+
+
+    compilando:
+    C:\Users\brito\Desktop\script>g++ olinda.cpp -o teste2
+    
+
+    EXECUTANDO:
+    C:\Users\brito\Desktop\script>.\teste2
+    ola mundo compilado
+
+
+
+
+
+    EXPLICAÇÕES:
+    para compilar um .c usamos gcc.
+    para compilar um .cpp usamos g++.
+
+    feito a sintaxe é a mesma. 
+    gcc -o nome-que-queremos-dar-ao-arquivo nome-do-arquivo-que-criamos
+    gcc -o teste ola.c
+    C:\Users\brito\Desktop\script>gcc -o teste ola.c
+
+    g++ arquivo.cpp -o arquivo-que-vai-ser-o-nome 
+    g++ olinda.cpp -o teste2
+    C:\Users\brito\Desktop\script>g++ olinda.cpp -o teste2
+
+    para executar usamos a sintaxe ./programa ou .\programa
+    .\teste
+    C:\Users\brito\Desktop\script>.\teste
+
+    .\teste2
+    C:\Users\brito\Desktop\script>.\teste2
+    
+
+  
+_____________________________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+    https://www.youtube.com/watch?v=ZERqj1ecqnM
+    https://www.youtube.com/watch?v=XqgptbdptVQ
+    http://www.decom.ufop.br/marco/extensao/obi/compilacao-por-linha-de-comando/#:~:text=Para%20os%20programas%20em%20C,%C3%A9%20necess%C3%A1rio%20instalar%20aplica%C3%A7%C3%B5es%20adicionais.

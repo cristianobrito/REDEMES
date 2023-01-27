@@ -1,0 +1,115 @@
+                             [ PEGAR DADOS DO FORM ]
+                              [ NODEJS BODY PARSER]
+___________________________________________________________________________________________________
+1. INSTALAÇÃO 
+   mkdir SERVER
+   cd SERVER
+   npm init 
+   npm install express --save
+   npm install body-parser --save
+   npm install express-handlebars --save
+   npm install nodemon --save
+   npm uninstall nome-do-pacote desinstalar
+   
+2. ESTRUTURA DE PASTAS E ARQUIVOS NOTE DIRETORIOS NÃO TEM A EXTENSÃO
+   SERVER
+     |——— views
+     |      |——— layouts
+     |      |      |——— main.handlebars
+     |      |
+     |      |——— formulario.handlebars
+     |
+     |——— index.js
+     |——— package-lock.json
+     |——— package.json
+
+_____________________________________________________________________________
+3. ARQUIVO index.js 
+   
+   const express    = require('express')
+   const app        = express()
+   const handlebars = require('express-handlebars')
+   const bodyParser = require('body-parser')
+
+// configuração do template engine obs: todo use é um midleware
+   app.engine('handlebars', handlebars.engine({ defaultLayout:'main' }))  
+   app.set('view engine', 'handlebars')
+
+
+// BODYPARSER
+   app.use(bodyParser.urlencoded({ extended: false }))
+   app.use(bodyParser.json())
+
+// ROTAS
+   app.get('/cadastro', function(req, res) {
+     res.render('formulario')
+   })
+
+   app.post('/recebe', function(req, res){
+     res.send('DADOS RECEBIDOS <hr><br>'+ 'NOME: ' +req.body.nome+ '<br> SOBRENOME: '+req.body.sobrenome)
+   })
+
+   app.listen(3000)
+
+===============================================================================
+4. ARQUIVO main.handlebars 
+   
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>PEGANDO DADOS DO FORM</title>
+   </head>
+   <body>
+   	 {{{ body }}}
+   </body>
+   </html>
+
+===============================================================================
+5. ARQUIVO formulario.handlebars
+
+   <form action="/recebe" method="POST" style="margin: auto; width: 220px;"r>
+    	<p>CADASTRO</p>
+    	<input type="text" name="nome" placeholder="digite nome" /> 
+    	<br><br>
+    	<input type="text" name="sobrenome" placeholder="digite sobrenome"/> 
+    	<br><br>
+    	<button type="submit">ENVIAR</button>
+   </form>
+
+================================================================================
+6. EXECUTANDO
+   cd SERVER
+   nodemon index.js 
+
+================================================================================
+7. ABRINDO
+   va no navegador e digite:
+   http://localhost:3000/cadastro
+
+==============================================================================
+*** OBS ***
+    1. [ index.js ]
+       Importamos o body-parse, configuramos e usamos.
+
+       // IMPORTANDO
+       const bodyParser = require('body-parser')
+
+       // BODYPARSER CONFIG
+       app.use(bodyParser.urlencoded({ extended: false }))
+       app.use(bodyParser.json())
+
+       // BODYPARSER USO
+       app.post('/recebe', function(req, res){
+       res.send('DADOS RECEBIDOS <hr><br>'+ 'NOME: ' +req.body.nome+ '<br> SOBRENOME: '+req.body.sobrenome)
+       })
+       note que:
+       req.body.nome e req.body.sobrenome são os name do formulario.handlebars.
+       usamos a propriedade name do formulario para pegar os dados e exibi-los assim como no php.
+       
+
+==============================================================================
+                    *** FIM ***
+                     15/02/2022

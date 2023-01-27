@@ -1,0 +1,159 @@
+                                  [ NODEJS ]   
+                                [ HANDLEBARS ]   
+___________________________________________________________________________________________________
+    ESTRUTURA:
+        .
+     AULA-NODE
+     |
+     |————— bars.js
+     |
+     |
+     |
+     |————— views
+     |       |————— layouts
+     |       |        |————— main.handlebars
+     |       |
+     |       |————— formulario.hsndlebars
+     |
+     |————— node_modules
+     |————— package-lock.json
+     |————— package.json
+ 
+     [ 4 diretorios e 5 arquivos ]
+___________________________________________________________________________________________________
+    DEPENDENCIAS:
+    C:\Users\brito\Desktop\AULA-NODE>npm install --save express-handlebars
+
+    added 18 packages, and audited 102 packages in 9s
+
+    4 packages are looking for funding
+    run `npm fund` for details
+
+    found 0 vulnerabilities
+
+    C:\Users\brito\Desktop\AULA-NODE>
+
+    C:\Users\brito\Desktop\AULA-NODE>npm install nodemon
+
+    added 105 packages, and audited 207 packages in 16s
+
+    20 packages are looking for funding
+    run `npm fund` for details
+
+    found 0 vulnerabilities
+
+    C:\Users\brito\Desktop\AULA-NODE>
+___________________________________________________________________________________________________
+    bars.js
+  
+    const express    = require('express')
+    const app        = express()
+    const handlebars = require('express-handlebars')
+    const Sequelize  = require('sequelize')
+
+   // config
+      // template engine
+      app.engine('handlebars', handlebars.engine({defaultLayout: 'main'}))
+      app.set('view engine', 'handlebars')
+
+      // conexão ao banco de dados:
+      // 'nome do banco de dados', 'usuario', 'senha'
+      const sequelize = new Sequelize('sistemaDeCadastro', 'root', '', {
+      host:    'localhost',
+      dialect: 'mysql'
+      }) 
+
+      //ROTAS:
+        app.get('/cad', function(req, res){
+        res.render('formulario')
+      })
+
+
+        app.post('/add', function(req, res){
+        res.send('formulario recebido')
+      })
+
+      app.listen(3000, function(){
+      console.log('SERVIDOR ATIVO')
+      })
+___________________________________________________________________________________________________
+    main.hendlebars
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANDLEBARS</title>
+   </head>
+   <body>
+    {{{ body }}}
+   </body>
+   </html>
+___________________________________________________________________________________________________
+    formulario.handlebars
+
+    <form action="/add" method="POST" style="text-align: center;">
+    <p>TITULO: </p>
+    <input type="text" name="titulo">
+    <p>Conteudo: </p>
+    <textarea name="conteudo"></textarea><br>
+    <hr>
+    <button type="submit">Cadastrar postagens</button>
+    </form>
+___________________________________________________________________________________________________
+    package.json
+
+    {
+    "dependencies": {
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.2",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "sequelize": "^6.16.2"
+    }
+    }
+___________________________________________________________________________________________________
+    EXECUTANDO:
+
+    PS C:\Users\brito\Desktop\AULA-NODE> nodemon bars.js
+    [nodemon] 2.0.15
+    [nodemon] to restart at any time, enter `rs`
+    [nodemon] watching path(s): *.*
+    [nodemon] watching extensions: js,mjs,json
+    [nodemon] starting `node bars.js`
+
+___________________________________________________________________________________________________
+    NA URL:
+
+    http://localhost:3000/cad
+
+___________________________________________________________________________________________________
+    EXPLICAÇÕES:
+
+    O formulario handlebars não precisa estar dentro de um html por causa da estrutura 'defaultLayout: main'
+    res.render('formulario') editamos essa linha para exibir o formulario
+    formulario é o nome do arquivo .handlebars que criamos
+    acessando a rota http://localhost:3000/cad deverá ser exibido pra gente o formulario
+    METODO OU VERBO GET envia dados pela url 
+    dentro do action do formulario informamos pra qual rota queremos mandar os dados form action="/add"
+    app.post('/add', pegamos a rota que queremos. do form
+    lembre /add é o nome do form e deve ser o mesmo da rota
+    METODO OU VERBO POST envia dados
+    note que trocamos app.get por app.post preste atenção ao verbo http usado
+    trocamos res.render por res.send preste atenção.
+    as rotas do tipo post não podem ser acessadas pela url
+___________________________________________________________________________________________________
+  
+***************************************************************************************************
+                           
+                    *******************************
+                    *     CRISTIANO OLIVEIRA      *
+                    *        22/02/2022           *
+                    *            DEUS             *
+                    *        SEJA LOUVADO         *
+                    *******************************
+
+***************************************************************************************************
+                                      

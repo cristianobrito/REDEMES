@@ -1,0 +1,82 @@
+                      EXEMPLOS DE CÓDIGO C
+                             [EX14]
+
+EX14:
+===========================================================
+#include <stdio.h>
+#include <stdlib.h>
+#include <Windows.h>
+#include <unistd.h>
+#include <conio.h>
+/*
+    EX14:
+         Esse codigo mostra um contador de porcentagem
+         usa incremento e decremento
+         a cor só funciona com o uso da função gotoxy
+         poderiamos usar o system.
+         procure a man page das libs dos includes
+         estude.
+*/
+
+#define VERMELHO     "\x1b[31m"
+#define VERDE        "\x1b[32m"
+#define AZUL         "\x1b[34m"
+#define RESET        "\x1b[0m"
+// prototipo da função
+void gotoxy(int x, int y);
+
+int main()
+{
+    system("title EX14 PORCENTAGEM");
+    int i;
+    printf(AZUL "CARREGAMENTO:\n\n\n" RESET);
+    printf("ACERTOS: ");
+    printf("[");
+    for(i=0; i<10; i++)
+    {
+        printf(VERDE "#" RESET);
+        usleep(500000);
+    }
+    printf("]");
+    printf("\n");
+    usleep(500000);
+    printf("ERROS:   ");
+    printf("[");
+    for(i=10; i>=1; i--)
+    {
+        printf(VERMELHO "#" RESET);
+        usleep(500000);
+    }
+    printf("]");
+    printf("\n");
+    usleep(5000);
+
+    return 0;
+}
+// definição da função
+void gotoxy(int x, int y)
+{
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),(COORD){x,y});
+
+     //funcao para deixar o cursor invisivel
+     HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+     CONSOLE_CURSOR_INFO info;
+     info.dwSize = 100;
+     info.bVisible = FALSE;
+     SetConsoleCursorInfo(consoleHandle, &info);
+}
+===========================================================
+                                                      [FIM]
+
+
+
+
+
+
+    __________________________________________________
+                        
+
+                           Autor:
+                     Cristiano Oliveira 
+                  Email: britonano@gmail.com
+                         21/03/2022     

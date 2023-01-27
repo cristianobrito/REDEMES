@@ -1,0 +1,51 @@
+                      EXEMPLOS DE CÓDIGO C
+                             [EX15]
+
+EX15:
+===========================================================
+#include <stdio.h>
+#include <stdlib.h>
+/*
+    EX15:
+         UNIDADES DE MEDIDA
+         BIT menor unidade de armazenamento
+         suporta apenas 0 ou 1
+         8 bits forman 1 byte
+         1024 bytes = 1 kilobyte
+         1024 kilobytes = 1 megabbyte
+         1024 megabyte = 1 gigabyte
+         pesquise
+
+*/
+int main()
+{
+    printf("EXEMPLO DE BITS E BYTES NA MEMORIA\n");
+    printf("_______________________________________\n");
+    printf("| 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |  |  |\n");
+    printf("---------------------------------------\n");
+    printf("|   |   |   |   |   |   |   |   |  |  |\n");
+    printf("---------------------------------------\n");
+    printf("|   |   |   | 0 | 1 | 0 | 0 | 1 |  |  |\n");
+    printf("---------------------------------------\n");
+    printf("|   |   |   |   |   | 0 | 0 | 1 |  |  |\n");
+    printf("---------------------------------------\n");
+    printf("|   |   |   |   |   |   | 0 | 1 |  |  |\n");
+    printf("---------------------------------------\n");
+    printf("\n");
+    return 0;
+}
+===========================================================
+                                                      [FIM]
+
+
+
+
+
+
+    __________________________________________________
+                        
+
+                           Autor:
+                     Cristiano Oliveira 
+                  Email: britonano@gmail.com
+                         22/03/2022     

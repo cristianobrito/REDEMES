@@ -1,0 +1,176 @@
+
+                        [ DARTH VADER ]
+
+                        CODEBLOCKS 20.03
+
+   
+                             Autor:
+                       Cristiano Oliveira
+                           14/03/2022
+
+
+           Como configurar a biblioteca graphics.h
+
+
+
+
+                                                [Página 00]
+    _______________________________________________________
+    Inicio:
+
+         0.0 Verificando a versão do compilador.
+             no codeblocks - Settings - Compiler 
+             na guia que se abre Global Compiler Settings.
+             opção Linker settings tanto a link libraries:
+             quanto Other linker options: devem estar
+             sem nada.se existir algo click em Clear ou 
+             delete.
+
+         0.1 digite o codigo a seguir:
+             #include <stdlib.h>
+             int main()
+             {
+                 system("gcc -v");
+                 return 0;     
+             }
+
+             // precione f9 ou vá em build and run. 
+
+             saida:
+             Dentre as muitas coisas dessa saida procure 
+             por: Target: x86_64-w64-mingw32
+
+
+
+
+                                                [Página 01]
+    _______________________________________________________
+    Instalações:
+
+         1.0 Baixe o tdm-gcc
+             https://jmeubank.github.io/tdm-gcc/
+             use essa versão:Baseado em MinGW.or 
+             tdm-gcc-10.3.0.exe,60,2M
+             Nota: existe uma versão de 64bits mas não 
+             foi essa que instalamos. com relação aos
+             downloads procure sempre o site oficial.
+             é só pesquisar no google.
+          
+         1.1 Click duplo para instalar o tdm-gcc.
+             Desmarque a opção Check for updates files
+             on the TDM-GCC server
+             depois de desmarcar click em Create.
+             O caminho padrão é C:\TDM-GCC-32 
+             ou seja é instalada no diretorio raiz c:
+             não mude nada click em next.
+             não mude nada click em Install.
+             Click em Next e Finish.
+             o arquivo de texto que se abre pode ser 
+             fechado.
+
+         1.2 Baixe a lib graphics.h 
+         1.3 se for zip extrai-a seu conteudo.
+         1.4 copy os arquivos graphics.h e winbgim.h para
+             C:\TDM-GCC-32\include ou seja a pasta include
+             do tdm-gcc-32. abrimos a pasta include e 
+             cola-mos dentro dela.
+
+         1.5 copy o arquivo libbgi.a para C:\TDM-GCC-32\lib
+             ou seja abrimos a pasta lib e cola-mos dentro
+             dela.
+
+        
+                                                [Página 02]
+    _______________________________________________________
+    No codeblocks:
+
+                   Configurações do Compilador
+
+         2.0 Abra o codeblocks vá em Settings - Compiler
+             abre as configurações do compilador global.
+             na guia Toolchain executables vem com esse
+             caminho: C:\Program Files\CodeBlocks\MinGW
+             click nos tres pontinhos  dela ... 
+             e navegue até a pasta do TDM-GCC-32 que 
+             instalamos no c: preste atenção para não
+             errar a pasta que devemos escolher é a desse
+             caminho: C:\   ou seja navegamos até o drive
+             c e clicamos na pasta para escolher ela sem 
+             abri-la.
+             de um click nela pra selecionar e em seguida
+             click em select folder.
+             
+         2.1 Agora vá em Linker settings e em 
+             Other linker options cole ou escreva
+         -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32
+             depois de escrever click em ok.
+
+         2.2 No codeblocks crie um novo projeto
+             tipo console application do tipo c++.
+             de nome ao projeto e escolha a pasta 
+             pra salvar. click em next e finish.
+
+         2.3 digite o code:
+             #include <graphics.h>
+             int main()
+             {
+                 int gd=DETECT, gm;
+                 initgraph(&gd, &gm, (char*)"");
+                 circle(320, 240, 200);
+                 getch();
+                 closegraph();
+                 return 0;
+             }
+             // precione f9 ou vá em build and run. 
+             
+
+         saida:
+              a saida deve ser um circulo desenhado no 
+              prompt.
+              
+             
+
+
+
+
+
+
+
+
+
+
+         
+         
+
+
+
+                                                [Página 03]
+    _______________________________________________________
+    erro que é gerado:
+         fatal error: graphics.h: No such file or directory
+      
+    OBS:
+        abri um novo projeto e o mingw é o copilador 
+        padrão tive que configurar denovo o 
+        -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32
+        e o caminho pro compilador:
+        C:\TDM-GCC-32
+        deixei fotos para complementar caso exista duvidas.
+        01_COMPILADOR.jpg e 02_COMPILADOR.jpg 
+        essas fotos estão na pasta IMG_REFERENCIAS no 
+        google drive. veja o nome da foto e o seu numero
+        vou deixar as pastas numeradas tipo 01, 02, 03 etc.
+        como exemplo essas fotos estão na pasta 01.
+        depois de fazer essas duas mudanças o projeto rodou  
+    
+
+
+
+
+
+                                                      [FIM]
+    _______________________________________________________
+    REFERÊNCIAS BIBLIOGRAFICAS:
+         Links:
+         https://www.youtube.com/watch?v=VEkAj-xVTKQ    
+         https://www.programmingsimplified.com/c/graphics.h

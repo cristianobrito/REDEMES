@@ -1,0 +1,103 @@
+                       [SOCKETS EM C]
+
+
+SERVER.C
+===========================================================
+// importando as bibliotecas
+#include <stdio.h>
+#include <winsock2.h>
+
+/*
+    SOCKETS:
+           Configuração dos sockets 
+           para windows 
+
+*/
+
+int main()
+{
+    char buff[129];
+    WSADATA wsa;
+    WSAStartup(MAKEWORD(2, 0), &wsa);
+
+    // recebe parametros de conexão do socket
+    struct sockaddr_in caddr;
+    struct sockaddr_in saddr = {
+          .sin_family       = AF_INET,
+          .sin_addr.s_addr  =  htonl(INADDR_ANY),
+          .sin_port         =  htons(5000)
+    };
+
+    int server = socket(AF_INET, SOCK_STREAM, 0);
+    int cliente, x;
+    int csize = sizeof caddr;
+    bind(server, (struct sockaddr *) &saddr, sizeof saddr);
+
+    listen(server, 5);
+
+    while(1){
+       cliente = accept(server, (struct sockaddr *) &caddr, &csize);
+       x = recv(cliente, buff, sizeof buff, 0);
+
+      send(cliente, buff, x, 0);
+
+      puts(buff);
+      fflush(stdout);
+
+      closesocket(cliente);
+    }
+
+    return 0;
+}
+===========================================================
+                                                      [FIM]
+
+    EXPLICAÇÕES:
+         -Depois de ter baixado e configurado 
+          o netcat.
+         -o codigo acima tem de ser compilado
+          obrigatoriamente pelo terminal
+         -navegue até a pasta do projeto:
+          C:\Users\brito\Desktop\C>cd SOCKET02
+
+          C:\Users\brito\Desktop\C\SOCKET02>dir
+
+         -De o comando abaixo incluindo as 
+          diretivas:
+          C:\Users\brito\Desktop\C\SOCKET02>gcc main.c -o server.exe -l ws2_32
+
+         -Compile:
+          C:\Users\brito\Desktop\C\SOCKET02>server
+
+         -Abra outro terminal como adm e de o 
+          comando:
+          C:\WINDOWS\system32>echo ola nanu terminal | nc 127.0.0.1 5000
+
+
+         -Repare na saida do outro terminal
+          C:\Users\brito\Desktop\C\SOCKET02>server
+          ola nanu terminal
+
+
+         -Para encerrar tecle ctrl+c 
+         -outra vantagem é que depois de 
+          instalarmos o netcat podemos
+          testar os comandos dele agora.
+         -Deixei um tutorial como instalar 
+          no google drive.
+
+
+
+    __________________________________________________
+    REFERENCIAIS BIBLIOGRÁFICAS:
+    https://www.youtube.com/watch?v=GaxjJvMnz-I&t=351s
+    -Procure pela man page do winsok
+    -Procure na documentação da mycrosoft
+
+
+
+                         Autor:
+                   Cristiano Oliveira
+                  britonano@gmnail.com
+                       21/03/2022
+

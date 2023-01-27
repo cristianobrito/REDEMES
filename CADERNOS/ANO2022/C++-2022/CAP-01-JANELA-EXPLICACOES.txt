@@ -1,0 +1,161 @@
+                                   [ C++ ]   
+
+                                 CAPÍTULO 01 
+                              CRIAÇÃO DE JANELA     
+___________________________________________________________________________________________________
+   ESTRUTURA DE ARQUIVOS
+        .
+   AndreasJanela
+        |
+        |——— .vs
+        |
+        |——— AndreasJanela
+        |         |
+        |         |——— x64
+        |         |——— AndreasJanela.vcxproj
+        |         |——— AndreasJanela.vcxproj.filters
+        |         |——— AndreasJanela.vcxproj.user
+        |         |——— Andreias.cpp
+        |
+        |
+        |——— x64
+        |     |——— Debug
+        |            |——— AndreasJanela.exe
+        |            |——— AndreasJanela.pdb
+        |
+        |
+        |——— AndreasJanela.sln
+___________________________________________________________________________________________________
+   CAMINHOS
+   
+   C:\Users\brito\source\repos
+   C:\Users\brito\source\repos\AndreasJanela
+                                        
+___________________________________________________________________________________________________
+1. CONFIGURAÇÃO
+   
+   criar um projeto
+   assistente do windows desktop                 [ c++ windows area de trabalho console biblioteca ]
+   nomei-e o projeto                             [ repare a localização ]
+   aplicativo da area de trabalho (.exe)         [ projeto do windows desktop ] [ projeto vazio ]
+
+___________________________________________________________________________________________________
+2. CRIANDO UM PROGRAMA
+
+   click direito arquivos de origem → adicionar → novo item     [ ctrl + shift + a ]
+   
+   na janela que se abre escolha
+   visual c++ → arquivo do c++ → nomei-e
+___________________________________________________________________________________________________
+3. MODIFICAR A TABELA DE CARACTERES
+   
+   de um click na janela do codigo onde inserimos os codigos e depois va em 
+   menu → projeto → propriedades de [ aqui va estar o nome do projeto ]
+   propriedades de configuração → avançado → propriedades avançadas → conjunto de caracteres → não definido
+   
+___________________________________________________________________________________________________
+4. APÓS AS CONFIGURAÇÕES TESTE UMA JANELA BÁSICA
+   
+   Andreias.cpp                                  [ Andreias foi o mome que dei ao meu arquivo.cpp ]
+   
+#define WIN32_LEAN_AND_MEAN
+#include <windows.h>                   // acesso a api do windows sem ela não tem janela
+
+
+// PROCEDIMENTO DA JANELA WinProc isso é o prototipo da função
+LRESULT CALLBACK WinProc(HWND, UINT, WPARAM, LPARAM);
+
+// ========================================================================
+// WinMain configura cria e deixa a janela visivel
+// dentro dessa função precisamos definir a variavel HWND para a janela
+// uma variavel MSG para armazenar as ações do usuario e da janela
+// uma variavel WNDCLASS para configurar e criar a janela
+// parametros da função: 
+// hInstance Identificador para a instância que o procedimento de janela desta classe está dentro. 
+// ========================================================================
+int APIENTRY WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPSTR lpCmdLine, _In_ int nCmdShow)
+{
+
+	// DEFININDO UMA WINDOW CLASS
+	HWND     hwnd;           // identificador para a janela
+	MSG      msg;            // DEFININDO MSG
+	WNDCLASS wndclass;       // estrutura de dados para a WINDOWCLASS
+
+        // ESTRUTURA DA JANELA
+	wndclass.style           = CS_HREDRAW | CS_VREDRAW;                 // especifica a classe pode ser bit a bit
+	wndclass.lpfnWndProc     = WinProc;                                 // ponteiro para procedimento da janela Esta função é chamada pelo Windows 
+	wndclass.cbClsExtra      = 0;                                       // bytes extra 
+	wndclass.cbWndExtra      = 0;                                       // bytes extra
+	wndclass.hInstance       = hInstance;                               // Identificador para a instância que o procedimento de janela desta classe está dentro.
+	wndclass.hIcon           = LoadIcon(NULL, IDI_APPLICATION);         // Identificador para um pequeno ícone que está associado com a classe de janela. 
+	wndclass.hCursor         = LoadCursor(NULL, IDC_ARROW);             // identificador para o cursor da classe
+	wndclass.hbrBackground   = (HBRUSH)GetStockObject(WHITE_BRUSH);     // Identificador para o pincel de plano de fundo de classe. Use a cor padrão do Windows como o plano de fundo da janela
+	wndclass.lpszMenuName    = NULL;                                    // Ponteiro para uma Cadeia de caracteres sem menu
+	wndclass.lpszClassName   = "BasicWindow";                           // nome da classe da janela
+
+	// REGISTRANDO UMA WINDOW CLASS
+	if (!RegisterClass(&wndclass))                                      // A função de RegisterClassEx registra uma classe de janela para uso subsequente 
+	{
+		MessageBox(NULL, "Erro na criação da janela!", "Aplicação", MB_ICONERROR);
+		return 0;
+	}
+
+	// CRIANDO UMA JANELA DA BASEADA NA CLASS
+	hwnd = CreateWindow(
+		"BasicWindow",                     // nome da window class
+		"Aplicação",                       // título da janela
+		WS_OVERLAPPEDWINDOW | WS_VISIBLE,  // estilo da janela janela padrão
+		CW_USEDEFAULT,                     // posição x inicial HORIZONTAL
+		CW_USEDEFAULT,                     // posição y inicial VERTICAL
+		CW_USEDEFAULT,                     // largura do programa
+		CW_USEDEFAULT,                     // altura do programa
+		NULL,                              // identificador da janela pai
+		NULL,                              // identificador do menu
+		hInstance,                         // identificador da aplicação manipulador de instância da janela
+		NULL);                             // parâmetros de criaçã
+
+
+// Executar o loop de mensagem. Ele será executado até GetMessage () retorna 0
+	while (GetMessage(&msg, NULL, 0, 0))
+	{
+                // Traduzir mensagens virtual-chave em mensagens de caráter
+		TranslateMessage(&msg);
+                // Enviar mensagem para WindowProcedure
+		DispatchMessage(&msg);
+	}
+	//return msg.wParam;
+
+	return 0;
+}
+
+// ESTA FUNÇÃO É CHAMADA PELA FUNÇÃO DISPATCHMESSAGE WINDOWS()
+// definição o que a função winproc faz
+LRESULT CALLBACK WinProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
+{
+	switch (message)                    // lidar com as mensagens
+	{
+	case WM_DESTROY:
+		PostQuitMessage(0);        //  enviar uma WM_QUIT para a fila de mensagens 
+		return 0;
+	}
+	return DefWindowProc(hwnd, message, wParam, lParam);
+}
+___________________________________________________________________________________________________
+5. EXECUTE ESSE CODIGO ACIMA
+   ele exibira uma pequena janela grande em branco
+___________________________________________________________________________________________________
+   BIBLIOGRAFIA:
+   https://docs.microsoft.com/en-us/windows/win32/winprog/using-the-windows-headers
+   http://programadorgenio.blogspot.com/2013/07/criando-janela-basica-em-c.html
+
+___________________________________________________________________________________________________
+
+      ====================================================================
+                   **************************************** 
+                   *          AUTOR: CRISTIANO            *
+                   *          DATA: 18/02/2022            *
+                   *                                      *
+                   *           DEUS SE LOUVADO            *
+                   *                                      *            
+                   ****************************************  
+      ====================================================================                                     

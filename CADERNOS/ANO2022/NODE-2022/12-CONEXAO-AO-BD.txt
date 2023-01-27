@@ -1,0 +1,80 @@
+                                  [ NODEJS ]   
+                                     ORM
+                                 CONEXÃO AO BD
+___________________________________________________________________________________________________
+   ESTRUTURA:
+        .
+     AULA-NODE
+     |
+     |————— app.js
+     |
+     |————— app2.js
+     |
+     |————— html
+     |      |————— index.html
+     |      |————— home.js
+     |
+     |————— node_modules
+     |————— package-lock.json
+     |————— package.json
+ 
+     [ 3 diretorios e 6 arquivos ]
+___________________________________________________________________________________________________
+   package.json
+
+   {
+   "dependencies": {
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.16.2"
+   }
+   }    
+   
+   // ignore as outras dependencias preste atenção apenas ao sequelize
+
+___________________________________________________________________________________________________
+   app2.js
+
+   const Sequelize = require('sequelize')
+   // 'nome do banco de dados', 'usuario', 'senha'
+   const sequelize = new Sequelize('sistemaDeCadastro', 'root', '', {
+    host:    'localhost',
+    dialect: 'mysql'
+    })
+
+   sequelize.authenticate()
+   .then(function(){
+      console.log("CONECTADO AO BD")
+    })
+   .catch(function(erro){
+      console.log("FALHA NÃO CONECTADO"+erro)
+   })
+___________________________________________________________________________________________________
+   EXECUTANDO:
+   C:\Users\brito\Desktop\AULA-NODE>nodemon app2.js
+   [nodemon] 2.0.15
+   [nodemon] to restart at any time, enter `rs`
+   [nodemon] watching path(s): *.*
+   [nodemon] watching extensions: js,mjs,json
+   [nodemon] starting `node app2.js`
+   Executing (default): SELECT 1+1 AS result
+   CONECTADO AO BD
+
+___________________________________________________________________________________________________
+   EXPLICAÇOES:
+   dialect: 'mysql' devemos especificar qual banco de dados usamos 
+   pois o sequelize trabalha com varios.
+   
+___________________________________________________________________________________________________
+  
+***************************************************************************************************
+                           
+                    *******************************
+                    *     CRISTIANO OLIVEIRA      *
+                    *        18/02/2022           *
+                    *            DEUS             *
+                    *        SEJA LOUVADO         *
+                    *******************************
+
+***************************************************************************************************
+                                      

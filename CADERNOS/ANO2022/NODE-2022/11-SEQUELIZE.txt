@@ -1,0 +1,59 @@
+                                  [ NODEJS ]    
+                                 [ SEQUELIZE ]  
+___________________________________________________________________________________________________
+   INSTALAÇÃO:
+   C:\Users\brito\Desktop\AULA-NODE>npm install --save sequelize
+
+   added 21 packages, and audited 72 packages in 47s
+
+   3 packages are looking for funding
+   run `npm fund` for details
+
+   found 0 vulnerabilities
+
+   C:\Users\brito\Desktop\AULA-NODE> 
+___________________________________________________________________________________________________
+   INSTALANDO O SEQUELIZE PARA O BD CERTO:
+   C:\Users\brito\Desktop\AULA-NODE>npm install --save mysql2
+
+   added 12 packages, and audited 84 packages in 4s
+
+   3 packages are looking for funding
+   run `npm fund` for details
+
+   found 0 vulnerabilities
+
+   C:\Users\brito\Desktop\AULA-NODE>
+
+___________________________________________________________________________________________________
+   package.json
+   ignore as outras dependencias veja que o sequelize esta ai
+
+   {
+   "dependencies": {
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.16.2"
+   }
+   }
+
+___________________________________________________________________________________________________
+   EXPLICAÇÕES:
+   O sequelize ajuda a trabalhar com banco de dados.
+   site:
+   https://www.npmjs.com/
+   https://www.npmjs.com/package/sequelize
+   
+   o sequelize trabalha com outros banco de dados além do mysql.
+___________________________________________________________________________________________________
+ 
+                             +—————————————+   
+                             |  CRISTIANO  |
+                             +—————————————+   
+                   +----------------------------------+
+                   |            18/02/2022            |
+                   |               DEUS               |
+                   |               SEJA               |
+                   |              LOUVADO             |
+                   +----------------------------------+    
+                                

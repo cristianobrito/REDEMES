@@ -1,0 +1,40 @@
+                                   [ DARTH VADER ]
+
+                                           C
+
+    [INTRODUÇÃO]
+    ___________________________________________________________________________
+
+
+
+                                Conceitos básicos de c
+
+    Vetor Unidimensional
+    sintaxe:
+         <tipo-do-dado> <identificador>[<tamanho>];
+         <tipo-do-dado>: tipo do dado armazenado em cada elemento do vetor.
+         <identificador>: identificador usado para referenciar a variável vetor.
+         <tamanho>: número de elementos do vetor.
+
+
+    Exemplos:
+    long inteiros[10]; // vetor com 10 números inteiros longos
+    char texto[1000];  // vetor com 1000 caracteres
+
+
+    O identificador de um vetor em C é, na verdade, um ponteiro que aponta para o 
+    primeiro elemento do vetor. Quando declaramos long inteiros[10]; estamos 
+    reservando um conjunto de dez posições de memória contíguas, cada uma delas 
+    com 4 bytes (um long tem 4 bytes). Logo, o vetor completo tem 40 bytes.
+         
+
+
+
+
+                                                                     [Página 1]
+    ___________________________________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+         http://albertocn.sytes.net/2010-1/pi/aulas/linguagem_c_vetores_ordenacao.htm
+         http://mtm.ufsc.br/~azeredo/cursoC/aulas/c410.html
+
+   

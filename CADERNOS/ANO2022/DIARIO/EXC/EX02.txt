@@ -1,0 +1,126 @@
+
+                      EXEMPLOS DE CÓDIGO C
+                             [EX02]
+
+EX02
+===========================================================
+#include <stdio.h>
+#include <stdlib.h>
+/*
+   EX02
+      Lendo numeros inteiros
+      Variaveis regras de declaração:
+      não pode começar por numero nem sinais especiais.
+      Variaveis reserva um espaço na memoria ela é um
+      lugar na memoria.
+      e o tipo especifica o tamanho desse espaço
+      exemplo o tipo int reserva 4 bytes  ou 32 bits
+      na memoria.
+*/
+
+int main()
+{
+    // cria a variavel do tipo inteiro
+    int valor;
+
+    // atribuição atribui valor a uma variavel
+    valor = 50;
+    
+    printf("O valor da minha variavel e: %d", valor);
+    printf("\nPressione qualquer tecla para sair\n");
+    getchar();
+    return 0;
+}
+
+
+
+
+
+
+EX02A
+===========================================================
+#include <stdio.h>
+#include <stdlib.h>
+/*
+   EX02A
+      Lendo um número dado pelo usuário
+      a função scanf(); lê a entrada do usuário
+      %d lê um valor inteiro
+      & pega o endereço de memória da variável valor
+      &valor pega o endereço de memória da variável
+      valor
+      o exemplo abaixo pega a entrada do usuario e
+      sobreescreve o valor 50 da variavel.
+      isso é possivel graças ao & que pega o endereço
+      de memoria da variavel.
+*/
+
+int main()
+{
+    // cria a variavel do tipo inteiro
+    int valor;
+
+    // atribuição atribui valor a uma variavel
+    valor = 50;
+
+    printf("\nDigite um valor inteiro: ");
+
+    // & pega o endereço de memoria da variavel valor
+    scanf("%d", &valor);
+
+    printf("O valor da minha variavel e: %d\n\n", valor);
+    printf("\nPressione qualquer tecla para sair\n");
+    getchar();
+    return 0;
+}
+
+
+
+EX02B
+===========================================================
+#include <stdio.h>
+#include <stdlib.h>
+/*
+   EX02B
+        Não podemos ter 2 variáveis com o mesmo nome
+        o programa abaixo pega o valor que o usuario digita
+        e mostra a saida no prompt sobreescrevendo o valor
+        da primeira variavel.
+
+*/
+
+int main()
+{
+    // cria a variavel do tipo inteiro
+    int valor, valor2;
+
+    // atribuição atribui valor a uma variavel
+    valor = 50;
+
+    printf("\nDigite um valor inteiro: ");
+
+    // & pega o endereço de memoria da variavel valor
+    scanf("%d", &valor);
+
+    printf("\nDigite outro valor inteiro: ");
+
+    // pegando o endereço de memoria
+    scanf("%d", &valor2);
+
+    printf("\nO valor da primeira variavel: %d\nValor da segunda variavel:   %d", valor, valor2);
+    printf("\nPressione qualquer tecla para sair\n");
+    getchar();
+    return 0;
+}
+===========================================================
+                                                      [FIM]
+
+
+
+
+
+
+    _______________________________________________________
+                             Autor:
+                       Cristiano Oliveira
+                           15/03/2022

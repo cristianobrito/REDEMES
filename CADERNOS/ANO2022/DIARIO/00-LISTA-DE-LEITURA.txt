@@ -1,0 +1,80 @@
+                                [LEITURAS]
+
+                                INTRODUÇÃO       
+
+ 
+                                                                        [Página iii]
+    ________________________________________________________________________________
+    Março de 2022
+   
+
+
+
+
+
+                        Referencias de Leituras
+
+    
+    
+
+    Leituras:
+         sobre	referencia	página	capítulo	status	data	                              	
+         TCP 	[rfc 793]	41              	lendo   08.03.2022
+         
+
+
+
+    Livros PDF:
+         livro                       formato    página   capítulo    status    data inicio        
+         Apostila_programacao_c_v    pdf        110      10.3.1	     lendo     01/03/2022
+         Linguagem assembly          pdf        30       _03         lendo     07/03/2022
+         C completo e total          pdf        26       01          lendo     08/03/2022
+
+
+
+
+                             Resumo by:
+                         Cristiano Oliveira
+
+    ________________________________________________________________________________
+    Referências bibliograficas:
+         https://datatracker.ietf.org/doc/html/rfc793
+         https://www.ime.usp.br/~ueda/ldoc/notastcp.html   *importante demais
+         https://datatracker.ietf.org/doc/html/rfc1180
+         https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/nbtstat
+         https://www.ibm.com/docs/en/zos/2.1.0?topic=sets-specifying-macro-copy-code-libraries-syslib
+         https://www.ibm.com/docs/en/zos/2.1.0?topic=hlasm-programmers-guide
+         https://www.ibm.com/docs/en/zos/2.1.0?topic=guide-programmers
+         https://www.ibm.com/docs/en/aix/7.2?topic=aix-assembler-language-reference
+         https://docs.microsoft.com/pt-br/dotnet/standard/assembly/create
+         https://docs.microsoft.com/pt-br/cpp/assembler/arm/arm-assembler-reference?view=msvc-170
+         https://docs.microsoft.com/pt-br/cpp/assembler/inline/using-assembly-language-in-asm-blocks?view=msvc-170
+         https://docs.microsoft.com/pt-br/cpp/intrinsics/?view=msvc-170
+         https://www.ibm.com/docs/pt-br/ibm-mq/9.0?topic=ssfksj-9-0-0-com-ibm-mq-dev-doc-q023760--htm#q023760___Declaring_constants
+         https://wiki.portugal-a-programar.pt/dev_geral:assembly:tutorial
+         https://pt.wikipedia.org/wiki/Linguagem_assembly
+         https://pt.wikipedia.org/wiki/C%C3%B3digo_de_m%C3%A1quina
+         http://ref.x86asm.net/coder32.html                *[importante]
+         https://insper.github.io/Z01.1/Teoria-Linguagem-de-Maquina/
+         https://crg.eti.br/post/assembly-assembler-e-linguagem-de-maquina/
+         https://www.invertexto.com/codigo-binario
+         https://blog.betrybe.com/tecnologia/codigo-binario/
+         
+
+    PESQUISAR:
+         https://cs.lmu.edu/~ray/notes/x86assembly/
+         https://en-m-wikipedia-org.translate.goog/wiki/X86_assembly_language?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=sc
+         https://www.felixcloutier.com/x86/
+         
+
+
+
+    OBS:
+      Estudar linguagem de baixo nivel.
+      ou seja estudar binarios como escreve-los e usalos.         
+
+
+         Pegando um atalho:
+         Download emu8086 with license key:
+	 User:  ISHAAN,glaitm
+	 Key:27R3VDEFYFX4N0VC3FRTQZX     

@@ -1,0 +1,30 @@
+
+                      EXEMPLOS DE CÓDIGO C
+                             [EX01]
+
+EX01
+===========================================================
+#include <stdio.h>
+#include <stdlib.h>
+/*
+    função system("pause");
+    O system pause e do windows e
+    portanto da erro nos outros systemas
+    veja como resolver abaixo
+*/
+
+int main()
+{
+
+    printf("\nPressione qualquer tecla para sair\n");
+    getchar();
+    return 0;
+}
+===========================================================
+                                                      [FIM]
+
+
+    _______________________________________________________
+                             Autor:
+                       Cristiano Oliveira
+                           15/03/2022

@@ -1,0 +1,37 @@
+                            AULAS EM INGLES
+
+    _________________________________________________________________
+    FREECODECAMP.ORG
+    https://www.youtube.com/c/Freecodecamp
+
+    =================================================================
+    JavaScript Game Development Course for Beginners
+    https://www.youtube.com/watch?v=GFO_txvwK_c&t=6639s
+
+    =================================================================
+    JavaScript Tutorial – Code Your Own Jeopardy Game
+    https://www.youtube.com/watch?v=vYEkEMfoi1c
+    
+
+    =================================================================
+    Node.js / Express Course - Build 4 Projects
+    https://www.youtube.com/watch?v=qwfE7fSVaZM&t=1979s
+
+    =================================================================
+    Web App Vulnerabilities - DevSecOps Course for Beginners
+    https://www.youtube.com/watch?v=F5KJVuii0Yw&t=1444s
+
+    =================================================================
+    Code a 2D Game Engine using Java - Full Course for Beginners
+    https://www.youtube.com/watch?v=025QFeZfeyM&t=4386s
+
+
+    =================================================================
+    ESCRITO POR: CRISTIANO OLIVEIRA
+      
+     
+         __________________________________________________
+
+                            28/07/2022
+
+    

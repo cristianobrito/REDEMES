@@ -1,0 +1,79 @@
+                              [ NODEJS ]       
+___________________________________________________________________________________________________
+  ESTRUTURA DE ARQUIVOS
+      .
+  AULA-NODE
+      |
+      |————— app.js                    [ './' significa mesmo diretorio mesmo local, nivel ]
+      |
+      |————— somar.js
+      |
+      |————— dividir.js
+      |
+      |————— subtrair.js
+      |
+      |————— multiplicar.js
+
+  [ 1 diretorio 5 arquivos ]
+___________________________________________________________________________________________________
+1. somar.js 
+
+   function somar(a, b) { return a + b }
+
+   module.exports = somar
+___________________________________________________________________________________________________
+2. dividir.js
+   
+   function dividir(a, b) { return a / b }
+
+   module.exports = dividir
+
+___________________________________________________________________________________________________
+3. subtrair.js
+   
+   function subtrair(a, b) { return a - b }
+
+   module.exports = subtrair
+
+___________________________________________________________________________________________________
+4. multiplicar.js
+
+   function multiplicar(a, b) { return a * b }
+
+   module.exports = multiplicar
+
+___________________________________________________________________________________________________
+5. app.js
+
+   var somar             = require('./somar')              // var somar pode ser dado qualquer nome 
+   var subtrair          = require('./subtrair')           // segue as regras normais do js para nomear variaveis 
+   var dividir           = require('./dividir')            // require('./somar') importa o modulo
+   var multiplicar       = require('./multiplicar')        
+
+   console.log(somar(5, 10))
+   console.log(subtrair(5, 10))
+   console.log(dividir(5, 10))
+   console.log(multiplicar(5, 10))
+
+___________________________________________________________________________________________________
+6. EXECUTE
+   
+   C:\Users\brito\Desktop\AULA-NODE> node app.js
+
+   SAIDA: 
+   15
+   -5
+   0.5
+   50
+
+___________________________________________________________________________________________________
+
+___________________________________________________________________________________________________
+
+                             +————————————+   
+                             | 16/02/2022 |
+                             +————————————+   
+                    ********************************
+                    *            DEUS              *
+                    *        SEJA LOUVADO          *
+                    ********************************                                       

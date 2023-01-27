@@ -1,0 +1,2078 @@
+                          [GTK]
+
+
+CMD COMO ADMINISTRADOR
+===========================================================
+
+C:\WINDOWS\system32>pkg-config --cflags gtk+-3.0
+-IC:/msys64/mingw64/bin/../include/gtk-3.0 -IC:/msys64/mingw64/bin/../include/pango-1.0 -IC:/msys64/mingw64/bin/../include -IC:/msys64/mingw64/bin/../include/glib-2.0 -IC:/msys64/mingw64/bin/../lib/glib-2.0/include -IC:/msys64/mingw64/bin/../include/harfbuzz -IC:/msys64/mingw64/bin/../include/freetype2 -IC:/msys64/mingw64/bin/../include/libpng16 -IC:/msys64/mingw64/bin/../include/fribidi -IC:/msys64/mingw64/bin/../include/cairo -IC:/msys64/mingw64/bin/../include/lzo -IC:/msys64/mingw64/bin/../include/pixman-1 -IC:/msys64/mingw64/bin/../include/gdk-pixbuf-2.0 -IC:/msys64/mingw64/bin/../include/atk-1.0 -mms-bitfields
+
+C:\WINDOWS\system32>pkg-config --libs gtk+-3.0
+-LC:/msys64/mingw64/bin/../lib -lgtk-3 -lgdk-3 -lz -lgdi32 -limm32 -lshell32 -lole32 -Wl,-luuid -lwinmm -ldwmapi -lsetupapi -lcfgmgr32 -lhid -lwinspool -lcomctl32 -lcomdlg32 -lpangowin32-1.0 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lintl
+
+C:\WINDOWS\system32>pkg-config --modversion gtk+-3.0
+3.24.33
+
+C:\WINDOWS\system32>pkg-config --modversion gtk+-4.0
+Package gtk+-4.0 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `gtk+-4.0.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'gtk+-4.0', required by 'virtual:world', not found
+
+C:\WINDOWS\system32>gcc --version
+gcc (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+C:\WINDOWS\system32>mingw-get update
+Updating catalogue: package-list.xml; (item 1 of 1)
+Checking catalogue: mingw32-package-list.xml; (item 2 of 4)
+Checking catalogue: mingw32-autoconf.xml; (item 3 of 38)
+Checking catalogue: mingw32-automake.xml; (item 4 of 38)
+Checking catalogue: mingw32-basic-bsdtar.xml; (item 5 of 38)
+Checking catalogue: mingw32-binutils.xml; (item 6 of 38)
+Checking catalogue: mingw32-bzip2.xml; (item 7 of 38)
+Checking catalogue: mingw32-dos2unix.xml; (item 8 of 38)
+Checking catalogue: mingw32-expat.xml; (item 9 of 38)
+Checking catalogue: mingw32-gcc3.xml; (item 10 of 38)
+Checking catalogue: mingw32-gcc4.xml; (item 11 of 38)
+Checking catalogue: mingw32-gcc-tools.xml; (item 12 of 38)
+Checking catalogue: mingw32-gdb.xml; (item 13 of 38)
+Checking catalogue: mingw32-gendef.xml; (item 14 of 38)
+Checking catalogue: mingw32-gettext.xml; (item 15 of 38)
+Checking catalogue: mingw32-gmp.xml; (item 16 of 38)
+Checking catalogue: mingw32-isl.xml; (item 17 of 38)
+Checking catalogue: mingw32-libarchive.xml; (item 18 of 38)
+Checking catalogue: mingw32-libiconv.xml; (item 19 of 38)
+Checking catalogue: mingw32-libtool.xml; (item 20 of 38)
+Checking catalogue: mingw32-lua.xml; (item 21 of 38)
+Checking catalogue: mingw32-make.xml; (item 22 of 38)
+Checking catalogue: mingw32-mingw-get.xml; (item 23 of 38)
+Checking catalogue: mingw32-mingw-utils.xml; (item 24 of 38)
+Checking catalogue: mingw32-mgwport.xml; (item 25 of 38)
+Checking catalogue: mingw32-mpc.xml; (item 26 of 38)
+Checking catalogue: mingw32-mpfr.xml; (item 27 of 38)
+Checking catalogue: mingw32-pexports.xml; (item 28 of 38)
+Checking catalogue: mingw32-popt.xml; (item 29 of 38)
+Checking catalogue: mingw32-pthreads-w32.xml; (item 30 of 38)
+Checking catalogue: mingw32-runtime.xml; (item 31 of 38)
+Checking catalogue: mingw32-wsl-candidate.xml; (item 32 of 38)
+Checking catalogue: mingw32-xz.xml; (item 33 of 38)
+Checking catalogue: mingw32-zlib.xml; (item 34 of 38)
+Checking catalogue: mingw32-base.xml; (item 35 of 38)
+Checking catalogue: mingw32-autotools.xml; (item 36 of 38)
+Checking catalogue: mingw32-contrib-package-list.xml; (item 37 of 38)
+Checking catalogue: mingw32-libunistring.xml; (item 38 of 43)
+Checking catalogue: mingw32-ncurses.xml; (item 39 of 43)
+Checking catalogue: mingw32-pdcurses.xml; (item 40 of 43)
+Checking catalogue: mingw32-tcltk.xml; (item 41 of 43)
+Checking catalogue: mingw32-xerces-c.xml; (item 42 of 43)
+Checking catalogue: msys-package-list.xml; (item 43 of 43)
+Checking catalogue: msys-autoconf.xml; (item 44 of 113)
+Checking catalogue: msys-autogen.xml; (item 45 of 113)
+Checking catalogue: msys-automake.xml; (item 46 of 113)
+Checking catalogue: msys-bash.xml; (item 47 of 113)
+Checking catalogue: msys-binutils.xml; (item 48 of 113)
+Checking catalogue: msys-bison.xml; (item 49 of 113)
+Checking catalogue: msys-bzip2.xml; (item 50 of 113)
+Checking catalogue: msys-console.xml; (item 51 of 113)
+Checking catalogue: msys-core.xml; (item 52 of 113)
+Checking catalogue: msys-coreutils.xml; (item 53 of 113)
+Checking catalogue: msys-crypt.xml; (item 54 of 113)
+Checking catalogue: msys-cvs.xml; (item 55 of 113)
+Checking catalogue: msys-cygutils.xml; (item 56 of 113)
+Checking catalogue: msys-dash.xml; (item 57 of 113)
+Checking catalogue: msys-diffutils.xml; (item 58 of 113)
+Checking catalogue: msys-diffstat.xml; (item 59 of 113)
+Checking catalogue: msys-dos2unix.xml; (item 60 of 113)
+Checking catalogue: msys-expat.xml; (item 61 of 113)
+Checking catalogue: msys-file.xml; (item 62 of 113)
+Checking catalogue: msys-findutils.xml; (item 63 of 113)
+Checking catalogue: msys-flex.xml; (item 64 of 113)
+Checking catalogue: msys-gawk.xml; (item 65 of 113)
+Checking catalogue: msys-gcc.xml; (item 66 of 113)
+Checking catalogue: msys-gdbm.xml; (item 67 of 113)
+Checking catalogue: msys-gettext.xml; (item 68 of 113)
+Checking catalogue: msys-gmp.xml; (item 69 of 113)
+Checking catalogue: msys-grep.xml; (item 70 of 113)
+Checking catalogue: msys-groff.xml; (item 71 of 113)
+Checking catalogue: msys-guile.xml; (item 72 of 113)
+Checking catalogue: msys-gzip.xml; (item 73 of 113)
+Checking catalogue: msys-help2man.xml; (item 74 of 113)
+Checking catalogue: msys-inetutils.xml; (item 75 of 113)
+Checking catalogue: msys-less.xml; (item 76 of 113)
+Checking catalogue: msys-libarchive.xml; (item 77 of 113)
+Checking catalogue: msys-libiconv.xml; (item 78 of 113)
+Checking catalogue: msys-libtool.xml; (item 79 of 113)
+Checking catalogue: msys-libxml2.xml; (item 80 of 113)
+Checking catalogue: msys-lndir.xml; (item 81 of 113)
+Checking catalogue: msys-lpr-enhanced.xml; (item 82 of 113)
+Checking catalogue: msys-m4.xml; (item 83 of 113)
+Checking catalogue: msys-make.xml; (item 84 of 113)
+Checking catalogue: msys-man.xml; (item 85 of 113)
+Checking catalogue: msys-minires.xml; (item 86 of 113)
+Checking catalogue: msys-mintty.xml; (item 87 of 113)
+Checking catalogue: msys-mktemp.xml; (item 88 of 113)
+Checking catalogue: msys-openssh.xml; (item 89 of 113)
+Checking catalogue: msys-openssl.xml; (item 90 of 113)
+Checking catalogue: msys-patch.xml; (item 91 of 113)
+Checking catalogue: msys-perl.xml; (item 92 of 113)
+Checking catalogue: msys-popt.xml; (item 93 of 113)
+Checking catalogue: msys-rebase.xml; (item 94 of 113)
+Checking catalogue: msys-regex.xml; (item 95 of 113)
+Checking catalogue: msys-rsync.xml; (item 96 of 113)
+Checking catalogue: msys-rxvt.xml; (item 97 of 113)
+Checking catalogue: msys-sed.xml; (item 98 of 113)
+Checking catalogue: msys-tar.xml; (item 99 of 113)
+Checking catalogue: msys-termcap.xml; (item 100 of 113)
+Checking catalogue: msys-texinfo.xml; (item 101 of 113)
+Checking catalogue: msys-unzip.xml; (item 102 of 113)
+Checking catalogue: msys-vim.xml; (item 103 of 113)
+Checking catalogue: msys-w32api.xml; (item 104 of 113)
+Checking catalogue: msys-wget.xml; (item 105 of 113)
+Checking catalogue: msys-xz.xml; (item 106 of 113)
+Checking catalogue: msys-zip.xml; (item 107 of 113)
+Checking catalogue: msys-zlib.xml; (item 108 of 113)
+Checking catalogue: msys-mksh.xml; (item 109 of 113)
+Checking catalogue: msys-ncurses.xml; (item 110 of 113)
+Checking catalogue: msys-base.xml; (item 111 of 113)
+Checking catalogue: mingw-developer-toolkit.xml; (item 112 of 113)
+Checking catalogue: msys-system-builder.xml; (item 113 of 113)
+
+C:\WINDOWS\system32>mingw-get upgrade
+upgrade: mingw-get-0.6.2-mingw32-beta-20131004-1-bin.tar.xz
+mingw-get: *** INFO *** package mingw-get-0.6.2-mingw32-beta-20131004-1-bin.tar.xz is up to date
+upgrade: mingw-get-0.6.2-mingw32-beta-20131004-1-gui.tar.xz
+mingw-get: *** INFO *** package mingw-get-0.6.2-mingw32-beta-20131004-1-gui.tar.xz is up to date
+upgrade: mingw-get-0.6.2-mingw32-beta-20131004-1-lic.tar.xz
+mingw-get: *** INFO *** package mingw-get-0.6.2-mingw32-beta-20131004-1-lic.tar.xz is up to date
+upgrade: msysCORE-1.0.19-1-msys-1.0.19-lic.tar.xz
+mingw-get: *** INFO *** package msysCORE-1.0.19-1-msys-1.0.19-lic.tar.xz is up to date
+upgrade: msysCORE-1.0.19-1-msys-1.0.19-doc.tar.xz
+mingw-get: *** INFO *** package msysCORE-1.0.19-1-msys-1.0.19-doc.tar.xz is up to date
+upgrade: termcap-0.20050421_1-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package termcap-0.20050421_1-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: libregex-1.20090805-2-msys-1.0.13-dll-1.tar.lzma
+mingw-get: *** INFO *** package libregex-1.20090805-2-msys-1.0.13-dll-1.tar.lzma is up to date
+upgrade: libtermcap-0.20050421_1-2-msys-1.0.13-dll-0.tar.lzma
+mingw-get: *** INFO *** package libtermcap-0.20050421_1-2-msys-1.0.13-dll-0.tar.lzma is up to date
+upgrade: libiconv-1.14-1-msys-1.0.17-dll-2.tar.lzma
+mingw-get: *** INFO *** package libiconv-1.14-1-msys-1.0.17-dll-2.tar.lzma is up to date
+upgrade: liblzma-5.0.3-1-msys-1.0.17-dll-5.tar.lzma
+mingw-get: *** INFO *** package liblzma-5.0.3-1-msys-1.0.17-dll-5.tar.lzma is up to date
+upgrade: libintl-0.18.1.1-1-msys-1.0.17-dll-8.tar.lzma
+mingw-get: *** INFO *** package libintl-0.18.1.1-1-msys-1.0.17-dll-8.tar.lzma is up to date
+upgrade: libxml2-2.7.6-1-msys-1.0.13-dll-2.tar.lzma
+mingw-get: *** INFO *** package libxml2-2.7.6-1-msys-1.0.13-dll-2.tar.lzma is up to date
+upgrade: libexpat-2.0.1-1-msys-1.0.13-dll-1.tar.lzma
+mingw-get: *** INFO *** package libexpat-2.0.1-1-msys-1.0.13-dll-1.tar.lzma is up to date
+upgrade: libcrypt-1.1_1-3-msys-1.0.13-dll-0.tar.lzma
+mingw-get: *** INFO *** package libcrypt-1.1_1-3-msys-1.0.13-dll-0.tar.lzma is up to date
+upgrade: libgdbm-1.8.3-3-msys-1.0.13-dll-3.tar.lzma
+mingw-get: *** INFO *** package libgdbm-1.8.3-3-msys-1.0.13-dll-3.tar.lzma is up to date
+upgrade: libbz2-1.0.6-1-msys-1.0.17-dll-1.tar.lzma
+mingw-get: *** INFO *** package libbz2-1.0.6-1-msys-1.0.17-dll-1.tar.lzma is up to date
+upgrade: zlib-1.2.7-1-msys-1.0.17-dll.tar.lzma
+mingw-get: *** INFO *** package zlib-1.2.7-1-msys-1.0.17-dll.tar.lzma is up to date
+upgrade: texinfo-4.13a-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package texinfo-4.13a-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: perl-5.8.8-1-msys-1.0.17-bin.tar.lzma
+mingw-get: *** INFO *** package perl-5.8.8-1-msys-1.0.17-bin.tar.lzma is up to date
+upgrade: sed-4.2.1-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package sed-4.2.1-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: m4-1.4.16-2-msys-1.0.17-bin.tar.lzma
+mingw-get: *** INFO *** package m4-1.4.16-2-msys-1.0.17-bin.tar.lzma is up to date
+upgrade: tar-1.23-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package tar-1.23-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: less-436-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package less-436-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: grep-2.5.4-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package grep-2.5.4-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: diffutils-2.8.7.20071206cvs-3-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package diffutils-2.8.7.20071206cvs-3-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: libmagic-5.04-1-msys-1.0.13-dll-1.tar.lzma
+mingw-get: *** INFO *** package libmagic-5.04-1-msys-1.0.13-dll-1.tar.lzma is up to date
+upgrade: file-5.04-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package file-5.04-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: coreutils-5.97-3-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package coreutils-5.97-3-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: bash-3.1.23-1-msys-1.0.18-bin.tar.xz
+mingw-get: *** INFO *** package bash-3.1.23-1-msys-1.0.18-bin.tar.xz is up to date
+upgrade: xz-5.0.3-1-msys-1.0.17-bin.tar.lzma
+mingw-get: *** INFO *** package xz-5.0.3-1-msys-1.0.17-bin.tar.lzma is up to date
+upgrade: gzip-1.3.12-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package gzip-1.3.12-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: bzip2-1.0.6-1-msys-1.0.17-bin.tar.lzma
+mingw-get: *** INFO *** package bzip2-1.0.6-1-msys-1.0.17-bin.tar.lzma is up to date
+upgrade: gawk-3.1.7-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package gawk-3.1.7-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: msysCORE-1.0.19-1-msys-1.0.19-bin.tar.xz
+mingw-get: *** INFO *** package msysCORE-1.0.19-1-msys-1.0.19-bin.tar.xz is up to date
+upgrade: autoconf2.5-2.68-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package autoconf2.5-2.68-1-mingw32-bin.tar.lzma is up to date
+upgrade: autoconf2.1-2.13-4-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package autoconf2.1-2.13-4-mingw32-bin.tar.lzma is up to date
+upgrade: automake1.11-1.11.1-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package automake1.11-1.11.1-1-mingw32-bin.tar.lzma is up to date
+upgrade: automake1.10-1.10.2-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package automake1.10-1.10.2-1-mingw32-bin.tar.lzma is up to date
+upgrade: automake1.9-1.9.6-3-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package automake1.9-1.9.6-3-mingw32-bin.tar.lzma is up to date
+upgrade: automake1.8-1.8.5-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package automake1.8-1.8.5-1-mingw32-bin.tar.lzma is up to date
+upgrade: automake1.7-1.7.9-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package automake1.7-1.7.9-1-mingw32-bin.tar.lzma is up to date
+upgrade: automake1.6-1.6.3-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package automake1.6-1.6.3-1-mingw32-bin.tar.lzma is up to date
+upgrade: automake1.5-1.5-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package automake1.5-1.5-1-mingw32-bin.tar.lzma is up to date
+upgrade: automake1.4-1.4p6-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package automake1.4-1.4p6-1-mingw32-bin.tar.lzma is up to date
+upgrade: automake-4-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package automake-4-1-mingw32-bin.tar.lzma is up to date
+upgrade: autoconf-10-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package autoconf-10-1-mingw32-bin.tar.lzma is up to date
+upgrade: libtool-2.4-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package libtool-2.4-1-mingw32-bin.tar.lzma is up to date
+upgrade: libltdl-2.4-1-mingw32-dll-7.tar.lzma
+mingw-get: *** INFO *** package libltdl-2.4-1-mingw32-dll-7.tar.lzma is up to date
+upgrade: libintl-0.18.3.2-2-mingw32-dll-8.tar.xz
+mingw-get: *** INFO *** package libintl-0.18.3.2-2-mingw32-dll-8.tar.xz is up to date
+upgrade: libiconv-1.14-3-mingw32-dll-2.tar
+mingw-get: *** INFO *** package libiconv-1.14-3-mingw32-dll-2.tar is up to date
+upgrade: libpthreadgc-2.10-mingw32-pre-20160821-1-dll-3.tar.xz
+ removing release libpthread-2.8.0-3-mingw32-dll-2.tar.lzma
+ installing libpthreadgc-2.10-mingw32-pre-20160821-1-dll-3.tar.xz
+mingw-get: *** ERROR *** C:\MinGW\/bin/pthreadGC-3.dll: extraction failed
+mingw-get: *** ERROR *** C:\MinGW\/bin/pthreadGC-3.dll: probable package conflict; existing file not overwritten
+upgrade: mingw32-libgomp-deps-5.3.0-mingw32-dll.meta
+mingw-get: *** INFO *** package mingw32-libgomp-deps-5.3.0-mingw32-dll.meta is up to date
+upgrade: libgcc-6.3.0-1-mingw32-dll-1.tar.xz
+mingw-get: *** INFO *** package libgcc-6.3.0-1-mingw32-dll-1.tar.xz is up to date
+upgrade: libgettextpo-0.18.3.2-2-mingw32-dll-0.tar.xz
+mingw-get: *** INFO *** package libgettextpo-0.18.3.2-2-mingw32-dll-0.tar.xz is up to date
+upgrade: libexpat-2.1.0-1-mingw32-dll-1.tar
+mingw-get: *** INFO *** package libexpat-2.1.0-1-mingw32-dll-1.tar is up to date
+upgrade: libgmp-6.1.2-2-mingw32-dll-10.tar.xz
+mingw-get: *** INFO *** package libgmp-6.1.2-2-mingw32-dll-10.tar.xz is up to date
+upgrade: libmpfr-3.1.5-2-mingw32-dll-4.tar.xz
+mingw-get: *** INFO *** package libmpfr-3.1.5-2-mingw32-dll-4.tar.xz is up to date
+upgrade: libmpc-1.0.3-1-mingw32-dll-3.tar.xz
+mingw-get: *** INFO *** package libmpc-1.0.3-1-mingw32-dll-3.tar.xz is up to date
+upgrade: libisl-0.18-1-mingw32-dll-15.tar.xz
+mingw-get: *** INFO *** package libisl-0.18-1-mingw32-dll-15.tar.xz is up to date
+upgrade: gcc-core-4.8.2-mingw32-dev.tar.meta
+mingw-get: *** INFO *** package gcc-core-4.8.2-mingw32-dev.tar.meta is up to date
+upgrade: mingw32-gcc-core-deps-6.3.0-1-mingw32-dll.meta
+mingw-get: *** INFO *** package mingw32-gcc-core-deps-6.3.0-1-mingw32-dll.meta is up to date
+upgrade: libquadmath-6.3.0-1-mingw32-dll-0.tar.xz
+mingw-get: *** INFO *** package libquadmath-6.3.0-1-mingw32-dll-0.tar.xz is up to date
+upgrade: libgomp-6.3.0-1-mingw32-dll-1.tar.xz
+mingw-get: *** INFO *** package libgomp-6.3.0-1-mingw32-dll-1.tar.xz is up to date
+upgrade: libstdc++-6.3.0-1-mingw32-dll-6.tar.xz
+mingw-get: *** INFO *** package libstdc++-6.3.0-1-mingw32-dll-6.tar.xz is up to date
+upgrade: libiconv-1.14-3-mingw32-dev.tar.lzma
+mingw-get: *** INFO *** package libiconv-1.14-3-mingw32-dev.tar.lzma is up to date
+upgrade: libiconv-1.14-3-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package libiconv-1.14-3-mingw32-bin.tar.lzma is up to date
+upgrade: gettext-0.18.3.2-2-mingw32-dev.tar.xz
+mingw-get: *** INFO *** package gettext-0.18.3.2-2-mingw32-dev.tar.xz is up to date
+upgrade: gettext-0.18.3.2-2-mingw32-bin.tar.xz
+mingw-get: *** INFO *** package gettext-0.18.3.2-2-mingw32-bin.tar.xz is up to date
+upgrade: libltdl-2.4-1-mingw32-dev.tar.lzma
+mingw-get: *** INFO *** package libltdl-2.4-1-mingw32-dev.tar.lzma is up to date
+upgrade: mingw32-autotools-2010090601-mingw32-bin.meta
+mingw-get: *** INFO *** package mingw32-autotools-2010090601-mingw32-bin.meta is up to date
+upgrade: mingwrt-5.0.2-mingw32-dll.tar.xz
+mingw-get: *** INFO *** package mingwrt-5.0.2-mingw32-dll.tar.xz is up to date
+upgrade: libssp-6.3.0-1-mingw32-dll-0.tar.xz
+mingw-get: *** INFO *** package libssp-6.3.0-1-mingw32-dll-0.tar.xz is up to date
+upgrade: libmingwex-5.0.2-mingw32-dll-0.tar.xz
+mingw-get: *** INFO *** package libmingwex-5.0.2-mingw32-dll-0.tar.xz is up to date
+upgrade: w32api-5.0.2-mingw32-dev.tar.xz
+mingw-get: *** INFO *** package w32api-5.0.2-mingw32-dev.tar.xz is up to date
+upgrade: mingwrt-5.0.2-mingw32-dev.tar.xz
+mingw-get: *** INFO *** package mingwrt-5.0.2-mingw32-dev.tar.xz is up to date
+upgrade: binutils-2.28-1-mingw32-bin.tar.xz
+mingw-get: *** INFO *** package binutils-2.28-1-mingw32-bin.tar.xz is up to date
+upgrade: libatomic-6.3.0-1-mingw32-dll-1.tar.xz
+mingw-get: *** INFO *** package libatomic-6.3.0-1-mingw32-dll-1.tar.xz is up to date
+upgrade: libz-1.2.8-1-mingw32-dll-1.tar
+mingw-get: *** INFO *** package libz-1.2.8-1-mingw32-dll-1.tar is up to date
+upgrade: gdb-7.6.1-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package gdb-7.6.1-1-mingw32-bin.tar.lzma is up to date
+upgrade: make-3.82.90-2-mingw32-cvs-20120902-bin.tar.lzma
+mingw-get: *** INFO *** package make-3.82.90-2-mingw32-cvs-20120902-bin.tar.lzma is up to date
+upgrade: gcc-6.3.0-1-mingw32-lic.tar.xz
+mingw-get: *** INFO *** package gcc-6.3.0-1-mingw32-lic.tar.xz is up to date
+upgrade: libgfortran-6.3.0-1-mingw32-dll-3.tar.xz
+mingw-get: *** INFO *** package libgfortran-6.3.0-1-mingw32-dll-3.tar.xz is up to date
+upgrade: gcc-fortran-4.8.2-mingw32-dev.tar.meta
+mingw-get: *** INFO *** package gcc-fortran-4.8.2-mingw32-dev.tar.meta is up to date
+upgrade: gcc-objc-4.8.2-mingw32-dev.tar.meta
+mingw-get: *** INFO *** package gcc-objc-4.8.2-mingw32-dev.tar.meta is up to date
+upgrade: gcc-core-6.3.0-1-mingw32-bin.tar.xz
+mingw-get: *** INFO *** package gcc-core-6.3.0-1-mingw32-bin.tar.xz is up to date
+upgrade: mingw32-base-2013072200-mingw32-bin.meta
+mingw-get: *** INFO *** package mingw32-base-2013072200-mingw32-bin.meta is up to date
+upgrade: gcc-ada-4.8.2-mingw32-dev.tar.meta
+mingw-get: *** INFO *** package gcc-ada-4.8.2-mingw32-dev.tar.meta is up to date
+upgrade: gcc-ada-6.3.0-1-mingw32-bin.tar.xz
+mingw-get: *** INFO *** package gcc-ada-6.3.0-1-mingw32-bin.tar.xz is up to date
+upgrade: gcc-fortran-6.3.0-1-mingw32-bin.tar.xz
+mingw-get: *** INFO *** package gcc-fortran-6.3.0-1-mingw32-bin.tar.xz is up to date
+upgrade: gcc-c++-4.8.2-mingw32-dev.tar.meta
+mingw-get: *** INFO *** package gcc-c++-4.8.2-mingw32-dev.tar.meta is up to date
+upgrade: gcc-c++-6.3.0-1-mingw32-bin.tar.xz
+mingw-get: *** INFO *** package gcc-c++-6.3.0-1-mingw32-bin.tar.xz is up to date
+upgrade: libobjc-6.3.0-1-mingw32-dll-4.tar.xz
+mingw-get: *** INFO *** package libobjc-6.3.0-1-mingw32-dll-4.tar.xz is up to date
+upgrade: gcc-objc-6.3.0-1-mingw32-bin.tar.xz
+mingw-get: *** INFO *** package gcc-objc-6.3.0-1-mingw32-bin.tar.xz is up to date
+upgrade: autoconf-10-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package autoconf-10-1-mingw32-lic.tar.lzma is up to date
+upgrade: autoconf2.1-2.13-4-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package autoconf2.1-2.13-4-mingw32-doc.tar.lzma is up to date
+upgrade: autoconf2.1-2.13-4-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package autoconf2.1-2.13-4-mingw32-lic.tar.lzma is up to date
+upgrade: autoconf2.5-2.68-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package autoconf2.5-2.68-1-mingw32-doc.tar.lzma is up to date
+upgrade: autoconf2.5-2.68-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package autoconf2.5-2.68-1-mingw32-lic.tar.lzma is up to date
+upgrade: automake-4-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package automake-4-1-mingw32-lic.tar.lzma is up to date
+upgrade: automake1.10-1.10.2-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package automake1.10-1.10.2-1-mingw32-doc.tar.lzma is up to date
+upgrade: automake1.10-1.10.2-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package automake1.10-1.10.2-1-mingw32-lic.tar.lzma is up to date
+upgrade: xerces-c-3.1.1-mingw32-lic.tar.xz
+mingw-get: *** INFO *** package xerces-c-3.1.1-mingw32-lic.tar.xz is up to date
+upgrade: xerces-c-3.1.1-2-mingw32-4.7.2-dll-3.tar.xz
+mingw-get: *** INFO *** package xerces-c-3.1.1-2-mingw32-4.7.2-dll-3.tar.xz is up to date
+upgrade: xerces-c-3.1.1-2-mingw32-4.7.2-dev.tar.xz
+mingw-get: *** INFO *** package xerces-c-3.1.1-2-mingw32-4.7.2-dev.tar.xz is up to date
+upgrade: xerces-c-3.1.1-2-mingw32-4.7.2-bin.tar.xz
+mingw-get: *** INFO *** package xerces-c-3.1.1-2-mingw32-4.7.2-bin.tar.xz is up to date
+upgrade: tk-8.6.0-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package tk-8.6.0-1-mingw32-lic.tar.lzma is up to date
+upgrade: tk-8.6.0-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package tk-8.6.0-1-mingw32-doc.tar.lzma is up to date
+upgrade: tk-8.6.0-1-mingw32-dll.tar.lzma
+mingw-get: *** INFO *** package tk-8.6.0-1-mingw32-dll.tar.lzma is up to date
+upgrade: tcl-8.6.0-1-mingw32-dll.tar.lzma
+mingw-get: *** INFO *** package tcl-8.6.0-1-mingw32-dll.tar.lzma is up to date
+upgrade: tcl-8.6.0-1-mingw32-dev.tar.lzma
+mingw-get: *** INFO *** package tcl-8.6.0-1-mingw32-dev.tar.lzma is up to date
+upgrade: tcl-8.6.0-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package tcl-8.6.0-1-mingw32-bin.tar.lzma is up to date
+upgrade: tk-8.6.0-1-mingw32-dev.tar.lzma
+mingw-get: *** INFO *** package tk-8.6.0-1-mingw32-dev.tar.lzma is up to date
+upgrade: tk-8.6.0-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package tk-8.6.0-1-mingw32-bin.tar.lzma is up to date
+upgrade: automake1.11-1.11.1-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package automake1.11-1.11.1-1-mingw32-doc.tar.lzma is up to date
+upgrade: automake1.11-1.11.1-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package automake1.11-1.11.1-1-mingw32-lic.tar.lzma is up to date
+upgrade: automake1.4-1.4p6-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package automake1.4-1.4p6-1-mingw32-doc.tar.lzma is up to date
+upgrade: automake1.4-1.4p6-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package automake1.4-1.4p6-1-mingw32-lic.tar.lzma is up to date
+upgrade: automake1.5-1.5-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package automake1.5-1.5-1-mingw32-doc.tar.lzma is up to date
+upgrade: automake1.5-1.5-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package automake1.5-1.5-1-mingw32-lic.tar.lzma is up to date
+upgrade: automake1.6-1.6.3-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package automake1.6-1.6.3-1-mingw32-doc.tar.lzma is up to date
+upgrade: automake1.6-1.6.3-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package automake1.6-1.6.3-1-mingw32-lic.tar.lzma is up to date
+upgrade: automake1.7-1.7.9-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package automake1.7-1.7.9-1-mingw32-doc.tar.lzma is up to date
+upgrade: automake1.7-1.7.9-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package automake1.7-1.7.9-1-mingw32-lic.tar.lzma is up to date
+upgrade: automake1.8-1.8.5-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package automake1.8-1.8.5-1-mingw32-doc.tar.lzma is up to date
+upgrade: automake1.8-1.8.5-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package automake1.8-1.8.5-1-mingw32-lic.tar.lzma is up to date
+upgrade: automake1.9-1.9.6-3-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package automake1.9-1.9.6-3-mingw32-doc.tar.lzma is up to date
+upgrade: automake1.9-1.9.6-3-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package automake1.9-1.9.6-3-mingw32-lic.tar.lzma is up to date
+upgrade: binutils-2.28-1-mingw32-dev.tar.xz
+mingw-get: *** INFO *** package binutils-2.28-1-mingw32-dev.tar.xz is up to date
+upgrade: binutils-2.28-1-mingw32-man.tar.xz
+mingw-get: *** INFO *** package binutils-2.28-1-mingw32-man.tar.xz is up to date
+upgrade: binutils-2.28-1-mingw32-info.tar.xz
+mingw-get: *** INFO *** package binutils-2.28-1-mingw32-info.tar.xz is up to date
+upgrade: binutils-2.24-1-mingw32-doc.tar.xz
+mingw-get: *** INFO *** package binutils-2.24-1-mingw32-doc.tar.xz is up to date
+upgrade: binutils-2.28-1-mingw32-lang.tar.xz
+mingw-get: *** INFO *** package binutils-2.28-1-mingw32-lang.tar.xz is up to date
+upgrade: gcc-core-4.8.1-4-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package gcc-core-4.8.1-4-mingw32-doc.tar.lzma is up to date
+upgrade: gcc-6.3.0-1-mingw32-info.tar.xz
+mingw-get: *** INFO *** package gcc-6.3.0-1-mingw32-info.tar.xz is up to date
+upgrade: gcc-6.3.0-1-mingw32-lang.tar.xz
+mingw-get: *** INFO *** package gcc-6.3.0-1-mingw32-lang.tar.xz is up to date
+upgrade: gcc-6.3.0-1-mingw32-man.tar.xz
+mingw-get: *** INFO *** package gcc-6.3.0-1-mingw32-man.tar.xz is up to date
+upgrade: gcc-ada-4.8.1-4-mingw32-info.tar.lzma
+mingw-get: *** INFO *** package gcc-ada-4.8.1-4-mingw32-info.tar.lzma is up to date
+upgrade: gcc-fortran-4.8.1-4-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package gcc-fortran-4.8.1-4-mingw32-doc.tar.lzma is up to date
+upgrade: gcc-fortran-6.3.0-1-mingw32-info.tar.xz
+mingw-get: *** INFO *** package gcc-fortran-6.3.0-1-mingw32-info.tar.xz is up to date
+upgrade: gcc-fortran-6.3.0-1-mingw32-man.tar.xz
+mingw-get: *** INFO *** package gcc-fortran-6.3.0-1-mingw32-man.tar.xz is up to date
+upgrade: gcc-c++-4.8.1-4-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package gcc-c++-4.8.1-4-mingw32-doc.tar.lzma is up to date
+upgrade: gcc-c++-6.3.0-1-mingw32-man.tar.xz
+mingw-get: *** INFO *** package gcc-c++-6.3.0-1-mingw32-man.tar.xz is up to date
+upgrade: libasprintf-0.18.3.2-2-mingw32-dll-0.tar.xz
+mingw-get: *** INFO *** package libasprintf-0.18.3.2-2-mingw32-dll-0.tar.xz is up to date
+upgrade: gcc-v3-core-3.4.5-20060117-3-mingw32-bin.tar.gz
+mingw-get: *** INFO *** package gcc-v3-core-3.4.5-20060117-3-mingw32-bin.tar.gz is up to date
+upgrade: gcc-v3-ada-3.4.5-20060117-3-mingw32-bin.tar.gz
+mingw-get: *** INFO *** package gcc-v3-ada-3.4.5-20060117-3-mingw32-bin.tar.gz is up to date
+upgrade: gcc-v3-g77-3.4.5-20060117-3-mingw32-bin.tar.gz
+mingw-get: *** INFO *** package gcc-v3-g77-3.4.5-20060117-3-mingw32-bin.tar.gz is up to date
+upgrade: gcc-v3-g++-3.4.5-20060117-3-mingw32-bin.tar.gz
+mingw-get: *** INFO *** package gcc-v3-g++-3.4.5-20060117-3-mingw32-bin.tar.gz is up to date
+upgrade: gcc-v3-java-3.4.5-20060117-3-mingw32-bin.tar.gz
+mingw-get: *** INFO *** package gcc-v3-java-3.4.5-20060117-3-mingw32-bin.tar.gz is up to date
+upgrade: gcc-v3-objc-3.4.5-20060117-3-mingw32-bin.tar.gz
+mingw-get: *** INFO *** package gcc-v3-objc-3.4.5-20060117-3-mingw32-bin.tar.gz is up to date
+upgrade: gdb-7.6.1-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package gdb-7.6.1-1-mingw32-doc.tar.lzma is up to date
+upgrade: gdb-7.6.1-1-mingw32-info.tar.lzma
+mingw-get: *** INFO *** package gdb-7.6.1-1-mingw32-info.tar.lzma is up to date
+upgrade: gdb-7.6.1-1-mingw32-lang.tar.lzma
+mingw-get: *** INFO *** package gdb-7.6.1-1-mingw32-lang.tar.lzma is up to date
+upgrade: gdb-7.6.1-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package gdb-7.6.1-1-mingw32-lic.tar.lzma is up to date
+upgrade: gdb-7.6.1-1-mingw32-man.tar.lzma
+mingw-get: *** INFO *** package gdb-7.6.1-1-mingw32-man.tar.lzma is up to date
+upgrade: gdb-python-7.5-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package gdb-python-7.5-1-mingw32-bin.tar.lzma is up to date
+upgrade: gdb-python-7.5-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package gdb-python-7.5-1-mingw32-doc.tar.lzma is up to date
+upgrade: gettext-0.18.3.2-2-mingw32-dll.tar.xz
+mingw-get: *** INFO *** package gettext-0.18.3.2-2-mingw32-dll.tar.xz is up to date
+upgrade: gettext-0.18.3.2-2-mingw32-doc.tar.xz
+mingw-get: *** INFO *** package gettext-0.18.3.2-2-mingw32-doc.tar.xz is up to date
+upgrade: gettext-0.18.3.2-2-mingw32-ext.tar.xz
+mingw-get: *** INFO *** package gettext-0.18.3.2-2-mingw32-ext.tar.xz is up to date
+upgrade: gettext-0.18.3.2-2-mingw32-html.tar.xz
+mingw-get: *** INFO *** package gettext-0.18.3.2-2-mingw32-html.tar.xz is up to date
+upgrade: gettext-0.18.3.2-2-mingw32-info.tar.xz
+mingw-get: *** INFO *** package gettext-0.18.3.2-2-mingw32-info.tar.xz is up to date
+upgrade: gettext-0.18.3.2-2-mingw32-lic.tar.xz
+mingw-get: *** INFO *** package gettext-0.18.3.2-2-mingw32-lic.tar.xz is up to date
+upgrade: gettext-0.18.3.2-2-mingw32-man.tar.xz
+mingw-get: *** INFO *** package gettext-0.18.3.2-2-mingw32-man.tar.xz is up to date
+upgrade: libgmpxx-6.1.2-2-mingw32-dll-4.tar.xz
+mingw-get: *** INFO *** package libgmpxx-6.1.2-2-mingw32-dll-4.tar.xz is up to date
+upgrade: gmp-6.1.2-2-mingw32-dev.tar.xz
+mingw-get: *** INFO *** package gmp-6.1.2-2-mingw32-dev.tar.xz is up to date
+upgrade: gmp-6.1.2-1-mingw32-doc.tar
+mingw-get: *** INFO *** package gmp-6.1.2-1-mingw32-doc.tar is up to date
+upgrade: gmp-6.1.2-2-mingw32-info.tar.xz
+mingw-get: *** INFO *** package gmp-6.1.2-2-mingw32-info.tar.xz is up to date
+upgrade: gmp-6.1.2-2-mingw32-lic.tar.xz
+mingw-get: *** INFO *** package gmp-6.1.2-2-mingw32-lic.tar.xz is up to date
+upgrade: isl-0.18-1-mingw32-dev.tar.xz
+mingw-get: *** INFO *** package isl-0.18-1-mingw32-dev.tar.xz is up to date
+upgrade: isl-0.18-1-mingw32-doc.tar.xz
+mingw-get: *** INFO *** package isl-0.18-1-mingw32-doc.tar.xz is up to date
+upgrade: isl-0.18-1-mingw32-lic.tar.xz
+mingw-get: *** INFO *** package isl-0.18-1-mingw32-lic.tar.xz is up to date
+upgrade: libcharset-1.14-3-mingw32-dll-1.tar
+mingw-get: *** INFO *** package libcharset-1.14-3-mingw32-dll-1.tar is up to date
+upgrade: libgnat-4.8.1-4-mingw32-dll-4_8.tar.lzma
+mingw-get: *** INFO *** package libgnat-4.8.1-4-mingw32-dll-4_8.tar.lzma is up to date
+upgrade: libiconv-1.14-3-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package libiconv-1.14-3-mingw32-doc.tar.lzma is up to date
+upgrade: libiconv-1.14-3-mingw32-html.tar.lzma
+mingw-get: *** INFO *** package libiconv-1.14-3-mingw32-html.tar.lzma is up to date
+upgrade: libiconv-1.14-3-mingw32-lang.tar.lzma
+mingw-get: *** INFO *** package libiconv-1.14-3-mingw32-lang.tar.lzma is up to date
+upgrade: libiconv-1.14-3-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package libiconv-1.14-3-mingw32-lic.tar.lzma is up to date
+upgrade: libiconv-1.14-3-mingw32-man.tar.lzma
+mingw-get: *** INFO *** package libiconv-1.14-3-mingw32-man.tar.lzma is up to date
+upgrade: libmingwex-5.0.2-mingw32-dev.tar.xz
+mingw-get: *** INFO *** package libmingwex-5.0.2-mingw32-dev.tar.xz is up to date
+upgrade: libncurses-6.0-2-mingw32-dev.tar.lzma
+mingw-get: *** INFO *** package libncurses-6.0-2-mingw32-dev.tar.lzma is up to date
+upgrade: libncurses-6.0-2-mingw32-dll-6.tar.lzma
+mingw-get: *** INFO *** package libncurses-6.0-2-mingw32-dll-6.tar.lzma is up to date
+upgrade: libpdcurses-3.4-1-mingw32-dll.tar.lzma
+mingw-get: *** INFO *** package libpdcurses-3.4-1-mingw32-dll.tar.lzma is up to date
+upgrade: libpdcurses-3.4-1-mingw32-dev.tar.lzma
+mingw-get: *** INFO *** package libpdcurses-3.4-1-mingw32-dev.tar.lzma is up to date
+upgrade: libpthreadgc-2.10-mingw32-pre-20160821-1-dev.tar.xz
+mingw-get: *** INFO *** package libpthreadgc-2.10-mingw32-pre-20160821-1-dev.tar.xz is up to date
+upgrade: libpthreadgce-2.10-mingw32-pre-20160821-1-dll-3.tar.xz
+mingw-get: *** INFO *** package libpthreadgce-2.10-mingw32-pre-20160821-1-dll-3.tar.xz is up to date
+upgrade: libpthreadgce-2.10-mingw32-pre-20160821-1-dev.tar.xz
+mingw-get: *** INFO *** package libpthreadgce-2.10-mingw32-pre-20160821-1-dev.tar.xz is up to date
+upgrade: libquadmath-6.3.0-1-mingw32-info.tar.xz
+mingw-get: *** INFO *** package libquadmath-6.3.0-1-mingw32-info.tar.xz is up to date
+upgrade: libquserex-2.9.0-mingw32-pre-20110507-2-dll.tar.lzma
+mingw-get: *** INFO *** package libquserex-2.9.0-mingw32-pre-20110507-2-dll.tar.lzma is up to date
+upgrade: libtool-2.4-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package libtool-2.4-1-mingw32-doc.tar.lzma is up to date
+upgrade: libtool-2.4-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package libtool-2.4-1-mingw32-lic.tar.lzma is up to date
+upgrade: libunistring-0.9.6-1-mingw32-dll-2.tar.lzma
+mingw-get: *** INFO *** package libunistring-0.9.6-1-mingw32-dll-2.tar.lzma is up to date
+upgrade: libunistring-0.9.6-1-mingw32-dev.tar.lzma
+mingw-get: *** INFO *** package libunistring-0.9.6-1-mingw32-dev.tar.lzma is up to date
+upgrade: libunistring-0.9.6-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package libunistring-0.9.6-1-mingw32-doc.tar.lzma is up to date
+upgrade: libunistring-0.9.6-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package libunistring-0.9.6-1-mingw32-lic.tar.lzma is up to date
+upgrade: libz-1.2.8-1-mingw32-dev-1.tar
+mingw-get: *** INFO *** package libz-1.2.8-1-mingw32-dev-1.tar is up to date
+upgrade: lua-5.2.0-1-mingw32-dll-52.tar.xz
+mingw-get: *** INFO *** package lua-5.2.0-1-mingw32-dll-52.tar.xz is up to date
+upgrade: lua-5.2.0-1-mingw32-bin.tar.xz
+mingw-get: *** INFO *** package lua-5.2.0-1-mingw32-bin.tar.xz is up to date
+upgrade: lua-5.2.0-1-mingw32-dev.tar.xz
+mingw-get: *** INFO *** package lua-5.2.0-1-mingw32-dev.tar.xz is up to date
+upgrade: lua-5.2.0-1-mingw32-doc.tar.xz
+mingw-get: *** INFO *** package lua-5.2.0-1-mingw32-doc.tar.xz is up to date
+upgrade: lua-5.2.0-1-mingw32-lic.tar.xz
+mingw-get: *** INFO *** package lua-5.2.0-1-mingw32-lic.tar.xz is up to date
+upgrade: lua-5.2.0-1-mingw32-man.tar.xz
+mingw-get: *** INFO *** package lua-5.2.0-1-mingw32-man.tar.xz is up to date
+upgrade: mingwrt-5.0.2-mingw32-lic.tar.xz
+mingw-get: *** INFO *** package mingwrt-5.0.2-mingw32-lic.tar.xz is up to date
+upgrade: mingwrt-5.0.2-mingw32-man.tar.xz
+mingw-get: *** INFO *** package mingwrt-5.0.2-mingw32-man.tar.xz is up to date
+upgrade: mpfr-3.1.5-2-mingw32-dev.tar.xz
+mingw-get: *** INFO *** package mpfr-3.1.5-2-mingw32-dev.tar.xz is up to date
+upgrade: mpc-1.0.3-1-mingw32-dev.tar.xz
+mingw-get: *** INFO *** package mpc-1.0.3-1-mingw32-dev.tar.xz is up to date
+upgrade: mpc-1.0.3-1-mingw32-doc.tar
+mingw-get: *** INFO *** package mpc-1.0.3-1-mingw32-doc.tar is up to date
+upgrade: mpc-1.0.3-1-mingw32-info.tar.xz
+mingw-get: *** INFO *** package mpc-1.0.3-1-mingw32-info.tar.xz is up to date
+upgrade: mpc-1.0.3-1-mingw32-lic.tar.xz
+mingw-get: *** INFO *** package mpc-1.0.3-1-mingw32-lic.tar.xz is up to date
+upgrade: mpfr-3.1.5-2-mingw32-doc.tar.xz
+mingw-get: *** INFO *** package mpfr-3.1.5-2-mingw32-doc.tar.xz is up to date
+upgrade: mpfr-3.1.5-2-mingw32-info.tar.xz
+mingw-get: *** INFO *** package mpfr-3.1.5-2-mingw32-info.tar.xz is up to date
+upgrade: mpfr-3.1.5-2-mingw32-lic.tar.xz
+mingw-get: *** INFO *** package mpfr-3.1.5-2-mingw32-lic.tar.xz is up to date
+upgrade: ncurses-6.0-2-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package ncurses-6.0-2-mingw32-bin.tar.lzma is up to date
+upgrade: ncurses-6.0-2-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package ncurses-6.0-2-mingw32-doc.tar.lzma is up to date
+upgrade: ncurses-6.0-2-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package ncurses-6.0-2-mingw32-lic.tar.lzma is up to date
+upgrade: PDCurses-3.4-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package PDCurses-3.4-1-mingw32-bin.tar.lzma is up to date
+upgrade: PDCurses-3.4-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package PDCurses-3.4-1-mingw32-doc.tar.lzma is up to date
+upgrade: PDCurses-3.4-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package PDCurses-3.4-1-mingw32-lic.tar.lzma is up to date
+upgrade: pthreads-w32-2.10-mingw32-pre-20160821-1-dev.tar.xz
+mingw-get: *** INFO *** package pthreads-w32-2.10-mingw32-pre-20160821-1-dev.tar.xz is up to date
+upgrade: pthreads-w32-2.10-mingw32-pre-20160821-1-doc.tar.xz
+mingw-get: *** INFO *** package pthreads-w32-2.10-mingw32-pre-20160821-1-doc.tar.xz is up to date
+upgrade: pthreads-w32-2.10-mingw32-pre-20160821-1-lic.tar.xz
+mingw-get: *** INFO *** package pthreads-w32-2.10-mingw32-pre-20160821-1-lic.tar.xz is up to date
+upgrade: tcl-8.6.0-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package tcl-8.6.0-1-mingw32-doc.tar.lzma is up to date
+upgrade: tcl-8.6.0-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package tcl-8.6.0-1-mingw32-lic.tar.lzma is up to date
+upgrade: tcl-8.6.0-1-mingw32-man.tar.lzma
+mingw-get: *** INFO *** package tcl-8.6.0-1-mingw32-man.tar.lzma is up to date
+upgrade: terminfo-6.0-2-mingw32-data.tar.lzma
+mingw-get: *** INFO *** package terminfo-6.0-2-mingw32-data.tar.lzma is up to date
+upgrade: libguile-1.8.7-2-msys-1.0.15-rtm.tar.lzma
+mingw-get: *** INFO *** package libguile-1.8.7-2-msys-1.0.15-rtm.tar.lzma is up to date
+upgrade: libpopt-1.15-2-msys-1.0.13-dll-0.tar.lzma
+mingw-get: *** INFO *** package libpopt-1.15-2-msys-1.0.13-dll-0.tar.lzma is up to date
+upgrade: libopenssl-1.0.0-1-msys-1.0.13-dll-100.tar.lzma
+mingw-get: *** INFO *** package libopenssl-1.0.0-1-msys-1.0.13-dll-100.tar.lzma is up to date
+upgrade: libltdl-2.4-1-msys-1.0.15-dll-7.tar.lzma
+mingw-get: *** INFO *** package libltdl-2.4-1-msys-1.0.15-dll-7.tar.lzma is up to date
+upgrade: libgmp-5.0.1-1-msys-1.0.13-dll-10.tar.lzma
+mingw-get: *** INFO *** package libgmp-5.0.1-1-msys-1.0.13-dll-10.tar.lzma is up to date
+upgrade: vim-7.3-2-msys-1.0.16-bin.tar.lzma
+mingw-get: *** INFO *** package vim-7.3-2-msys-1.0.16-bin.tar.lzma is up to date
+upgrade: rsync-3.0.8-1-msys-1.0.17-bin.tar.lzma
+mingw-get: *** INFO *** package rsync-3.0.8-1-msys-1.0.17-bin.tar.lzma is up to date
+upgrade: libminires-1.02_1-2-msys-1.0.13-dll.tar.lzma
+mingw-get: *** INFO *** package libminires-1.02_1-2-msys-1.0.13-dll.tar.lzma is up to date
+upgrade: patch-2.6.1-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package patch-2.6.1-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: openssl-1.0.0-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package openssl-1.0.0-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: openssh-5.4p1-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package openssh-5.4p1-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: mktemp-1.6-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package mktemp-1.6-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: make-3.81-3-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package make-3.81-3-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: findutils-4.4.2-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package findutils-4.4.2-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: dos2unix-7.4.0-1-msys-1.0.19-bin.tar.lzma
+mingw-get: *** INFO *** package dos2unix-7.4.0-1-msys-1.0.19-bin.tar.lzma is up to date
+upgrade: msysCORE-1.0.19-1-msys-1.0.19-ext.tar.xz
+mingw-get: *** INFO *** package msysCORE-1.0.19-1-msys-1.0.19-ext.tar.xz is up to date
+upgrade: libopts-5.10.1-1-msys-1.0.15-dll-25.tar.lzma
+mingw-get: *** INFO *** package libopts-5.10.1-1-msys-1.0.15-dll-25.tar.lzma is up to date
+upgrade: libguile-1.8.7-2-msys-1.0.15-dll-17.tar.lzma
+mingw-get: *** INFO *** package libguile-1.8.7-2-msys-1.0.15-dll-17.tar.lzma is up to date
+upgrade: libarchive-2.8.3-1-msys-1.0.13-dll-2.tar.lzma
+mingw-get: *** INFO *** package libarchive-2.8.3-1-msys-1.0.13-dll-2.tar.lzma is up to date
+upgrade: lndir-1.0.1-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package lndir-1.0.1-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: inetutils-1.7-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package inetutils-1.7-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: guile-1.8.7-2-msys-1.0.15-bin.tar.lzma
+mingw-get: *** INFO *** package guile-1.8.7-2-msys-1.0.15-bin.tar.lzma is up to date
+upgrade: flex-2.5.35-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package flex-2.5.35-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: diffstat-1.54-1-msys-1.0.17-bin.tar.lzma
+mingw-get: *** INFO *** package diffstat-1.54-1-msys-1.0.17-bin.tar.lzma is up to date
+upgrade: cvs-1.12.13-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package cvs-1.12.13-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: coreutils-5.97-3-msys-1.0.13-ext.tar.lzma
+mingw-get: *** INFO *** package coreutils-5.97-3-msys-1.0.13-ext.tar.lzma is up to date
+upgrade: bsdcpio-2.8.3-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package bsdcpio-2.8.3-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: bsdtar-2.8.3-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package bsdtar-2.8.3-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: bison-2.4.2-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package bison-2.4.2-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: autogen-5.10.1-1-msys-1.0.15-bin.tar.lzma
+mingw-get: *** INFO *** package autogen-5.10.1-1-msys-1.0.15-bin.tar.lzma is up to date
+upgrade: msys-base-2013072300-msys-bin.meta
+mingw-get: *** INFO *** package msys-base-2013072300-msys-bin.meta is up to date
+upgrade: mingw-developer-toolkit-2013072300-msys-bin.meta
+mingw-get: *** INFO *** package mingw-developer-toolkit-2013072300-msys-bin.meta is up to date
+
+C:\WINDOWS\system32>gcc --version
+gcc (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+C:\WINDOWS\system32>gcc --version
+gcc (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+C:\WINDOWS\system32>mingw-get update
+Updating catalogue: package-list.xml; (item 1 of 1)
+Checking catalogue: mingw32-package-list.xml; (item 2 of 4)
+Checking catalogue: mingw32-autoconf.xml; (item 3 of 38)
+Checking catalogue: mingw32-automake.xml; (item 4 of 38)
+Checking catalogue: mingw32-basic-bsdtar.xml; (item 5 of 38)
+Checking catalogue: mingw32-binutils.xml; (item 6 of 38)
+Checking catalogue: mingw32-bzip2.xml; (item 7 of 38)
+Checking catalogue: mingw32-dos2unix.xml; (item 8 of 38)
+Checking catalogue: mingw32-expat.xml; (item 9 of 38)
+Checking catalogue: mingw32-gcc3.xml; (item 10 of 38)
+Checking catalogue: mingw32-gcc4.xml; (item 11 of 38)
+Checking catalogue: mingw32-gcc-tools.xml; (item 12 of 38)
+Checking catalogue: mingw32-gdb.xml; (item 13 of 38)
+Checking catalogue: mingw32-gendef.xml; (item 14 of 38)
+Checking catalogue: mingw32-gettext.xml; (item 15 of 38)
+Checking catalogue: mingw32-gmp.xml; (item 16 of 38)
+Checking catalogue: mingw32-isl.xml; (item 17 of 38)
+Checking catalogue: mingw32-libarchive.xml; (item 18 of 38)
+Checking catalogue: mingw32-libiconv.xml; (item 19 of 38)
+Checking catalogue: mingw32-libtool.xml; (item 20 of 38)
+Checking catalogue: mingw32-lua.xml; (item 21 of 38)
+Checking catalogue: mingw32-make.xml; (item 22 of 38)
+Checking catalogue: mingw32-mingw-get.xml; (item 23 of 38)
+Checking catalogue: mingw32-mingw-utils.xml; (item 24 of 38)
+Checking catalogue: mingw32-mgwport.xml; (item 25 of 38)
+Checking catalogue: mingw32-mpc.xml; (item 26 of 38)
+Checking catalogue: mingw32-mpfr.xml; (item 27 of 38)
+Checking catalogue: mingw32-pexports.xml; (item 28 of 38)
+Checking catalogue: mingw32-popt.xml; (item 29 of 38)
+Checking catalogue: mingw32-pthreads-w32.xml; (item 30 of 38)
+Checking catalogue: mingw32-runtime.xml; (item 31 of 38)
+Checking catalogue: mingw32-wsl-candidate.xml; (item 32 of 38)
+Checking catalogue: mingw32-xz.xml; (item 33 of 38)
+Checking catalogue: mingw32-zlib.xml; (item 34 of 38)
+Checking catalogue: mingw32-base.xml; (item 35 of 38)
+Checking catalogue: mingw32-autotools.xml; (item 36 of 38)
+Checking catalogue: mingw32-contrib-package-list.xml; (item 37 of 38)
+Checking catalogue: mingw32-libunistring.xml; (item 38 of 43)
+Checking catalogue: mingw32-ncurses.xml; (item 39 of 43)
+Checking catalogue: mingw32-pdcurses.xml; (item 40 of 43)
+Checking catalogue: mingw32-tcltk.xml; (item 41 of 43)
+Checking catalogue: mingw32-xerces-c.xml; (item 42 of 43)
+Checking catalogue: msys-package-list.xml; (item 43 of 43)
+Checking catalogue: msys-autoconf.xml; (item 44 of 113)
+Checking catalogue: msys-autogen.xml; (item 45 of 113)
+Checking catalogue: msys-automake.xml; (item 46 of 113)
+Checking catalogue: msys-bash.xml; (item 47 of 113)
+Checking catalogue: msys-binutils.xml; (item 48 of 113)
+Checking catalogue: msys-bison.xml; (item 49 of 113)
+Checking catalogue: msys-bzip2.xml; (item 50 of 113)
+Checking catalogue: msys-console.xml; (item 51 of 113)
+Checking catalogue: msys-core.xml; (item 52 of 113)
+Checking catalogue: msys-coreutils.xml; (item 53 of 113)
+Checking catalogue: msys-crypt.xml; (item 54 of 113)
+Checking catalogue: msys-cvs.xml; (item 55 of 113)
+Checking catalogue: msys-cygutils.xml; (item 56 of 113)
+Checking catalogue: msys-dash.xml; (item 57 of 113)
+Checking catalogue: msys-diffutils.xml; (item 58 of 113)
+Checking catalogue: msys-diffstat.xml; (item 59 of 113)
+Checking catalogue: msys-dos2unix.xml; (item 60 of 113)
+Checking catalogue: msys-expat.xml; (item 61 of 113)
+Checking catalogue: msys-file.xml; (item 62 of 113)
+Checking catalogue: msys-findutils.xml; (item 63 of 113)
+Checking catalogue: msys-flex.xml; (item 64 of 113)
+Checking catalogue: msys-gawk.xml; (item 65 of 113)
+Checking catalogue: msys-gcc.xml; (item 66 of 113)
+Checking catalogue: msys-gdbm.xml; (item 67 of 113)
+Checking catalogue: msys-gettext.xml; (item 68 of 113)
+Checking catalogue: msys-gmp.xml; (item 69 of 113)
+Checking catalogue: msys-grep.xml; (item 70 of 113)
+Checking catalogue: msys-groff.xml; (item 71 of 113)
+Checking catalogue: msys-guile.xml; (item 72 of 113)
+Checking catalogue: msys-gzip.xml; (item 73 of 113)
+Checking catalogue: msys-help2man.xml; (item 74 of 113)
+Checking catalogue: msys-inetutils.xml; (item 75 of 113)
+Checking catalogue: msys-less.xml; (item 76 of 113)
+Checking catalogue: msys-libarchive.xml; (item 77 of 113)
+Checking catalogue: msys-libiconv.xml; (item 78 of 113)
+Checking catalogue: msys-libtool.xml; (item 79 of 113)
+Checking catalogue: msys-libxml2.xml; (item 80 of 113)
+Checking catalogue: msys-lndir.xml; (item 81 of 113)
+Checking catalogue: msys-lpr-enhanced.xml; (item 82 of 113)
+Checking catalogue: msys-m4.xml; (item 83 of 113)
+Checking catalogue: msys-make.xml; (item 84 of 113)
+Checking catalogue: msys-man.xml; (item 85 of 113)
+Checking catalogue: msys-minires.xml; (item 86 of 113)
+Checking catalogue: msys-mintty.xml; (item 87 of 113)
+Checking catalogue: msys-mktemp.xml; (item 88 of 113)
+Checking catalogue: msys-openssh.xml; (item 89 of 113)
+Checking catalogue: msys-openssl.xml; (item 90 of 113)
+Checking catalogue: msys-patch.xml; (item 91 of 113)
+Checking catalogue: msys-perl.xml; (item 92 of 113)
+Checking catalogue: msys-popt.xml; (item 93 of 113)
+Checking catalogue: msys-rebase.xml; (item 94 of 113)
+Checking catalogue: msys-regex.xml; (item 95 of 113)
+Checking catalogue: msys-rsync.xml; (item 96 of 113)
+Checking catalogue: msys-rxvt.xml; (item 97 of 113)
+Checking catalogue: msys-sed.xml; (item 98 of 113)
+Checking catalogue: msys-tar.xml; (item 99 of 113)
+Checking catalogue: msys-termcap.xml; (item 100 of 113)
+Checking catalogue: msys-texinfo.xml; (item 101 of 113)
+Checking catalogue: msys-unzip.xml; (item 102 of 113)
+Checking catalogue: msys-vim.xml; (item 103 of 113)
+Checking catalogue: msys-w32api.xml; (item 104 of 113)
+Checking catalogue: msys-wget.xml; (item 105 of 113)
+Checking catalogue: msys-xz.xml; (item 106 of 113)
+Checking catalogue: msys-zip.xml; (item 107 of 113)
+Checking catalogue: msys-zlib.xml; (item 108 of 113)
+Checking catalogue: msys-mksh.xml; (item 109 of 113)
+Checking catalogue: msys-ncurses.xml; (item 110 of 113)
+Checking catalogue: msys-base.xml; (item 111 of 113)
+Checking catalogue: mingw-developer-toolkit.xml; (item 112 of 113)
+Checking catalogue: msys-system-builder.xml; (item 113 of 113)
+
+C:\WINDOWS\system32>mingw-get upgrade
+mingw-get: *** ERROR *** mingw32-libmingwex-dll: unknown package
+mingw-get: *** ERROR *** gcc-core-6.3.0-1-mingw32-bin.tar.xz: requires...
+mingw-get: *** ERROR *** libmingwex-*-mingw32-dll-0.tar: unresolved dependency (type 'eq')
+mingw-get: *** ERROR *** libmingwex-*-mingw32-dll-0.tar: cannot identify any providing package
+mingw-get: *** ERROR *** please report this to the package maintainer
+mingw-get: *** ERROR *** gcc-core-6.3.0-1-mingw32-bin.tar.xz: requires...
+mingw-get: *** ERROR *** libmingwex-*-mingw32-dll-0.tar: unresolved dependency (type 'eq')
+mingw-get: *** ERROR *** libmingwex-*-mingw32-dll-0.tar: cannot identify any providing package
+mingw-get: *** ERROR *** please report this to the package maintainer
+mingw-get: *** ERROR *** gcc-core-6.3.0-1-mingw32-bin.tar.xz: requires...
+mingw-get: *** ERROR *** libmingwex-*-mingw32-dll-0.tar: unresolved dependency (type 'eq')
+mingw-get: *** ERROR *** libmingwex-*-mingw32-dll-0.tar: cannot identify any providing package
+mingw-get: *** ERROR *** please report this to the package maintainer
+mingw-get: *** ERROR *** gcc-core-6.3.0-1-mingw32-bin.tar.xz: requires...
+mingw-get: *** ERROR *** libmingwex-*-mingw32-dll-0.tar: unresolved dependency (type 'eq')
+mingw-get: *** ERROR *** libmingwex-*-mingw32-dll-0.tar: cannot identify any providing package
+mingw-get: *** ERROR *** please report this to the package maintainer
+mingw-get: *** ERROR *** gcc-core-6.3.0-1-mingw32-bin.tar.xz: requires...
+mingw-get: *** ERROR *** libmingwex-*-mingw32-dll-0.tar: unresolved dependency (type 'eq')
+mingw-get: *** ERROR *** libmingwex-*-mingw32-dll-0.tar: cannot identify any providing package
+mingw-get: *** ERROR *** please report this to the package maintainer
+mingw-get: *** ERROR *** gcc-core-6.3.0-1-mingw32-bin.tar.xz: requires...
+mingw-get: *** ERROR *** libmingwex-*-mingw32-dll-0.tar: unresolved dependency (type 'eq')
+mingw-get: *** ERROR *** libmingwex-*-mingw32-dll-0.tar: cannot identify any providing package
+mingw-get: *** ERROR *** please report this to the package maintainer
+mingw-get: *** ERROR *** mingw32-libmingwex-dev: unknown package
+mingw-get: *** ERROR *** mingwrt-man: unknown package
+mingw-get: *** ERROR *** gcc-core-6.3.0-1-mingw32-bin.tar.xz: requires...
+mingw-get: *** ERROR *** libmingwex-*-mingw32-dll-0.tar: unresolved dependency (type 'eq')
+mingw-get: *** ERROR *** libmingwex-*-mingw32-dll-0.tar: cannot identify any providing package
+mingw-get: *** ERROR *** please report this to the package maintainer
+mingw-get: *** ERROR *** gcc-core-6.3.0-1-mingw32-bin.tar.xz: requires...
+mingw-get: *** ERROR *** libmingwex-*-mingw32-dll-0.tar: unresolved dependency (type 'eq')
+mingw-get: *** ERROR *** libmingwex-*-mingw32-dll-0.tar: cannot identify any providing package
+mingw-get: *** ERROR *** please report this to the package maintainer
+http://prdownloads.sourceforge.net/mingw/mingwrt-4.0-1-mingw32-rc-4-dll.tar.lzma?download
+13.13 kB / 13.13 kB     |================================================| 100%
+http://prdownloads.sourceforge.net/mingw/w32api-4.0-1-mingw32-rc-4-dev.tar.lzma?download
+1.11 MB / 1.11 MB       |================================================| 100%
+http://prdownloads.sourceforge.net/mingw/mingwrt-4.0-1-mingw32-rc-4-dev.tar.lzma?download
+337.74 kB / 337.74 kB   |================================================| 100%
+http://prdownloads.sourceforge.net/mingw/mingwrt-4.0-1-mingw32-rc-4-lic.tar.lzma?download
+827 B / 827 B           |================================================| 100%
+http://prdownloads.sourceforge.net/mingw/liblzma-5.0.3-2-mingw32-dll-5.tar.lzma?download
+62.40 kB / 62.40 kB     |================================================| 100%
+upgrade: mingw-get-0.6.2-mingw32-beta-20131004-1-bin.tar.xz
+mingw-get: *** INFO *** package mingw-get-0.6.2-mingw32-beta-20131004-1-bin.tar.xz is up to date
+upgrade: mingw-get-0.6.2-mingw32-beta-20131004-1-gui.tar.xz
+mingw-get: *** INFO *** package mingw-get-0.6.2-mingw32-beta-20131004-1-gui.tar.xz is up to date
+upgrade: mingw-get-0.6.2-mingw32-beta-20131004-1-lic.tar.xz
+mingw-get: *** INFO *** package mingw-get-0.6.2-mingw32-beta-20131004-1-lic.tar.xz is up to date
+upgrade: msysCORE-1.0.19-1-msys-1.0.19-lic.tar.xz
+mingw-get: *** INFO *** package msysCORE-1.0.19-1-msys-1.0.19-lic.tar.xz is up to date
+upgrade: msysCORE-1.0.19-1-msys-1.0.19-doc.tar.xz
+mingw-get: *** INFO *** package msysCORE-1.0.19-1-msys-1.0.19-doc.tar.xz is up to date
+upgrade: termcap-0.20050421_1-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package termcap-0.20050421_1-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: libregex-1.20090805-2-msys-1.0.13-dll-1.tar.lzma
+mingw-get: *** INFO *** package libregex-1.20090805-2-msys-1.0.13-dll-1.tar.lzma is up to date
+upgrade: libtermcap-0.20050421_1-2-msys-1.0.13-dll-0.tar.lzma
+mingw-get: *** INFO *** package libtermcap-0.20050421_1-2-msys-1.0.13-dll-0.tar.lzma is up to date
+upgrade: libpopt-1.15-2-msys-1.0.13-dll-0.tar.lzma
+mingw-get: *** INFO *** package libpopt-1.15-2-msys-1.0.13-dll-0.tar.lzma is up to date
+upgrade: libiconv-1.14-1-msys-1.0.17-dll-2.tar.lzma
+mingw-get: *** INFO *** package libiconv-1.14-1-msys-1.0.17-dll-2.tar.lzma is up to date
+upgrade: liblzma-5.0.3-1-msys-1.0.17-dll-5.tar.lzma
+mingw-get: *** INFO *** package liblzma-5.0.3-1-msys-1.0.17-dll-5.tar.lzma is up to date
+upgrade: libintl-0.18.1.1-1-msys-1.0.17-dll-8.tar.lzma
+mingw-get: *** INFO *** package libintl-0.18.1.1-1-msys-1.0.17-dll-8.tar.lzma is up to date
+upgrade: libxml2-2.7.6-1-msys-1.0.13-dll-2.tar.lzma
+mingw-get: *** INFO *** package libxml2-2.7.6-1-msys-1.0.13-dll-2.tar.lzma is up to date
+upgrade: libexpat-2.0.1-1-msys-1.0.13-dll-1.tar.lzma
+mingw-get: *** INFO *** package libexpat-2.0.1-1-msys-1.0.13-dll-1.tar.lzma is up to date
+upgrade: libcrypt-1.1_1-3-msys-1.0.13-dll-0.tar.lzma
+mingw-get: *** INFO *** package libcrypt-1.1_1-3-msys-1.0.13-dll-0.tar.lzma is up to date
+upgrade: libgdbm-1.8.3-3-msys-1.0.13-dll-3.tar.lzma
+mingw-get: *** INFO *** package libgdbm-1.8.3-3-msys-1.0.13-dll-3.tar.lzma is up to date
+upgrade: libbz2-1.0.6-1-msys-1.0.17-dll-1.tar.lzma
+mingw-get: *** INFO *** package libbz2-1.0.6-1-msys-1.0.17-dll-1.tar.lzma is up to date
+upgrade: zlib-1.2.7-1-msys-1.0.17-dll.tar.lzma
+mingw-get: *** INFO *** package zlib-1.2.7-1-msys-1.0.17-dll.tar.lzma is up to date
+upgrade: texinfo-4.13a-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package texinfo-4.13a-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: perl-5.8.8-1-msys-1.0.17-bin.tar.lzma
+mingw-get: *** INFO *** package perl-5.8.8-1-msys-1.0.17-bin.tar.lzma is up to date
+upgrade: sed-4.2.1-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package sed-4.2.1-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: m4-1.4.16-2-msys-1.0.17-bin.tar.lzma
+mingw-get: *** INFO *** package m4-1.4.16-2-msys-1.0.17-bin.tar.lzma is up to date
+upgrade: libopenssl-1.0.0-1-msys-1.0.13-dll-100.tar.lzma
+mingw-get: *** INFO *** package libopenssl-1.0.0-1-msys-1.0.13-dll-100.tar.lzma is up to date
+upgrade: wget-1.12-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package wget-1.12-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: unzip-6.0-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package unzip-6.0-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: tar-1.23-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package tar-1.23-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: less-436-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package less-436-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: grep-2.5.4-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package grep-2.5.4-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: diffutils-2.8.7.20071206cvs-3-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package diffutils-2.8.7.20071206cvs-3-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: libmagic-5.04-1-msys-1.0.13-dll-1.tar.lzma
+mingw-get: *** INFO *** package libmagic-5.04-1-msys-1.0.13-dll-1.tar.lzma is up to date
+upgrade: file-5.04-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package file-5.04-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: diffstat-1.54-1-msys-1.0.17-bin.tar.lzma
+mingw-get: *** INFO *** package diffstat-1.54-1-msys-1.0.17-bin.tar.lzma is up to date
+upgrade: coreutils-5.97-3-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package coreutils-5.97-3-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: bash-3.1.23-1-msys-1.0.18-bin.tar.xz
+mingw-get: *** INFO *** package bash-3.1.23-1-msys-1.0.18-bin.tar.xz is up to date
+upgrade: xz-5.0.3-1-msys-1.0.17-bin.tar.lzma
+mingw-get: *** INFO *** package xz-5.0.3-1-msys-1.0.17-bin.tar.lzma is up to date
+upgrade: rsync-3.0.8-1-msys-1.0.17-bin.tar.lzma
+mingw-get: *** INFO *** package rsync-3.0.8-1-msys-1.0.17-bin.tar.lzma is up to date
+upgrade: patch-2.6.1-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package patch-2.6.1-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: make-3.81-3-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package make-3.81-3-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: lndir-1.0.1-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package lndir-1.0.1-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: gzip-1.3.12-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package gzip-1.3.12-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: bzip2-1.0.6-1-msys-1.0.17-bin.tar.lzma
+mingw-get: *** INFO *** package bzip2-1.0.6-1-msys-1.0.17-bin.tar.lzma is up to date
+upgrade: gawk-3.1.7-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package gawk-3.1.7-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: msysCORE-1.0.19-1-msys-1.0.19-bin.tar.xz
+mingw-get: *** INFO *** package msysCORE-1.0.19-1-msys-1.0.19-bin.tar.xz is up to date
+upgrade: autoconf2.5-2.68-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package autoconf2.5-2.68-1-mingw32-bin.tar.lzma is up to date
+upgrade: autoconf2.1-2.13-4-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package autoconf2.1-2.13-4-mingw32-bin.tar.lzma is up to date
+upgrade: automake1.11-1.11.1-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package automake1.11-1.11.1-1-mingw32-bin.tar.lzma is up to date
+upgrade: automake1.10-1.10.2-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package automake1.10-1.10.2-1-mingw32-bin.tar.lzma is up to date
+upgrade: automake1.9-1.9.6-3-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package automake1.9-1.9.6-3-mingw32-bin.tar.lzma is up to date
+upgrade: automake1.8-1.8.5-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package automake1.8-1.8.5-1-mingw32-bin.tar.lzma is up to date
+upgrade: automake1.7-1.7.9-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package automake1.7-1.7.9-1-mingw32-bin.tar.lzma is up to date
+upgrade: automake1.6-1.6.3-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package automake1.6-1.6.3-1-mingw32-bin.tar.lzma is up to date
+upgrade: automake1.5-1.5-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package automake1.5-1.5-1-mingw32-bin.tar.lzma is up to date
+upgrade: automake1.4-1.4p6-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package automake1.4-1.4p6-1-mingw32-bin.tar.lzma is up to date
+upgrade: automake-4-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package automake-4-1-mingw32-bin.tar.lzma is up to date
+upgrade: autoconf-10-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package autoconf-10-1-mingw32-bin.tar.lzma is up to date
+upgrade: libtool-2.4-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package libtool-2.4-1-mingw32-bin.tar.lzma is up to date
+upgrade: libltdl-2.4-1-mingw32-dll-7.tar.lzma
+mingw-get: *** INFO *** package libltdl-2.4-1-mingw32-dll-7.tar.lzma is up to date
+upgrade: libintl-0.18.3.2-2-mingw32-dll-8.tar.xz
+mingw-get: *** INFO *** package libintl-0.18.3.2-2-mingw32-dll-8.tar.xz is up to date
+upgrade: libiconv-1.14-3-mingw32-dll-2.tar
+mingw-get: *** INFO *** package libiconv-1.14-3-mingw32-dll-2.tar is up to date
+upgrade: libpthreadgc-2.10-mingw32-pre-20160821-1-dll-3.tar.xz
+ removing release libpthread-2.8.0-3-mingw32-dll-2.tar.lzma
+ installing libpthreadgc-2.10-mingw32-pre-20160821-1-dll-3.tar.xz
+mingw-get: *** ERROR *** C:\MinGW\/bin/pthreadGC-3.dll: extraction failed
+mingw-get: *** ERROR *** C:\MinGW\/bin/pthreadGC-3.dll: probable package conflict; existing file not overwritten
+upgrade: mingw32-libgomp-deps-5.3.0-mingw32-dll.meta
+mingw-get: *** INFO *** package mingw32-libgomp-deps-5.3.0-mingw32-dll.meta is up to date
+upgrade: libgcc-6.3.0-1-mingw32-dll-1.tar.xz
+mingw-get: *** INFO *** package libgcc-6.3.0-1-mingw32-dll-1.tar.xz is up to date
+upgrade: libgettextpo-0.18.3.2-2-mingw32-dll-0.tar.xz
+mingw-get: *** INFO *** package libgettextpo-0.18.3.2-2-mingw32-dll-0.tar.xz is up to date
+upgrade: libexpat-2.1.0-1-mingw32-dll-1.tar
+mingw-get: *** INFO *** package libexpat-2.1.0-1-mingw32-dll-1.tar is up to date
+upgrade: libgmp-6.1.2-2-mingw32-dll-10.tar.xz
+mingw-get: *** INFO *** package libgmp-6.1.2-2-mingw32-dll-10.tar.xz is up to date
+upgrade: libmpfr-3.1.5-2-mingw32-dll-4.tar.xz
+mingw-get: *** INFO *** package libmpfr-3.1.5-2-mingw32-dll-4.tar.xz is up to date
+upgrade: libmpc-1.0.3-1-mingw32-dll-3.tar.xz
+mingw-get: *** INFO *** package libmpc-1.0.3-1-mingw32-dll-3.tar.xz is up to date
+upgrade: libisl-0.18-1-mingw32-dll-15.tar.xz
+mingw-get: *** INFO *** package libisl-0.18-1-mingw32-dll-15.tar.xz is up to date
+upgrade: gcc-core-4.8.2-mingw32-dev.tar.meta
+mingw-get: *** INFO *** package gcc-core-4.8.2-mingw32-dev.tar.meta is up to date
+upgrade: mingw32-gcc-core-deps-6.3.0-1-mingw32-dll.meta
+mingw-get: *** INFO *** package mingw32-gcc-core-deps-6.3.0-1-mingw32-dll.meta is up to date
+upgrade: libquadmath-6.3.0-1-mingw32-dll-0.tar.xz
+mingw-get: *** INFO *** package libquadmath-6.3.0-1-mingw32-dll-0.tar.xz is up to date
+upgrade: libgomp-6.3.0-1-mingw32-dll-1.tar.xz
+mingw-get: *** INFO *** package libgomp-6.3.0-1-mingw32-dll-1.tar.xz is up to date
+upgrade: libstdc++-6.3.0-1-mingw32-dll-6.tar.xz
+mingw-get: *** INFO *** package libstdc++-6.3.0-1-mingw32-dll-6.tar.xz is up to date
+upgrade: libiconv-1.14-3-mingw32-dev.tar.lzma
+mingw-get: *** INFO *** package libiconv-1.14-3-mingw32-dev.tar.lzma is up to date
+upgrade: libiconv-1.14-3-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package libiconv-1.14-3-mingw32-bin.tar.lzma is up to date
+upgrade: gettext-0.18.3.2-2-mingw32-dev.tar.xz
+mingw-get: *** INFO *** package gettext-0.18.3.2-2-mingw32-dev.tar.xz is up to date
+upgrade: gettext-0.18.3.2-2-mingw32-bin.tar.xz
+mingw-get: *** INFO *** package gettext-0.18.3.2-2-mingw32-bin.tar.xz is up to date
+upgrade: libltdl-2.4-1-mingw32-dev.tar.lzma
+mingw-get: *** INFO *** package libltdl-2.4-1-mingw32-dev.tar.lzma is up to date
+upgrade: mingw32-autotools-2010090601-mingw32-bin.meta
+mingw-get: *** INFO *** package mingw32-autotools-2010090601-mingw32-bin.meta is up to date
+upgrade: libssp-6.3.0-1-mingw32-dll-0.tar.xz
+mingw-get: *** INFO *** package libssp-6.3.0-1-mingw32-dll-0.tar.xz is up to date
+upgrade: mingwrt-4.0-1-mingw32-rc-4-dll.tar.lzma
+ removing release mingwrt-3.20-2-mingw32-dll.tar.lzma
+ installing mingwrt-4.0-1-mingw32-rc-4-dll.tar.lzma
+upgrade: w32api-4.0-1-mingw32-rc-4-dev.tar.lzma
+ removing release w32api-3.17-2-mingw32-dev.tar.lzma
+ installing w32api-4.0-1-mingw32-rc-4-dev.tar.lzma
+upgrade: mingwrt-4.0-1-mingw32-rc-4-dev.tar.lzma
+ removing release mingwrt-3.20-2-mingw32-dev.tar.lzma
+ installing mingwrt-4.0-1-mingw32-rc-4-dev.tar.lzma
+upgrade: binutils-2.28-1-mingw32-bin.tar.xz
+mingw-get: *** INFO *** package binutils-2.28-1-mingw32-bin.tar.xz is up to date
+upgrade: libatomic-6.3.0-1-mingw32-dll-1.tar.xz
+mingw-get: *** INFO *** package libatomic-6.3.0-1-mingw32-dll-1.tar.xz is up to date
+upgrade: libz-1.2.8-1-mingw32-dll-1.tar
+mingw-get: *** INFO *** package libz-1.2.8-1-mingw32-dll-1.tar is up to date
+upgrade: gdb-7.6.1-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package gdb-7.6.1-1-mingw32-bin.tar.lzma is up to date
+upgrade: make-3.82.90-2-mingw32-cvs-20120902-bin.tar.lzma
+mingw-get: *** INFO *** package make-3.82.90-2-mingw32-cvs-20120902-bin.tar.lzma is up to date
+upgrade: gcc-6.3.0-1-mingw32-lic.tar.xz
+mingw-get: *** INFO *** package gcc-6.3.0-1-mingw32-lic.tar.xz is up to date
+upgrade: libgfortran-6.3.0-1-mingw32-dll-3.tar.xz
+mingw-get: *** INFO *** package libgfortran-6.3.0-1-mingw32-dll-3.tar.xz is up to date
+upgrade: gcc-fortran-4.8.2-mingw32-dev.tar.meta
+mingw-get: *** INFO *** package gcc-fortran-4.8.2-mingw32-dev.tar.meta is up to date
+upgrade: gcc-objc-4.8.2-mingw32-dev.tar.meta
+mingw-get: *** INFO *** package gcc-objc-4.8.2-mingw32-dev.tar.meta is up to date
+upgrade: gcc-core-6.3.0-1-mingw32-bin.tar.xz
+mingw-get: *** INFO *** package gcc-core-6.3.0-1-mingw32-bin.tar.xz is up to date
+upgrade: mingw32-base-2013072200-mingw32-bin.meta
+mingw-get: *** INFO *** package mingw32-base-2013072200-mingw32-bin.meta is up to date
+upgrade: gcc-ada-4.8.2-mingw32-dev.tar.meta
+mingw-get: *** INFO *** package gcc-ada-4.8.2-mingw32-dev.tar.meta is up to date
+upgrade: gcc-ada-6.3.0-1-mingw32-bin.tar.xz
+mingw-get: *** INFO *** package gcc-ada-6.3.0-1-mingw32-bin.tar.xz is up to date
+upgrade: gcc-fortran-6.3.0-1-mingw32-bin.tar.xz
+mingw-get: *** INFO *** package gcc-fortran-6.3.0-1-mingw32-bin.tar.xz is up to date
+upgrade: gcc-c++-4.8.2-mingw32-dev.tar.meta
+mingw-get: *** INFO *** package gcc-c++-4.8.2-mingw32-dev.tar.meta is up to date
+upgrade: gcc-c++-6.3.0-1-mingw32-bin.tar.xz
+mingw-get: *** INFO *** package gcc-c++-6.3.0-1-mingw32-bin.tar.xz is up to date
+upgrade: libobjc-6.3.0-1-mingw32-dll-4.tar.xz
+mingw-get: *** INFO *** package libobjc-6.3.0-1-mingw32-dll-4.tar.xz is up to date
+upgrade: gcc-objc-6.3.0-1-mingw32-bin.tar.xz
+mingw-get: *** INFO *** package gcc-objc-6.3.0-1-mingw32-bin.tar.xz is up to date
+upgrade: autoconf-10-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package autoconf-10-1-mingw32-lic.tar.lzma is up to date
+upgrade: autoconf2.1-2.13-4-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package autoconf2.1-2.13-4-mingw32-doc.tar.lzma is up to date
+upgrade: autoconf2.1-2.13-4-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package autoconf2.1-2.13-4-mingw32-lic.tar.lzma is up to date
+upgrade: autoconf2.5-2.68-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package autoconf2.5-2.68-1-mingw32-doc.tar.lzma is up to date
+upgrade: autoconf2.5-2.68-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package autoconf2.5-2.68-1-mingw32-lic.tar.lzma is up to date
+upgrade: automake-4-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package automake-4-1-mingw32-lic.tar.lzma is up to date
+upgrade: automake1.10-1.10.2-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package automake1.10-1.10.2-1-mingw32-doc.tar.lzma is up to date
+upgrade: automake1.10-1.10.2-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package automake1.10-1.10.2-1-mingw32-lic.tar.lzma is up to date
+upgrade: xerces-c-3.1.1-mingw32-lic.tar.xz
+mingw-get: *** INFO *** package xerces-c-3.1.1-mingw32-lic.tar.xz is up to date
+upgrade: xerces-c-3.1.1-2-mingw32-4.7.2-dll-3.tar.xz
+mingw-get: *** INFO *** package xerces-c-3.1.1-2-mingw32-4.7.2-dll-3.tar.xz is up to date
+upgrade: xerces-c-3.1.1-2-mingw32-4.7.2-dev.tar.xz
+mingw-get: *** INFO *** package xerces-c-3.1.1-2-mingw32-4.7.2-dev.tar.xz is up to date
+upgrade: xerces-c-3.1.1-2-mingw32-4.7.2-bin.tar.xz
+mingw-get: *** INFO *** package xerces-c-3.1.1-2-mingw32-4.7.2-bin.tar.xz is up to date
+upgrade: tk-8.6.0-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package tk-8.6.0-1-mingw32-lic.tar.lzma is up to date
+upgrade: tk-8.6.0-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package tk-8.6.0-1-mingw32-doc.tar.lzma is up to date
+upgrade: tk-8.6.0-1-mingw32-dll.tar.lzma
+mingw-get: *** INFO *** package tk-8.6.0-1-mingw32-dll.tar.lzma is up to date
+upgrade: tcl-8.6.0-1-mingw32-dll.tar.lzma
+mingw-get: *** INFO *** package tcl-8.6.0-1-mingw32-dll.tar.lzma is up to date
+upgrade: tcl-8.6.0-1-mingw32-dev.tar.lzma
+mingw-get: *** INFO *** package tcl-8.6.0-1-mingw32-dev.tar.lzma is up to date
+upgrade: tcl-8.6.0-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package tcl-8.6.0-1-mingw32-bin.tar.lzma is up to date
+upgrade: tk-8.6.0-1-mingw32-dev.tar.lzma
+mingw-get: *** INFO *** package tk-8.6.0-1-mingw32-dev.tar.lzma is up to date
+upgrade: tk-8.6.0-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package tk-8.6.0-1-mingw32-bin.tar.lzma is up to date
+upgrade: automake1.11-1.11.1-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package automake1.11-1.11.1-1-mingw32-doc.tar.lzma is up to date
+upgrade: automake1.11-1.11.1-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package automake1.11-1.11.1-1-mingw32-lic.tar.lzma is up to date
+upgrade: automake1.4-1.4p6-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package automake1.4-1.4p6-1-mingw32-doc.tar.lzma is up to date
+upgrade: automake1.4-1.4p6-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package automake1.4-1.4p6-1-mingw32-lic.tar.lzma is up to date
+upgrade: automake1.5-1.5-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package automake1.5-1.5-1-mingw32-doc.tar.lzma is up to date
+upgrade: automake1.5-1.5-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package automake1.5-1.5-1-mingw32-lic.tar.lzma is up to date
+upgrade: automake1.6-1.6.3-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package automake1.6-1.6.3-1-mingw32-doc.tar.lzma is up to date
+upgrade: automake1.6-1.6.3-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package automake1.6-1.6.3-1-mingw32-lic.tar.lzma is up to date
+upgrade: automake1.7-1.7.9-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package automake1.7-1.7.9-1-mingw32-doc.tar.lzma is up to date
+upgrade: automake1.7-1.7.9-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package automake1.7-1.7.9-1-mingw32-lic.tar.lzma is up to date
+upgrade: automake1.8-1.8.5-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package automake1.8-1.8.5-1-mingw32-doc.tar.lzma is up to date
+upgrade: automake1.8-1.8.5-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package automake1.8-1.8.5-1-mingw32-lic.tar.lzma is up to date
+upgrade: automake1.9-1.9.6-3-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package automake1.9-1.9.6-3-mingw32-doc.tar.lzma is up to date
+upgrade: automake1.9-1.9.6-3-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package automake1.9-1.9.6-3-mingw32-lic.tar.lzma is up to date
+upgrade: binutils-2.28-1-mingw32-dev.tar.xz
+mingw-get: *** INFO *** package binutils-2.28-1-mingw32-dev.tar.xz is up to date
+upgrade: binutils-2.28-1-mingw32-man.tar.xz
+mingw-get: *** INFO *** package binutils-2.28-1-mingw32-man.tar.xz is up to date
+upgrade: binutils-2.28-1-mingw32-info.tar.xz
+mingw-get: *** INFO *** package binutils-2.28-1-mingw32-info.tar.xz is up to date
+upgrade: binutils-2.24-1-mingw32-doc.tar.xz
+mingw-get: *** INFO *** package binutils-2.24-1-mingw32-doc.tar.xz is up to date
+upgrade: binutils-2.28-1-mingw32-lang.tar.xz
+mingw-get: *** INFO *** package binutils-2.28-1-mingw32-lang.tar.xz is up to date
+upgrade: gcc-core-4.8.1-4-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package gcc-core-4.8.1-4-mingw32-doc.tar.lzma is up to date
+upgrade: gcc-6.3.0-1-mingw32-info.tar.xz
+mingw-get: *** INFO *** package gcc-6.3.0-1-mingw32-info.tar.xz is up to date
+upgrade: gcc-6.3.0-1-mingw32-lang.tar.xz
+mingw-get: *** INFO *** package gcc-6.3.0-1-mingw32-lang.tar.xz is up to date
+upgrade: gcc-6.3.0-1-mingw32-man.tar.xz
+mingw-get: *** INFO *** package gcc-6.3.0-1-mingw32-man.tar.xz is up to date
+upgrade: gcc-ada-4.8.1-4-mingw32-info.tar.lzma
+mingw-get: *** INFO *** package gcc-ada-4.8.1-4-mingw32-info.tar.lzma is up to date
+upgrade: gcc-fortran-4.8.1-4-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package gcc-fortran-4.8.1-4-mingw32-doc.tar.lzma is up to date
+upgrade: gcc-fortran-6.3.0-1-mingw32-info.tar.xz
+mingw-get: *** INFO *** package gcc-fortran-6.3.0-1-mingw32-info.tar.xz is up to date
+upgrade: gcc-fortran-6.3.0-1-mingw32-man.tar.xz
+mingw-get: *** INFO *** package gcc-fortran-6.3.0-1-mingw32-man.tar.xz is up to date
+upgrade: gcc-c++-4.8.1-4-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package gcc-c++-4.8.1-4-mingw32-doc.tar.lzma is up to date
+upgrade: gcc-c++-6.3.0-1-mingw32-man.tar.xz
+mingw-get: *** INFO *** package gcc-c++-6.3.0-1-mingw32-man.tar.xz is up to date
+upgrade: libasprintf-0.18.3.2-2-mingw32-dll-0.tar.xz
+mingw-get: *** INFO *** package libasprintf-0.18.3.2-2-mingw32-dll-0.tar.xz is up to date
+upgrade: gcc-v3-core-3.4.5-20060117-3-mingw32-bin.tar.gz
+mingw-get: *** INFO *** package gcc-v3-core-3.4.5-20060117-3-mingw32-bin.tar.gz is up to date
+upgrade: gcc-v3-ada-3.4.5-20060117-3-mingw32-bin.tar.gz
+mingw-get: *** INFO *** package gcc-v3-ada-3.4.5-20060117-3-mingw32-bin.tar.gz is up to date
+upgrade: gcc-v3-g77-3.4.5-20060117-3-mingw32-bin.tar.gz
+mingw-get: *** INFO *** package gcc-v3-g77-3.4.5-20060117-3-mingw32-bin.tar.gz is up to date
+upgrade: gcc-v3-g++-3.4.5-20060117-3-mingw32-bin.tar.gz
+mingw-get: *** INFO *** package gcc-v3-g++-3.4.5-20060117-3-mingw32-bin.tar.gz is up to date
+upgrade: gcc-v3-java-3.4.5-20060117-3-mingw32-bin.tar.gz
+mingw-get: *** INFO *** package gcc-v3-java-3.4.5-20060117-3-mingw32-bin.tar.gz is up to date
+upgrade: gcc-v3-objc-3.4.5-20060117-3-mingw32-bin.tar.gz
+mingw-get: *** INFO *** package gcc-v3-objc-3.4.5-20060117-3-mingw32-bin.tar.gz is up to date
+upgrade: gdb-7.6.1-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package gdb-7.6.1-1-mingw32-doc.tar.lzma is up to date
+upgrade: gdb-7.6.1-1-mingw32-info.tar.lzma
+mingw-get: *** INFO *** package gdb-7.6.1-1-mingw32-info.tar.lzma is up to date
+upgrade: gdb-7.6.1-1-mingw32-lang.tar.lzma
+mingw-get: *** INFO *** package gdb-7.6.1-1-mingw32-lang.tar.lzma is up to date
+upgrade: gdb-7.6.1-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package gdb-7.6.1-1-mingw32-lic.tar.lzma is up to date
+upgrade: gdb-7.6.1-1-mingw32-man.tar.lzma
+mingw-get: *** INFO *** package gdb-7.6.1-1-mingw32-man.tar.lzma is up to date
+upgrade: gdb-python-7.5-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package gdb-python-7.5-1-mingw32-bin.tar.lzma is up to date
+upgrade: gdb-python-7.5-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package gdb-python-7.5-1-mingw32-doc.tar.lzma is up to date
+upgrade: gettext-0.18.3.2-2-mingw32-dll.tar.xz
+mingw-get: *** INFO *** package gettext-0.18.3.2-2-mingw32-dll.tar.xz is up to date
+upgrade: gettext-0.18.3.2-2-mingw32-doc.tar.xz
+mingw-get: *** INFO *** package gettext-0.18.3.2-2-mingw32-doc.tar.xz is up to date
+upgrade: gettext-0.18.3.2-2-mingw32-ext.tar.xz
+mingw-get: *** INFO *** package gettext-0.18.3.2-2-mingw32-ext.tar.xz is up to date
+upgrade: gettext-0.18.3.2-2-mingw32-html.tar.xz
+mingw-get: *** INFO *** package gettext-0.18.3.2-2-mingw32-html.tar.xz is up to date
+upgrade: gettext-0.18.3.2-2-mingw32-info.tar.xz
+mingw-get: *** INFO *** package gettext-0.18.3.2-2-mingw32-info.tar.xz is up to date
+upgrade: gettext-0.18.3.2-2-mingw32-lic.tar.xz
+mingw-get: *** INFO *** package gettext-0.18.3.2-2-mingw32-lic.tar.xz is up to date
+upgrade: gettext-0.18.3.2-2-mingw32-man.tar.xz
+mingw-get: *** INFO *** package gettext-0.18.3.2-2-mingw32-man.tar.xz is up to date
+upgrade: libgmpxx-6.1.2-2-mingw32-dll-4.tar.xz
+mingw-get: *** INFO *** package libgmpxx-6.1.2-2-mingw32-dll-4.tar.xz is up to date
+upgrade: gmp-6.1.2-2-mingw32-dev.tar.xz
+mingw-get: *** INFO *** package gmp-6.1.2-2-mingw32-dev.tar.xz is up to date
+upgrade: gmp-6.1.2-1-mingw32-doc.tar
+mingw-get: *** INFO *** package gmp-6.1.2-1-mingw32-doc.tar is up to date
+upgrade: gmp-6.1.2-2-mingw32-info.tar.xz
+mingw-get: *** INFO *** package gmp-6.1.2-2-mingw32-info.tar.xz is up to date
+upgrade: gmp-6.1.2-2-mingw32-lic.tar.xz
+mingw-get: *** INFO *** package gmp-6.1.2-2-mingw32-lic.tar.xz is up to date
+upgrade: isl-0.18-1-mingw32-dev.tar.xz
+mingw-get: *** INFO *** package isl-0.18-1-mingw32-dev.tar.xz is up to date
+upgrade: isl-0.18-1-mingw32-doc.tar.xz
+mingw-get: *** INFO *** package isl-0.18-1-mingw32-doc.tar.xz is up to date
+upgrade: isl-0.18-1-mingw32-lic.tar.xz
+mingw-get: *** INFO *** package isl-0.18-1-mingw32-lic.tar.xz is up to date
+upgrade: libcharset-1.14-3-mingw32-dll-1.tar
+mingw-get: *** INFO *** package libcharset-1.14-3-mingw32-dll-1.tar is up to date
+upgrade: libgnat-4.8.1-4-mingw32-dll-4_8.tar.lzma
+mingw-get: *** INFO *** package libgnat-4.8.1-4-mingw32-dll-4_8.tar.lzma is up to date
+upgrade: libiconv-1.14-3-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package libiconv-1.14-3-mingw32-doc.tar.lzma is up to date
+upgrade: libiconv-1.14-3-mingw32-html.tar.lzma
+mingw-get: *** INFO *** package libiconv-1.14-3-mingw32-html.tar.lzma is up to date
+upgrade: libiconv-1.14-3-mingw32-lang.tar.lzma
+mingw-get: *** INFO *** package libiconv-1.14-3-mingw32-lang.tar.lzma is up to date
+upgrade: libiconv-1.14-3-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package libiconv-1.14-3-mingw32-lic.tar.lzma is up to date
+upgrade: libiconv-1.14-3-mingw32-man.tar.lzma
+mingw-get: *** INFO *** package libiconv-1.14-3-mingw32-man.tar.lzma is up to date
+upgrade: libncurses-6.0-2-mingw32-dev.tar.lzma
+mingw-get: *** INFO *** package libncurses-6.0-2-mingw32-dev.tar.lzma is up to date
+upgrade: libncurses-6.0-2-mingw32-dll-6.tar.lzma
+mingw-get: *** INFO *** package libncurses-6.0-2-mingw32-dll-6.tar.lzma is up to date
+upgrade: libpdcurses-3.4-1-mingw32-dll.tar.lzma
+mingw-get: *** INFO *** package libpdcurses-3.4-1-mingw32-dll.tar.lzma is up to date
+upgrade: libpdcurses-3.4-1-mingw32-dev.tar.lzma
+mingw-get: *** INFO *** package libpdcurses-3.4-1-mingw32-dev.tar.lzma is up to date
+upgrade: libpthreadgc-2.10-mingw32-pre-20160821-1-dev.tar.xz
+mingw-get: *** INFO *** package libpthreadgc-2.10-mingw32-pre-20160821-1-dev.tar.xz is up to date
+upgrade: libpthreadgce-2.10-mingw32-pre-20160821-1-dll-3.tar.xz
+mingw-get: *** INFO *** package libpthreadgce-2.10-mingw32-pre-20160821-1-dll-3.tar.xz is up to date
+upgrade: libpthreadgce-2.10-mingw32-pre-20160821-1-dev.tar.xz
+mingw-get: *** INFO *** package libpthreadgce-2.10-mingw32-pre-20160821-1-dev.tar.xz is up to date
+upgrade: libquadmath-6.3.0-1-mingw32-info.tar.xz
+mingw-get: *** INFO *** package libquadmath-6.3.0-1-mingw32-info.tar.xz is up to date
+upgrade: libquserex-2.9.0-mingw32-pre-20110507-2-dll.tar.lzma
+mingw-get: *** INFO *** package libquserex-2.9.0-mingw32-pre-20110507-2-dll.tar.lzma is up to date
+upgrade: libtool-2.4-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package libtool-2.4-1-mingw32-doc.tar.lzma is up to date
+upgrade: libtool-2.4-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package libtool-2.4-1-mingw32-lic.tar.lzma is up to date
+upgrade: libunistring-0.9.6-1-mingw32-dll-2.tar.lzma
+mingw-get: *** INFO *** package libunistring-0.9.6-1-mingw32-dll-2.tar.lzma is up to date
+upgrade: libunistring-0.9.6-1-mingw32-dev.tar.lzma
+mingw-get: *** INFO *** package libunistring-0.9.6-1-mingw32-dev.tar.lzma is up to date
+upgrade: libunistring-0.9.6-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package libunistring-0.9.6-1-mingw32-doc.tar.lzma is up to date
+upgrade: libunistring-0.9.6-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package libunistring-0.9.6-1-mingw32-lic.tar.lzma is up to date
+upgrade: libz-1.2.8-1-mingw32-dev-1.tar
+mingw-get: *** INFO *** package libz-1.2.8-1-mingw32-dev-1.tar is up to date
+upgrade: lua-5.2.0-1-mingw32-dll-52.tar.xz
+mingw-get: *** INFO *** package lua-5.2.0-1-mingw32-dll-52.tar.xz is up to date
+upgrade: lua-5.2.0-1-mingw32-bin.tar.xz
+mingw-get: *** INFO *** package lua-5.2.0-1-mingw32-bin.tar.xz is up to date
+upgrade: lua-5.2.0-1-mingw32-dev.tar.xz
+mingw-get: *** INFO *** package lua-5.2.0-1-mingw32-dev.tar.xz is up to date
+upgrade: lua-5.2.0-1-mingw32-doc.tar.xz
+mingw-get: *** INFO *** package lua-5.2.0-1-mingw32-doc.tar.xz is up to date
+upgrade: lua-5.2.0-1-mingw32-lic.tar.xz
+mingw-get: *** INFO *** package lua-5.2.0-1-mingw32-lic.tar.xz is up to date
+upgrade: lua-5.2.0-1-mingw32-man.tar.xz
+mingw-get: *** INFO *** package lua-5.2.0-1-mingw32-man.tar.xz is up to date
+upgrade: mingwrt-4.0-1-mingw32-rc-4-lic.tar.lzma
+ installing mingwrt-4.0-1-mingw32-rc-4-lic.tar.lzma
+upgrade: mpfr-3.1.5-2-mingw32-dev.tar.xz
+mingw-get: *** INFO *** package mpfr-3.1.5-2-mingw32-dev.tar.xz is up to date
+upgrade: mpc-1.0.3-1-mingw32-dev.tar.xz
+mingw-get: *** INFO *** package mpc-1.0.3-1-mingw32-dev.tar.xz is up to date
+upgrade: mpc-1.0.3-1-mingw32-doc.tar
+mingw-get: *** INFO *** package mpc-1.0.3-1-mingw32-doc.tar is up to date
+upgrade: mpc-1.0.3-1-mingw32-info.tar.xz
+mingw-get: *** INFO *** package mpc-1.0.3-1-mingw32-info.tar.xz is up to date
+upgrade: mpc-1.0.3-1-mingw32-lic.tar.xz
+mingw-get: *** INFO *** package mpc-1.0.3-1-mingw32-lic.tar.xz is up to date
+upgrade: mpfr-3.1.5-2-mingw32-doc.tar.xz
+mingw-get: *** INFO *** package mpfr-3.1.5-2-mingw32-doc.tar.xz is up to date
+upgrade: mpfr-3.1.5-2-mingw32-info.tar.xz
+mingw-get: *** INFO *** package mpfr-3.1.5-2-mingw32-info.tar.xz is up to date
+upgrade: mpfr-3.1.5-2-mingw32-lic.tar.xz
+mingw-get: *** INFO *** package mpfr-3.1.5-2-mingw32-lic.tar.xz is up to date
+upgrade: ncurses-6.0-2-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package ncurses-6.0-2-mingw32-bin.tar.lzma is up to date
+upgrade: ncurses-6.0-2-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package ncurses-6.0-2-mingw32-doc.tar.lzma is up to date
+upgrade: ncurses-6.0-2-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package ncurses-6.0-2-mingw32-lic.tar.lzma is up to date
+upgrade: PDCurses-3.4-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package PDCurses-3.4-1-mingw32-bin.tar.lzma is up to date
+upgrade: PDCurses-3.4-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package PDCurses-3.4-1-mingw32-doc.tar.lzma is up to date
+upgrade: PDCurses-3.4-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package PDCurses-3.4-1-mingw32-lic.tar.lzma is up to date
+upgrade: pthreads-w32-2.10-mingw32-pre-20160821-1-dev.tar.xz
+mingw-get: *** INFO *** package pthreads-w32-2.10-mingw32-pre-20160821-1-dev.tar.xz is up to date
+upgrade: pthreads-w32-2.10-mingw32-pre-20160821-1-doc.tar.xz
+mingw-get: *** INFO *** package pthreads-w32-2.10-mingw32-pre-20160821-1-doc.tar.xz is up to date
+upgrade: pthreads-w32-2.10-mingw32-pre-20160821-1-lic.tar.xz
+mingw-get: *** INFO *** package pthreads-w32-2.10-mingw32-pre-20160821-1-lic.tar.xz is up to date
+upgrade: tcl-8.6.0-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package tcl-8.6.0-1-mingw32-doc.tar.lzma is up to date
+upgrade: tcl-8.6.0-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package tcl-8.6.0-1-mingw32-lic.tar.lzma is up to date
+upgrade: tcl-8.6.0-1-mingw32-man.tar.lzma
+mingw-get: *** INFO *** package tcl-8.6.0-1-mingw32-man.tar.lzma is up to date
+upgrade: terminfo-6.0-2-mingw32-data.tar.lzma
+mingw-get: *** INFO *** package terminfo-6.0-2-mingw32-data.tar.lzma is up to date
+upgrade: basic-bsdtar-2.8.3-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package basic-bsdtar-2.8.3-1-mingw32-bin.tar.lzma is up to date
+upgrade: liblzma-5.0.3-2-mingw32-dll-5.tar.lzma
+ removing release liblzma-4.999.9beta_20100401-1-mingw32-dll-1.tar.bz2
+ installing liblzma-5.0.3-2-mingw32-dll-5.tar.lzma
+upgrade: libbz2-1.0.6-4-mingw32-dll-2.tar.lzma
+mingw-get: *** INFO *** package libbz2-1.0.6-4-mingw32-dll-2.tar.lzma is up to date
+upgrade: libarchive-2.8.3-1-mingw32-dll-2.tar.bz2
+mingw-get: *** INFO *** package libarchive-2.8.3-1-mingw32-dll-2.tar.bz2 is up to date
+upgrade: bsdcpio-2.8.3-1-mingw32-bin.tar.bz2
+mingw-get: *** INFO *** package bsdcpio-2.8.3-1-mingw32-bin.tar.bz2 is up to date
+upgrade: bsdtar-2.8.3-1-mingw32-bin.tar.bz2
+mingw-get: *** INFO *** package bsdtar-2.8.3-1-mingw32-bin.tar.bz2 is up to date
+upgrade: bzip2-1.0.6-4-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package bzip2-1.0.6-4-mingw32-bin.tar.lzma is up to date
+upgrade: libminizip-1.2.7-1-mingw32-dll-1.tar.lzma
+mingw-get: *** INFO *** package libminizip-1.2.7-1-mingw32-dll-1.tar.lzma is up to date
+upgrade: liblzma-5.0.3-2-mingw32-dev.tar.lzma
+mingw-get: *** INFO *** package liblzma-5.0.3-2-mingw32-dev.tar.lzma is up to date
+upgrade: libexpat-2.1.0-1-mingw32-dev.tar
+mingw-get: *** INFO *** package libexpat-2.1.0-1-mingw32-dev.tar is up to date
+upgrade: bzip2-1.0.6-4-mingw32-dev.tar.lzma
+mingw-get: *** INFO *** package bzip2-1.0.6-4-mingw32-dev.tar.lzma is up to date
+upgrade: bzip2-1.0.6-4-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package bzip2-1.0.6-4-mingw32-doc.tar.lzma is up to date
+upgrade: bzip2-1.0.6-4-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package bzip2-1.0.6-4-mingw32-lic.tar.lzma is up to date
+upgrade: bzip2-1.0.6-4-mingw32-man.tar.lzma
+mingw-get: *** INFO *** package bzip2-1.0.6-4-mingw32-man.tar.lzma is up to date
+upgrade: dos2unix-7.4.0-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package dos2unix-7.4.0-1-mingw32-bin.tar.lzma is up to date
+upgrade: dos2unix-7.4.0-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package dos2unix-7.4.0-1-mingw32-doc.tar.lzma is up to date
+upgrade: dos2unix-7.4.0-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package dos2unix-7.4.0-1-mingw32-lic.tar.lzma is up to date
+upgrade: expat-2.1.0-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package expat-2.1.0-1-mingw32-bin.tar.lzma is up to date
+upgrade: expat-2.1.0-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package expat-2.1.0-1-mingw32-doc.tar.lzma is up to date
+upgrade: expat-2.1.0-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package expat-2.1.0-1-mingw32-lic.tar.lzma is up to date
+upgrade: expat-2.1.0-1-mingw32-man.tar.lzma
+mingw-get: *** INFO *** package expat-2.1.0-1-mingw32-man.tar.lzma is up to date
+upgrade: pexports-0.47-mingw32-bin.tar.xz
+mingw-get: *** INFO *** package pexports-0.47-mingw32-bin.tar.xz is up to date
+upgrade: gcc-tools-epoch2-autoconf-2.64-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package gcc-tools-epoch2-autoconf-2.64-1-mingw32-bin.tar.lzma is up to date
+upgrade: gcc-tools-epoch2-autoconf-2.64-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package gcc-tools-epoch2-autoconf-2.64-1-mingw32-doc.tar.lzma is up to date
+upgrade: gcc-tools-epoch2-autoconf-2.64-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package gcc-tools-epoch2-autoconf-2.64-1-mingw32-lic.tar.lzma is up to date
+upgrade: gcc-tools-epoch2-automake-1.11.1-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package gcc-tools-epoch2-automake-1.11.1-1-mingw32-bin.tar.lzma is up to date
+upgrade: gcc-tools-epoch2-automake-1.11.1-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package gcc-tools-epoch2-automake-1.11.1-1-mingw32-doc.tar.lzma is up to date
+upgrade: gcc-tools-epoch2-automake-1.11.1-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package gcc-tools-epoch2-automake-1.11.1-1-mingw32-lic.tar.lzma is up to date
+upgrade: gendef-1.0.1346-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package gendef-1.0.1346-1-mingw32-bin.tar.lzma is up to date
+upgrade: gendef-1.0.1346-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package gendef-1.0.1346-1-mingw32-doc.tar.lzma is up to date
+upgrade: gendef-1.0.1346-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package gendef-1.0.1346-1-mingw32-lic.tar.lzma is up to date
+upgrade: libarchive-2.8.3-1-mingw32-dev.tar.bz2
+mingw-get: *** INFO *** package libarchive-2.8.3-1-mingw32-dev.tar.bz2 is up to date
+upgrade: libarchive-2.8.3-1-mingw32-doc.tar.bz2
+mingw-get: *** INFO *** package libarchive-2.8.3-1-mingw32-doc.tar.bz2 is up to date
+upgrade: libarchive-2.8.3-1-mingw32-lic.tar.bz2
+mingw-get: *** INFO *** package libarchive-2.8.3-1-mingw32-lic.tar.bz2 is up to date
+upgrade: libminizip-1.2.7-1-mingw32-dev.tar.lzma
+mingw-get: *** INFO *** package libminizip-1.2.7-1-mingw32-dev.tar.lzma is up to date
+upgrade: libpopt-1.15-1-mingw32-dll-0.tar.lzma
+mingw-get: *** INFO *** package libpopt-1.15-1-mingw32-dll-0.tar.lzma is up to date
+upgrade: libpopt-1.15-1-mingw32-dev.tar.lzma
+mingw-get: *** INFO *** package libpopt-1.15-1-mingw32-dev.tar.lzma is up to date
+upgrade: libpopt-1.15-1-mingw32-lang.tar.lzma
+mingw-get: *** INFO *** package libpopt-1.15-1-mingw32-lang.tar.lzma is up to date
+upgrade: make-3.82.90-2-mingw32-cvs-20120902-doc.tar.lzma
+mingw-get: *** INFO *** package make-3.82.90-2-mingw32-cvs-20120902-doc.tar.lzma is up to date
+upgrade: make-3.82.90-2-mingw32-cvs-20120902-lang.tar.lzma
+mingw-get: *** INFO *** package make-3.82.90-2-mingw32-cvs-20120902-lang.tar.lzma is up to date
+upgrade: make-3.82.90-2-mingw32-cvs-20120902-lic.tar.lzma
+mingw-get: *** INFO *** package make-3.82.90-2-mingw32-cvs-20120902-lic.tar.lzma is up to date
+upgrade: mgwport-0.10.6-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package mgwport-0.10.6-1-mingw32-bin.tar.lzma is up to date
+upgrade: mgwport-0.10.6-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package mgwport-0.10.6-1-mingw32-doc.tar.lzma is up to date
+upgrade: mgwport-0.10.6-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package mgwport-0.10.6-1-mingw32-lic.tar.lzma is up to date
+upgrade: mingw-utils-0.4-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package mingw-utils-0.4-1-mingw32-bin.tar.lzma is up to date
+upgrade: mingw-utils-0.4-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package mingw-utils-0.4-1-mingw32-doc.tar.lzma is up to date
+upgrade: mingw-utils-0.4-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package mingw-utils-0.4-1-mingw32-lic.tar.lzma is up to date
+upgrade: minizip-1.2.7-1-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package minizip-1.2.7-1-mingw32-bin.tar.lzma is up to date
+upgrade: pexports-0.47-mingw32-doc.tar.xz
+mingw-get: *** INFO *** package pexports-0.47-mingw32-doc.tar.xz is up to date
+upgrade: pexports-0.47-mingw32-lic.tar.xz
+mingw-get: *** INFO *** package pexports-0.47-mingw32-lic.tar.xz is up to date
+upgrade: pkginfo-0.6.2-mingw32-beta-20131004-1-bin.tar.xz
+mingw-get: *** INFO *** package pkginfo-0.6.2-mingw32-beta-20131004-1-bin.tar.xz is up to date
+upgrade: popt-1.15-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package popt-1.15-1-mingw32-doc.tar.lzma is up to date
+upgrade: popt-1.15-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package popt-1.15-1-mingw32-lic.tar.lzma is up to date
+upgrade: wsl_rc-4.0-1-mingw32-rc-4-meta.tar.lzma
+mingw-get: *** INFO *** package wsl_rc-4.0-1-mingw32-rc-4-meta.tar.lzma is up to date
+upgrade: xz-5.0.3-2-mingw32-bin.tar.lzma
+mingw-get: *** INFO *** package xz-5.0.3-2-mingw32-bin.tar.lzma is up to date
+upgrade: xz-5.0.3-2-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package xz-5.0.3-2-mingw32-doc.tar.lzma is up to date
+upgrade: xz-5.0.3-2-mingw32-lang.tar.lzma
+mingw-get: *** INFO *** package xz-5.0.3-2-mingw32-lang.tar.lzma is up to date
+upgrade: xz-5.0.3-2-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package xz-5.0.3-2-mingw32-lic.tar.lzma is up to date
+upgrade: zlib-1.2.8-1-mingw32-doc.tar.lzma
+mingw-get: *** INFO *** package zlib-1.2.8-1-mingw32-doc.tar.lzma is up to date
+upgrade: zlib-1.2.8-1-mingw32-lic.tar.lzma
+mingw-get: *** INFO *** package zlib-1.2.8-1-mingw32-lic.tar.lzma is up to date
+upgrade: zlib-1.2.8-1-mingw32-man.tar.lzma
+mingw-get: *** INFO *** package zlib-1.2.8-1-mingw32-man.tar.lzma is up to date
+upgrade: mingwrt-4.0-1-mingw32-rc-4-doc.tar.lzma
+mingw-get: *** INFO *** package mingwrt-4.0-1-mingw32-rc-4-doc.tar.lzma is up to date
+upgrade: w32api-4.0-1-mingw32-rc-4-doc.tar.lzma
+mingw-get: *** INFO *** package w32api-4.0-1-mingw32-rc-4-doc.tar.lzma is up to date
+upgrade: w32api-4.0-1-mingw32-rc-4-lic.tar.lzma
+mingw-get: *** INFO *** package w32api-4.0-1-mingw32-rc-4-lic.tar.lzma is up to date
+upgrade: wsl_rc-test-off-4.0-1-mingw32-rc-4-meta.dat
+mingw-get: *** INFO *** package wsl_rc-test-off-4.0-1-mingw32-rc-4-meta.dat is up to date
+upgrade: wsl_rc-test-on-4.0-1-mingw32-rc-4-meta.dat
+mingw-get: *** INFO *** package wsl_rc-test-on-4.0-1-mingw32-rc-4-meta.dat is up to date
+upgrade: libguile-1.8.7-2-msys-1.0.15-rtm.tar.lzma
+mingw-get: *** INFO *** package libguile-1.8.7-2-msys-1.0.15-rtm.tar.lzma is up to date
+upgrade: libltdl-2.4-1-msys-1.0.15-dll-7.tar.lzma
+mingw-get: *** INFO *** package libltdl-2.4-1-msys-1.0.15-dll-7.tar.lzma is up to date
+upgrade: libgmp-5.0.1-1-msys-1.0.13-dll-10.tar.lzma
+mingw-get: *** INFO *** package libgmp-5.0.1-1-msys-1.0.13-dll-10.tar.lzma is up to date
+upgrade: vim-7.3-2-msys-1.0.16-bin.tar.lzma
+mingw-get: *** INFO *** package vim-7.3-2-msys-1.0.16-bin.tar.lzma is up to date
+upgrade: libminires-1.02_1-2-msys-1.0.13-dll.tar.lzma
+mingw-get: *** INFO *** package libminires-1.02_1-2-msys-1.0.13-dll.tar.lzma is up to date
+upgrade: openssl-1.0.0-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package openssl-1.0.0-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: openssh-5.4p1-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package openssh-5.4p1-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: mktemp-1.6-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package mktemp-1.6-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: findutils-4.4.2-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package findutils-4.4.2-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: dos2unix-7.4.0-1-msys-1.0.19-bin.tar.lzma
+mingw-get: *** INFO *** package dos2unix-7.4.0-1-msys-1.0.19-bin.tar.lzma is up to date
+upgrade: msysCORE-1.0.19-1-msys-1.0.19-ext.tar.xz
+mingw-get: *** INFO *** package msysCORE-1.0.19-1-msys-1.0.19-ext.tar.xz is up to date
+upgrade: libopts-5.10.1-1-msys-1.0.15-dll-25.tar.lzma
+mingw-get: *** INFO *** package libopts-5.10.1-1-msys-1.0.15-dll-25.tar.lzma is up to date
+upgrade: libguile-1.8.7-2-msys-1.0.15-dll-17.tar.lzma
+mingw-get: *** INFO *** package libguile-1.8.7-2-msys-1.0.15-dll-17.tar.lzma is up to date
+upgrade: libarchive-2.8.3-1-msys-1.0.13-dll-2.tar.lzma
+mingw-get: *** INFO *** package libarchive-2.8.3-1-msys-1.0.13-dll-2.tar.lzma is up to date
+upgrade: inetutils-1.7-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package inetutils-1.7-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: guile-1.8.7-2-msys-1.0.15-bin.tar.lzma
+mingw-get: *** INFO *** package guile-1.8.7-2-msys-1.0.15-bin.tar.lzma is up to date
+upgrade: flex-2.5.35-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package flex-2.5.35-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: cvs-1.12.13-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package cvs-1.12.13-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: coreutils-5.97-3-msys-1.0.13-ext.tar.lzma
+mingw-get: *** INFO *** package coreutils-5.97-3-msys-1.0.13-ext.tar.lzma is up to date
+upgrade: bsdcpio-2.8.3-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package bsdcpio-2.8.3-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: bsdtar-2.8.3-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package bsdtar-2.8.3-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: bison-2.4.2-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package bison-2.4.2-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: autogen-5.10.1-1-msys-1.0.15-bin.tar.lzma
+mingw-get: *** INFO *** package autogen-5.10.1-1-msys-1.0.15-bin.tar.lzma is up to date
+upgrade: msys-base-2013072300-msys-bin.meta
+mingw-get: *** INFO *** package msys-base-2013072300-msys-bin.meta is up to date
+upgrade: mingw-developer-toolkit-2013072300-msys-bin.meta
+mingw-get: *** INFO *** package mingw-developer-toolkit-2013072300-msys-bin.meta is up to date
+upgrade: automake-1.11.1-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package automake-1.11.1-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: autoconf-2.68-1-msys-1.0.17-bin.tar.lzma
+mingw-get: *** INFO *** package autoconf-2.68-1-msys-1.0.17-bin.tar.lzma is up to date
+upgrade: libtool-2.4-1-msys-1.0.15-bin.tar.lzma
+mingw-get: *** INFO *** package libtool-2.4-1-msys-1.0.15-bin.tar.lzma is up to date
+upgrade: cygutils-1.3.4-4-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package cygutils-1.3.4-4-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: autoconf-2.68-1-msys-1.0.17-doc.tar.lzma
+mingw-get: *** INFO *** package autoconf-2.68-1-msys-1.0.17-doc.tar.lzma is up to date
+upgrade: autoconf-2.68-1-msys-1.0.17-lic.tar.lzma
+mingw-get: *** INFO *** package autoconf-2.68-1-msys-1.0.17-lic.tar.lzma is up to date
+upgrade: autogen-5.10.1-1-msys-1.0.15-doc.tar.lzma
+mingw-get: *** INFO *** package autogen-5.10.1-1-msys-1.0.15-doc.tar.lzma is up to date
+upgrade: autogen-5.10.1-1-msys-1.0.15-lic.tar.lzma
+mingw-get: *** INFO *** package autogen-5.10.1-1-msys-1.0.15-lic.tar.lzma is up to date
+upgrade: automake-1.11.1-1-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package automake-1.11.1-1-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: automake-1.11.1-1-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package automake-1.11.1-1-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: bash-3.1.23-1-msys-1.0.18-doc.tar.xz
+mingw-get: *** INFO *** package bash-3.1.23-1-msys-1.0.18-doc.tar.xz is up to date
+upgrade: bash-3.1.23-1-msys-1.0.18-lic.tar.xz
+mingw-get: *** INFO *** package bash-3.1.23-1-msys-1.0.18-lic.tar.xz is up to date
+upgrade: bash-3.1.23-1-msys-1.0.18-lnk.tar.xz
+mingw-get: *** INFO *** package bash-3.1.23-1-msys-1.0.18-lnk.tar.xz is up to date
+upgrade: binutils-2.19.51-3-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package binutils-2.19.51-3-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: binutils-2.19.51-3-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package binutils-2.19.51-3-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: binutils-2.19.51-3-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package binutils-2.19.51-3-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: bison-2.4.2-1-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package bison-2.4.2-1-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: bison-2.4.2-1-msys-1.0.13-lang.tar.lzma
+mingw-get: *** INFO *** package bison-2.4.2-1-msys-1.0.13-lang.tar.lzma is up to date
+upgrade: bison-2.4.2-1-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package bison-2.4.2-1-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: bison-2.4.2-1-msys-1.0.13-rtm.tar.lzma
+mingw-get: *** INFO *** package bison-2.4.2-1-msys-1.0.13-rtm.tar.lzma is up to date
+upgrade: bzip2-1.0.6-1-msys-1.0.17-doc.tar.lzma
+mingw-get: *** INFO *** package bzip2-1.0.6-1-msys-1.0.17-doc.tar.lzma is up to date
+upgrade: bzip2-1.0.6-1-msys-1.0.17-lic.tar.lzma
+mingw-get: *** INFO *** package bzip2-1.0.6-1-msys-1.0.17-lic.tar.lzma is up to date
+upgrade: console-2.00b147-1-msys-1.0.15-bin.tar.lzma
+mingw-get: *** INFO *** package console-2.00b147-1-msys-1.0.15-bin.tar.lzma is up to date
+upgrade: console-2.00b147-1-msys-1.0.15-doc.tar.lzma
+mingw-get: *** INFO *** package console-2.00b147-1-msys-1.0.15-doc.tar.lzma is up to date
+upgrade: console-2.00b147-1-msys-1.0.15-lic.tar.lzma
+mingw-get: *** INFO *** package console-2.00b147-1-msys-1.0.15-lic.tar.lzma is up to date
+upgrade: msysCORE-1.0.19-1-msys-1.0.19-dbg.tar.xz
+mingw-get: *** INFO *** package msysCORE-1.0.19-1-msys-1.0.19-dbg.tar.xz is up to date
+upgrade: w32api-3.14-3-msys-1.0.12-dev.tar.lzma
+mingw-get: *** INFO *** package w32api-3.14-3-msys-1.0.12-dev.tar.lzma is up to date
+upgrade: msysCORE-1.0.19-1-msys-1.0.19-dev.tar.xz
+mingw-get: *** INFO *** package msysCORE-1.0.19-1-msys-1.0.19-dev.tar.xz is up to date
+upgrade: coreutils-5.97-3-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package coreutils-5.97-3-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: coreutils-5.97-3-msys-1.0.13-lang.tar.lzma
+mingw-get: *** INFO *** package coreutils-5.97-3-msys-1.0.13-lang.tar.lzma is up to date
+upgrade: coreutils-5.97-3-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package coreutils-5.97-3-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: crypt-1.1_1-3-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package crypt-1.1_1-3-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: crypt-1.1_1-3-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package crypt-1.1_1-3-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: crypt-1.1_1-3-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package crypt-1.1_1-3-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: cvs-1.12.13-2-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package cvs-1.12.13-2-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: cvs-1.12.13-2-msys-1.0.13-lang.tar.lzma
+mingw-get: *** INFO *** package cvs-1.12.13-2-msys-1.0.13-lang.tar.lzma is up to date
+upgrade: cvs-1.12.13-2-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package cvs-1.12.13-2-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: cygutils-1.3.4-4-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package cygutils-1.3.4-4-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: cygutils-1.3.4-4-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package cygutils-1.3.4-4-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: dash-0.5.5.1_2-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package dash-0.5.5.1_2-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: dash-0.5.5.1_2-1-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package dash-0.5.5.1_2-1-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: dash-0.5.5.1_2-1-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package dash-0.5.5.1_2-1-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: diffstat-1.54-1-msys-1.0.17-doc.tar.lzma
+mingw-get: *** INFO *** package diffstat-1.54-1-msys-1.0.17-doc.tar.lzma is up to date
+upgrade: diffstat-1.54-1-msys-1.0.17-lic.tar.lzma
+mingw-get: *** INFO *** package diffstat-1.54-1-msys-1.0.17-lic.tar.lzma is up to date
+upgrade: diffutils-2.8.7.20071206cvs-3-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package diffutils-2.8.7.20071206cvs-3-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: diffutils-2.8.7.20071206cvs-3-msys-1.0.13-lang.tar.lzma
+mingw-get: *** INFO *** package diffutils-2.8.7.20071206cvs-3-msys-1.0.13-lang.tar.lzma is up to date
+upgrade: diffutils-2.8.7.20071206cvs-3-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package diffutils-2.8.7.20071206cvs-3-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: dos2unix-7.4.0-1-msys-1.0.19-doc.tar.lzma
+mingw-get: *** INFO *** package dos2unix-7.4.0-1-msys-1.0.19-doc.tar.lzma is up to date
+upgrade: dos2unix-7.4.0-1-msys-1.0.19-lic.tar.lzma
+mingw-get: *** INFO *** package dos2unix-7.4.0-1-msys-1.0.19-lic.tar.lzma is up to date
+upgrade: expat-2.0.1-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package expat-2.0.1-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: expat-2.0.1-1-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package expat-2.0.1-1-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: expat-2.0.1-1-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package expat-2.0.1-1-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: file-5.04-1-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package file-5.04-1-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: file-5.04-1-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package file-5.04-1-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: findutils-4.4.2-2-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package findutils-4.4.2-2-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: findutils-4.4.2-2-msys-1.0.13-lang.tar.lzma
+mingw-get: *** INFO *** package findutils-4.4.2-2-msys-1.0.13-lang.tar.lzma is up to date
+upgrade: findutils-4.4.2-2-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package findutils-4.4.2-2-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: flex-2.5.35-2-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package flex-2.5.35-2-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: flex-2.5.35-2-msys-1.0.13-lang.tar.lzma
+mingw-get: *** INFO *** package flex-2.5.35-2-msys-1.0.13-lang.tar.lzma is up to date
+upgrade: flex-2.5.35-2-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package flex-2.5.35-2-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: gawk-3.1.7-2-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package gawk-3.1.7-2-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: gawk-3.1.7-2-msys-1.0.13-lang.tar.lzma
+mingw-get: *** INFO *** package gawk-3.1.7-2-msys-1.0.13-lang.tar.lzma is up to date
+upgrade: gawk-3.1.7-2-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package gawk-3.1.7-2-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: gcc-3.4.4-3-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package gcc-3.4.4-3-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: gcc-3.4.4-3-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package gcc-3.4.4-3-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: gcc-3.4.4-3-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package gcc-3.4.4-3-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: gdbm-1.8.3-3-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package gdbm-1.8.3-3-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: gdbm-1.8.3-3-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package gdbm-1.8.3-3-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: gdbm-1.8.3-3-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package gdbm-1.8.3-3-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: gettext-0.18.1.1-1-msys-1.0.17-bin.tar.lzma
+mingw-get: *** INFO *** package gettext-0.18.1.1-1-msys-1.0.17-bin.tar.lzma is up to date
+upgrade: libgettextpo-0.18.1.1-1-msys-1.0.17-dll-0.tar.lzma
+mingw-get: *** INFO *** package libgettextpo-0.18.1.1-1-msys-1.0.17-dll-0.tar.lzma is up to date
+upgrade: gettext-0.18.1.1-1-msys-1.0.17-dev.tar.lzma
+mingw-get: *** INFO *** package gettext-0.18.1.1-1-msys-1.0.17-dev.tar.lzma is up to date
+upgrade: gettext-0.18.1.1-1-msys-1.0.17-doc.tar.lzma
+mingw-get: *** INFO *** package gettext-0.18.1.1-1-msys-1.0.17-doc.tar.lzma is up to date
+upgrade: gettext-0.18.1.1-1-msys-1.0.17-ext.tar.lzma
+mingw-get: *** INFO *** package gettext-0.18.1.1-1-msys-1.0.17-ext.tar.lzma is up to date
+upgrade: gettext-0.18.1.1-1-msys-1.0.17-lic.tar.lzma
+mingw-get: *** INFO *** package gettext-0.18.1.1-1-msys-1.0.17-lic.tar.lzma is up to date
+upgrade: gmp-5.0.1-1-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package gmp-5.0.1-1-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: gmp-5.0.1-1-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package gmp-5.0.1-1-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: grep-2.5.4-2-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package grep-2.5.4-2-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: grep-2.5.4-2-msys-1.0.13-lang.tar.lzma
+mingw-get: *** INFO *** package grep-2.5.4-2-msys-1.0.13-lang.tar.lzma is up to date
+upgrade: grep-2.5.4-2-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package grep-2.5.4-2-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: groff-1.20.1-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package groff-1.20.1-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: groff-1.20.1-2-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package groff-1.20.1-2-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: groff-1.20.1-2-msys-1.0.13-ext.tar.lzma
+mingw-get: *** INFO *** package groff-1.20.1-2-msys-1.0.13-ext.tar.lzma is up to date
+upgrade: groff-1.20.1-2-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package groff-1.20.1-2-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: groff-1.20.1-2-msys-1.0.13-smp.tar.lzma
+mingw-get: *** INFO *** package groff-1.20.1-2-msys-1.0.13-smp.tar.lzma is up to date
+upgrade: guile-1.8.7-2-msys-1.0.15-doc.tar.lzma
+mingw-get: *** INFO *** package guile-1.8.7-2-msys-1.0.15-doc.tar.lzma is up to date
+upgrade: guile-1.8.7-2-msys-1.0.15-lic.tar.lzma
+mingw-get: *** INFO *** package guile-1.8.7-2-msys-1.0.15-lic.tar.lzma is up to date
+upgrade: gzip-1.3.12-2-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package gzip-1.3.12-2-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: gzip-1.3.12-2-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package gzip-1.3.12-2-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: help2man-1.40.4-1-msys-1.0.17-bin.tar.lzma
+mingw-get: *** INFO *** package help2man-1.40.4-1-msys-1.0.17-bin.tar.lzma is up to date
+upgrade: help2man-1.40.4-1-msys-1.0.17-doc.tar.lzma
+mingw-get: *** INFO *** package help2man-1.40.4-1-msys-1.0.17-doc.tar.lzma is up to date
+upgrade: help2man-1.40.4-1-msys-1.0.17-lic.tar.lzma
+mingw-get: *** INFO *** package help2man-1.40.4-1-msys-1.0.17-lic.tar.lzma is up to date
+upgrade: inetutils-1.7-1-msys-1.0.13-dev.tar.lzma
+mingw-get: *** INFO *** package inetutils-1.7-1-msys-1.0.13-dev.tar.lzma is up to date
+upgrade: inetutils-1.7-1-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package inetutils-1.7-1-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: inetutils-1.7-1-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package inetutils-1.7-1-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: less-436-2-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package less-436-2-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: less-436-2-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package less-436-2-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: libminizip-1.2.7-1-msys-1.0.17-dll-1.tar.lzma
+mingw-get: *** INFO *** package libminizip-1.2.7-1-msys-1.0.17-dll-1.tar.lzma is up to date
+upgrade: zlib-1.2.7-1-msys-1.0.17-dev.tar.lzma
+mingw-get: *** INFO *** package zlib-1.2.7-1-msys-1.0.17-dev.tar.lzma is up to date
+upgrade: libxml2-2.7.6-1-msys-1.0.13-dev.tar.lzma
+mingw-get: *** INFO *** package libxml2-2.7.6-1-msys-1.0.13-dev.tar.lzma is up to date
+upgrade: libopenssl-1.0.0-1-msys-1.0.13-dev.tar.lzma
+mingw-get: *** INFO *** package libopenssl-1.0.0-1-msys-1.0.13-dev.tar.lzma is up to date
+upgrade: liblzma-5.0.3-1-msys-1.0.17-dev.tar.lzma
+mingw-get: *** INFO *** package liblzma-5.0.3-1-msys-1.0.17-dev.tar.lzma is up to date
+upgrade: libbz2-1.0.6-1-msys-1.0.17-dev.tar.lzma
+mingw-get: *** INFO *** package libbz2-1.0.6-1-msys-1.0.17-dev.tar.lzma is up to date
+upgrade: libarchive-2.8.3-1-msys-1.0.13-dev.tar.lzma
+mingw-get: *** INFO *** package libarchive-2.8.3-1-msys-1.0.13-dev.tar.lzma is up to date
+upgrade: libarchive-2.8.3-1-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package libarchive-2.8.3-1-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: libarchive-2.8.3-1-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package libarchive-2.8.3-1-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: libasprintf-0.18.1.1-1-msys-1.0.17-dll-0.tar.lzma
+mingw-get: *** INFO *** package libasprintf-0.18.1.1-1-msys-1.0.17-dll-0.tar.lzma is up to date
+upgrade: libcharset-1.14-1-msys-1.0.17-dll-1.tar.lzma
+mingw-get: *** INFO *** package libcharset-1.14-1-msys-1.0.17-dll-1.tar.lzma is up to date
+upgrade: libcrypt-1.1_1-3-msys-1.0.13-dev.tar.lzma
+mingw-get: *** INFO *** package libcrypt-1.1_1-3-msys-1.0.13-dev.tar.lzma is up to date
+upgrade: libexpat-2.0.1-1-msys-1.0.13-dev.tar.lzma
+mingw-get: *** INFO *** package libexpat-2.0.1-1-msys-1.0.13-dev.tar.lzma is up to date
+upgrade: libgdbm-1.8.3-3-msys-1.0.13-dev.tar.lzma
+mingw-get: *** INFO *** package libgdbm-1.8.3-3-msys-1.0.13-dev.tar.lzma is up to date
+upgrade: libregex-1.20090805-2-msys-1.0.13-dev.tar.lzma
+mingw-get: *** INFO *** package libregex-1.20090805-2-msys-1.0.13-dev.tar.lzma is up to date
+upgrade: libltdl-2.4-1-msys-1.0.15-dev.tar.lzma
+mingw-get: *** INFO *** package libltdl-2.4-1-msys-1.0.15-dev.tar.lzma is up to date
+upgrade: libgmp-5.0.1-1-msys-1.0.13-dev.tar.lzma
+mingw-get: *** INFO *** package libgmp-5.0.1-1-msys-1.0.13-dev.tar.lzma is up to date
+upgrade: libguile-1.8.7-2-msys-1.0.15-dev.tar.lzma
+mingw-get: *** INFO *** package libguile-1.8.7-2-msys-1.0.15-dev.tar.lzma is up to date
+upgrade: libiconv-1.14-1-msys-1.0.17-bin.tar.lzma
+mingw-get: *** INFO *** package libiconv-1.14-1-msys-1.0.17-bin.tar.lzma is up to date
+upgrade: libiconv-1.14-1-msys-1.0.17-dev.tar.lzma
+mingw-get: *** INFO *** package libiconv-1.14-1-msys-1.0.17-dev.tar.lzma is up to date
+upgrade: libiconv-1.14-1-msys-1.0.17-doc.tar.lzma
+mingw-get: *** INFO *** package libiconv-1.14-1-msys-1.0.17-doc.tar.lzma is up to date
+upgrade: libiconv-1.14-1-msys-1.0.17-lic.tar.lzma
+mingw-get: *** INFO *** package libiconv-1.14-1-msys-1.0.17-lic.tar.lzma is up to date
+upgrade: libmagic-5.04-1-msys-1.0.13-dev.tar.lzma
+mingw-get: *** INFO *** package libmagic-5.04-1-msys-1.0.13-dev.tar.lzma is up to date
+upgrade: libminires-1.02_1-2-msys-1.0.13-dev.tar.lzma
+mingw-get: *** INFO *** package libminires-1.02_1-2-msys-1.0.13-dev.tar.lzma is up to date
+upgrade: libminizip-1.2.7-1-msys-1.0.17-dev.tar.lzma
+mingw-get: *** INFO *** package libminizip-1.2.7-1-msys-1.0.17-dev.tar.lzma is up to date
+upgrade: libncurses-6.0-2-msys-1.0.18-dev.tar.lzma
+mingw-get: *** INFO *** package libncurses-6.0-2-msys-1.0.18-dev.tar.lzma is up to date
+upgrade: libncurses-6.0-2-msys-1.0.18-dll-6.tar.lzma
+mingw-get: *** INFO *** package libncurses-6.0-2-msys-1.0.18-dll-6.tar.lzma is up to date
+upgrade: libopts-5.10.1-1-msys-1.0.15-dev.tar.lzma
+mingw-get: *** INFO *** package libopts-5.10.1-1-msys-1.0.15-dev.tar.lzma is up to date
+upgrade: libpopt-1.15-2-msys-1.0.13-dev.tar.lzma
+mingw-get: *** INFO *** package libpopt-1.15-2-msys-1.0.13-dev.tar.lzma is up to date
+upgrade: libpopt-1.15-2-msys-1.0.13-lang.tar.lzma
+mingw-get: *** INFO *** package libpopt-1.15-2-msys-1.0.13-lang.tar.lzma is up to date
+upgrade: libtermcap-0.20050421_1-2-msys-1.0.13-dev.tar.lzma
+mingw-get: *** INFO *** package libtermcap-0.20050421_1-2-msys-1.0.13-dev.tar.lzma is up to date
+upgrade: libtool-2.4-1-msys-1.0.15-doc.tar.lzma
+mingw-get: *** INFO *** package libtool-2.4-1-msys-1.0.15-doc.tar.lzma is up to date
+upgrade: libtool-2.4-1-msys-1.0.15-lic.tar.lzma
+mingw-get: *** INFO *** package libtool-2.4-1-msys-1.0.15-lic.tar.lzma is up to date
+upgrade: libxml2-2.7.6-1-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package libxml2-2.7.6-1-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: libxml2-2.7.6-1-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package libxml2-2.7.6-1-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: libxml2-2.7.6-1-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package libxml2-2.7.6-1-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: lndir-1.0.1-2-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package lndir-1.0.1-2-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: lndir-1.0.1-2-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package lndir-1.0.1-2-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: locate-4.4.2-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package locate-4.4.2-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: lpr-enhanced-1.0.2-1-msys-1.0.11-bin.tar.lzma
+mingw-get: *** INFO *** package lpr-enhanced-1.0.2-1-msys-1.0.11-bin.tar.lzma is up to date
+upgrade: lpr-enhanced-1.0.2-1-msys-1.0.11-doc.tar.lzma
+mingw-get: *** INFO *** package lpr-enhanced-1.0.2-1-msys-1.0.11-doc.tar.lzma is up to date
+upgrade: lpr-enhanced-1.0.2-1-msys-1.0.11-lic.tar.lzma
+mingw-get: *** INFO *** package lpr-enhanced-1.0.2-1-msys-1.0.11-lic.tar.lzma is up to date
+upgrade: m4-1.4.16-2-msys-1.0.17-doc.tar.lzma
+mingw-get: *** INFO *** package m4-1.4.16-2-msys-1.0.17-doc.tar.lzma is up to date
+upgrade: m4-1.4.16-2-msys-1.0.17-lic.tar.lzma
+mingw-get: *** INFO *** package m4-1.4.16-2-msys-1.0.17-lic.tar.lzma is up to date
+upgrade: make-3.81-3-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package make-3.81-3-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: make-3.81-3-msys-1.0.13-lang.tar.lzma
+mingw-get: *** INFO *** package make-3.81-3-msys-1.0.13-lang.tar.lzma is up to date
+upgrade: make-3.81-3-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package make-3.81-3-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: man-1.6f-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package man-1.6f-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: man-1.6f-2-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package man-1.6f-2-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: man-1.6f-2-msys-1.0.13-lang.tar.lzma
+mingw-get: *** INFO *** package man-1.6f-2-msys-1.0.13-lang.tar.lzma is up to date
+upgrade: man-1.6f-2-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package man-1.6f-2-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: minires-1.02_1-2-msys-1.0.13-bin.tar.lzma
+mingw-get: *** INFO *** package minires-1.02_1-2-msys-1.0.13-bin.tar.lzma is up to date
+upgrade: minires-1.02_1-2-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package minires-1.02_1-2-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: minires-1.02_1-2-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package minires-1.02_1-2-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: minizip-1.2.7-1-msys-1.0.17-bin.tar.lzma
+mingw-get: *** INFO *** package minizip-1.2.7-1-msys-1.0.17-bin.tar.lzma is up to date
+upgrade: mintty-1.0.3-1-msys-1.0.17-bin.tar.lzma
+mingw-get: *** INFO *** package mintty-1.0.3-1-msys-1.0.17-bin.tar.lzma is up to date
+upgrade: mintty-1.0.3-1-msys-1.0.17-doc.tar.lzma
+mingw-get: *** INFO *** package mintty-1.0.3-1-msys-1.0.17-doc.tar.lzma is up to date
+upgrade: mksh-40.0.0c-1-msys-1.0.17-bin.tar.lzma
+mingw-get: *** INFO *** package mksh-40.0.0c-1-msys-1.0.17-bin.tar.lzma is up to date
+upgrade: mksh-40.0.0c-1-msys-1.0.17-doc.tar.lzma
+mingw-get: *** INFO *** package mksh-40.0.0c-1-msys-1.0.17-doc.tar.lzma is up to date
+upgrade: mksh-40.0.0c-1-msys-1.0.17-lic.tar.lzma
+mingw-get: *** INFO *** package mksh-40.0.0c-1-msys-1.0.17-lic.tar.lzma is up to date
+upgrade: mktemp-1.6-2-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package mktemp-1.6-2-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: mktemp-1.6-2-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package mktemp-1.6-2-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: ncurses-6.0-2-msys-1.0.18-bin.tar.lzma
+mingw-get: *** INFO *** package ncurses-6.0-2-msys-1.0.18-bin.tar.lzma is up to date
+upgrade: ncurses-6.0-2-msys-1.0.18-doc.tar.lzma
+mingw-get: *** INFO *** package ncurses-6.0-2-msys-1.0.18-doc.tar.lzma is up to date
+upgrade: ncurses-6.0-2-msys-1.0.18-lic.tar.lzma
+mingw-get: *** INFO *** package ncurses-6.0-2-msys-1.0.18-lic.tar.lzma is up to date
+upgrade: openssh-5.4p1-1-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package openssh-5.4p1-1-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: openssh-5.4p1-1-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package openssh-5.4p1-1-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: openssl-1.0.0-1-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package openssl-1.0.0-1-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: openssl-1.0.0-1-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package openssl-1.0.0-1-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: patch-2.6.1-1-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package patch-2.6.1-1-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: patch-2.6.1-1-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package patch-2.6.1-1-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: perl-5.8.8-1-msys-1.0.17-doc.tar.lzma
+mingw-get: *** INFO *** package perl-5.8.8-1-msys-1.0.17-doc.tar.lzma is up to date
+upgrade: perl-5.8.8-1-msys-1.0.17-html.tar.lzma
+mingw-get: *** INFO *** package perl-5.8.8-1-msys-1.0.17-html.tar.lzma is up to date
+upgrade: perl-5.8.8-1-msys-1.0.17-lic.tar.lzma
+mingw-get: *** INFO *** package perl-5.8.8-1-msys-1.0.17-lic.tar.lzma is up to date
+upgrade: perl-5.8.8-1-msys-1.0.17-man.tar.lzma
+mingw-get: *** INFO *** package perl-5.8.8-1-msys-1.0.17-man.tar.lzma is up to date
+upgrade: popt-1.15-2-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package popt-1.15-2-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: popt-1.15-2-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package popt-1.15-2-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: rebase-4.0.1_1-1-msys-1.0.17-bin.tar.lzma
+mingw-get: *** INFO *** package rebase-4.0.1_1-1-msys-1.0.17-bin.tar.lzma is up to date
+upgrade: rebase-4.0.1_1-1-msys-1.0.17-dev.tar.lzma
+mingw-get: *** INFO *** package rebase-4.0.1_1-1-msys-1.0.17-dev.tar.lzma is up to date
+upgrade: rebase-4.0.1_1-1-msys-1.0.17-doc.tar.lzma
+mingw-get: *** INFO *** package rebase-4.0.1_1-1-msys-1.0.17-doc.tar.lzma is up to date
+upgrade: rebase-4.0.1_1-1-msys-1.0.17-lic.tar.lzma
+mingw-get: *** INFO *** package rebase-4.0.1_1-1-msys-1.0.17-lic.tar.lzma is up to date
+upgrade: regex-1.20090805-2-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package regex-1.20090805-2-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: regex-1.20090805-2-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package regex-1.20090805-2-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: rsync-3.0.8-1-msys-1.0.17-doc.tar.lzma
+mingw-get: *** INFO *** package rsync-3.0.8-1-msys-1.0.17-doc.tar.lzma is up to date
+upgrade: rsync-3.0.8-1-msys-1.0.17-lic.tar.lzma
+mingw-get: *** INFO *** package rsync-3.0.8-1-msys-1.0.17-lic.tar.lzma is up to date
+upgrade: rxvt-2.7.2-3-msys-1.0.14-bin.tar.lzma
+mingw-get: *** INFO *** package rxvt-2.7.2-3-msys-1.0.14-bin.tar.lzma is up to date
+upgrade: rxvt-2.7.2-3-msys-1.0.14-doc.tar.lzma
+mingw-get: *** INFO *** package rxvt-2.7.2-3-msys-1.0.14-doc.tar.lzma is up to date
+upgrade: rxvt-2.7.2-3-msys-1.0.14-lic.tar.lzma
+mingw-get: *** INFO *** package rxvt-2.7.2-3-msys-1.0.14-lic.tar.lzma is up to date
+upgrade: sed-4.2.1-2-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package sed-4.2.1-2-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: sed-4.2.1-2-msys-1.0.13-lang.tar.lzma
+mingw-get: *** INFO *** package sed-4.2.1-2-msys-1.0.13-lang.tar.lzma is up to date
+upgrade: sed-4.2.1-2-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package sed-4.2.1-2-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: msys-system-builder-2010090600-msys-bin.meta
+mingw-get: *** INFO *** package msys-system-builder-2010090600-msys-bin.meta is up to date
+upgrade: tar-1.23-1-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package tar-1.23-1-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: tar-1.23-1-msys-1.0.13-ext.tar.lzma
+mingw-get: *** INFO *** package tar-1.23-1-msys-1.0.13-ext.tar.lzma is up to date
+upgrade: tar-1.23-1-msys-1.0.13-lang.tar.lzma
+mingw-get: *** INFO *** package tar-1.23-1-msys-1.0.13-lang.tar.lzma is up to date
+upgrade: tar-1.23-1-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package tar-1.23-1-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: termcap-0.20050421_1-2-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package termcap-0.20050421_1-2-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: termcap-0.20050421_1-2-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package termcap-0.20050421_1-2-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: terminfo-6.0-2-msys-1.0.18-data.tar.lzma
+mingw-get: *** INFO *** package terminfo-6.0-2-msys-1.0.18-data.tar.lzma is up to date
+upgrade: texinfo-4.13a-2-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package texinfo-4.13a-2-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: texinfo-4.13a-2-msys-1.0.13-lang.tar.lzma
+mingw-get: *** INFO *** package texinfo-4.13a-2-msys-1.0.13-lang.tar.lzma is up to date
+upgrade: texinfo-4.13a-2-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package texinfo-4.13a-2-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: msys-tiny-2013072300-msys-bin.meta
+mingw-get: *** INFO *** package msys-tiny-2013072300-msys-bin.meta is up to date
+upgrade: unzip-6.0-1-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package unzip-6.0-1-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: unzip-6.0-1-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package unzip-6.0-1-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: vim-7.3-2-msys-1.0.16-doc.tar.lzma
+mingw-get: *** INFO *** package vim-7.3-2-msys-1.0.16-doc.tar.lzma is up to date
+upgrade: vim-7.3-2-msys-1.0.16-lang.tar.lzma
+mingw-get: *** INFO *** package vim-7.3-2-msys-1.0.16-lang.tar.lzma is up to date
+upgrade: vim-7.3-2-msys-1.0.16-lic.tar.lzma
+mingw-get: *** INFO *** package vim-7.3-2-msys-1.0.16-lic.tar.lzma is up to date
+upgrade: wget-1.12-1-msys-1.0.13-doc.tar.lzma
+mingw-get: *** INFO *** package wget-1.12-1-msys-1.0.13-doc.tar.lzma is up to date
+upgrade: wget-1.12-1-msys-1.0.13-lang.tar.lzma
+mingw-get: *** INFO *** package wget-1.12-1-msys-1.0.13-lang.tar.lzma is up to date
+upgrade: wget-1.12-1-msys-1.0.13-lic.tar.lzma
+mingw-get: *** INFO *** package wget-1.12-1-msys-1.0.13-lic.tar.lzma is up to date
+upgrade: xz-5.0.3-1-msys-1.0.17-doc.tar.lzma
+mingw-get: *** INFO *** package xz-5.0.3-1-msys-1.0.17-doc.tar.lzma is up to date
+upgrade: xz-5.0.3-1-msys-1.0.17-lang.tar.lzma
+mingw-get: *** INFO *** package xz-5.0.3-1-msys-1.0.17-lang.tar.lzma is up to date
+upgrade: xz-5.0.3-1-msys-1.0.17-lic.tar.lzma
+mingw-get: *** INFO *** package xz-5.0.3-1-msys-1.0.17-lic.tar.lzma is up to date
+upgrade: zip-3.0-1-msys-1.0.14-bin.tar.lzma
+mingw-get: *** INFO *** package zip-3.0-1-msys-1.0.14-bin.tar.lzma is up to date
+upgrade: zip-3.0-1-msys-1.0.14-doc.tar.lzma
+mingw-get: *** INFO *** package zip-3.0-1-msys-1.0.14-doc.tar.lzma is up to date
+upgrade: zip-3.0-1-msys-1.0.14-lic.tar.lzma
+mingw-get: *** INFO *** package zip-3.0-1-msys-1.0.14-lic.tar.lzma is up to date
+upgrade: zlib-1.2.7-1-msys-1.0.17-doc.tar.lzma
+mingw-get: *** INFO *** package zlib-1.2.7-1-msys-1.0.17-doc.tar.lzma is up to date
+upgrade: zlib-1.2.7-1-msys-1.0.17-lic.tar.lzma
+mingw-get: *** INFO *** package zlib-1.2.7-1-msys-1.0.17-lic.tar.lzma is up to date
+
+C:\WINDOWS\system32>gcc --version
+gcc (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+C:\WINDOWS\system32>
+
+===========================================================
+
+
+NO MSYS2
+===========================================================
+
+brito@DESKTOP-R5KRUP6 MSYS ~
+$ pacman -S mingw-w64-x86_64-gtk3
+warning: mingw-w64-x86_64-gtk3-3.24.33-2 is up to date -- reinstalling
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (1) mingw-w64-x86_64-gtk3-3.24.33-2
+
+Total Installed Size:  68.55 MiB
+Net Upgrade Size:       0.00 MiB
+
+:: Proceed with installation? [Y/n] y
+(1/1) checking keys in keyring                     [#####################] 100%
+(1/1) checking package integrity                   [#####################] 100%
+(1/1) loading package files                        [#####################] 100%
+(1/1) checking for file conflicts                  [#####################] 100%
+(1/1) checking available disk space                [#####################] 100%
+:: Processing package changes...
+(1/1) reinstalling mingw-w64-x86_64-gtk3           [#####################] 100%
+:: Running post-transaction hooks...
+(1/2) Compiling GSettings XML schema files...
+(2/2) Updating icon theme caches...
+
+brito@DESKTOP-R5KRUP6 MSYS ~
+$ pacman -S mingw-w64-x86_64-glade
+warning: mingw-w64-x86_64-glade-3.38.2-1 is up to date -- reinstalling
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (1) mingw-w64-x86_64-glade-3.38.2-1
+
+Total Installed Size:  12.38 MiB
+Net Upgrade Size:       0.00 MiB
+
+:: Proceed with installation? [Y/n] y
+(1/1) checking keys in keyring                     [#####################] 100%
+(1/1) checking package integrity                   [#####################] 100%
+(1/1) loading package files                        [#####################] 100%
+(1/1) checking for file conflicts                  [#####################] 100%
+(1/1) checking available disk space                [#####################] 100%
+:: Processing package changes...
+(1/1) reinstalling mingw-w64-x86_64-glade          [#####################] 100%
+:: Running post-transaction hooks...
+(1/1) Updating icon theme caches...
+
+brito@DESKTOP-R5KRUP6 MSYS ~
+$ pacman -S mingw-w64-x86_64-toolchain base-devel
+:: There are 19 members in group mingw-w64-x86_64-toolchain:
+:: Repository mingw64
+   1) mingw-w64-x86_64-binutils  2) mingw-w64-x86_64-crt-git
+   3) mingw-w64-x86_64-gcc  4) mingw-w64-x86_64-gcc-ada
+   5) mingw-w64-x86_64-gcc-fortran  6) mingw-w64-x86_64-gcc-libgfortran
+   7) mingw-w64-x86_64-gcc-libs  8) mingw-w64-x86_64-gcc-objc
+   9) mingw-w64-x86_64-gdb  10) mingw-w64-x86_64-gdb-multiarch
+   11) mingw-w64-x86_64-headers-git  12) mingw-w64-x86_64-libgccjit
+   13) mingw-w64-x86_64-libmangle-git  14) mingw-w64-x86_64-libwinpthread-git
+   15) mingw-w64-x86_64-make  16) mingw-w64-x86_64-pkgconf
+   17) mingw-w64-x86_64-tools-git  18) mingw-w64-x86_64-winpthreads-git
+   19) mingw-w64-x86_64-winstorecompat-git
+
+Enter a selection (default=all):
+warning: mingw-w64-x86_64-binutils-2.38-2 is up to date -- reinstalling
+warning: mingw-w64-x86_64-crt-git-9.0.0.6448.b03cbfb95-1 is up to date -- reinstalling
+warning: mingw-w64-x86_64-gcc-11.2.0-10 is up to date -- reinstalling
+warning: mingw-w64-x86_64-gcc-ada-11.2.0-10 is up to date -- reinstalling
+warning: mingw-w64-x86_64-gcc-fortran-11.2.0-10 is up to date -- reinstalling
+warning: mingw-w64-x86_64-gcc-libgfortran-11.2.0-10 is up to date -- reinstalling
+warning: mingw-w64-x86_64-gcc-libs-11.2.0-10 is up to date -- reinstalling
+warning: mingw-w64-x86_64-gcc-objc-11.2.0-10 is up to date -- reinstalling
+warning: mingw-w64-x86_64-gdb-11.2-2 is up to date -- reinstalling
+warning: mingw-w64-x86_64-gdb-multiarch-11.2-2 is up to date -- reinstalling
+warning: mingw-w64-x86_64-headers-git-9.0.0.6448.b03cbfb95-1 is up to date -- reinstalling
+warning: mingw-w64-x86_64-libgccjit-11.2.0-10 is up to date -- reinstalling
+warning: mingw-w64-x86_64-libmangle-git-9.0.0.6448.b03cbfb95-1 is up to date -- reinstalling
+warning: mingw-w64-x86_64-libwinpthread-git-9.0.0.6448.b03cbfb95-1 is up to date -- reinstalling
+warning: mingw-w64-x86_64-make-4.3-1 is up to date -- reinstalling
+warning: mingw-w64-x86_64-pkgconf-1.8.0-2 is up to date -- reinstalling
+warning: mingw-w64-x86_64-tools-git-9.0.0.6448.b03cbfb95-1 is up to date -- reinstalling
+warning: mingw-w64-x86_64-winpthreads-git-9.0.0.6448.b03cbfb95-1 is up to date -- reinstalling
+warning: mingw-w64-x86_64-winstorecompat-git-9.0.0.6448.b03cbfb95-1 is up to date -- reinstalling
+warning: base-devel-2022.01-1 is up to date -- reinstalling
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (20) base-devel-2022.01-1  mingw-w64-x86_64-binutils-2.38-2
+              mingw-w64-x86_64-crt-git-9.0.0.6448.b03cbfb95-1
+              mingw-w64-x86_64-gcc-11.2.0-10
+              mingw-w64-x86_64-gcc-ada-11.2.0-10
+              mingw-w64-x86_64-gcc-fortran-11.2.0-10
+              mingw-w64-x86_64-gcc-libgfortran-11.2.0-10
+              mingw-w64-x86_64-gcc-libs-11.2.0-10
+              mingw-w64-x86_64-gcc-objc-11.2.0-10  mingw-w64-x86_64-gdb-11.2-2
+              mingw-w64-x86_64-gdb-multiarch-11.2-2
+              mingw-w64-x86_64-headers-git-9.0.0.6448.b03cbfb95-1
+              mingw-w64-x86_64-libgccjit-11.2.0-10
+              mingw-w64-x86_64-libmangle-git-9.0.0.6448.b03cbfb95-1
+              mingw-w64-x86_64-libwinpthread-git-9.0.0.6448.b03cbfb95-1
+              mingw-w64-x86_64-make-4.3-1  mingw-w64-x86_64-pkgconf-1.8.0-2
+              mingw-w64-x86_64-tools-git-9.0.0.6448.b03cbfb95-1
+              mingw-w64-x86_64-winpthreads-git-9.0.0.6448.b03cbfb95-1
+              mingw-w64-x86_64-winstorecompat-git-9.0.0.6448.b03cbfb95-1
+
+Total Installed Size:  672.26 MiB
+Net Upgrade Size:        0.00 MiB
+
+:: Proceed with installation? [Y/n] y
+(20/20) checking keys in keyring                   [#####################] 100%
+(20/20) checking package integrity                 [#####################] 100%
+(20/20) loading package files                      [#####################] 100%
+(20/20) checking for file conflicts                [#####################] 100%
+(20/20) checking available disk space              [#####################] 100%
+:: Processing package changes...
+( 1/20) reinstalling mingw-w64-x86_64-binutils     [#####################] 100%
+( 2/20) reinstalling mingw-w64-x86_64-headers-git  [#####################] 100%
+( 3/20) reinstalling mingw-w64-x86_64-crt-git      [#####################] 100%
+( 4/20) reinstalling mingw-w64-x86_64-libwinpt...  [#####################] 100%
+( 5/20) reinstalling mingw-w64-x86_64-gcc-libs     [#####################] 100%
+( 6/20) reinstalling mingw-w64-x86_64-winpthre...  [#####################] 100%
+( 7/20) reinstalling mingw-w64-x86_64-gcc          [#####################] 100%
+( 8/20) reinstalling mingw-w64-x86_64-gcc-ada      [#####################] 100%
+( 9/20) reinstalling mingw-w64-x86_64-gcc-libg...  [#####################] 100%
+(10/20) reinstalling mingw-w64-x86_64-gcc-fortran  [#####################] 100%
+(11/20) reinstalling mingw-w64-x86_64-gcc-objc     [#####################] 100%
+(12/20) reinstalling mingw-w64-x86_64-gdb          [#####################] 100%
+(13/20) reinstalling mingw-w64-x86_64-gdb-mult...  [#####################] 100%
+(14/20) reinstalling mingw-w64-x86_64-libgccjit    [#####################] 100%
+(15/20) reinstalling mingw-w64-x86_64-libmangl...  [#####################] 100%
+(16/20) reinstalling mingw-w64-x86_64-make         [#####################] 100%
+(17/20) reinstalling mingw-w64-x86_64-pkgconf      [#####################] 100%
+(18/20) reinstalling mingw-w64-x86_64-tools-git    [#####################] 100%
+(19/20) reinstalling mingw-w64-x86_64-winstore...  [#####################] 100%
+(20/20) reinstalling base-devel                    [#####################] 100%
+
+brito@DESKTOP-R5KRUP6 MSYS ~
+$
+===========================================================
+
+
+
+
+
+
+    _______________________________________________________
+                           Autor:
+                    Cristiano Oliveira
+                         18/03/2022

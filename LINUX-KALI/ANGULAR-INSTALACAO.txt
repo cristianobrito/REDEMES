@@ -1,0 +1,18 @@
+                          instalação
+
+
+
+	1. npx -p @angular/cli ng new demoAngular 
+	2. css
+	3. cd demoAngular
+	4. npm run ng serve –open
+	5. copie o localhost e cole na guia do navegador http://localhost:4200/
+
+
+
+	EXPLICAÇÕES:
+	A. O npx é instalado quando instalamos o npm.
+	B. npx ng serve ou npm run ng serve -open sobe o servidor.
+	C. demoAngular é o nome do diretório que criamos.
+	D. cd é o comando para entrar no diretório criado.
+	E. fim 

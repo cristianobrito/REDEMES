@@ -1,0 +1,204 @@
+              [ DARTH VADER ]
+
+
+
+                    C++ 
+  
+
+
+
+             Cristiano Oliveira
+                 05.03.2022
+
+
+
+
+
+
+
+
+    CLASSES C++ .................... 00
+
+    
+
+
+
+
+
+
+
+
+
+        CLASSES OU REGISTROS OU STRUCTS C++
+
+    Arrays sao para objetos do mesmo tipo.
+    ex: int, double etc... .
+    para guardar tipos diferentes podemos
+    usar arrays paralelos.
+    que nada mais é do que declarar um 
+    array para cada tipo que precisasse-mos
+    ex: um para int, um para double, 
+    um para float etc...
+    mas a melhor maneira para tipos 
+    diferentes e usarmos class ou (struct).
+    class e struct sao a mesma coisa.
+    struct vem do c e portanto pode ser
+    usado em c++.
+
+
+
+
+    SINTAXE:
+    class Nome-da-classe
+    {
+      public:
+        tipo1 nome[];
+        tipo2 nome[];
+        tipo3 nome; 
+        outros tipos ....
+    }
+
+
+    struct jogador
+    {
+      char nome[20];
+      float salario;
+      unsigner gols;
+    };
+    
+    estrutura basica de uma classe ou 
+    struct ou registro.
+    class, struct palavra reservada chave.
+    o nome da classe ou struct deve começar com 
+    maiuscula. e obedecem as mesmas 
+    regras de nomeacao das variaveis.
+    public: obrigatorio usar.
+    tipo sao os tipos primitivos
+    ex: int, char, double etc...
+        
+
+    
+    EXEMPLO DE UMA CLASSE:
+    class Pessoa
+    {
+       public:
+         char nome[128];
+         char sobrenome[128];
+         int  cpf;
+    };
+    
+
+    EXEMPLO DE UMA STRUCT OU REGISTRO:
+    struct Jogador
+    {
+      char nome[20];
+      float salario;
+      unsigner gols;
+    };
+    
+
+    
+
+       DAS CLASSES VEM OS OBJETOS
+
+    Classes sao como variaveis.
+    podemos criar(instanciar) objetos 
+    com as classes.
+    uma instancia de uma classe e chamada
+    de objeto.
+    como instanciar uma classe.
+    SINTAXE:
+    Nome-da-classe nome-do-objeto;
+    ex: Pessoa eu;
+    
+
+    SINTETIZANDO UMA DEFINICAO DE CLASSE:
+    um otimo exemplo para explicar classes
+    e a definicao biologica.
+    ex: cachorro(raça) e a classe.
+    snoop, flora e pretinha sao os objetos.
+
+
+
+
+
+    COMO ACESSAR OS MENBROS DE UM OBJETO:
+    SINTAXE:
+    nome-do-objeto.nome-do-menbro
+    ex: eu.cpf = 10101401757;
+
+    USANDO:
+    Pessoa eu;
+    eu.cpf = 10101401757;
+    cin >> eu.cpf;
+
+    DISSECANDO:
+    nome, sobrenome e cpf sao os menbros 
+    ou propriedades.
+    eu e o objeto ou a instancia. 
+    pont . e o operador de acesso.
+
+
+
+
+
+    SEPARANDO AS COISAS:
+    eu e o objeto da classe Pessoa.
+    eu.cpf e um membro ou uma 
+    propriedade do objeto eu.
+    o tipo de eu e Pessoa.
+    o tipo de eu.cpf e int.
+    o tipo de eu.nome e char.
+    
+
+
+
+
+
+
+ 
+    INICIALIZANDO UM OBJETO NA CRIACAO:
+    Pessoa eu = {"cristiano", "Oliveira", 10101401757};
+    
+
+
+    DESIGNACAO:
+    Pessoa copyOfEu;
+    copyOfEu = eu;
+
+
+    DECLARANDO E INICIALIZANDO ARRAYS DE OBJETOS:
+    Pessoa pessoa[5] = {
+                         {"cristiano", "oliveira", 10101401757},
+                         {"joyce", "mendes", 10101401758},
+                         {"akilles", "victor", 10101401759}
+                       };
+
+
+
+
+    ANALIZANDO:
+    cada elemento do array e um abjeto.
+    
+
+    ACESSANDO OS MENBROS:
+    pessoa[3].cpf = 10101401760;
+
+
+
+
+
+
+
+
+
+_____________________________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+    COMEÇANDO A PROGRAMAR EM C++ PARA LEIGOS editora altaboks.
+    
+    
+
+
+
+
+    

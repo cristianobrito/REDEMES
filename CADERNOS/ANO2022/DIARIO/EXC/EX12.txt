@@ -1,0 +1,78 @@
+
+                      EXEMPLOS DE CÓDIGO C
+                             [EX12]
+
+EX12
+===========================================================
+/*
+    EX12
+        Esse programa emite um som como saida
+        e realizei a compilação pelo cmd 
+        ao final do codigo tem as entradas e 
+        saidas do prompt.
+*/
+
+#include <windows.h>
+#include "stdio.h"
+
+int som();
+
+void main(void)
+{
+   system("title criando ruidos em c");
+   printf("ouca com atencao");
+   som();
+
+   printf("\n\n");
+}
+
+int som()
+{   
+    Beep(120, 1000);
+    Beep(130, 1000);
+    Beep(140, 1000);
+    Beep(150, 1000);
+    Beep(160, 1000);
+    Beep(170, 1000);
+    Beep(180, 1000);
+    Beep(190, 1000);
+    Beep(200, 1000);
+    Beep(500, 1000);
+    Beep(700, 1000);
+    Beep(900, 1000);
+    Beep(1000, 1000);
+    Beep(1500, 1000);
+    Beep(2000, 1000);
+    Beep(5000, 1000);
+    Beep(10000, 1000);
+    Beep(15000, 1000);
+    Beep(100000, 1000);
+} 
+
+
+
+
+===========================================================
+                                                      [FIM]
+
+
+D:\>gcc -o ruidos ruidos.c
+
+D:\>ruidos
+ouca com atencao
+
+
+D:\>ruidos
+ouca com atencao
+
+
+D:\>
+
+
+
+
+
+    _______________________________________________________
+                             Autor:
+                       Cristiano Oliveira
+             

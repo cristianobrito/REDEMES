@@ -1,0 +1,49 @@
+                      EXEMPLOS DE CÓDIGO C
+                             [EX17]
+
+EX17:
+===========================================================
+#include <stdio.h>
+#include <stdlib.h>
+/*
+    EX17:
+         SHORT:
+           Usado para economizar memoria
+           um short int ocupa a metade de
+           um int ou seja 2 bytes 16 bits
+           short int para usarmos com
+           numeros pequenos
+           intervalo: -32.769 até 32.767
+           se passar um bit disso estoura
+           o buffer
+           para imprimir um short %hi ou %d
+
+*/
+int main()
+{
+    short int x = 32767;
+    short int y = 32768;  // estouro de buffer
+
+    printf("Tamanho na memoria de uma variavel short int:  %d bytes\n", sizeof x);
+    printf("Tamanho na memoria de uma variavel short int : %d bytes\n", sizeof(x));
+    printf("Tamanho na memoria de um int: %d bytes\n", sizeof x);
+    printf("Tamanho na memoria de uma variavel short int : %d bytes\n", y);  // estouro de buffer
+    printf("Tamanho na memoria de uma variavel short int : %hi bytes\n", y); // estouro de buffer
+
+    return 0;
+}
+===========================================================
+                                                      [FIM]
+
+
+
+
+
+
+    __________________________________________________
+                        
+
+                           Autor:
+                     Cristiano Oliveira 
+                  Email: britonano@gmail.com
+                         22/03/2022     

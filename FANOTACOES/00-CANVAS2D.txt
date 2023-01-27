@@ -1,0 +1,49 @@
+                       INFO?
+
+
+
+    1. MUDEI O COMPILADOR PARA 
+       C:\TDM-GCC-32  
+       sttings - compiler - toolchain executables
+
+    2. EM LINKER SETTINGS
+       LINK LIBRARIES:
+       C:\Program Files\CodeBlocks\MinGW\x86_64-w64-mingw32\lib\libbgi.a
+
+    3. EM OTHER LINKER OPTIONS:
+       -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32
+
+    4. Pareçe que o erro estava no caminho que é
+       MinGW\x86_64-w64-mingw32
+       x86_64-w64-mingw32 
+       essa pasta que fica dentro do mingw e ao que
+       parece serve para as duas compilações de 32/64 bits
+       
+
+                 
+
+
+                " PARA DEUS TUDO É POSSIVEL "
+
+
+
+
+    __________________________________________________
+    REFERÊNCIAS BIBLIOGRÁFICAS:
+    https://www.youtube.com/playlist?list=PLE_mbOgL4W4IxcdUkRSp0IF3Dy8O1Qtin 
+
+
+            
+                       Autor:
+                 Cristiano Oliveira
+                     19/03/2022
+
+
+      
+
+                        EMAIL:
+                  britonano@gmail.com
+
+
+
+    

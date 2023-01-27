@@ -1,0 +1,50 @@
+
+                      EXEMPLOS DE CÓDIGO C
+                             [EX08]
+
+EX08
+===========================================================
+#include <stdio.h>
+#include <stdlib.h>
+/*
+    EX08:
+         LEITURA DE DADOS:
+         Para criar as variaveis é como no
+         banco de dados imagine de que tipo
+         é aquele dado por exemplo:
+         idade é de que tipo?
+         idade é int
+         sexo é de que tipo?
+         sexo é char
+         peso é altura são de que tipo?
+         são do tipo float
+
+*/
+
+int main()
+{
+    char sexo;
+    int idade;
+    float peso, altura;
+    printf("Digite sexo (f, F, m ou M), idade, peso e altura: \n");
+    scanf("%c%d%f%f", &sexo, &idade, &peso, &altura);
+
+    printf("\nSEXO: %c\nIDADE: %d\nPESO: %f\nALTURA: %.2f\n", sexo, idade, peso, altura);
+
+    printf("\n\t\t\t\tAPERTE QUALQUER TECLA PRA SAIR");
+    getch();
+    return 0;
+}
+===========================================================
+                                                      [FIM]
+
+
+    REFERENCIAS BIBLIOGRAFICAS:
+         https://www.youtube.com/watch?v=o-LV7gAQmjE&list=PLqJK4Oyr5WSjjEQCKkX6oXFORZX7ro3DA&index=12
+
+
+
+    _______________________________________________________
+                             Autor:
+                       Cristiano Oliveira
+                           18/03/2022

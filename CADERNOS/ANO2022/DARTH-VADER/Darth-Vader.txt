@@ -1,0 +1,576 @@
+                        [ DARTH VADER ]
+
+                  
+
+
+
+                         escrito por: 
+                      Cristiano Oliveira
+                         26.02.2022
+
+
+
+
+            Em plena guerra da Russia com a Ucrania.
+      O mundo evoluiu e a tecnologia pode mudar o rumo da 
+                          guera.
+            A guerra tecnologica chegou e o pós guerra é
+     uma realidade tendo isso como um cânone inicio aqui
+     o estudo para segurança futura.
+
+            " QUE DEUS TENHA PIEDADE DAS NAÇÕES "  
+
+
+
+                    
+
+
+
+
+
+
+
+                        PREFÁCIO
+
+Introdução .................................................. 00
+Reunindo informações ........................................ 01
+Instalando o whois .......................................... 02
+
+
+
+
+
+
+
+
+
+
+                        REUNINDO INFORMAÇÕES
+
+
+
+                                                                    
+                        IP
+
+    Sem muitas palavras vamos para a ação.
+    Devemos saber o ip do site que queremos.
+
+    no cmd use o comando ping [node-do-site] ou 
+    ping [ip-do-site] seguem exemplos abaixo:
+
+    C:\Users\brito>ping google.com
+
+    Disparando google.com [2800:3f0:4004:803::200e] com 32 bytes de dados:
+    Resposta de 2800:3f0:4004:803::200e: tempo=10ms
+    Resposta de 2800:3f0:4004:803::200e: tempo=10ms
+    Resposta de 2800:3f0:4004:803::200e: tempo=14ms
+    Resposta de 2800:3f0:4004:803::200e: tempo=12ms
+
+    Estatísticas do Ping para 2800:3f0:4004:803::200e:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+    Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 10ms, Máximo = 14ms, Média = 11ms
+
+    C:\Users\brito>
+
+
+    OUTRO EXEMPLO:
+    C:\WINDOWS\system32>ping gaveanews.com
+
+    Disparando gaveanews.com [170.82.174.10] com 32 bytes de dados:
+    Resposta de 170.82.174.10: bytes=32 tempo=22ms TTL=50
+    Resposta de 170.82.174.10: bytes=32 tempo=21ms TTL=50
+    Resposta de 170.82.174.10: bytes=32 tempo=19ms TTL=50
+    Resposta de 170.82.174.10: bytes=32 tempo=18ms TTL=50
+
+    Estatísticas do Ping para 170.82.174.10:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+    Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 18ms, Máximo = 22ms, Média = 20ms
+
+    
+
+    C:\WINDOWS\system32>
+
+
+
+           COMO SABER AS PORTAS ABERTAS DE UM IP
+
+    Com o comando netstat.Digite o comando Netstat conforme abaixo, 
+    após o findstr deverá informar o penúltimo e o ultimo numero do 
+    IP do servidor ao qual quer verificar a porta e após os : (Dois pontos) 
+    informar a a porta especifica, conforme exemplo abaixo: 
+    Descobrir quais aplicações estão trabalhando na porta 51671.
+    EX:C:\WINDOWS\system32>netstat  | findstr 7310:80
+
+
+    EX2:C:\WINDOWS\system32>netstat | findstr 7310:443
+
+    EXEMPLOS:
+    netstat -routtable
+    C:\WINDOWS\system32>netstat -state
+    C:\WINDOWS\system32>netstat -socket
+    C:\WINDOWS\system32>netstat -f          [ mostra todas as conexões ativas]
+    C:\WINDOWS\system32>netstat -o          [ mostra só conexões tcp ]
+    netstat -0 | findstr 28604
+    netstat -s -p tcp -f
+    netstat -p IP
+    netstat -s -p icmpv6
+    C:\WINDOWS\system32>netstat -s -p tcp
+    netstat -s -p tcp
+    netstat -s -p udp
+    netstat -an |find /i "listening"        //Portas a escuta
+    netstat -an |find /i "established"      //Portas com ligação estabelecida
+    netstat -an |find /i "3306"             //Definir porta específica "3306"
+    C:\WINDOWS\system32>netstat /?
+    C:\WINDOWS\system32>netstat -o -n -a
+
+    Descobrir quais aplicações estão trabalhando na porta  51671.
+    netstat -o -n -a | findstr  0.160:51671
+
+   
+    
+    PORTAS ULTILIZADAS:
+    Atenção: As Portas utilizadas pelo Pervasive são 1583 e 3351.
+    As portas de utilizadas pelo GAP são 80 e 8080
+    As portas Utilizadas pelo SQL 1433 e 1434
+    
+
+    Uso:
+     Primeiro abri a conexão ao gaveanews e depois dei os comandos
+     obs: só a pagina do gavea estava no meu navegador só tinha essa
+     conexão.
+
+    C:\WINDOWS\system32>netstat 170.82.174.10
+
+Conexões ativas
+
+  Proto  Endereço local         Endereço externo       Estado
+  TCP    192.168.0.87:49682     20.198.162.78:https    ESTABLISHED
+  TCP    192.168.0.87:50002     104.45.188.91:https    CLOSE_WAIT
+  TCP    192.168.0.87:50316     a23-32-32-9:https      CLOSE_WAIT
+  TCP    192.168.0.87:59905     170.82.173.10:https    TIME_WAIT
+  TCP    192.168.0.87:59910     85.17.31.162:https     CLOSE_WAIT
+  TCP    192.168.0.87:59913     server-99-84-31-5:https  ESTABLISHED
+  TCP    192.168.0.87:59914     172:https              CLOSE_WAIT
+  TCP    192.168.0.87:59915     207.198.113.170:https  TIME_WAIT
+  TCP    192.168.0.87:59926     49:https               ESTABLISHED
+  TCP    192.168.0.87:59928     204.62.13.72:https     ESTABLISHED
+  TCP    192.168.0.87:59929     85.17.31.162:https     CLOSE_WAIT
+  TCP    192.168.0.87:59930     47.252.78.131:https    ESTABLISHED
+  TCP    192.168.0.87:59932     ec2-3-64-239-44:https  ESTABLISHED
+  TCP    192.168.0.87:59934     146.20.132.90:https    ESTABLISHED
+  TCP    192.168.0.87:59937     ec2-3-64-239-44:https  CLOSE_WAIT
+  TCP    192.168.0.87:59938     146.20.128.188:https   TIME_WAIT
+  TCP    192.168.0.87:59939     rio07s01-in-f2:https   ESTABLISHED
+  TCP    192.168.0.87:59940     151.101.178.49:https   ESTABLISHED
+  TCP    192.168.0.87:59942     ec2-52-6-103-226:https  CLOSE_WAIT
+  TCP    192.168.0.87:59944     146.20.132.90:https    ESTABLISHED
+  TCP    192.168.0.87:59946     85.17.31.162:https     CLOSE_WAIT
+  TCP    192.168.0.87:59950     static:https           ESTABLISHED
+  TCP    192.168.0.87:59953     ec2-54-158-28-50:https  ESTABLISHED
+  TCP    192.168.0.87:59955     81:https               ESTABLISHED
+  TCP    192.168.0.87:59959     198.148.27.139:https   TIME_WAIT
+  TCP    192.168.0.87:59961     218:https              ESTABLISHED
+  TCP    192.168.0.87:59962     ec2-52-52-65-25:https  ESTABLISHED
+  TCP    192.168.0.87:59963     ec2-52-52-65-25:https  ESTABLISHED
+  TCP    192.168.0.87:59964     rio07s02-in-f2:https   ESTABLISHED
+  TCP    192.168.0.87:59968     ec2-18-231-92-9:https  CLOSE_WAIT
+  TCP    192.168.0.87:59969     ec2-52-52-171-236:https  CLOSE_WAIT
+  TCP    192.168.0.87:59970     a23-52-116-248:https   ESTABLISHED
+  TCP    192.168.0.87:59972     a23-52-116-248:https   ESTABLISHED
+  TCP    192.168.0.87:59973     5.226.179.10:https     ESTABLISHED
+  TCP    192.168.0.87:59975     ec2-52-0-156-250:https  TIME_WAIT
+  TCP    192.168.0.87:59978     52.46.154.242:https    ESTABLISHED
+  TCP    192.168.0.87:59984     121.199.22.56:http     CLOSE_WAIT
+  TCP    192.168.0.87:59992     ec2-52-52-65-25:https  ESTABLISHED
+  TCP    192.168.0.87:59993     a23-52-117-32:https    TIME_WAIT
+  TCP    192.168.0.87:59995     ec2-52-52-171-236:https  ESTABLISHED
+  TCP    192.168.0.87:60018     854001065:https        ESTABLISHED
+  TCP    192.168.0.87:60020     173.231.178.77:https   CLOSE_WAIT
+
+                        EXPLICAÇÕES:
+
+
+                 PARA QUE SERVE O COMANDO PING
+
+         O comando ping envia um ECHO_REQUEST do Internet Control 
+    Message Protocol (ICMP) para obter um ECHO_RESPONSE do ICMP 
+    de um host ou gateway. 
+         Ping ou latência é um comando que serve para testar a 
+    conectividade entre equipamentos de uma rede utilizando o 
+    protocolo ICMP. ... 
+         Esse comando basicamente envia dados para esses 
+    equipamentos e fica aguardando respostas. Ele está 
+    disponível em praticamente todos os sistemas operacionais
+    utilizados atualmente.
+
+
+
+
+
+
+                        WHOIS
+
+                      Instalação
+
+    Por padrão esse comando não vem habilitado no windows.
+    Por isso precisamos baixa-lo e configura-lo obs: de a
+    preferencia em baixar do proprio site da microsoft. Depois
+    de baixar devemos extrair esse zip para o drive c: ele
+    deve ficar na raiz do pc no drive c:
+    nesse caminho C:\WhoIs  Preste atenção quando falo drive c
+    é o drive puro sem entrar em nenhuma outra pasta é só c:
+    é ai que o zip do whois deve ser instalado. Na primeira vez
+    não consegui instalar pois estava tentando usar em:
+    C:\Users\brito>
+
+
+                 PARA QUE SERVE O COMANDO WHOIS
+
+    É um mecanismo que registra domínios, 
+    IPs e sistemas autônomos na Internet e que serve para 
+    identificar o proprietário de um site.
+
+         Segundo o google O banco de dados WHOIS armazena 
+    informações sobre domínios, como as seguintes:
+    dados de contato cadastrados de responsáveis pelo registro, 
+    administradores e técnicos.
+    registrador patrocinador 
+    datas de criação, atualização e validade
+    status de domínio e servidores de nomes
+
+         As informações armazenadas no banco de dados WHOIS podem ou 
+    não ser publicadas. 
+         Isso depende das configurações do usuário. O registro também 
+    controla quais campos são exibidos.
+    
+         No caso o whois seria como uma ferramenta de pesquisa de dominios.
+
+    No momneto em que voce registra um dominio ele faz parte do banco de dados
+    do whois.
+
+
+                        INFORMAÇÕES ADICIONAIS
+                               DO WHOIS
+
+         Assim que um novo dominio é registrado. As informações
+    deste dominio são incluidas no whois pelo registrador.Esse 
+    transmite as informações adicionais para outros dominios.
+         Essa atualização passa por um intervalo regular que é 
+    de 2 em 2 horas e pode levar até 72 horas.
+
+         O registro.br não permite ocultar as informações
+    aociadas a um dominio.
+         O whois não é a unica forma de consultar informações
+    sobre dominio temos o RDAP que é o sucessor do WHOIS.
+     
+
+
+                       QUAIS DADOS SÃO EXIBIDOS
+                                EM UMA
+                             CONULTA WHOIS 
+
+
+
+     DOMINIOS NACIONAIS BR:
+     titular (empresa ou pessoa fisica)
+     cpf ou cnpj
+     endereço
+     telefone
+     servidores dns(para onde o dominio esta apontando)
+     data de criação, alteração e expiração do dominio
+     status
+     e-mail do contato(do proprietario ou do tecnico)
+     pais
+
+    DOMINIOS INTERNACIONAIS:
+    registrante,administrador ou contato do tecnico
+    titular (pessoa fisica que registrou)
+    organização (nome da empresa)
+    endereço
+    telefone
+    e-mail do contato
+    data de criação, alteração e expiração do dominio
+    servidores dns
+
+
+   
+                          USO
+  
+    C:\>cd WhoIs
+
+    
+    C:\WhoIs>whois microsoft.com 
+    como a resposta da microsoft foi grande demais usei outro site.
+
+
+    C:\WhoIs>whois gaveanews.com.br
+
+    Whois v1.21 - Domain information lookup
+    Copyright (C) 2005-2019 Mark Russinovich
+    Sysinternals - www.sysinternals.com
+
+    Connecting to BR.whois-servers.net...
+
+    domain:      gaveanews.com.br
+    owner:       Hugo Nogueira Pinto
+    ownerid:     104.952.716-08
+    country:     BR
+    owner-c:     HUNPI3
+    tech-c:      HUNPI3
+    nserver:     a.auto.dns.br
+    nsstat:      20220217 AA
+    nslastaa:    20220217
+    nserver:     b.auto.dns.br
+    nsstat:      20220217 AA
+    nslastaa:    20220217
+    dsrecord:    33150 ECDSA-SHA-256 D2AD536383325E1228CF9161B3792A47DCCE37540DC52D03DF9B7E2E26E7C92A
+    dsstatus:    20220223 DSOK
+    dslastok:    20220223
+    saci:        yes
+    created:     20180626 #18514024
+    changed:     20210626
+    expires:     20220626
+    status:      published
+
+    nic-hdl-br:  HUNPI3
+    person:      Hugo Nogueira Pinto
+    e-mail:      hnogjf@gmail.com
+    country:     BR
+    created:     20180626
+    changed:     20190528
+
+    % Security and mail abuse issues should also be addressed to
+    % cert.br, http://www.cert.br/ , respectivelly to cert@cert.br
+    % and mail-abuse@cert.br
+    %
+    % whois.registro.br accepts only direct match queries. Types
+    % of queries are: domain (.br), registrant (tax ID), ticket,
+    % provider, CIDR block, IP and ASN.
+
+    Connecting to aveanews.com.br...
+    Este host nÒo Ú conhecido.
+
+    C:\WhoIs>
+    
+
+      
+
+
+
+
+                        TELNET
+
+         O comando telnet configura um servidor de um 
+    pc remoto para a execução de comandos. A função do
+    telnet era transmitir dados entre as bases militares.
+
+         Resumindo permite a comunicação entre portas. 
+    Porta é um software de aplicação ou processo que 
+    funciona como ponto final de comunicação no sistema de
+    comunicação de um hospedeiro. Cada porta é associada a
+    um endereço de ip do hospedeiro e ao tipo de protocolo
+    ultilizado para comunicação.
+
+         Para fazer a conexão ao pc remoto é solicitado senha
+    e nome de usuario.
+         Só envia texto simples sem criptografia.
+    
+
+
+                        TELNET USO
+
+    Por padrão ele não vem habilitado e por isso vamos habilita-lo.
+    no executar use o atalho tecla do windows + R e digite optionalfeatures
+    na seção que se abre ativar ou desativar recuros do windows.
+    selecione a opção "Cliente Telnet" E, em seguida click em OK.
+         Essa seção é bem interessante pois possui outros recursos
+    que futuramente vamos ativar como "Cliente ftp" mas não tive agora.
+
+         Resumão as grandes empresas usam o telnet para se cominicar
+    cliente/servidor. O telnet é semelhante a outros protocolos mais
+    recentes como ssh, vpn e PuTTy. Devemos saber quais as diferencas 
+    entre eles.
+    SSH garante uma comunicação segura entre cliente e servidor.
+    VPN garante que naveguemos em oculto, privadamente, anonimamente.
+    PuTTy software ultilizado para se conectar com um servidor remoto
+    usando protocolos como telnet e o SSH.
+
+
+
+    Para usar o telnet antes precisamos saber o ip do site e para isso
+    usamos o comando ping ex:
+ 
+    C:\WINDOWS\system32>ping gaveanews.com
+
+    Disparando gaveanews.com [170.82.173.10] com 32 bytes de dados:
+    Resposta de 170.82.173.10: bytes=32 tempo=22ms TTL=53
+    Resposta de 170.82.173.10: bytes=32 tempo=23ms TTL=53
+    Resposta de 170.82.173.10: bytes=32 tempo=22ms TTL=53
+    Resposta de 170.82.173.10: bytes=32 tempo=21ms TTL=53
+
+    Estatísticas do Ping para 170.82.173.10:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+    Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 21ms, Máximo = 23ms, Média = 22ms
+
+    C:\WINDOWS\system32>
+
+    sabendo o ip podemos usar o telnet como descrito abaixo:    
+    
+   
+    SINTAXE:
+     telnet servidor e porta
+
+     
+    No cmd:
+    C:\WINDOWS\system32>telnet 170.82.173.10
+    Conectando-se a 170.82.173.10...Não foi possível abrir conexão com host,
+    na porta 23: conexão falhou
+
+    C:\WINDOWS\system32>     
+
+
+
+    Buscando ajuda do telnet:
+    C:\Users\brito>telnet /?
+
+    telnet [-a][-e escape char][-f log file][-l user][-t term][host [port]]
+    -a      Tenta fazer logon automático. Como a opção -l, mas usa
+         o nome de usuário conectado.
+    -e      Caractere de escape para entrar no prompt de cliente telnet.
+    -f      Nome de arquivo para fazer logon no lado do cliente
+    -l      Especifica o nome de usuário com o qual fazer logon no sistema remoto.
+         Requer que o sistema remoto dê suporte à opção TELNET ENVIRON.
+    -t      Especifica o tipo de terminal.
+         Só há suporte para os tipos de terminal vt100, vt52, ansi e vtnt.
+    host    Especifica o nome do host ou endereço IP do computador remoto
+         ao qual se conectar.
+    port    Especifica um número de porta ou nome de serviço.
+
+    C:\Users\brito>
+
+
+    ESPECIFICANDO UMA PORTA:
+
+    C:\WINDOWS\system32>telnet 170.82.173.10 8080
+    Conectando-se a 170.82.173.10...Não foi possível abrir conexão com host, na porta 8080: conexão falhou
+
+    C:\WINDOWS\system32>
+
+
+
+
+    Passando os parametros certos, confira abaixo comousar o telnet
+    C:\WINDOWS\system32>telnet 170.82.173.10 80
+
+    HTTP/1.1 400 Bad Request
+    Date: Sat, 26 Feb 2022 19:59:13 GMT
+    Content-Type: text/html
+    Content-Length: 154
+    Connection: close
+    Server: gocache
+
+    <html>
+    <head><title>400 Bad Request</title></head>
+    <body>
+    <center><h1>400 Bad Request</h1></center>
+    <hr><center>openresty</center>
+    </body>
+    </html>
+    i
+    C:\WINDOWS\system32>
+    Conexão ao host perdida.
+    C:\WINDOWS\system32>
+
+
+    acima temos uma requisição feita pelo telnet na porta 80 e sua resposta
+    C:\WINDOWS\system32>telnet -a 170.82.173.10 80
+
+    use o help do telnet a opção -a tenta fazer login automatico.
+    C:\WINDOWS\system32>telnet -help
+    
+    C:\WINDOWS\system32>telnet /?
+    Todos os comandos acima funcionam
+    
+
+
+    Entrar em um terminal telnet
+    C:\Users\brito>telnet 
+    depois de confirmar com enter voce vai estar no terminal telnet
+    Bem-vindo ao Cliente MS Telnet
+
+    O caractere de escape é 'CTRL+ç'
+
+    Microsoft Telnet>
+
+    A saida exibida é o terminal telnet nele passamos os comandos.
+    ex:
+    Microsoft Telnet> ?/
+
+    Os comandos podem ser abreviados. Os comandos com suporte são:
+
+    c    - close                  fecha a conexão atual
+    d    - display                exibe parâmetros operacionais
+    o    - open hostname [port]   conecta a um nome de host (padrão porta 23).
+    q    - quit                   encerra o telnet
+    set  - set                    define opções (digite 'set ?' para listas)
+    sen  - send                   envia cadeias de caracteres ao servidor
+    st   - status                 imprime informações de status
+    u    - unset                  anula definições de opções (digite 'unset ?'
+                              para listas)
+    ?/h  - help                   imprime informações de ajuda
+    Microsoft Telnet>
+
+
+    Tentando abrir o host:
+    Microsoft Telnet> open 170.82.173.10 80
+    Conectando-se a 170.82.173.10...
+
+    Conexão ao host perdida.
+
+    Microsoft Telnet>
+
+    OBS: Caso apareça uma mensagem que diga "Por favor aperte Enter"
+         ou "Aperte qualquer tecla para continuar", Significa que
+         a porta está liberada.
+         Caso apareça "Não foi possivel abrir a conexão", Significa
+         que a porta está fechada.
+
+         
+
+
+
+    
+________________________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+
+    https://www.techtudo.com.br/noticias/2016/03/como-descobrir-o-ip-de-um-site.ghtml
+    https://www.ibm.com/docs/pt-br/power8?topic=commands-ping-command
+    https://datatracker.ietf.org/doc/html/rfc1400
+    https://docs.microsoft.com/pt-br/troubleshoot/windows-server/networking/research-internet-domains-with-whois
+    https://www.youtube.com/watch?v=4OLyskf5qZU
+    https://support.google.com/domains/answer/3288171?hl=pt-BR
+    https://tudosobrehospedagemdesites.com.br/whois/
+    https://github.com/openrdap/rdap
+    https://docs.microsoft.com/pt-br/troubleshoot/windows-server/identity/directory-service-manage-objects
+    https://docs.microsoft.com/pt-br/sysinternals/downloads/whois
+    https://blog.betrybe.com/tecnologia/comando-telnet/
+    http://urs.bira.nom.br/informatica/comandos_shell_msdos/comandos_telnet.htm#:~:text=Os%20comandos%20telnet%20permitem%20a,do%20Telnet%20(telnet%3E).
+    https://br.ccm.net/contents/709-como-utilizar-o-telnet
+    https://pt.wikihow.com/Verificar-se-uma-Porta-de-Rede-est%C3%A1-Aberta#:~:text=Acesse%20http%3A%2F%2Fwww.canyouseeme,no%20campo%20%22Seu%20IP%22.
+    https://treinamento24.com/library/lecture/read/139577-como-saber-as-portas-abertas-de-um-ip
+    https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/netstat
+    https://www.ibm.com/docs/pt-br/power9?topic=commands-netstat-command
+    https://www.topgadget.com.br/howto/windows/netstat-o-que-e-e-como-usar-o-comando.htm
+    https://pt.wikipedia.org/wiki/Netstat 
+    https://www.openrdap.org/docs
+    https://www.openrdap.org/
+    http://www.linhadecodigo.com.br/artigo/2793/usando-linhas-de-comando-para-gerenciar-objetos-no-active-directory.aspx
+    https://docs.microsoft.com/pt-br/mem/configmgr/core/plan-design/hierarchy/ports
+    
+    

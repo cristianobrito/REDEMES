@@ -1,0 +1,101 @@
+                        [ DARTH VADER ]
+
+                  
+                         EXEMPLOS DE C
+
+
+                         escrito por: 
+                      Cristiano Oliveira
+                          15/03/2022
+
+
+
+
+            Em plena guerra da Russia com a Ucrania.
+      O mundo evoluiu e a tecnologia pode mudar o rumo da 
+                          guerra.
+            A guerra tecnologica chegou e o pós guerra é
+     uma realidade tendo isso como um cânone inicio aqui
+     o estudo para segurança futura.
+
+            " QUE DEUS TENHA PIEDADE DAS NAÇÕES "  
+
+
+
+                    
+
+
+
+
+
+
+
+                           PREFÁCIO
+
+    INTRODUÇÃO  ........................................ 00
+
+
+
+                        CODEBLOCKS 20.3
+
+
+
+
+
+
+                                                [Página 00]
+    _______________________________________________________
+                      EXEMPLOS DE CÓDIGO C
+                             [EX00]
+      
+EX00
+===========================================================
+#include <stdio.h>
+#include <stdlib.h>
+/*
+    função printf(); imprime na tela
+    \n pula linha caractere de escape
+*/
+
+int main()
+{
+    printf("Hello world!\n");
+    return 0;
+}
+
+
+
+
+
+EX01
+===========================================================
+#include <stdio.h>
+#include <stdlib.h>
+/*
+    loop infinito
+
+*/
+
+int main()
+{
+    for(;;)
+    {
+      printf("AKILLES\n");
+    }
+    return 0;
+}
+
+
+===========================================================
+                                                      [FIM]
+
+
+
+
+    _______________________________________________________
+    refencias bibliograficas:
+         https://www.youtube.com/c/ProgrameseufuturoComWagnerGaspar/videos
+         https://www.youtube.com/c/ProgrameseufuturoComWagnerGaspar/playlists
+         https://www.youtube.com/watch?v=r0UR9Bdcpic&list=PLqJK4Oyr5WSjjEQCKkX6oXFORZX7ro3DA
+         https://www.youtube.com/playlist?list=PLqJK4Oyr5WSjjEQCKkX6oXFORZX7ro3DA
+         

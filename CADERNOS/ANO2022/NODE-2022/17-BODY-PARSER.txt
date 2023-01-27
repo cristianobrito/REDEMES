@@ -1,0 +1,149 @@
+                                  [ NODEJS ]   
+                                [ BODY-PARSER ]   
+___________________________________________________________________________________________________
+    ESTRUTURA:
+        .
+     AULA-NODE
+     |
+     |————— bars.js
+     |
+     |
+     |
+     |————— views
+     |       |————— layouts
+     |       |        |————— main.handlebars
+     |       |
+     |       |————— formulario.hsndlebars
+     |
+     |————— node_modules
+     |————— package-lock.json
+     |————— package.json
+ 
+     [ 4 diretorios e 5 arquivos ]
+___________________________________________________________________________________________________
+    DEPENDENCIAS:
+
+    C:\Users\brito\Desktop\AULA-NODE>npm install --save body-parser
+
+    up to date, audited 207 packages in 2s
+
+    20 packages are looking for funding
+    run `npm fund` for details
+
+    found 0 vulnerabilities
+
+    C:\Users\brito\Desktop\AULA-NODE>
+___________________________________________________________________________________________________
+    package.json
+
+    {
+    "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.2",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "sequelize": "^6.16.2"
+    }
+    }
+___________________________________________________________________________________________________
+    bars.js
+
+    const express    = require('express')
+    const app        = express()
+    const handlebars = require('express-handlebars')
+    const bodyParser = require('body-parser')
+    const Sequelize  = require('sequelize')
+
+   // config
+   // template engine
+   app.engine('handlebars', handlebars.engine({defaultLayout: 'main'}))
+   app.set('view engine', 'handlebars')
+   
+   // body-parser
+   app.use(bodyParser.urlencoded({extended: false}))
+   app.use(bodyParser.json())
+
+   // conexão ao banco de dados:
+   // 'nome do banco de dados', 'usuario', 'senha'
+   const sequelize = new Sequelize('sistemaDeCadastro', 'root', '', {
+     host:    'localhost',
+     dialect: 'mysql'
+   }) 
+
+   //ROTAS:
+   app.get('/cad', function(req, res){
+       res.render('formulario')
+   })
+
+   app.post('/add', function(req, res){
+       res.send("Texto: "+ req.body.titulo+" Conteudo: "+ req.body.conteudo)
+   })
+
+    app.listen(3000, function(){
+    console.log('SERVIDOR ATIVO')
+    })
+___________________________________________________________________________________________________
+    formulario.handlebars
+
+    <form action="/add" method="POST" style="text-align: center;">
+    <p>TITULO: </p>
+    <input type="text" name="titulo">
+    <p>CONTEUDO: </p>
+    <textarea name="conteudo"></textarea><br>
+    <hr>
+    <button type="submit">Cadastrar postagens</button>
+    </form>
+
+___________________________________________________________________________________________________
+    main.handlebars
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANDLEBARS</title>
+    </head>
+    <body>
+    {{{ body }}}
+    </body>
+    </html>
+___________________________________________________________________________________________________
+    EXECUTANDO:
+
+    PS C:\Users\brito\Desktop\AULA-NODE> nodemon bars.js
+    [nodemon] 2.0.15
+    [nodemon] to restart at any time, enter `rs`
+    [nodemon] watching path(s): *.*
+    [nodemon] watching extensions: js,mjs,json
+    [nodemon] starting `node bars.js`
+    SERVIDOR ATIVO
+___________________________________________________________________________________________________
+    NA URL:
+
+   http://localhost:3000/cad
+___________________________________________________________________________________________________
+    EXPLICAÇÕES:
+
+    BODY-PARSER recebe dados de qualquer formulario
+    res.send("Texto: "+ req.body.titulo+" Conteudo: "+ req.body.conteudo)
+    a linha acima pega os dados do formulario req.body.nome-do-campo-do-formulario
+    <input type="text" name="titulo"> e <textarea name="conteudo"> 
+    são os campos que usamos name.
+    quando preenchemos o formulario a pagina retorna os dados que preenchemos.
+___________________________________________________________________________________________________
+
+  
+***************************************************************************************************
+                           
+                    *******************************
+                    *     CRISTIANO OLIVEIRA      *
+                    *        22/02/2022           *
+                    *            DEUS             *
+                    *        SEJA LOUVADO         *
+                    *******************************
+
+***************************************************************************************************
+      

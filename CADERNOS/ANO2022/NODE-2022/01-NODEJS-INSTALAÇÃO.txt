@@ -1,0 +1,22 @@
+                                  [ NODEJS ]       
+___________________________________________________________________________________________________
+   INSTALAÇÃO
+  
+1. baixe do site
+   https://nodejs.org/pt-br/
+
+2. configure as variaveis de ambiente
+   encontre o caminha até dentro da pasta bin e cole ao path das variaveis de ambiente
+
+3. no terminal cmd veja a versão
+   node -v
+   npm -v
+___________________________________________________________________________________________________
+
+                             +————————————+   
+                             | 16/02/2022 |
+                             +————————————+   
+                    ********************************
+                    *            DEUS              *
+                    *        SEJA LOUVADO          *
+                    ********************************                                       

@@ -1,0 +1,72 @@
+                                  [ CONECÇÃO AO BANCO DE DADOS ]
+                                            [ MONGO ]
+___________________________________________________________________________________________________
+1. ESTRUTURA DE DIRETORIOS
+   .
+   CONECTAR
+   |——— conectando.js
+   |——— package.json
+   |——— package-lock.json
+   |——— node_modules
+___________________________________________________________________________________________________
+2. abra o cmd e digite o comando para iniciar o servidor mongo
+   mongod
+___________________________________________________________________________________________________
+3. EM UM NOVO CMD
+   mkdir CONECTAR
+   cd CONECTAR
+   code .
+   npm init --yes                                [ inicia o package.json ]
+   npm install --save mongoose  
+
+___________________________________________________________________________________________________
+3. COMO ABRIR O BD MONGO
+   abra outro cmd e digite
+   mongo
+   show databases                                [ ver quais bds existem ]
+   use loja                                      [ cria o bd loja ]
+   
+___________________________________________________________________________________________________
+4. conectando.js
+
+   const mongoose = require('mongoose')
+
+   // obs se esse bd não existir ele será criado
+   mongoose.connect("mongodb://localhost/loja")
+    .then(() => {
+        console.log("CONECTADO AO BD LOJA")
+    })
+    .catch((err) => {
+        console.log("OCORREU UM ERRO")
+    })
+
+___________________________________________________________________________________________________
+4.1 caso ocorra algum erro va ao site https://www.npmjs.com/package/mongoose?activeTab=readme
+    la encontrei a solução
+    Nota: Se a conexão local falhar, tente usar 127.0.0.1 em vez de localhost. Às vezes, 
+    podem surgir problemas quando o nome do host local foi alterado.
+
+    const mongoose = require('mongoose')
+
+    // obs se esse bd não existir ele será criado
+    mongoose.connect('mongodb://127.0.0.1/loja')
+    .then(() => {
+        console.log("CONECTADO AO BD LOJA")
+    }).catch((err) => {
+        console.log("OCORREU UM ERRO")
+    })
+  
+___________________________________________________________________________________________________
+5. EXECUTANDO
+   node conectando.js
+___________________________________________________________________________________________________
+
+                                +————————————+
+                                | 16/02/2022 |
+                                |    FIM     |
+                                +————————————+
+                             *********************
+                             * DEUS SEJA LOUVADO *
+                             *********************
+                             
+                            

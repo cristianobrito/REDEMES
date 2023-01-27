@@ -1,0 +1,435 @@
+                        [ DARTH VADER ]
+
+
+    VENDO OS PERFIS:
+    C:\>netsh wlan show profiles
+
+    Perfis na interface Wi-Fi:
+
+    Perfis da política de grupo (somente leitura)
+    ---------------------------------
+    <Nenhum>
+
+    Perfis do usuário
+    -------------
+    Todos os Perfis de Usuários: Mendes289
+    Todos os Perfis de Usuários: Akilles
+    Todos os Perfis de Usuários: Repetidor
+
+
+
+
+
+
+
+    MOSTRAR LISTA DE PERFIS:
+    netsh wlan show profiles interface=”nome da sua interface Wi-Fi”
+
+
+
+    OBTER INFORMAÇÕES DO ADAPTADOR SEM FIO:
+    C:\>netsh wlan show drivers
+
+    Nome da interface: Wi-Fi
+
+    Driver                    : Dell Wireless 1705 802.11b|g|n (2,4 GHz)
+    Fornecedor                : Qualcomm Atheros Communications Inc.
+    Provedor                  : Microsoft
+    Data                      : 26/03/2016
+    Versão                    : 3.0.2.201
+    Arquivo INF               : athw8x.inf
+    Tipo                      : Driver Wi-Fi Nativo
+    Tipos de rádio com suporte     : 802.11b 802.11g 802.11n
+    Suporte para o modo FIPS 140-2: Sim
+    Suporte para Proteção de Quadro de Gerenciamento 802.11w: Sim
+    Rede hospedada compatível: Sim
+    Autenticação e codificação com suporte no modo de infraestrutura:
+                                Abrir           Nenhum
+                                Abrir           WEP-40bit
+                                Abrir           WEP-104bit
+                                Abrir           WEP
+                                WPA-Enterprise  TKIP
+                                WPA-Personal    TKIP
+                                WPA2-Enterprise TKIP
+                                WPA2-Personal   TKIP
+                                Definido pelo fornecedorTKIP
+                                WPA2-Enterprise Definido pelo fornecedor
+                                Definido pelo fornecedorDefinido pelo fornecedor
+                                WPA-Enterprise  CCMP
+                                WPA-Personal    CCMP
+                                WPA2-Enterprise CCMP
+                                Definido pelo fornecedorCCMP
+                                WPA2-Enterprise Definido pelo fornecedor
+                                Definido pelo fornecedorDefinido pelo fornecedor
+                                WPA2-Personal   CCMP
+                                Definido pelo fornecedorDefinido pelo fornecedor
+    Autenticação e codificação com suporte no modo ad-hoc:
+                                Abrir           Nenhum
+                                Abrir           WEP-40bit
+                                Abrir           WEP-104bit
+                                Abrir           WEP
+                                WPA2-Personal   CCMP
+                                Definido pelo fornecedorDefinido pelo fornecedor
+    Vídeo sem Fio com Suporte: Sim (Driver de Gráficos: Sim, Driver Wi-Fi: Sim)
+
+
+C:\>
+
+
+
+
+
+
+
+
+    VERIFICAR CAPACIDADE:
+    C:\>netsh wlan show wirelesscapabilities
+
+Funcionalidades sem Fio do Sistema
+----------------------------
+    Número de antenas conectadas ao rádio 802.11 (valor não disponível)
+
+    Número máximo de canais em que o dispositivo pode operar simultaneamente (valor não disponível)
+
+    Suporte para Coexistência                        : desconhecido
+
+
+Funcionalidades de Dispositivo sem Fio
+----------------------------
+
+Nome da interface: Wi-Fi
+
+    Versão WDI (Windows)                       : 0.0.0.0
+
+    Versão VDI (IHV)                           : 0.0.0.0
+
+    Versão de Firmware                            :
+
+    Estação                                     : com suporte
+
+    SoftAP                                     : com suporte
+
+    Modo de monitor de rede                        : com suporte
+
+    Dispositivo Wi-Fi Direct                         : com suporte
+
+    Wi-Fi Direct GO                             : com suporte
+
+    Cliente Wi-Fi Direct                         : com suporte
+
+    Quadros de Gerenciamento Protegido                 : Com suporte
+
+    Relatório de vizinho OT11k                      : Desconhecido
+
+    Descoberta de Informações de Serviço ANQP          : Sem suporte
+
+    Quadro de Ação                                : Sem suporte
+
+    Diversidade de Antena                           : Desconhecido
+
+    IBSS                                        : Com suporte
+
+    Modo Promíscuo                            : Com suporte
+
+    Descoberta de Dispositivo P2P                        : Sem suporte
+
+    Descoberta de Nome de Serviço P2P                  : Sem suporte
+
+    Descoberta de Informações de Serviço P2P                  : Sem suporte
+
+    Descoberta P2P em Segundo Plano                    : Sem suporte
+
+    P2P GO em 5 GHz                             : Desconhecido
+
+    Descoberta de Nome de Serviço ASP 2.0: Sem suporte
+
+    Descoberta de Informações de Serviço ASP 2.0: Sem suporte
+
+    Compatível com Encaixe de IP: Sem suporte
+
+    FIPS                                        : Com suporte
+
+    Conexão Instantânea                             : Sem suporte
+
+    NLO Dx em Espera                              : Sem suporte
+
+    Anúncio de Comutador de Canal Estendido        : Desconhecido
+
+    Redefinição de Nível de Função                      : Sem suporte
+
+    Redefinição de Nível de Plataforma                        : Sem suporte
+
+    Redefinição do Nível de Barramento                             : Sem suporte
+
+    Randomização de MAC                           : Sem suporte
+
+    Transição Rápida                             : Sem suporte
+
+    MU-MIMO                                     : Desconhecido
+
+    Coletor Miracast                               : Desconhecido
+
+    Transição de BSS (802.11v)                    : Sem suporte
+
+    Módulo de Extensibilidade IHV Configurado         : Sem suporte
+
+    Autenticação SAE                          : Sem suporte
+
+    Autenticação de Hash para Elemento SAE:          : Sem suporte
+
+    Autenticação SUITE-B WPA3                 : Sem suporte
+
+    Modo FIPS SUITE-B WPA3                      : Sem suporte
+
+    Autenticação OWE                          : Sem suporte
+
+    FTM como Iniciador                            : Sem suporte
+
+    Suporte a MBO                                 : Sem suporte
+
+    Número de Fluxos Espaciais Tx                : 0
+
+    Número de Fluxos Espaciais Rx                : 0
+
+    Número de Canais Simultâneos com Suporte     : 2
+
+    Contagem de portas GO P2P                          : 1
+
+    Contagem de Portas de Clientes P2P                          : 2
+
+    Máximo de Clientes de AP Móveis P2P                   : 128
+
+    Máximo de Anúncios de Serviço ANQP com Suporte   : 0
+
+    Suporte para Coexistência                        : desconhecido
+
+
+
+C:\>
+
+
+
+
+
+
+
+
+
+
+
+    CONFIGURAÇÕES DO ADAPTADOR:
+    C:\>netsh wlan show interfaces
+
+Há 1 interface no sistema:
+
+    Nome                   : Wi-Fi
+    Descrição            : Dell Wireless 1705 802.11b|g|n (2.4GHZ)
+    GUID                   : 7160c864-d562-49f0-b5b4-d81e6f06bb67
+    Endereço físico       : 10:08:b1:88:21:77
+    Estado                  : Conectado
+    SSID                   : Mendes289
+    BSSID                  : 68:02:b8:66:bd:eb
+    Tipo de rede           : Infraestrutura
+    Tipo de rádio             : 802.11n
+    Autenticação         : WPA2-Personal
+    Codificação                 : CCMP
+    Modo de conexão        : Conexão Automática
+    Canal                : 6
+    Taxa de recepção (Mbps)    : 72.2
+    Taxa de transmissão (Mbps)   : 72.2
+    Sinal                 : 100%
+    Perfil                : Mendes289
+
+    Status da rede hospedada: Não disponível
+
+
+C:\>
+
+
+
+
+
+
+
+
+    VER INFORMAÇÕES:
+    C:\>netsh wlan show interface name=Mendes289
+
+Há 1 interface no sistema:
+
+    Nome                   : Wi-Fi
+    Descrição            : Dell Wireless 1705 802.11b|g|n (2.4GHZ)
+    GUID                   : 7160c864-d562-49f0-b5b4-d81e6f06bb67
+    Endereço físico       : 10:08:b1:88:21:77
+    Estado                  : Conectado
+    SSID                   : Mendes289
+    BSSID                  : 68:02:b8:66:bd:eb
+    Tipo de rede           : Infraestrutura
+    Tipo de rádio             : 802.11n
+    Autenticação         : WPA2-Personal
+    Codificação                 : CCMP
+    Modo de conexão        : Conexão Automática
+    Canal                : 6
+    Taxa de recepção (Mbps)    : 72.2
+    Taxa de transmissão (Mbps)   : 72.2
+    Sinal                 : 96%
+    Perfil                : Mendes289
+
+    Status da rede hospedada: Não disponível
+
+
+C:\>
+
+
+
+
+
+
+
+
+    OUTROS:
+    Se você perdeu e não se lembra de sua senha de segurança de rede para conectar outro dispositivo para um determinado ponto de acesso Wi-Fi, você pode visualizar sua senha WiFi usar o comando:
+    netsh wlan show profile name=”nome da sua interface Wi-Fi” key=clear
+    netsh wlan show profile name=”Mendes289” key=clear
+
+
+    C:\>netsh wlan show profile name="Mendes289" key=clear
+
+Perfil Mendes289 na interface Wi-Fi:
+======================================================================= 
+
+Aplicado: Todos os Perfis de Usuários
+
+Informações do perfil
+-------------------
+    Versão                : 1
+    Tipo                   : LAN sem Fio
+    Nome                   : Mendes289
+    Opções de controle        :
+        Modo de conexão    : Conectar automaticamente
+        Transmissão da rede  : conectar somente se esta rede estiver transmitindo
+        Alternância automática : Não alternar para outra rede
+        Uso de MAC Aleatório: Desabilitado
+
+Configurações de conectividade
+---------------------
+    Número de SSIDs        : 1
+    Nome SSID              : "Mendes289"
+    Tipo de rede           : Infraestrutura
+    Tipo de Rádio               : [ Qualquer Tipo de Rádio ]
+    Extensão do fornecedor       : Não presente
+
+Configurações de segurança
+-----------------
+    Autenticação         : WPA2-Personal
+    Codificação         : CCMP
+    Autenticação         : WPA2-Personal
+    Codificação         : GCMP
+    Chave de segurança           : Presente
+    Conteúdo da Chave            : 2210201916
+
+Configurações de custo
+-------------
+    Custo                   : Irrestrito
+    Congestionado              : Não
+    Limite de Dados Aproximado: Não
+    Limite de Dados Excedido        : Não
+    Roaming                : Não
+    Origem de Custo            : Padrão
+
+
+C:\>
+
+
+
+
+
+
+
+
+    CONECTANDO AO WI-FI:
+    netsh wlan set hostednetwork mode=allow ssid=”nome da sua conexão Wi-Fi” key=”senha de conexão Wi-Fi”
+    
+
+
+    PARAR O ACESSO:
+    netsh wlan start hostednet
+
+
+
+    VOLTAR O ACESSO:
+    netsh wlan stop hostednetwork
+
+
+
+    IMPEDINDO CONEXÕES:
+    netsh wlan set profileparameter name=”nome da sua conexão Wi-Fi” connectionmode=manual
+
+
+
+    VOLTAR AO MODO AUTOMATICO:
+    netsh wlan set profileparameter name=”nome da sua conexão Wi-Fi” connectionmode=auto
+
+
+
+    APAGAR UM PERFIL:
+    netsh wlan delete profile name=”nome da sua conexão Wi-Fi”
+    
+
+
+    EXPORTANDO PERFIS:
+    netsh wlan export profile key=clear folder=”a pasta que você deseja salvar este relatório”
+
+
+
+    EXPORTAZR PERFIL ESPECIFICO:
+    netsh wlan export profile name=”nome da sua conexão Wi-Fi” key=clear folder=”a pasta que você deseja salvar este relatório”
+
+
+
+    RELATORIO DO ADAPTADOR SEM FIO: OBS PERMISSOES DE ADM
+    netsh wlan show wlanreport
+
+
+
+    C:\WINDOWS\system32>netsh wlan show wlanreport
+Gerando relatório ...
+Consultando Eventos de WLAN...
+Consultando Eventos de NCSI...
+Consultando Eventos de NDIS...
+Consultando Eventos de EAP...
+Consultando Eventos de WCM...
+Consultando Eventos de Kernel...
+Consultando Eventos do Sistema...
+Executando ipconfig...
+Executando netsh wlan show all ...
+Consultando Perfis Sem Fio...
+Consultando Certificados do Sistema e do Usuário...
+Consultando Informações do Usuário...
+Consultando Dispositivos de Rede...
+
+Relatório gravado em: C:\ProgramData\Microsoft\Windows\WlanReport\wlan-report-latest.html
+concluído.
+
+
+C:\WINDOWS\system32>
+
+
+
+
+    
+
+
+    
+    
+
+
+
+
+_____________________________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+    https://www.techtudo.com.br/noticias/2016/11/como-conectar-gerenciar-e-excluir-redes-wi-fi-no-prompt-de-comando.ghtml
+    
+
+    
+    

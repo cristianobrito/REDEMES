@@ -1,0 +1,201 @@
+Digite símbolos de moedas. Pressione a tecla Alt e digite os números abaixo usando o teclado numérico.
+O símbolo vai aparecer quando você soltar Alt. Lembre-se de que a tecla NumLock precisa estar ativada.[1]
+ Símbolo 	Nome	 Código 
+€	Euro	0128
+£	Libra	156
+¢	Centavo, cent ou cêntimo (fora do Brasil)	155
+¥	Iene	157
+ƒ	Florim	159
+¤	 Moeda 	0164
+
+
+Digite símbolos matemáticos. Pressione a tecla Alt e digite os números abaixo usando o teclado numérico 
+para inserir símbolos matemáticos. O símbolo vai aparecer quando você soltar Alt. Lembre-se de que a tecla NumLock 
+precisa estar ativada.[2]
+ Símbolo 	Nome	 Código 
+÷	Divisão	246
+×	Multiplicação	0215
+±	Mais ou menos	0177
+≈	Aproximadamente igual a	247
+√	Raiz quadrada	251
+ⁿ	Enésima potência	252
+²	Elevação ao quadrado	253
+¼	Um quarto	0188
+½	Meio	0189
+¾	Três quartos	0190
+∞	Infinito	236
+≥	 Maior que ou igual a 	242
+≤	Menor que ou igual a	243
+π	Pi	227
+°	Graus	248
+
+
+
+Digite símbolos especiais de pontuação e edição. Pressione Alt e use o teclado numérico para inserir um dos números abaixo e criar símbolos de pontuação especiais. 
+O símbolo vai aparecer quando você soltar Alt. Lembre-se de que a tecla NumLock precisa estar ativada.
+ Símbolo 	Nome	 Código 
+¡	 Ponto de exclamação invertido 	173
+¿	Ponto de interrogação invertido	168
+§	Seção	21
+¶	Parágrafo (ou pé de mosca)	20
+©	Copyright (direitos autorais)	0169
+®	Marca registrada	0174
+™	Trademark (marca registrada para empresas e instituições estrangeiras)	0153
+†	Obelisco (ou adaga)	0134
+‡	Obelisco duplo (ou adaga dupla)	0135
+–	Meia-risca	0150
+—	Travessão	0151
+•	Ponto lista	0149
+
+
+Insira símbolos da notação musical. Pressione a tecla Alt e digite os números abaixo usando o teclado numérico. 
+O símbolo vai aparecer quando você soltar Alt. Lembre-se de que a tecla NumLock precisa estar ativada. Os símbolos dos códigos 9000 a 9999 nem sempre funcionam, 
+já que dependem de certas fontes.
+ Símbolo 	Nome	 Código 
+♪	Colcheia	13
+♫	Duas colcheias conectadas a um raio	14
+♬	Duas colcheias ligadas a uma trave	9836
+♭	Bemol	9837
+♮	Bequadro	9838
+♯	Sustenido	9839
+
+
+
+Insira outros símbolos variados. Pressione a tecla Alt e digite os números abaixo usando o teclado numérico. 
+O símbolo vai aparecer quando você soltar Alt. Lembre-se de que a tecla NumLock precisa estar ativada.[3]
+ Símbolo 	Nome	 Código 
+☺	Smiley	1
+☻	 Smiley preto 	2
+♥	Coração (ou copas)	3
+♦	Losango (ou ouros)	4
+♣	Paus	5
+♠	Espadas	6
+♂	Masculino	11
+♀	Feminino	12
+↑	Seta para cima	24
+↓	Seta para baixo	25
+→	Seta para direita	26
+←	Seta para esquerda	27
+☼	Sol	15
+⌂	Casa	127
+Ω	Ômega	234
+
+=============================================================================
+
+Atalhos de teclado no Windows
+
+Atalhos de teclado no Windows… Uma lista completa!
+
+Nota: as SETAS DE DIREÇÃO são as teclas de setas, que normalmente ficam entre as letras e o teclado numérico, próximas da tecla DELETE. A tecla WIN é a que tem o logotipo do Windows, normalmente fica entre CTRL e ALT, existem duas. Ao ver o sinal de “+”, quer dizer que as teclas devem ser pressionadas juntas, assim: tecle a primeira, fique segurando, tecle a segunda (e assim por diante) e solte todas.
+
+Windows em geral
+WIN = Abre o menu Iniciar. Use as setas para navegar nas opções, e dê ENTER para abrir um item.
+WIN + D = Mostrar área de trabalho.
+WIN + M = Minimizar tudo.
+SHIFT + WIN + M = Desminimizar tudo.
+WIN + R = Executar.
+WIN + E = Abre o Windows Explorer.
+WIN + PAUSE BREAK = Propriedades do sistema.
+WIN + F = Pesquisar arquivos ou pastas.
+WIN + U = Gerenciador de utilitários.
+WIN + L = Bloquear computador ou trocar de usuário, sem fazer logoff.
+CTRL + ESC = Abre o menu Iniciar.
+CTRL + ALT + DEL = Gerenciador de tarefas, permite fechar programas travados. No Windows NT/2000/XP/Vista etc. pode abrir a janela “Segurança do Windows”, com opções para trocar senha, fazer logoff ou abrir o gerenciador de tarefas.
+CTRL + SHIFT + ESC = Gerenciador de tarefas (com a vantagem de abri-lo direto, e não a tela de segurança, em algumas versões de Windows).
+ALT + LETRA SUBLINHADA DE MENUS OU BOTÕES = Acessa o menu ou botão. Use as setas de direção do teclado para se mover, ENTER para confirmar ou a barra de espaços para marcar ou desmarcar as caixinhas de marcação.
+ALT + TAB = Alterna as janelas abertas. Segure ALT e vá teclando TAB até selecionar a janela desejada, e então solte tudo.
+SHIFT + ALT + TAB = Alterna as janelas abertas, só que selecionando as anteriores, e não as próximas. Ao usar o ALT + TAB, você pode teclar ou soltar SHIFT quando precisar.
+ALT + ESC = Alterna diretamente para a janela anterior na barra de tarefas.
+CTRL + TAB = Alterna as guias (abas) das janelas que tem abas, avançando, e em alguns programas, alterna os documentos abertos.
+SHIFT + CTRL + TAB = Alterna as guias, voltando para as anteriores, em vez de avançar.
+ALT + F4 = Fecha a janela ativa. Se nenhuma janela estiver aberta, abre a caixa de diálogo “Desligar o computador”.
+ALT + ESPAÇO = Abre o menu de controle da janela ativa (= clicar na barra de título com o botão direito do mouse ou, mais precisamente, clicar no ícone que fica à esquerda, na barra de título dos programas). Dica: use para maximizar, minimizar ou restaurar janelas pelo teclado.
+F10 = Seleciona os menus do programa atual. Use as setas de direção do teclado para se mover por eles.
+SHIFT + F10 = Corresponde a clicar com o botão direito no objeto selecionado ou em foco. Use as setas para escolher um item do menu, e ENTER para “clicá-lo”. Pode-se usar diretamente a tecla que tem um menu com uma setinha, é a chama “tecla de atalho de aplicativo”, que normalmente fica entre as teclas WIN DIREITA e CTRL de alguns teclados.
+PRINT SCREEN = Copia uma imagem da tela atual para a área de transferência. Basta colar no seu programa gráfico preferido (pode ser o Paint), ou num editor que aceite imagens (como o Word). Ideal para pegar ilustrações de tela sem precisar de programas de terceiros.
+ALT + PRINT SCREEN = Copia uma imagem apenas da janela ativa, e não da tela inteira (janela ativa é a janela que está em primeiro plano).
+
+Windows Explorer
+Confira mais abaixo as dicas de seleção de textos, muitas valem para o trabalho com arquivos e pastas também
+F3 = Pesquisar arquivos na pasta atual.
+F4 = Abre a listinha da barra de endereços.
+F5 = Atualiza a janela atual.
+F6 = Seleciona o texto da barra de endereços.
+F11 = Abre a página em tela cheia. Tecle F11 para voltar ao normal.
+CTRL + H = Abre a lista do histórico.
+CTRL + I = Abre a lista dos favoritos.
+BACKSPACE = Abrir a pasta pai (acima).
+
+Atalhos do Windows 7
+
+O Windows 7 tem alguns atalhos próprios, aproveitando melhor a sua interface.
+
+Win + Seta para cima = Maximiza a janela atual (a que você estiver).
+Win + Seta para esquerda = Deixa a janela na metade esquerda da tela.
+Win + Seta para direita = Deixa a janela na metade direita da tela (ela também pode ser arrastada pela barra de título para um dos lados).
+Win + Seta para baixo = Minimiza a janela, ou restaura caso esteja maximizada.
+Win + P = Menu de projetor, útil para espelhar a imagem da tela numa tela externa.
+Win + Home = Minimiza tudo e deixa só a janela principal ativa (a janela em que você estiver trabalhando).
+Win + Espaço = Oculta todas as janelas e mostra a área de trabalho, igual quando você leva o mouse para o canto direito da barra de tarefas. Isso permite ver o desktop, mas nunca vi muita utilidade.
+Win + “+” = Dá zoom na tela.
+Win + “-” = Reduz o zoom.
+Win + Shift + Seta para esquerda = Move a janela atual para o monitor do lado esquerdo (se você usar dois monitores, é claro).
+Win + Shift + Seta para direita = Move a janela para o monitor do lado direito.
+Alt + P = Mostra e oculta a pré-visualização no Windows Explorer.
+Win + T = Coloca o foco nos botões da barra de tarefas. Use as setas direcionais para se mover entre eles e enter para selecionar um.
+Win + Número (1, 2, 3, etc) = Corresponde a clicar no botão da barra de tarefas que estiver na posição do número teclado.
+
+Cópia e seleção de textos ou arquivos
+CTRL + C = Copiar seleção.
+CTRL + V = Colar.
+CTRL + X = Recortar (mover).
+CTRL + A = Selecionar tudo do campo atual.
+CTRL + Z = Desfaz a última ação de edição, se possível. Cuidado ao usar no Windows Explorer, pois pode desrenomear uma pasta que acabou de ser renomeada, apagar arquivos que foram copiados ou mover de volta arquivos que foram movidos.
+
+Textos em diversos programas
+Muitos valem para arquivos no Windows Explorer também
+SETA ESQUERDA = Coloca o cursor um caractere anterior.
+SETA DIREITA = Coloca o cursor um caractere depois.
+SETA ACIMA = Vai para a linha de cima, na mesma coluna.
+SETA ABIXO = Vai para a linha de baixo, na mesma coluna.
+SHIFT + SETA ESQUERDA = Vai selecionando à esquerda do cursor. Segurando SHIFT, vá teclando a SETA ESQUERDA.
+SHIFT + SETA DIREITA = Idem anterior, seleciona à direita do cursor. Segure SHIFT e vá teclando SETA DIREITA.
+SHIFT + SETA ACIMA = Seleciona o texto compreendido entre a linha atual e a linha acima, na mesma coluna. Segure SHIFT e vá teclando SETA ACIMA para selecionar mais linhas para cima.
+SHIFT + SETA ABAIXO = Idem anterior, seleciona linhas para baixo.
+HOME = Coloca o cursor no começo da linha.
+END = Coloca o cursor no final da linha.
+SHIFT + HOME = Seleciona do cursor até o início da linha.
+SHIFT + END = Seleciona do cursor até o fim da linha.
+PAGE UP = Rola uma tela acima.
+PAGE DOWN = Rola uma tela abaixo.
+INSERT = Alterna entre inserir ou substituir caracteres ao digitar.
+DELETE = Exclui caracteres à direita do cursor.
+BACKSPACE = Exclui caracteres à esquerda do cursor.
+SHIFT + TECLA = Coloca o símbolo secundário da tecla. No caso das letras, alterna para caixa alta (maiúsculas).
+ALT DIREITA + TECLA = Coloca o símbolo terciário da tecla (nas que possuem três símbolos impressos na tecla).
+CAPS LOCK = Alterna maiúsculas e minúsculas ao digitar.
+
+Internet Explorer
+BACKSPACE = Voltar (desde que nenhum campo de edição tenha o foco).
+SHIFT + BACKSPACE = Avançar (desde que nenhum campo de edição tenha o foco).
+ALT + HOME = Abre a página inicial.
+F3 = Pesquisar na web (não recomendado, prefisa usar seu site de busca favorito).
+F4 = Mostra a listinha da barra de endereços.
+F5 = Atualiza (recarrega) a página.
+F6 = Seleciona a barra de endereços.
+F11 = Abre a página em tela cheia. Tecle F11 para voltar ao normal. Dica: mesmo navegando em tela cheia, você pode teclar WIN para abrir o menu Iniciar ou usar o ALT+TAB para alternar entre as janelas abertas.
+CTRL + F = Pesquisar texto na página atual (é bom clicar logo no comecinho da página antes de dar CTRL+F, para deixar o cursor bem no início e então pesquisar a partir dali).
+CTRL + D = Adiciona a página atual nos favoritos.
+TAB = Avança de link em link ou de objeto em objeto na página. Tecle a barra de espaço para selecioar se for um campo de marcação, ou tecle ENTER para abrir, se for um botão ou link. O objeto ativo ficará cercado por um retângulo tracejado, para que você possa identificá-lo.
+SHIFT + TAB = A mesma coisa do TAB, só que em direção oposta. Ideal para voltar para links atrás ou quando você “passar” do ponto com o TAB.
+CTRL + H = Abre a lista de histórico, à esquerda.
+CTRL + I = Abre a lista dos favoritos, à esquerda.
+CTRL + O = Abrir arquivo, site ou uma URL qualquer.
+SHIFT + CLIQUE NUM LINK = Abre o link em nova janela, mantendo a atual aberta. A mesma coisa de clicar no link com o direito e escolher “Abrir em nova janela”.
+HOME = Vai para o topo da página.
+END = Vai para o fim da página.
+ESPAÇO = Rola a tela para baixo.
+SHIFT + ESPAÇO = Rola a tela para cima.
+SETAS DE DIREÇÃO = Rolam a tela, para a direção da seta teclada (acima, abaixo, à esquerda e à direita).
+PAGE UP = Rola a tela para cima
+PAGE DOWN = Rola a tela para baixo.

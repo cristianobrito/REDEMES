@@ -1,0 +1,59 @@
+                    CONFI ESCULTURA BLENDER
+
+
+
+    0. PREPAROS:
+       SHIFT + A (add) uvesfere
+       painel sculpt
+       ligue a simetria
+
+
+    1. PREFERENCIAS
+         INPUT
+              EMULATE 3 BUTTON MOUSE
+
+
+    2. NAVIGATION
+         ORBIT AROUND SELECTION
+
+
+
+
+                    ATALHOS ESCULTURA
+
+
+    1. REMESH
+       SHIFTH + R e arraste a caneta pra controlar a intensidade [005] tente detalhar o maximo nessa resolução
+       depois de ter detalhado bem use 0.01 para dar mais detalhes. para mais detalhes 00.7
+       e para confirmar tecle CTRL + R ou tecle em remeshe
+
+    2. shift (suavisar)
+
+    3. CTRL  (inverte o brush)
+
+    4. tecle N 
+       va em view e altere o focal lengt de 50mm para 100mm
+
+    5. M (para mascara)
+       CTRL + I (inverter a mascara) ou tecle A (escolha invert mask)
+      
+    6. tecle A (clear mask) limpar mascara ou ALT + M
+
+    7. SHIFT + BARRA DE SPAÇO (todos os pinces)
+
+    8. ALT + ARRASTE A CANETA ORBIT
+  
+    9. CTRL + ALT E SHIFT + ALT
+
+    10 . se precisar na simetria use a opção simetrizar
+
+    11 . crtl + shift (mascara) 
+         va na opçãoes de mascara e mask extract
+
+    12 . ctrl + tab (menu)
+
+
+
+
+    _______________________________________________________
+    luamilena28

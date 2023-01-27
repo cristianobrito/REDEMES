@@ -1,0 +1,77 @@
+                     RETOPOLOGIA BLENDER 3.0
+
+
+    1. SHIFT + a [crie um plano]
+       mova rotacione e scale esse plane a seu gosto
+       coloque ele sobre a malha
+
+    2. NA GUIA SHADING [com o plane selecionado]
+          color - coloque em object
+
+    3. va agora em object properties
+       viewport display [altere a cor a seu gosto]
+       para evitar que a malha fique pra fora 
+       nesse mesmo painel habilite in front
+
+    4. com o plane selecionado tecle TAB para entrar no edit mode
+       4.1 add modificador mirror
+           habilite o clipping
+
+       4.2 add modificador subdivision surface
+           em levels viewport adicione a seu gosto 
+           para controlar a densidade da malha
+
+       4.3 add modificador shrinkwrap[coloa o plane na malha] 
+           em target escolha a malha alvo [no meu caso era a head]
+           ou use o conta gotas e clique na malha alvo.
+
+       4.4 em wrap method escolha project
+           deixe marcado positive e negative
+           keep above surface e ajuste o offset 0.02
+           isso ajusta a distancia para a malha
+
+    5. habilite o snap(simbolo de ferradura) la na parte de cima do menu
+       e no tipo de elemento do snap escolha a face
+
+    6. escolha a ferramenta poly build 
+       6.1 escolha o edge ou vertice click e arraste
+           no vertice se não funcionar tecle E[extrude]
+       
+
+    7. em object mode com esse plane selecionado 
+       aplique os modificadores na ordem em que estão
+       
+
+    8. adicionais se quiser ver as subdivisões 
+       va em objects properties - viweport display
+       habilite o wireframe
+       depois disso controle os niveis de subdivisões
+
+
+    FIM
+
+    F [criar uma face]
+    E [extrudar]
+    ctrl + click esquerdo [ele extruda]
+    selecione 2 vertices alt + m [colar] atcenter
+    selecione 3 ou mais vertices tecle X e dissolve vertices 
+    tecle g 2 vezes ele move seguindo o edge
+    ctrl + l [para limpar os normais]
+    H [ocultar]
+    adicione o modificador multiresolution acima de todos os outros 
+    para controlar a resolução da malha[se quiser]
+    
+    
+
+    em mesh display ative o normals para ver se estão corretas
+    
+    
+    
+       
+     
+
+    _______________________________________________________
+    CRISTIANO OLIVEIRA
+
+
+    REF: https://www.youtube.com/watch?v=ll5h76qzAlc

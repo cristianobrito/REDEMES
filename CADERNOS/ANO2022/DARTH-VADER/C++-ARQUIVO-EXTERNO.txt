@@ -1,0 +1,155 @@
+                       [ DARTH VADER ]
+
+                  
+
+
+
+                         escrito por: 
+                      Cristiano Oliveira
+                         28.02.2022
+
+
+
+
+            Em plena guerra da Russia com a Ucrania.
+      O mundo evoluiu e a tecnologia pode mudar o rumo da 
+                          guera.
+            A guerra tecnologica chegou e o pós guerra é
+     uma realidade tendo isso como um cânone inicio aqui
+     o estudo para segurança futura.
+
+            " QUE DEUS TENHA PIEDADE DAS NAÇÕES "  
+              
+
+
+
+
+
+
+
+
+
+
+
+                C++ ARQUIVO EXTERNO
+
+
+    COISAS OBRIGATORIAS:
+    #include <stdlib.h>
+
+    SINTAXE:
+    system("DRIVE:\\CAMINHO\\NOMEDOPROGRAMA.EXE");
+    não esquecer de usar duas barras \\ para o 
+    caminho. duas \\ representam uma \ .
+
+
+
+
+    ESTRUTURA
+       .
+    CHAMADOR
+     |
+     |——— bin
+     |——— obj 
+     |——— CHAMADOR.cbp
+     |——— main.cpp
+
+    [ 2 diretorios 2 arquivos ]
+ 
+
+
+    ARQUIVOS:
+    main.cpp
+
+    #include <iostream>
+    #include <stdlib.h>
+
+    using namespace std;
+
+    int main()
+    {
+         cout << "CHAMANDO ARQUIVO EXTERNO .BAT" << endl;
+         system("D:\\FAZEDOR.bat");
+         return 0;
+    }
+
+
+    
+
+
+
+    CHAMADOR.bat
+    @echo off
+
+    start chrome
+
+
+
+    SAIDA ESPERADA:
+    O arquivo .bat é chamado e abre uma pagina do
+    google.
+
+
+
+
+
+
+
+
+
+
+                    EXPLICAÇÕES
+
+    
+    O arquivo chamador.bat estava localizado no
+    drive d: e o arquivo chamador estava no c: 
+
+
+
+
+    Chamando o arquivo que criamos:
+    crie outro arquivo CHAMADOR2 e no main.cpp
+    coloque o codigo abaixo:
+
+    #include <iostream>
+    #include <stdlib.h>
+
+    using namespace std;
+
+    int main()
+    {
+         cout << "CHAMANDO CHAMADOR EXE" << endl;
+         system("C:\\Users\\brito\\Desktop\\C++\\CHAMADOR\\bin\\Debug\\CHAMADOR.exe");
+         return 0;
+    }
+
+
+
+
+
+    Como notado esse arquivo chama o outro.
+    Note que depois que damos o build geramos
+    um executavel em cpp.
+    
+    NOTE: tambem que clicando com o direito
+    no executavel voce pode ver o local exato
+    do arquivo executavel.
+
+
+    
+
+
+
+
+
+
+
+_________________________________________________
+
+                 +---------------+
+                 |   O SENHOR    |
+                 |     SEJA      |
+                 |    LOUVADO    |
+                 +---------------+
+              
+                         

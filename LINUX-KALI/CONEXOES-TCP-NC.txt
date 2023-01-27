@@ -1,0 +1,104 @@
+                             LINUX
+
+
+
+              CRIAR CONEXÕES TCP E ENVIAR ARQUIVOS
+
+
+
+
+    NO KALI VAMOS OUVIR A PORTA 12345:
+
+    ┌──(root㉿kali)-[~]
+    └─# nc-il 12345
+    nc-il: command not found
+                                                                             
+    ┌──(root㉿kali)-[~]
+    └─# nc -lp 12345
+    ^C
+                                                                             
+    ┌──(root㉿kali)-[~]
+    └─# ifconfig
+    eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.7  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 2804:d41:59e4:8800::100  prefixlen 128  scopeid 0x0<global>
+        inet6 2804:d41:59e4:8800:20c:29ff:fe5e:35b3  prefixlen 64  scopeid 0x0<global>
+        inet6 2804:d41:59e4:8800:47b4:a3d0:1d45:6d27  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::20c:29ff:fe5e:35b3  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:5e:35:b3  txqueuelen 1000  (Ethernet)
+        RX packets 78  bytes 8056 (7.8 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 61  bytes 6644 (6.4 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+    lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+                                                                             
+    ┌──(root㉿kali)-[~]
+    └─# nc -lp 12345
+    ola
+    ola win
+    como anda as coias ai na vk linux
+    legal win e ai ... como v'ao as coisas
+    ^A^C
+                                                                             
+    ┌──(root㉿kali)-[~]
+    └─#
+
+===========================================================
+    NO WINDOWS
+
+    C:\>nc 192.168.1.7 12345
+    OLA KALI
+===========================================================
+
+
+    SAIDAS:
+    KALI
+    ┌──(root㉿kali)-[~]
+    └─# nc -lp 12345
+    ola kali
+    oi win
+
+    WIN
+    C:\>nc 192.168.1.7 12345
+    ola kali
+    oi win
+
+    **************************************************
+    NOTA:
+         l se refere ao listen mode
+         p se refere a porta que será ouvida
+         ifconfig inet 192.168.1.7 é o ip da
+         maquina virtual kali.
+         no win passsamos esse ip 
+
+
+
+
+    __________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+         https://solitudelab.wordpress.com/2017/12/19/netcat-o-canivete-suico/
+
+
+
+
+
+
+
+                        Autor:
+                  Cristiano Oliveira
+                 britonano@gmail.com
+                      28/03/2022
+
+
+
+
+       

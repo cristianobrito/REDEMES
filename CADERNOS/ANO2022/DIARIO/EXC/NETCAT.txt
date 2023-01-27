@@ -1,0 +1,42 @@
+                        [NETCAT]
+
+
+
+    INSTALAÇÃO:
+         -Baixe os arquivos do site do netcat
+          https://eternallybored.org/misc/netcat/
+          https://nmap.org/ncat/
+         -extraia os arquivos .zip
+         -Crie uma pasta com o nome da versão do 
+          netcat que voce esta baixando nesse caso
+          netcat-1.12 dentro da pasta C:\Program Files
+          o caminho depois de colado fica:
+          C:\Program Files\netcat-1.12
+         -Abra um terminal como adm e de o comando:
+          C:\>nc 8.8.8.8 80 -v
+          dns.google [8.8.8.8] 80 (http): TIMEDOUT
+
+
+
+
+         Agora podemos usar e testar comandos  
+         netcat.
+         Estude comando via netcat é uma otima
+         ferramenta.
+
+
+    __________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+    https://medium.com/@pedr0ni/reverse-shell-com-netcat-2fe833d2b4e7
+                    
+
+
+
+
+
+
+
+                         Autor:
+                   Cristiano Oliveira
+                   britonano@gmail.com
+                       21/03/2022

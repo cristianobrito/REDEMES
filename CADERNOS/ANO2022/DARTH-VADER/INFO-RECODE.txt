@@ -1,0 +1,1221 @@
+                        [ DARTH VADER ]
+
+
+                 ESTUDO DO CONCEITO DE PENTEST
+
+
+
+                             ATAQUE
+
+
+
+    De preferencia ultilize o kali linux.
+    mas se for preciso busque por ferramentas
+    que fazem o mesmo efeito no windows.
+
+
+
+    ALVO:
+    recodepro.org.br
+
+    INICIO:
+    A primeira coisa que procuramos
+    é informações no proprio site
+    e-mails, nomes etc...
+    abra um bloco de notas e anote 
+    tudo que achar como e-mail, nomes
+    ip, servidores dns, dns name, telefone etc...
+
+    Apos essa primeira coleta 
+    va ao site e veja o codigo fonte
+    click direito exibir codigo fonte
+    ou ctrl + u 
+    Novamente procure por links, ligações
+    externas ou seja tudo que pode ser usado
+    lembre que tudo é dados. e dados 
+    organizados viram informações. 
+
+
+
+    COLHENDO INFORMAÇÕES:
+    PELA URL
+    https://recodepro.org.br/wp-content/uploads/2022/01/
+    https://recodepro.org.br/comments/feed/
+    https://recodepro.org.br/feed/
+    view-source:https://recodepro.org.br/
+    
+    SUGESTÃO:
+    deconponha a url e va achando as coisas.
+    EX:
+    https://recodepro.org.br/wp-content/uploads/2022/01/
+    https://recodepro.org.br/wp-content/uploads/2022/
+    https://recodepro.org.br/wp-content/uploads
+    https://recodepro.org.br/wp-content/
+    https://recodepro.org.br/wp
+    va fazendo a decomposição e recolha informações.
+    procure em cada link da pagina.
+
+
+
+
+
+    Os passos acima são chamados google hacking.
+
+
+    A proxima coisa a fazer agora é saber de onde 
+    é o site com o comando whois.
+
+    C:\>cd whois
+
+    C:\WhoIs>
+
+    C:\WhoIs>whois www.recodepro.org.br
+
+    Whois v1.21 - Domain information lookup
+    Copyright (C) 2005-2019 Mark Russinovich
+    Sysinternals - www.sysinternals.com
+
+    Connecting to BR.whois-servers.net...
+
+    domain:      recodepro.org.br
+    owner:       COMITE PARA DEMOCRATIZACAO DA INFORMATICA
+    ownerid:     00.969.401/0001-54
+    responsible: Rodrigo Baggio
+    country:     BR
+    owner-c:     ROB332
+    tech-c:      ROB332
+    nserver:     ns1-08.azure-dns.com
+    nsstat:      20220228 AA
+    nslastaa:    20220228
+    nserver:     ns2-08.azure-dns.net
+    nsstat:      20220228 AA
+    nslastaa:    20220228
+    nserver:     ns3-08.azure-dns.org
+    nsstat:      20220228 AA
+    nslastaa:    20220228
+    nserver:     ns4-08.azure-dns.info
+    nsstat:      20220228 AA
+    nslastaa:    20220228
+    saci:        yes
+    created:     20200518 #21052682
+    changed:     20200522
+    expires:     20220518
+    status:      published
+
+    nic-hdl-br:  ROB332
+    person:      Rodrigo Baggio
+    e-mail:      wagner@cdi.org.br
+    country:     BR
+    created:     20010822
+    changed:     20200518
+
+    % Security and mail abuse issues should also be addressed to
+    % cert.br, http://www.cert.br/ , respectivelly to cert@cert.br
+    % and mail-abuse@cert.br
+    %
+    % whois.registro.br accepts only direct match queries. Types
+    % of queries are: domain (.br), registrant (tax ID), ticket,
+    % provider, CIDR block, IP and ASN.
+
+    Connecting to ecodepro.org.br...
+    Este host nÒo Ú conhecido.
+
+    C:\WhoIs>
+
+
+    
+
+
+
+    O que conseguimos:
+    nserver endereços que apontam pro 
+    endereço de ip do servidor do site.
+    geralmente onde o site esta hospedado.
+     ns1-08.azure-dns.com
+     ns2-08.azure-dns.net
+     ns3-08.azure-dns.org
+     ns4-08.azure-dns.info
+
+    Pelas informações acimas ja vemos
+    que o site esta hospedado na azure.
+    pesquise no google por: azure-dns
+    e na resposta voce vera que é
+    um serviço de hospedagem para dominios
+    dns. A partir dai voce pode procurar
+    por vulnerabilidades da azure dns.
+    mesmo assim não há uma garantia 
+    de ser o site verdadeiro as vezes 
+    ele esta escondido.
+     
+
+    email:
+    wagner@cdi.org.br
+
+    responsavel:
+    Rodrigo Baggio
+  
+    pais:
+    br
+
+    se tivesse telefone e outras 
+    coisas anotaria.
+
+
+       
+    DESCOBRINDO O IP:
+    C:\>PING recodepro.org.br
+
+    Disparando recodepro.org.br [200.95.188.82] com 32 bytes de dados:
+    Esgotado o tempo limite do pedido.
+    Esgotado o tempo limite do pedido.
+    Esgotado o tempo limite do pedido.
+    Esgotado o tempo limite do pedido.
+
+    Estatísticas do Ping para 200.95.188.82:
+    Pacotes: Enviados = 4, Recebidos = 0, Perdidos = 4 (100% de
+             perda),
+
+    C:\>PING recodepro.org
+
+    Disparando recodepro.org [103.224.182.242] com 32 bytes de dados:
+    Resposta de 103.224.182.242: bytes=32 tempo=196ms TTL=44
+    Resposta de 103.224.182.242: bytes=32 tempo=188ms TTL=44
+    Resposta de 103.224.182.242: bytes=32 tempo=187ms TTL=44
+    Resposta de 103.224.182.242: bytes=32 tempo=189ms TTL=44
+
+    Estatísticas do Ping para 103.224.182.242:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+    Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 187ms, Máximo = 196ms, Média = 190ms
+
+    C:\> 
+
+
+    Temos agora o ip e ele vai para nossas 
+    informações:
+    ip:
+    103.224.182.242
+    200.95.188.82
+
+
+
+    SABENDO O IP DAMOS UM WHOIS NELE:
+    C:\WhoIs>whois 200.95.188.82
+
+Whois v1.21 - Domain information lookup
+Copyright (C) 2005-2019 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+O nome solicitado Ú vßlido, mas nÒo foram encontrados dados do tipo solicitado.
+
+C:\WhoIs>whois 103.224.182.242
+
+Whois v1.21 - Domain information lookup
+Copyright (C) 2005-2019 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+Connecting to COM.whois-servers.net...
+
+WHOIS Server: whois.above.com
+   Registrar URL: http://www.above.com
+   Updated Date: 2021-05-15T02:01:07Z
+   Creation Date: 1997-05-20T04:00:00Z
+   Registry Expiry Date: 2022-05-21T04:00:00Z
+   Registrar: Above.com Pty Ltd.
+   Registrar IANA ID: 940
+   Registrar Abuse Contact Email: abuse@above.com
+   Registrar Abuse Contact Phone: +61 3 9589 7946
+   Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+   Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+   Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+   Name Server: NS1.TRELLIAN.COM
+   Name Server: NS2.TRELLIAN.COM
+   DNSSEC: unsigned
+   URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of whois database: 2022-03-02T23:34:35Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+NOTICE: The expiration date displayed in this record is the date the
+registrar's sponsorship of the domain name registration in the registry is
+currently set to expire. This date does not necessarily reflect the expiration
+date of the domain name registrant's agreement with the sponsoring
+registrar.  Users may consult the sponsoring registrar's Whois database to
+view the registrar's reported date of expiration for this registration.
+
+TERMS OF USE: You are not authorized to access or query our Whois
+database through the use of electronic processes that are high-volume and
+automated except as reasonably necessary to register domain names or
+modify existing registrations; the Data in VeriSign Global Registry
+Services' ("VeriSign") Whois database is provided by VeriSign for
+information purposes only, and to assist persons in obtaining information
+about or related to a domain name registration record. VeriSign does not
+guarantee its accuracy. By submitting a Whois query, you agree to abide
+by the following terms of use: You agree that you may use this Data only
+for lawful purposes and that under no circumstances will you use this Data
+to: (1) allow, enable, or otherwise support the transmission of mass
+unsolicited, commercial advertising or solicitations via e-mail, telephone,
+or facsimile; or (2) enable high volume, automated, electronic processes
+that apply to VeriSign (or its computer systems). The compilation,
+repackaging, dissemination or other use of this Data is expressly
+prohibited without the prior written consent of VeriSign. You agree not to
+use electronic processes that are automated and high-volume to access or
+query the Whois database except as reasonably necessary to register
+domain names or modify existing registrations. VeriSign reserves the right
+to restrict your access to the Whois database in its sole discretion to ensure
+operational stability.  VeriSign may restrict or terminate your access to the
+Whois database for failure to abide by these terms of use. VeriSign
+reserves the right to modify these terms at any time.
+
+The Registry database contains ONLY .COM, .NET, .EDU domains and
+Registrars.
+
+Connecting to whois.above.com...
+
+WHOIS Server: whois.above.com
+Registrar URL: http://www.above.com
+Updated Date: 2016-04-21 16:39:17.028166+10
+Creation Date: 1997-05-20 04:00:00+10
+Registrar Registration Expiration Date: 2022-05-21 04:00:00+10
+Registrar: ABOVE.COM PTY LTD.
+Registrar IANA ID: 940
+Registrar Abuse Contact Email: abuse@above.com
+Registrar Abuse Contact Phone: +61.390164107
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+Registry Registrant ID: above_privacy
+Registrant State/Province: Victoria
+Registrant Country: AU
+Registrant Email: above.com@privacy.above.com
+Registry Admin ID: above_privacy
+Admin State/Province: Victoria
+Admin Country: AU
+Admin Email: above.com@privacy.above.com
+Registry Tech ID: above_privacy
+Tech State/Province: Victoria
+Tech Country: AU
+Tech Email: above.com@privacy.above.com
+Name Server: ns1.trellian.com
+Name Server: ns2.trellian.com
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System:
+http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2016-04-21 16:39:17.028166+10  <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+The data in this whois database is provided to you for information purposes only, that is, to assist you in obtaining information about or related to a domain name registration record. We make this information available "as is", and do not guarantee its accuracy. By submitting a whois query, you agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to: (1) enable high volume, automated, electronic processes that stress or load this whois database system providing you this information; or (2) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, electronic mail, or by telephone. The compilation, repackaging, dissemination or other use of this data is expressly prohibited without prior written consent from us. The Registrar of record is Above.com, Pty. Ltd. We reserve the right to modify these terms at any time. By submitting this query, you agree to abide by these terms. For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en.
+
+
+
+Domain Name: ABOVE.COM
+Registry Domain ID: 2122865_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.above.com
+Registrar URL: http://www.above.com
+Updated Date: 2016-04-21 16:39:17.028166+10
+Creation Date: 1997-05-20 04:00:00+10
+Registrar Registration Expiration Date: 2022-05-21 04:00:00+10
+Registrar: ABOVE.COM PTY LTD.
+Registrar IANA ID: 940
+Registrar Abuse Contact Email: abuse@above.com
+Registrar Abuse Contact Phone: +61.390164107
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+Registry Registrant ID: above_privacy
+Registrant State/Province: Victoria
+Registrant Country: AU
+Registrant Email: above.com@privacy.above.com
+Registry Admin ID: above_privacy
+Admin State/Province: Victoria
+Admin Country: AU
+Admin Email: above.com@privacy.above.com
+Registry Tech ID: above_privacy
+Tech State/Province: Victoria
+Tech Country: AU
+Tech Email: above.com@privacy.above.com
+Name Server: ns1.trellian.com
+Name Server: ns2.trellian.com
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System:
+http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2016-04-21 16:39:17.028166+10  <<<
+
+    For more information on Whois status codes, please visit https://icann.org/epp
+
+    The data in this whois database is provided to you for information purposes only, that is, to assist you in obtaining information about or related to a domain name registration record. We make this information available "as is", and do not guarantee its accuracy. By submitting a whois query, you agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to: (1) enable high volume, automated, electronic processes that stress or load this whois database system providing you this information; or (2) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, electronic mail, or by telephone. The compilation, repackaging, dissemination or other use of this data is expressly prohibited without prior written consent from us. The Registrar of record is Above.com, Pty. Ltd. We reserve the right to modify these terms at any time. By submitting this query, you agree to abide by these terms. For    more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en.
+
+
+
+    C:\WhoIs>
+
+
+
+    COM ISSO TEMOS UMA NOVA RODADA DE INFORMAÇÕES.
+    QUE DEVEM IR PARA NOSSAS ANOTAÇÕES.
+
+    OBS: PESQUISAR POR NET RANGE.
+         E POR BLOCOS DE IP.
+
+    No kali linux:
+    ┌──(kali㉿kali)-[~]
+    └─$ host recodepro.org                                                     1 ⨯
+    recodepro.org has address 103.224.182.242
+    recodepro.org mail is handled by 10 park-mx.above.com.
+
+
+
+    ┌──(kali㉿kali)-[~]
+    └─$ host recodepro.org
+    recodepro.org has address 103.224.182.242
+    recodepro.org mail is handled by 10 park-mx.above.com.
+                                                                               
+    ┌──(kali㉿kali)-[~]
+    └─$ host 103.224.182.242
+    242.182.224.103.in-addr.arpa domain name pointer lb-182-242.above.com.
+
+
+    ┌──(kali㉿kali)-[~]
+    └─$ host recodepro.org.br
+    recodepro.org.br has address 200.95.188.82
+
+
+    pegue o email e os nomes de host e de os comandos abaixo:
+    ┌──(kali㉿kali)-[~]
+    └─$ host lb-182-242.above.com
+    lb-182-242.above.com has address 103.224.182.242
+
+    
+
+
+
+
+    A REGRA BASICA É VAI USANDO OS COMANDOS
+    WHOIS E HOST EM TODOS OS DNS, NSERVER,
+    EMAILS, IP TUDO QUE APARECER. E ANOTE.
+
+    E LEMBRE QUE 200.155.80.0/20 É UMA
+    MASCARA UM RANGE DE REDE. RANGE DE IPS.
+    APRENDER RANGE DE IPS.
+    GERALMENTE USAMOS ESSES RANGES E 
+    VARREMOS A REDE.
+    obs: não faça port scan nesses rangers
+    voce vai preso.
+
+
+
+
+    USANDO OUTRA FERRAMENTA DO LINUX:
+    VENDO O MAXIMO DE INFORMAÇÕES DE UM
+    DNS:
+    ┌──(kali㉿kali)-[~]
+    └─$ dnsenum recodepro.org.br
+    dnsenum VERSION:1.2.6
+
+    -----   recodepro.org.br   -----
+
+
+    Host's addresses:
+    __________________
+
+    recodepro.org.br.                        5        IN    A        200.95.188.82
+
+
+    Name Servers:
+    ______________
+
+    ns1-08.azure-dns.com.                    5        IN    A         40.90.4.8
+    ns2-08.azure-dns.net.                    5        IN    A         64.4.48.8
+    ns3-08.azure-dns.org.                    5        IN    A        13.107.24.8
+    ns4-08.azure-dns.info.                   5        IN    A        13.107.160.8
+
+
+    Mail (MX) Servers:
+    ___________________
+ 
+
+                                                                               
+    Trying Zone Transfers and getting Bind Versions:                               
+    _________________________________________________                              
+                                                                               
+                                                                               
+    Trying Zone Transfer for recodepro.org.br on ns1-08.azure-dns.com ... 
+    AXFR record query failed: REFUSED
+
+    Trying Zone Transfer for recodepro.org.br on ns2-08.azure-dns.net ... 
+    AXFR record query failed: REFUSED
+
+    Trying Zone Transfer for recodepro.org.br on ns4-08.azure-dns.info ... 
+    AXFR record query failed: REFUSED
+
+    Trying Zone Transfer for recodepro.org.br on ns3-08.azure-dns.org ... 
+    AXFR record query failed: REFUSED
+
+                                                                               
+    Brute forcing with /usr/share/dnsenum/dns.txt:                                 
+    _______________________________________________                                
+                                                                               
+    
+    
+
+
+    ENUMERANDO DENOVO:
+    ┌──(kali㉿kali)-[~]
+    └─$ dnsenum recodepro.org                                                130 ⨯
+    dnsenum VERSION:1.2.6
+
+    -----   recodepro.org   -----                                                  
+                                                                               
+                                                                               
+    Host's addresses:                                                              
+    __________________                                                             
+                                                                               
+    recodepro.org.                           5        IN    A        103.224.182.242
+
+                                                                               
+    Wildcard detection using: kckyzuzjafqu                                         
+    _______________________________________                                        
+                                                                               
+    kckyzuzjafqu.recodepro.org.              5        IN    A        103.224.182.242
+
+                                                                               
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!                                                   
+                                                                               
+    Wildcards detected, all subdomains will point to the same IP address          
+    Omitting results containing 103.224.182.242.                                  
+    Maybe you are using OpenDNS servers.                                          
+                                                                               
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!                                                   
+                                                                               
+                                                                               
+    Name Servers:                                                                  
+    ______________                                                                 
+                                                                               
+    ns1.above.com.                           5        IN    A        103.224.212.5 
+    ns1.above.com.                           5        IN    A        103.224.182.5
+    ns2.above.com.                           5        IN    A        103.224.212.6
+    ns2.above.com.                           5        IN    A        103.224.182.6
+
+                                                                               
+    Mail (MX) Servers:                                                             
+    ___________________                                                            
+                                                                               
+    park-mx.above.com.                       5        IN    A        103.224.212.34
+
+                                                                               
+    Trying Zone Transfers and getting Bind Versions:                               
+    _________________________________________________                              
+                                                                               
+                                                                               
+    Trying Zone Transfer for recodepro.org on ns1.above.com ... 
+    AXFR record query failed: NOTAUTH
+
+    Trying Zone Transfer for recodepro.org on ns2.above.com ... 
+    AXFR record query failed: NOTAUTH
+
+                                                                               
+    Brute forcing with /usr/share/dnsenum/dns.txt:                                 
+    _______________________________________________                                
+                                                                               
+   
+                                                   
+
+    As entradas do tipo A é o redirecionamento pro ip mesmo.
+    ex:
+    ns1.above.com. isso é o dominio e redireciona pra 103.224.212.5 
+    
+
+    me trazendo o ip:
+    ┌──(kali㉿kali)-[~]
+    └─$ host www.recodepro.org.br                                            130 ⨯
+    www.recodepro.org.br is an alias for recodepro.org.br.
+    recodepro.org.br has address 200.95.188.82
+
+
+
+
+
+    ┌──(kali㉿kali)-[~]
+    └─$ host www.recodepro.org                                                 1 ⨯
+    www.recodepro.org has address 103.224.182.242
+    www.recodepro.org mail is handled by 10 park-mx.above.com.
+
+    OBS: ESTOU FAZENDO SEMPRE DOIS POIS OS RESULTADOS
+         TEM SIDO DIFERENTES.
+
+
+
+    SE existir alguma pasta com esses nomes ele mostra:
+    ┌──(kali㉿kali)-[~]
+    └─$ host includesrecodepro.org.br                                          1 ⨯
+    Host includesrecodepro.org.br not found: 3(NXDOMAIN)
+                                                                               
+    ┌──(kali㉿kali)-[~]
+    └─$ host includesrecodepro.org                                             1 ⨯
+    Host includesrecodepro.org not found: 3(NXDOMAIN)
+                                                                               
+    ┌──(kali㉿kali)-[~]
+    └─$ host adminrecodepro.org.br                                             1 ⨯
+    Host adminrecodepro.org.br not found: 3(NXDOMAIN)
+                                                                               
+    ┌──(kali㉿kali)-[~]
+    └─$ host adminrecodepro.or                                                 1 ⨯
+    Host adminrecodepro.or not found: 3(NXDOMAIN)
+                                                                               
+    ┌──(kali㉿kali)-[~]
+    └─$ host adminrecodepro.org                                                1 ⨯
+    Host adminrecodepro.org not found: 3(NXDOMAIN)
+                                                                               
+    ┌──(kali㉿kali)-[~]
+    └─$    
+
+
+    se eu ficar testando isso até achar algo isso é
+    conhecido como brute force.
+
+
+
+    ENUMERAR SUBDOMINIOS:
+    É UM NOME ANTES DO DOMINIO PRINCIPAL EX:
+    adminrecodepro.org.br
+    includes.recodepro.org
+    nesse ponto podemos usar programas
+    para ficar tentando fazer isso.
+ 
+
+
+
+    LOGANDO COMO ROOT NO KALI:
+    ┌──(kali㉿kali)-[~]
+    └─$ sudo su      
+    [sudo] password for kali: 
+    ┌──(root💀kali)-[/home/kali]
+    └─# 
+
+    por padrão a senha do kali é kali
+
+
+    LISTANDO DIRETORIOS E ARQUIVOS:
+    ┌──(root💀kali)-[/home/kali]
+    └─# ls                                                                   130 ⨯
+    Desktop    Music     recodepro.com_ips.txt  www.gaveanews.com
+    Documents  Pictures  Templates              www.recodepro.org.br
+    Downloads  Public    Videos
+  
+
+
+
+    CRIE UM SCRIPT NO NANO:
+    nano digite o codigo do arquivo
+    pra salvar ctrl + x
+    ele pergunta se voce quer salvar tecle y
+    e digite o nome do arquivo e sua extensão.
+    nome-do-arquivo.extensão
+
+    #include <stdio.h>
+
+    int main()
+    {
+         printf("ola nano");
+    }
+
+
+
+
+    ┌──(root💀kali)-[/home/kali]
+    └─# ls
+    Desktop    Music     Public                 Videos
+    Documents  ola.c     recodepro.com_ips.txt  www.gaveanews.com
+    Downloads  Pictures  Templates              www.recodepro.org.br
+
+
+
+    VENDO O QUE TEM NO ARQUIVO:
+    ┌──(root💀kali)-[/home/kali]
+    └─# cat ola.c                                                            130 ⨯
+    #include <stdio.h>
+
+    int main()
+    {
+         printf("ola nano");
+    }
+
+
+
+
+
+
+    PARA ABRIR DE O COMANDO:
+    nano dnsbrute.py 
+    esse arquivo foi escrito em python.
+    ┌──(root💀kali)-[/home/kali]
+    └─# cat dnsbrute.py
+import sys
+import dns.resolver
+
+argumentos = sys.argv   # le os argumentos do comando
+try:
+    dominio = argumentos [1]
+    lista = argumentos [2]
+except:
+    print("Faltam argumentos no comando")
+    sys.exit(1)
+
+# abre a wordlist
+try:
+    arquivo = open(lista)
+    linhas = arquivo.read().splitlines()
+except:
+    print("Arquivo nao encontrado ou invalido")
+    sys.exit(1)
+
+# para cada linha da wordlist testa o dns
+for linha in linhas:
+    subdominio = linha + '.recodepro.org.br'
+    try:
+
+
+    
+
+
+
+
+
+    RESUMINDO:
+    E sse programa faz uma requisição dns.
+    e com uma lista cheia de nomes ele testa cada um desses nomes.
+    
+    crie uma lista no nano com possiveis nomes que podem aparecer
+    na pagina.
+    wordlistdominios.txt
+    www
+    admin
+    admim
+    administrador
+    includes
+    painel
+    webmail
+    mail
+    alunos
+    home
+    casa
+    aprovados
+    ano
+
+
+
+
+
+    COMO USAR ESSA LISTA:
+    python3 chamamos o python
+    primeiro argumento chamamos nosso script dnsbrute.py
+    segundo argumento chamamos o site que queremos atacar
+    terceiro argumento chamamos nossa lista.
+    ┌──(root💀kali)-[/home/kali]
+    └─# python3 dnsbrute.py recodepro.org wordlistdominios.txt
+
+    ┌──(root💀kali)-[/home/kali]
+    └─# python3 dnsbrute.py recodepro.org wordlistdominios.txt   
+    /home/kali/dnsbrute.py:24: DeprecationWarning: please use dns.resolver.resolve() instead
+    respostas = dns.resolver.query(subdominio, 'a')
+    www.recodepro.org.br 200.95.188.82
+
+
+
+
+
+
+    BUSCANDO AJUDA:
+    ┌──(root💀kali)-[/home/kali]
+    └─# host -h                                                              130 ⨯
+host: illegal option -- h
+Usage: host [-aCdilrTvVw] [-c class] [-N ndots] [-t type] [-W time]
+            [-R number] [-m flag] [-p port] hostname [server]
+       -a is equivalent to -v -t ANY
+       -A is like -a but omits RRSIG, NSEC, NSEC3
+       -c specifies query class for non-IN data
+       -C compares SOA records on authoritative nameservers
+       -d is equivalent to -v
+       -l lists all hosts in a domain, using AXFR
+       -m set memory debugging flag (trace|record|usage)
+       -N changes the number of dots allowed before root lookup is done
+       -p specifies the port on the server to query
+       -r disables recursive processing
+       -R specifies number of retries for UDP packets
+       -s a SERVFAIL response should stop query
+       -t specifies the query type
+       -T enables TCP/IP mode
+       -U enables UDP mode
+       -v enables verbose output
+       -V print version number and exit
+       -w specifies to wait forever for a reply
+       -W specifies how long to wait for a reply
+       -4 use IPv4 query transport only
+       -6 use IPv6 query transport only
+
+
+    NA JUDA DESCOBRIMOS COISAS E
+    O dns enum faz a mesma coisa que o programa faz
+    usa brute force.
+    
+    veja como é feito abaixo:
+    ┌──(root💀kali)-[/home/kali]
+    └─# dnsenum -f wordlistdominios.txt  recodepro.org                         1 ⨯
+    dnsenum VERSION:1.2.6
+
+    -----   recodepro.org   -----                                                  
+                                                                               
+                                                                               
+    Host's addresses:                                                              
+    __________________                                                             
+                                                                               
+    recodepro.org.                           5        IN    A        103.224.182.242
+
+                                                                               
+    Wildcard detection using: plbbfalukkpe                                         
+    _______________________________________                                        
+                                                                               
+    plbbfalukkpe.recodepro.org.              5        IN    A        103.224.182.242
+
+                                                                               
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!                                                   
+                                                                               
+    Wildcards detected, all subdomains will point to the same IP address          
+    Omitting results containing 103.224.182.242.                                  
+    Maybe you are using OpenDNS servers.                                          
+                                                                               
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!                                                   
+                                                                               
+                                                                               
+    Name Servers:                                                                  
+    ______________                                                                 
+                                                                               
+    ns1.above.com.                           5        IN    A        103.224.182.5 
+    ns1.above.com.                           5        IN    A        103.224.212.5
+    ns2.above.com.                           5        IN    A        103.224.212.6
+    ns2.above.com.                           5        IN    A        103.224.182.6
+
+                                                                               
+    Mail (MX) Servers:                                                             
+    ___________________                                                            
+                                                                               
+    park-mx.above.com.                       5        IN    A        103.224.212.34
+
+                                                                               
+    Trying Zone Transfers and getting Bind Versions:                               
+    _________________________________________________                              
+                                                                               
+                                                                               
+    Trying Zone Transfer for recodepro.org on ns2.above.com ... 
+    AXFR record query failed: NOTAUTH
+
+    Trying Zone Transfer for recodepro.org on ns1.above.com ... 
+    AXFR record query failed: NOTAUTH
+
+                                                                               
+    Brute forcing with wordlistdominios.txt:                                       
+    _________________________________________                                      
+                                                                               
+                                                                               
+                                                                               
+    recodepro.org class C netranges:                                               
+    _________________________________                                              
+                                                                               
+    103.224.182.0/24                                                              
+
+                                                                               
+    Performing reverse lookup on 256 ip addresses:                                 
+    _______________________________________________                                
+                                                                               
+                                                                               
+    0 results out of 256 IP addresses.
+
+                                                                               
+    recodepro.org ip blocks:                                                       
+    _________________________                                                      
+                                                                               
+                                                                               
+    done.
+
+        
+
+    
+
+
+
+
+
+    o dnsenum realizsa um brute force que 
+    nada mais é do que um programa que vai 
+    tentando opções que nos passamos naquela lista
+    voce pode jogar a saida desse brute force 
+    para um arquivo>
+    ┌──(root💀kali)-[/home/kali]
+    └─# dnsenum -f wordlistdominios.txt  recodepro.org > saidaRECODE.txt
+    AXFR record query failed: NOTAUTH
+    AXFR record query failed: NOTAUTH
+
+
+
+
+
+
+    de um cat para ver o conteudo do arquivo:
+    ┌──(root💀kali)-[/home/kali]
+    └─# cat saidaRECODE.txt     
+    dnsenum VERSION:1.2.6
+
+
+
+
+
+
+    DEPOIS DESSES PASSOS VAMOS NO GOOLE PARA PROCURAR.
+    O CHAMADO GOOGLE HACKING.
+    pesquise.
+    site:recodepro.org.br
+    pesquise por dentro do google
+    com essa pesquisa achei:
+    https://recodepro.org.br/
+    https://recodepro.org.br/contato/
+    https://recodepro.org.br/processo-seletivo/
+    https://recodepro.org.br/author/admin/
+    https://recodepro.org.br/author/trianons/
+    https://recodepro.org.br/politica-de-privacidade/
+    https://recodepro.org.br/category/sem-categoria/
+    https://recodepro.org.br/privacidade/
+    https://recodepro.org.br/o-que-fazemos/
+    https://recodepro.org.br/category/sem-categoria/
+
+
+
+
+    e por ultimo use isso na url:
+    https://recodepro.org.br/robots.txt
+
+    obtive isso:
+    Agente de usuário: *
+    Não permitir: /wp-admin/
+    Permitir: /wp-admin/admin-ajax.php
+
+    Mapa do site: https://recodepro.org.br/wp-sitemap.xml
+
+
+
+    em ingles tirando a tradução da pagina:
+    User-agent: *
+    Disallow: /wp-admin/
+    Allow: /wp-admin/admin-ajax.php
+
+    Sitemap: https://recodepro.org.br/wp-sitemap.xml
+
+
+
+
+
+
+
+    teste isso pois muitas paginas tem esses robots.txt
+    pra que servem?
+    se voce tem um arquivo desses é para voce passar informações pra eles.
+    e voce pode falar assiim pra ele por exemplo
+    não quero que voce olhe em determinada pasta ou arquivo
+    como isso: Disallow: /wp-admin/ 
+    ele não quer que olhemos dentro dessa pasta.
+    então usamos isso no google
+    https://recodepro.org.br//wp-admin/
+    e ai caimos na tela de login
+    e podemos continuar com o google hacking 
+    testando varias coisas pela url.
+    https://recodepro.org.br/wp-includes/
+    fui trocando o final /wp-home, wp-casa
+    até achar includes e outros.
+    https://recodepro.org.br/wp-includes/
+
+
+
+
+    INSTALAR WAFW00F 
+    ┌──(root💀kali)-[/home/kali]
+    └─# sudo apt install wafw00f                                              127 ⨯
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+wafw00f is already the newest version (2.1.0-1).
+wafw00f set to manually installed.
+The following packages were automatically installed and are no longer required:
+  gstreamer1.0-pulseaudio python3-gevent python3-gevent-websocket
+  python3-greenlet python3-jupyter-core python3-m2crypto python3-nbformat
+  python3-parameterized python3-plotly python3-zope.event
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+   
+
+
+
+
+┌──(root💀kali)-[/home/kali]
+└─# apt install wafw00f                                                     1 ⨯
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+wafw00f is already the newest version (2.1.0-1).
+The following packages were automatically installed and are no longer required:
+  gstreamer1.0-pulseaudio python3-gevent python3-gevent-websocket
+  python3-greenlet python3-jupyter-core python3-m2crypto python3-nbformat
+  python3-parameterized python3-plotly python3-zope.event
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgrad
+
+
+
+
+    DE UM UPDATE:
+    ┌──(root💀kali)-[/home/kali]
+    └─# apt update  
+
+    DE UM UPGRADE:
+    ┌──(root💀kali)-[/home/kali]
+    └─# apt upgrade
+
+
+
+
+    AGORA TENTE INSTALAR:
+    ANTES TENTE ISSO:
+    ┌──(root💀kali)-[/home/kali]
+    └─# wafw00f -l  
+
+
+
+
+
+    
+                ______
+               /      \                                                         
+              (  W00f! )                                                        
+               \  ____/                                                         
+               ,,    __            404 Hack Not Found                           
+           |`-.__   / /                      __     __                          
+           /"  _/  /_/                       \ \   / /                          
+          *===*    /                          \ \_/ /  405 Not Allowed          
+         /     )__//                           \   /                            
+    /|  /     /---`                        403 Forbidden                        
+    \\/`   \ |                                 / _ \                            
+    `\    /_\\_              502 Bad Gateway  / / \ \  500 Internal Error       
+      `_____``-`                             /_/   \_\                          
+                                                                                
+                        ~ WAFW00F : v2.1.0 ~                                    
+        The Web Application Firewall Fingerprinting Toolkit                     
+                                                                                
+[+] Can test for these WAFs:
+
+  WAF Name                        Manufacturer
+  --------                        ------------                                  
+                                                                                
+  ACE XML Gateway                  Cisco                                        
+  aeSecure                         aeSecure                         
+  AireeCDN                         Airee                            
+  Airlock                          Phion/Ergon                      
+  Alert Logic                      Alert Logic                      
+  AliYunDun                        Alibaba Cloud Computing          
+  Anquanbao                        Anquanbao                        
+  AnYu                             AnYu Technologies                
+  Approach                         Approach                         
+  AppWall                          Radware                          
+  Armor Defense                    Armor                            
+  ArvanCloud                       ArvanCloud                       
+  ASP.NET Generic                  Microsoft                        
+  ASPA Firewall                    ASPA Engineering Co.             
+  Astra                            Czar Securities                  
+  AWS Elastic Load Balancer        Amazon                           
+  AzionCDN                         AzionCDN                         
+  Azure Front Door                 Microsoft                        
+  Barikode                         Ethic Ninja                      
+  Barracuda                        Barracuda Networks               
+  Bekchy                           Faydata Technologies Inc.        
+  Beluga CDN                       Beluga                           
+  BIG-IP Local Traffic Manager     F5 Networks                      
+  BinarySec                        BinarySec                        
+  BitNinja                         BitNinja                         
+  BlockDoS                         BlockDoS                         
+  Bluedon                          Bluedon IST                      
+  BulletProof Security Pro         AITpro Security                  
+  CacheWall                        Varnish                          
+  CacheFly CDN                     CacheFly                         
+  Comodo cWatch                    Comodo CyberSecurity             
+  CdnNS Application Gateway        CdnNs/WdidcNet                   
+  ChinaCache Load Balancer         ChinaCache                       
+  Chuang Yu Shield                 Yunaq                            
+  Cloudbric                        Penta Security                   
+  Cloudflare                       Cloudflare Inc.                  
+  Cloudfloor                       Cloudfloor DNS                   
+  Cloudfront                       Amazon                           
+  CrawlProtect                     Jean-Denis Brun                  
+  DataPower                        IBM                              
+  DenyALL                          Rohde & Schwarz CyberSecurity    
+  Distil                           Distil Networks                  
+  DOSarrest                        DOSarrest Internet Security      
+  DotDefender                      Applicure Technologies           
+  DynamicWeb Injection Check       DynamicWeb                       
+  Edgecast                         Verizon Digital Media            
+  Eisoo Cloud Firewall             Eisoo                            
+  Expression Engine                EllisLab                         
+  BIG-IP AppSec Manager            F5 Networks                      
+  BIG-IP AP Manager                F5 Networks                      
+  Fastly                           Fastly CDN                       
+  FirePass                         F5 Networks                      
+  FortiWeb                         Fortinet                         
+  GoDaddy Website Protection       GoDaddy                          
+  Greywizard                       Grey Wizard                      
+  Huawei Cloud Firewall            Huawei                           
+  HyperGuard                       Art of Defense                   
+  Imunify360                       CloudLinux                       
+  Incapsula                        Imperva Inc.                     
+  IndusGuard                       Indusface                        
+  Instart DX                       Instart Logic                    
+  ISA Server                       Microsoft                        
+  Janusec Application Gateway      Janusec                          
+  Jiasule                          Jiasule                          
+  Kona SiteDefender                Akamai                           
+  KS-WAF                           KnownSec                         
+  KeyCDN                           KeyCDN                           
+  LimeLight CDN                    LimeLight                        
+  LiteSpeed                        LiteSpeed Technologies           
+  Open-Resty Lua Nginx             FLOSS                            
+  Oracle Cloud                     Oracle                           
+  Malcare                          Inactiv                          
+  MaxCDN                           MaxCDN                           
+  Mission Control Shield           Mission Control                  
+  ModSecurity                      SpiderLabs                       
+  NAXSI                            NBS Systems                      
+  Nemesida                         PentestIt                        
+  NevisProxy                       AdNovum                          
+  NetContinuum                     Barracuda Networks               
+  NetScaler AppFirewall            Citrix Systems                   
+  Newdefend                        NewDefend                        
+  NexusGuard Firewall              NexusGuard                       
+  NinjaFirewall                    NinTechNet                       
+  NullDDoS Protection              NullDDoS                         
+  NSFocus                          NSFocus Global Inc.              
+  OnMessage Shield                 BlackBaud                        
+  Palo Alto Next Gen Firewall      Palo Alto Networks               
+  PerimeterX                       PerimeterX                       
+  PentaWAF                         Global Network Services          
+  pkSecurity IDS                   pkSec                            
+  PT Application Firewall          Positive Technologies            
+  PowerCDN                         PowerCDN                         
+  Profense                         ArmorLogic                       
+  Puhui                            Puhui                            
+  Qiniu                            Qiniu CDN                        
+  Reblaze                          Reblaze                          
+  RSFirewall                       RSJoomla!                        
+  RequestValidationMode            Microsoft                        
+  Sabre Firewall                   Sabre                            
+  Safe3 Web Firewall               Safe3                            
+  Safedog                          SafeDog                          
+  Safeline                         Chaitin Tech.                    
+  SecKing                          SecKing                          
+  eEye SecureIIS                   BeyondTrust                      
+  SecuPress WP Security            SecuPress                        
+  SecureSphere                     Imperva Inc.                     
+  Secure Entry                     United Security Providers        
+  SEnginx                          Neusoft                          
+  ServerDefender VP                Port80 Software                  
+  Shield Security                  One Dollar Plugin                
+  Shadow Daemon                    Zecure                           
+  SiteGround                       SiteGround                       
+  SiteGuard                        Sakura Inc.                      
+  Sitelock                         TrueShield                       
+  SonicWall                        Dell                             
+  UTM Web Protection               Sophos                           
+  Squarespace                      Squarespace                      
+  SquidProxy IDS                   SquidProxy                       
+  StackPath                        StackPath                        
+  Sucuri CloudProxy                Sucuri Inc.                      
+  Tencent Cloud Firewall           Tencent Technologies             
+  Teros                            Citrix Systems                   
+  Trafficshield                    F5 Networks                      
+  TransIP Web Firewall             TransIP                          
+  URLMaster SecurityCheck          iFinity/DotNetNuke               
+  URLScan                          Microsoft                        
+  UEWaf                            UCloud                           
+  Varnish                          OWASP                            
+  Viettel                          Cloudrity                        
+  VirusDie                         VirusDie LLC                     
+  Wallarm                          Wallarm Inc.                     
+  WatchGuard                       WatchGuard Technologies          
+  WebARX                           WebARX Security Solutions        
+  WebKnight                        AQTRONIX                         
+  WebLand                          WebLand                          
+  RayWAF                           WebRay Solutions                 
+  WebSEAL                          IBM                              
+  WebTotem                         WebTotem                         
+  West263 CDN                      West263CDN                       
+  Wordfence                        Defiant                          
+  WP Cerber Security               Cerber Tech                      
+  WTS-WAF                          WTS                              
+  360WangZhanBao                   360 Technologies                 
+  XLabs Security WAF               XLabs                            
+  Xuanwudun                        Xuanwudun                        
+  Yundun                           Yundun                           
+  Yunsuo                           Yunsuo                           
+  Yunjiasu                         Baidu Cloud Computing            
+  YXLink                           YxLink Technologies              
+  Zenedge                          Zenedge                          
+  ZScaler                          Accenture                        
+                                                
+
+
+
+
+
+
+    E AGORA CONSEGUIMOS ENCONTRAR:
+    ┌──(root💀kali)-[/home/kali]
+    └─# wafw00f https://recodepro.org.br/
+
+                   ______
+                  /      \
+                 (  Woof! )
+                  \  ____/                      )
+                  ,,                           ) (_
+             .-. -    _______                 ( |__|
+            ()``; |==|_______)                .)|__|
+            / ('        /|\                  (  |__|
+        (  /  )        / | \                  . |__|
+         \(_)_))      /  |  \                   |__|
+
+                    ~ WAFW00F : v2.1.0 ~
+    The Web Application Firewall Fingerprinting Toolkit
+    
+[*] Checking https://recodepro.org.br/
+[+] Generic Detection results:
+[-] No WAF detected by the generic detection
+[~] Number of requests: 7
+
+
+
+ PROXIMO DIA:
+ https://www.youtube.com/watch?v=x_UPKlUNkb4
+
+    
+
+
+
+
+
+
+    
+    
+
+_____________________________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+    https://www.youtube.com/watch?v=L0V5pdWaB1Q
+    https://www.youtube.com/watch?v=Gf_BYCCkPiM&list=PLp95aw034Wn8M910YSGLh3zvmq1xI7LbD
+    https://www.asciiart.eu/
+    
+    
+    

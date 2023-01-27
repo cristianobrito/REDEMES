@@ -1,0 +1,122 @@
+                        DEBIAN
+
+
+
+                      INSTALAÇÃO
+
+
+
+
+    0.0 Baixe do site: https://www.debian.org/
+        click em download
+
+    0.1 Abra o vmware - Create a new virtual machine
+      - Selecione tipical e next
+      - selecione i will install the operating system
+        later. the virtual machine be created with a 
+        blank hard disk.                
+      - Guest operating system selecione Linux
+      - escolha a versão do debian que voce baixou
+        debian 11.2.0-amd64-netinst.iso
+        (debian 10.x 64-bit)
+      - Virtual machine name: debian 11
+        coloque o numero de sua versão baixada
+      - location: navegue até a pasta do vmware
+        e dentro da pasta do vmware crie uma pasta
+        com onome da versão que voce baixou ex:
+        Debian 11 e next
+      - deixe o hd como esta e selecione 
+        store virtual disk as a single file e next
+      - customise hardware - use iso image file:
+        click em browser e navegue até a pasta
+        da sua iso. feito isso click em close
+      - finish
+      
+
+
+                   Minha instalação
+
+
+    1.0 escolha a imagem iso do debian.
+      - installer disc image file(iso)
+      - Browser... - vá até sua iso
+    
+    1.1 Guest operating system:
+      - Linux
+
+    1.2 Version:
+      - Debian 10.x 64-bit
+
+    1.3 Virtual machine name:
+      - Debian 11.2.0 (nome da versão que baixei)
+
+    1.4 Location:
+      - C:\ProgramData\VMware\Debian 11.2.0
+
+    1.5 Agora pode usar. Play virtual machine.
+
+    1.6 select graphics install
+      - selecione idioma e continue
+      - selecione pais e continue
+      - selecione teclado continue
+      - informar nome da maquina Debian
+        aqui voce pode escolher qualquer nome
+        de host valido
+      - configuração de rede deixe em branco
+      - escolher senha root: debian 
+      - usuario: debian
+      - configurar usuarios e senhas: debian
+      - configurar usuario e senhas:  debian
+      - regiao rio de janeiro
+    1.7 Assistente-usar o disco inteiro
+        escolha essa opção
+    1.8 SCSI3(0,0,0)-21.5 GB VMware, VMware Virtual S
+    1.9 Todos os arquivos em uma partição(para iniciantes)
+    1.10 Finalizar o particionamento e escrever
+         as mudanças no disco
+    1.11 particionar discos: sim (yes)
+    1.12 Configurar o gerenciador de pacotes
+         selecione: não (no)
+    1.13 pais brasil
+    1.14 deb.debian.org selecione essa
+    1.15 informações sobre o proxi deixe em branco
+    1.16 Configuração popularity-contest
+         selecione: NÃO
+    1.17 Seleção de software: selecione os abaixos
+       - ambiente de area de trabalho no debian
+       - GNOME
+       - ULTILITARIOS DE SISTEMA PADRÃO
+       - servidor SSH
+       - SERVIDORES WEB
+    1.18 Instalar o carregador de inicialização GRUB
+         selecione: SIM
+    1.19 selecione: /dev/sda
+    1.20 Finalizar instalação click em continue
+
+       
+        
+
+
+
+
+
+
+
+
+
+    __________________________________________________
+    OBS: se o download do arquivo aparecer uma pasta
+         do winrar mas sua extensão for .iso não 
+         precisa fazer nada ele já é uma imagem iso
+         é só seleciona-la.
+
+         As senhas do debian é a mesma coisa que do
+         kali para usuario e super usuario ou para
+         usuario e host.
+         kali kali
+         debian debian
+
+                         Autor:
+                   Cristiano oliveira
+                  britonano@gmail.com
+                       25/03/2022 

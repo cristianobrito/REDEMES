@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <Windows.h>
+#include <unistd.h>
+#include <conio.h>
+
+
+#define ANSI_COLOR_RED      "\x1b[31m" //cores em ANSI utilizadas
+#define ANSI_COLOR_GRAY     "\e[0;37m"
+#define VERMELHO     "\x1b[31m"
+#define VERDE        "\x1b[32m"
+#define AZUL         "\x1b[34m"
+#define RESET        "\x1b[0m"
+
+void gotoxy(int x, int y);
+
+int main()
+{
+    system("title JANELA DO GAME EM C");
+    int i;
+    // loop infinito inicio
+    for(;;)
+    {
+    //=================[ LINHA SUPERIOR ]===============
+    for(i=0; i<50; i++)
+    {
+        //system("color 1d");
+        gotoxy(i,0);
+        printf("%c",219);
+        usleep(10*01);
+    }
+    //=================[ COLUNA DIREITA ]===============
+    for(i=0; i<20; i++)
+    {
+       // system("color 38");
+        gotoxy(50,i);
+        printf(VERDE   "%c" RESET,219);
+        usleep(10*01);
+    }
+    //=================[ LINHA INFERIOR ]===============
+    for(i=50; i>=0; i--)
+    {
+       // system("COLOR 61");
+        gotoxy(i,20);
+        printf(AZUL "%c" RESET,219);
+        usleep(10*01);
+    }
+    //=================[ COLUNA ESQUERDA ]===============
+    for(i=20; i>0; i--)
+    {
+      //  system("COLOR 16");
+        gotoxy(0,i);
+        printf(ANSI_COLOR_RED "%c" ANSI_COLOR_RED,219);
+        usleep(10*01);
+    }
+    //=================[ FIM COLUNAS ]===================
+    Sleep(5000);          // pausa para recomeçar
+    system("cls");     // limpa a tela
+
+   }
+   // fim loop infinito
+    getch();
+    return 0;
+}
+void gotoxy(int x, int y)
+{
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),(COORD){x,y});
+}
+// https://pt.stackoverflow.com/questions/157898/como-destacar-texto-mudar-cor-em-c-ansi

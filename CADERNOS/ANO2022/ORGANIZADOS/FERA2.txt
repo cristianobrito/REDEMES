@@ -1,0 +1,42 @@
+                   [ CMD ]
+                 [ ARQUIVOS ]
+_________________________________________________
+1. criando um arquivo .txt
+   copy con [nome do arquivo]
+   D:\>copy con FERA2.txt
+_________________________________________________
+2. abrindo um arquivo pelo cmd
+   type [ nome do arquivo ]
+   D:\>type fera2.txt
+_________________________________________________
+3. deletando um arquivo pelo cmd
+   del /f /a fera2.txt
+_________________________________________________
+5. como criar um diretorio pelo cmd
+   D:\>mkdir eu
+_________________________________________________
+6. como entrar em um diretorio pelo cmd
+   D:\>cd eu
+   
+   SAIDA:
+   D:\eu>
+_________________________________________________
+7. como deletar um diretorio pelo cmd
+   D:\>rd /s eu
+   eu, Tem certeza (S/N)? s
+
+   D:\>
+_________________________________________________
+8. como excluir um diretorio
+   rmdir nome do diretorio
+   rmdir eu
+   
+   remove com todos os seus subdiretorios
+   rmdir /s eu
+_________________________________________________
+                 
+        +----------------------+
+        |         FIM          |
+        |      19/02/2022      |
+        |       cristiano      |
+        +----------------------+

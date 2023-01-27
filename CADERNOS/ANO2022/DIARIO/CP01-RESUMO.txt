@@ -1,0 +1,63 @@
+               [ DARTH VADER ]
+
+
+
+                    C++ 
+  
+
+
+
+             Cristiano Oliveira
+                 05.03.2022
+
+
+
+   
+
+
+
+
+                  RESUMOS
+
+    CLASSES
+    CRIANDO UMA CLASSE:
+    class Pessoa
+    {
+       public:
+         char nome[128];
+         char sobrenome[128];
+         int  cpf;
+    };
+
+    INSTANCIANDO(CRIANDO) UM OBJETO:
+    Pessoa eu;
+
+    ACESSANDO MENBROS DO OBJETO:
+    Pessoa eu;
+    eu.cpf = 10101401757;
+    cin >> eu.cpf;
+
+    INICIALIZANDO UM OBJETO NA CRIACAO:
+    Pessoa eu = {"cristiano", "Oliveira", 10101401757};
+    
+    DESIGNACAO:
+    Pessoa copyOfEu;
+    copyOfEu = eu;
+
+    DECLARANDO E INICIALIZANDO ARRAYS DE OBJETOS:
+    Pessoa pessoa[5] = {
+                 {"cristiano", "oliveira", 10101401757},
+                 {"joyce",     "mendes",   10101401758},
+                 {"akilles",   "victor",   10101401759},
+                 {"akilles2",  "victor",   10101401760},
+                 {"akilles3",  "victor",   10101401761}
+    };
+
+    ACESSANDO OS MENBROS:
+    pessoa[3].cpf = 10101401760;
+
+
+
+___________________________________________________________
+    RESUMO SOBRE MINHAS IDEIAS:
+       

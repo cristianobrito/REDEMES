@@ -1,0 +1,323 @@
+                                  [ DARTH VADER ]
+
+
+
+    VER OS USUARIOS DA REDE:
+    C:\>net users
+
+    Contas de usuário para \\DESKTOP-R5KRUP6
+
+    -------------------------------------------------------------------------------
+    Administrador            brito                    Convidado
+    DefaultAccount           WDAGUtilityAccount
+    Comando concluído com êxito.
+
+
+
+
+    COMANDO 2:
+    C:\>WHOAMI
+    desktop-r5krup6\brito
+
+
+
+
+                             WORDLISTS PERSONALIZADAS
+
+
+    C:\>net users
+
+    Contas de usuário para \\DESKTOP-R5KRUP6
+
+    -------------------------------------------------------------------------------
+    Administrador            brito                    Convidado
+    DefaultAccount           WDAGUtilityAccount
+    Comando concluído com êxito.
+
+
+    C:\>notepad
+
+    C:\>WHOAMI
+    desktop-r5krup6\brito
+
+    C:\>D:
+
+    D:\>DIR
+    O volume na unidade D é OS
+    O Número de Série do Volume é 76DE-463A
+
+    Pasta de D:\
+
+    06/02/2022  13:35    <DIR>          API-FAKE
+    11/02/2022  15:00    <DIR>          API-FAKE-SEXTA
+    31/01/2022  18:40    <DIR>          API-RESTFULL
+    01/02/2022  18:03    <DIR>          API2
+    10/02/2022  17:12    <DIR>          APP
+    09/01/2022  23:56    <DIR>          ASCII
+    16/01/2022  12:19    <DIR>          ASSEMBLY
+    24/01/2022  20:54    <DIR>          BDloja
+    10/02/2022  16:09    <DIR>          C
+    03/03/2022  18:52    <DIR>          C++PDF
+    27/02/2022  12:02    <DIR>          CADERNO-2022
+    27/02/2022  22:02                 0 cls
+    08/02/2022  23:31               243 db.json
+    22/09/2020  14:47    <DIR>          DOCUMENTOS
+    08/02/2022  16:01    <DIR>          EXERCICIOS
+    26/01/2022  10:25    <DIR>          EXERCICIOS-C++
+    28/02/2022  09:54                25 FAZEDOR.bat
+    10/02/2022  15:35    <DIR>          FRONT-END
+    15/01/2022  17:18    <DIR>          JUDSON
+    01/02/2022  15:18    <DIR>          JUDSON-PDFS
+    08/12/2020  17:39     2.514.515.149 kali-linux-2020.4-vmware-amd64 - Copia.7z
+    05/07/2021  14:34     2.697.398.327 kali-linux-2021.2-vmware-amd64.7z
+    31/05/2021  19:22    <DIR>          Kali-Linux-2021.2-vmware-amd64.vmwarevm
+    03/03/2022  11:17    <DIR>          LINUX-PDF
+    02/03/2022  23:30    <DIR>          LIVRONANU
+    09/12/2021  22:10            11.311 NODE.odt
+    09/02/2022  11:55         1.127.876 OPENCV.pdf
+    09/02/2022  12:14         1.148.183 OpenCV2.pdf
+    14/11/2021  18:05    <DIR>          paint
+    04/02/2022  17:33    <DIR>          pasta-material-auxiliar-do-livro-react-do-maujor  
+    04/02/2022  17:33        13.724.074 pasta-material-auxiliar-do-livro-react-do-maujor.zip
+    03/03/2022  11:58    <DIR>          PENTEST
+    05/02/2022  22:47    <DIR>          SEGURANCA
+    09/02/2022  21:51    <DIR>          SERVER-QUINTA
+    08/02/2022  22:47    <DIR>          SERVERJSON
+    22/02/2022  22:52        17.350.368 SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit.zip
+    09/12/2021  20:28            25.595 SITES.pdf
+    15/01/2022  12:39        33.280.684 snapshot_2022-01-14_15-51.zip
+              12 arquivo(s)  5.278.581.835 bytes
+              26 pasta(s)   85.623.406.592 bytes disponíveis
+
+    D:\>CD CADERNO-2022
+
+    D:\CADERNO-2022>DIR
+    O volume na unidade D é OS
+    O Número de Série do Volume é 76DE-463A
+
+    Pasta de D:\CADERNO-2022
+
+    27/02/2022  12:02    <DIR>          .
+    27/02/2022  12:02    <DIR>          ..
+    02/03/2022  22:32    <DIR>          C++-2022
+    04/03/2022  14:19    <DIR>          DARTH-VADER
+    19/02/2022  16:44    <DIR>          ELETRONICA-BASICA
+    24/02/2022  15:35    <DIR>          INSTALAR-LIB
+    24/02/2022  15:34             6.290 INSTALAR-LIB-CURL-.txt
+    24/02/2022  21:30            13.339 LIBCURL.txt
+    03/03/2022  11:54    <DIR>          MECANICA-BASICA
+    23/02/2022  18:41    <DIR>          NODE-2022
+    02/03/2022  23:28    <DIR>          ORGANIZADOS
+               2 arquivo(s)         19.629 bytes
+               9 pasta(s)   85.623.406.592 bytes disponíveis
+
+    D:\CADERNO-2022>CD DART-VADER
+    O sistema não pode encontrar o caminho especificado.
+
+    D:\CADERNO-2022>CD DARTH-VADER
+
+    D:\CADERNO-2022\DARTH-VADER>DIR
+    O volume na unidade D é OS
+    O Número de Série do Volume é 76DE-463A
+
+    Pasta de D:\CADERNO-2022\DARTH-VADER
+
+    04/03/2022  14:19    <DIR>          .
+    04/03/2022  14:19    <DIR>          ..
+    02/03/2022  00:25            10.298 00-DNS.txt
+    01/03/2022  12:20             1.850 00-HEADER-FILES.txt
+    01/03/2022  13:15             1.830 00-INCLUDE.txt
+    01/03/2022  15:09             3.802 00-NTESH.txt
+    04/03/2022  11:50            10.235 00-PROG-UTEIS.txt
+    01/03/2022  14:48             1.193 00-SENHA-WI-FI.txt
+    04/03/2022  14:29               719 00-USUARIOS-DA-REDE.txt
+    02/03/2022  16:57               648 01-KALI-LINIX.txt
+    03/03/2022  17:32             4.766 02-EXECUTAR-C-DO-CMD.txt
+    27/02/2022  22:28             8.828 ATAQUE.txt
+    28/02/2022  10:40             2.570 C++-ARQUIVO-EXTERNO.txt
+    27/02/2022  13:32             7.997 CAP-03-DNS.txt
+    25/02/2022  17:39            19.381 COKIES.txt
+    26/02/2022  20:44            17.977 CP-01-TOPOLOGIA-DE-REDES.txt
+    26/02/2022  19:07             1.166 Darth-Vader-01.txt
+    27/02/2022  18:26            20.793 Darth-Vader.txt
+    03/03/2022  21:37            51.641 INFO-RECODE.txt
+    28/02/2022  16:13            11.294 NOTAS.txt
+    28/02/2022  22:33            12.882 WI-FI.txt
+              19 arquivo(s)        189.870 bytes
+               2 pasta(s)   85.623.406.592 bytes disponíveis
+
+    D:\CADERNO-2022\DARTH-VADER>cd ..
+
+    D:\CADERNO-2022>mkdir SCRIPTS
+
+    D:\CADERNO-2022>CD SCRIPTS
+
+    D:\CADERNO-2022\SCRIPTS>dir
+    O volume na unidade D é OS
+    O Número de Série do Volume é 76DE-463A
+
+    Pasta de D:\CADERNO-2022\SCRIPTS
+
+    04/03/2022  14:33    <DIR>          .
+    04/03/2022  14:33    <DIR>          ..
+               0 arquivo(s)              0 bytes
+               2 pasta(s)   85.623.406.592 bytes disponíveis
+
+D:\CADERNO-2022\SCRIPTS>copy con datas.c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+FILE *resul;
+
+int main()
+
+{
+
+ int aa, mm, dd;
+ resul = fopen("datas.txt", "w");
+ for(aa = 1970; aa < 2030; aa++)
+   for(mm = 1; mm < 13; mm ++)
+     for( dd = 1; dd < 32; dd++)
+     {
+       fprintf(resul, "%02d%02d%02d\n", aa, mm, dd);
+       fprintf(resul, "%02d%02d%02d\n", dd, mm, aa);
+
+       fprintf(resul, "%02d%02d%02d\n", aa, mm, dd);
+       fprintf(resul, "%02d%02d%02d\n", dd, mm, aa);
+
+       fprintf(resul, "%02d%02d%02d\n", aa, mm, dd);
+       fprintf(resul, "%02d%02d%02d\n", dd, mm, aa);
+
+       fprintf(resul, "%02d%02d%02d\n", aa, mm, dd);
+       fprintf(resul, "%02d%02d%02d\n", dd, mm, aa);
+
+      }
+
+    fclose(resul);
+    return 0;
+}^Z
+        1 arquivo(s) copiado(s).
+
+D:\CADERNO-2022\SCRIPTS>gcc -o datas datas.c
+datas.c: In function 'main':
+datas.c:14:13: error: 'l' undeclared (first use in this function)
+    for(mm = l; mm < 13; mm ++)
+             ^
+datas.c:14:13: note: each undeclared identifier is reported only once for each function it appears in
+
+D:\CADERNO-2022\SCRIPTS>notepad datas.c
+
+D:\CADERNO-2022\SCRIPTS>gcc -o datas datas.c
+datas.c: In function 'main':
+datas.c:12:2: error: 'resul' undeclared (first use in this function); did you mean 'result'?
+  resul = fopen("datas.txt", "w");
+  ^~~~~
+  result
+datas.c:12:2: note: each undeclared identifier is reported only once for each function it appears in
+
+D:\CADERNO-2022\SCRIPTS>notepad datas.c
+
+D:\CADERNO-2022\SCRIPTS>gcc -o datas datas.c
+
+D:\CADERNO-2022\SCRIPTS>datas.exe
+
+
+
+
+
+
+
+D:\CADERNO-2022\SCRIPTS>color 2
+
+D:\CADERNO-2022\SCRIPTS>
+
+
+
+    A saida desse programa é exibir varias datas em um arquivo de texto.
+    codigo fonte gera o programa e o programa gera a wordlist.
+    
+
+    EXEMPLO 2:
+    C:\>color 3
+
+    C:\>d:
+
+    D:\>cd caderno-2022
+
+    D:\CADERNO-2022>cd scripts
+
+    D:\CADERNO-2022\SCRIPTS>dir
+    O volume na unidade D é OS
+    O Número de Série do Volume é 76DE-463A
+
+    Pasta de D:\CADERNO-2022\SCRIPTS
+
+    04/03/2022  14:53    <DIR>          .
+    04/03/2022  14:53    <DIR>          ..
+    04/03/2022  14:48               747 datas.c
+    04/03/2022  14:48            54.728 datas.exe
+               2 arquivo(s)         55.475 bytes
+               2 pasta(s)   85.623.341.056 bytes disponíveis
+
+D:\CADERNO-2022\SCRIPTS>copy con celular.c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void gera_celular(const char prefixo[]);
+
+FILE *resul;
+int tamanho = 4;
+unsigned long int limite = 999999;
+char arquivo[100];
+
+int main()
+{
+    printf("Nome do arquivo: ");
+    scanf("%s", arquivo);
+    sprintf(arquivo, "%s.txt", arquivo);
+
+    gera_celular("96");
+
+    return 0;
+}
+
+
+void gera_celular(const char prefixo[])
+{
+   unsigned long int i;
+
+   resul = fopen(arquivo, "a");
+
+   printf("\nGerando de wordlist: %s", prefixo);
+   for (i = 0; i < limite+1; i++)
+       fprintf(resul, "%s%06li\n", prefixo, i);
+
+   fclose(resul);
+}
+^Z
+        1 arquivo(s) copiado(s).
+
+D:\CADERNO-2022\SCRIPTS>gcc -o celular celular.c
+
+D:\CADERNO-2022\SCRIPTS>celular.exe
+Nome do arquivo: cell
+
+Gerando de wordlist: 96
+D:\CADERNO-2022\SCRIPTS>
+
+
+    A SAIDA DESSE ARQUIVO É:
+    cell.txt 
+    
+
+
+
+    
+
+___________________________________________________________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+    https://www.youtube.com/watch?v=3lQEtSnnPRs
+    https://www.youtube.com/watch?v=3lQEtSnnPRs
+    

@@ -1,0 +1,11 @@
+proxima aula.
+    https://www.youtube.com/watch?v=WmRFcXUb8qs&list=PLqJK4Oyr5WSjjEQCKkX6oXFORZX7ro3DA&index=11
+
+
+
+
+link das aulas:
+     https://www.youtube.com/playlist?list=PLqJK4Oyr5WSjjEQCKkX6oXFORZX7ro3DA
+     
+
+Curso de Programação C - Como ler vários valores do teclado com a função scanf() - aula 10

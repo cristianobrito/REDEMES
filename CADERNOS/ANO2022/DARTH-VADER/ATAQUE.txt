@@ -1,0 +1,312 @@
+                        ANATOMIA DO ATAQUE 
+
+
+
+    ALVO:
+    https://recodepro.org.br/
+
+
+
+    REUNINDO DADOS:
+    whois
+
+    
+    C:\WhoIs>whois recodepro.org.br
+
+    Whois v1.21 - Domain information lookup
+    Copyright (C) 2005-2019 Mark Russinovich
+    Sysinternals - www.sysinternals.com
+
+    Connecting to BR.whois-servers.net...
+
+    domain:      recodepro.org.br
+    owner:       COMITE PARA DEMOCRATIZACAO DA INFORMATICA
+    ownerid:     00.969.401/0001-54
+    responsible: Rodrigo Baggio
+    country:     BR
+    owner-c:     ROB332
+    tech-c:      ROB332
+    nserver:     ns1-08.azure-dns.com
+    nsstat:      20220226 AA
+    nslastaa:    20220226
+    nserver:     ns2-08.azure-dns.net
+    nsstat:      20220226 AA
+    nslastaa:    20220226
+    nserver:     ns3-08.azure-dns.org
+    nsstat:      20220226 AA
+    nslastaa:    20220226
+    nserver:     ns4-08.azure-dns.info
+    nsstat:      20220226 AA
+    nslastaa:    20220226
+    saci:        yes
+    created:     20200518 #21052682
+    changed:     20200522
+    expires:     20220518
+    status:      published
+
+    nic-hdl-br:  ROB332
+    person:      Rodrigo Baggio
+    e-mail:      wagner@cdi.org.br
+    country:     BR
+    created:     20010822
+    changed:     20200518
+
+    % Security and mail abuse issues should also be addressed to
+    % cert.br, http://www.cert.br/ , respectivelly to cert@cert.br
+    % and mail-abuse@cert.br
+    %
+    % whois.registro.br accepts only direct match queries. Types
+    % of queries are: domain (.br), registrant (tax ID), ticket,
+    % provider, CIDR block, IP and ASN.
+
+    Connecting to ecodepro.org.br...
+    Este host nÒo Ú conhecido.
+
+    C:\WhoIs>
+
+
+
+
+    ANATOMIA:
+    nome de dominio.
+    recodepro.org.br    
+
+    em nome de quem esta o site.
+    Rodrigo Baggio
+
+    e-mail.                          
+    wagner@cdi.org.br 
+
+    pais.                                        
+    BR 
+
+    nome de DNS.                                
+    ns1-08.azure-dns.com
+    ns2-08.azure-dns.net
+    ns3-08.azure-dns.org
+    ns4-08.azure-dns.info
+
+
+
+    PEGANDO O IP
+    C:\>ping recodepro.org
+
+    Disparando recodepro.org [103.224.182.242] com 32 bytes de dados:
+    Resposta de 103.224.182.242: bytes=32 tempo=183ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=183ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=183ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=180ms TTL=45
+
+    Estatísticas do Ping para 103.224.182.242:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+    Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 180ms, Máximo = 183ms, Média = 182ms
+
+    C:\>
+
+
+
+    JOGANDO A SAIDA PARA UM ARQUIVO DE TEXTO
+    C:\>ping 103.224.182.242 -t > filename.txt
+    esse arquivo é criado no diretorio c: 
+
+    Se quiser executar em d: entre no diretorio d:
+    D:\>ping 103.224.182.242 > PONG.txt
+
+    D:\>
+    iso cria o arquivo no diretorio D:    
+
+
+
+    FAZ PING ATÉ SER INTERROMPIDO:
+    C:\>ping -t 103.224.182.242
+
+    Disparando 103.224.182.242 com 32 bytes de dados:
+    Resposta de 103.224.182.242: bytes=32 tempo=171ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=171ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=172ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=171ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=169ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=169ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=172ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=171ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=174ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=170ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=170ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=170ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=169ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=174ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=169ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=170ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=177ms TTL=45
+
+    Estatísticas do Ping para 103.224.182.242:
+    Pacotes: Enviados = 17, Recebidos = 17, Perdidos = 0 (0% de
+             perda),
+    Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 169ms, Máximo = 177ms, Média = 171ms
+    Control-C
+    ^C
+    C:\>
+
+
+
+    C:\>ping recodepro.org.br
+
+    Disparando recodepro.org.br [200.95.188.82] com 32 bytes de dados:
+    Esgotado o tempo limite do pedido.
+    Esgotado o tempo limite do pedido.
+    Esgotado o tempo limite do pedido.
+    Esgotado o tempo limite do pedido.
+
+    Estatísticas do Ping para 200.95.188.82:
+    Pacotes: Enviados = 4, Recebidos = 0, Perdidos = 4 (100% de
+             perda),
+
+    C:\>
+
+    o ip é 200.95.188.82 
+    para confirmar jogue isso na url e o site deve abrir
+    
+
+
+
+
+
+
+    PING DE SERVIDOR
+    C:\>PING -n 1 recodepro.org
+
+    Disparando recodepro.org [103.224.182.242] com 32 bytes de dados:
+    Resposta de 103.224.182.242: bytes=32 tempo=172ms TTL=45
+
+    Estatísticas do Ping para 103.224.182.242:
+    Pacotes: Enviados = 1, Recebidos = 1, Perdidos = 0 (0% de
+             perda),
+    Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 172ms, Máximo = 172ms, Média = 172ms
+
+    C:\>
+
+
+
+
+
+
+
+    VERIFIQUE SE O HOST NÃO ESTA ACESSIVEL
+    C:\>PING recodepro.org |find "TTL=" || ECHO MyHost not found
+    Resposta de 103.224.182.242: bytes=32 tempo=170ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=168ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=172ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=170ms TTL=45
+
+    C:\>
+
+
+
+
+
+
+
+    VERIFIQUE SE UM HOST ESTA ACESSIVEL
+    C:\>PING recodepro.org |find "TTL=" && ECHO host encontrado
+    Resposta de 103.224.182.242: bytes=32 tempo=172ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=169ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=170ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=170ms TTL=45
+    host encontrado
+
+    C:\>
+
+
+
+
+    
+    ROTAS COM SALTOS DE CONTAGEM VAI DE 1 A 9
+    C:\>ping -r 2 103.224.182.242
+
+    Disparando 103.224.182.242 com 32 bytes de dados:
+    Esgotado o tempo limite do pedido.
+    Esgotado o tempo limite do pedido.
+    Esgotado o tempo limite do pedido.
+    Esgotado o tempo limite do pedido.
+
+    Estatísticas do Ping para 103.224.182.242:
+    Pacotes: Enviados = 4, Recebidos = 0, Perdidos = 4 (100% de
+             perda),
+
+    C:\>
+
+
+
+
+
+
+    ENCONTRANDO UM SITE
+    C:\>ping -n 6 170.82.173.10>nul
+
+    C:\>ping 170.82.173.10 | find "TTL=" && ECHO encontrei o gavea news
+    Resposta de 170.82.173.10: bytes=32 tempo=23ms TTL=53
+    Resposta de 170.82.173.10: bytes=32 tempo=19ms TTL=53
+    Resposta de 170.82.173.10: bytes=32 tempo=25ms TTL=53
+    Resposta de 170.82.173.10: bytes=32 tempo=21ms TTL=53
+    encontrei o gavea news
+
+    C:\>ping 170.82.173.10 | find "TTL=" || ECHO encontrei o gaveanews
+    Resposta de 170.82.173.10: bytes=32 tempo=25ms TTL=53
+    Resposta de 170.82.173.10: bytes=32 tempo=23ms TTL=53
+    Resposta de 170.82.173.10: bytes=32 tempo=22ms TTL=53
+    Resposta de 170.82.173.10: bytes=32 tempo=20ms TTL=53
+
+    C:\>
+
+
+
+
+    ping em um site 5 vezes:
+    C:\>PING -n 5 -w 7500 www.recodepro.org
+
+    Disparando www.recodepro.org [103.224.182.242] com 32 bytes de dados:
+    Resposta de 103.224.182.242: bytes=32 tempo=172ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=169ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=169ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=168ms TTL=45
+    Resposta de 103.224.182.242: bytes=32 tempo=170ms TTL=45
+
+    Estatísticas do Ping para 103.224.182.242:
+    Pacotes: Enviados = 5, Recebidos = 5, Perdidos = 0 (0% de
+             perda),
+    Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 168ms, Máximo = 172ms, Média = 169ms
+
+    C:\>
+
+
+
+
+
+
+
+
+    Monitore um site (example.com) a cada 15 segundos:
+    @Echo off
+    Echo Logging ping responses, press CTRL-C to stop
+    :start
+    Ping -n 1 www.recodepro.org | find "TTL=" >>c:\pingtest.txt
+    Echo .
+    Ping -n 16 127.0.0.1>nul
+    goto start
+
+
+
+
+
+_____________________________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+    https://ss64.com/nt/ping.html
+    https://datatracker.ietf.org/doc/html/rfc5737
+    https://network-tools.com/
+    https://qastack.com.br/superuser/196920/save-ping-output-in-a-text-file
+    

@@ -1,0 +1,105 @@
+                        [ DARTH VADER ]
+
+
+
+
+
+
+    CMD COMO ADMINISTRADOR:
+
+    C:\WINDOWS\system32>netsh
+    netsh>/?
+
+Os seguintes comandos estão disponíveis:
+
+Comandos neste contexto:
+..             - Vai para um nível de contexto acima.
+?              - Exibe uma lista de comandos.
+abort          - Descarta as alterações feitas durante o modo off-line.
+add            - Adiciona uma entrada de configuração a uma lista de entradas.
+advfirewall    - Altera para o contexto `netsh advfirewall'.
+alias          - Adiciona um alias.
+bridge         - Altera para o contexto `netsh bridge'.
+bye            - Sai do programa.
+commit         - Confirma as alterações feitas durante o modo off-line.
+delete         - Exclui uma entrada de configuração de uma lista de entradas.
+dhcpclient     - Altera para o contexto `netsh dhcpclient'.
+dnsclient      - Altera para o contexto `netsh dnsclient'.
+dump           - Exibe um script de configuração.
+exec           - Executa um arquivo de script.
+exit           - Sai do programa.
+firewall       - Altera para o contexto `netsh firewall'.
+help           - Exibe uma lista de comandos.
+http           - Altera para o contexto `netsh http'.
+interface      - Altera para o contexto `netsh interface'.
+ipsec          - Altera para o contexto `netsh ipsec'.
+lan            - Altera para o contexto `netsh lan'.
+mbn            - Altera para o contexto `netsh mbn'.
+namespace      - Altera para o contexto `netsh namespace'.
+netio          - Altera para o contexto `netsh netio'.
+offline        - Define o modo atual para off-line.
+online         - Define o modo atual para on-line.
+p2p            - Altera para o contexto `netsh p2p'.
+popd           - Retira um contexto da pilha.
+pushd          - Envia por push o contexto atual na pilha.
+quit           - Sai do programa.
+ras            - Altera para o contexto `netsh ras'.
+rpc            - Altera para o contexto `netsh rpc'.
+set            - Atualiza as configurações das definições.
+show           - Exibe informações.
+trace          - Altera para o contexto `netsh trace'.
+unalias        - Exclui um alias.
+wcn            - Altera para o contexto `netsh wcn'.
+wfp            - Altera para o contexto `netsh wfp'.
+winhttp        - Altera para o contexto `netsh winhttp'.
+winsock        - Altera para o contexto `netsh winsock'.
+wlan           - Altera para o contexto `netsh wlan'.
+
+Os seguintes subcontextos estão disponíveis:
+ advfirewall bridge dhcpclient dnsclient firewall http interface ipsec lan mbn namespace netio p2p ras rpc trace wcn wfp winhttp winsock wlan
+
+Para exibir a ajuda relacionada a um comando, digite o comando seguido
+de um espaço e digite ?.
+
+netsh> 
+
+
+
+
+    SEGUNDO COMANDO:
+    netsh> wlan show profile
+
+Perfis na interface Wi-Fi:
+
+Perfis da política de grupo (somente leitura)
+---------------------------------
+    <Nenhum>
+
+Perfis do usuário
+-------------
+Todos os Perfis de Usuários: Mendes289
+Todos os Perfis de Usuários: Akilles
+Todos os Perfis de Usuários: Repetidor
+
+netsh>
+
+
+
+
+
+    
+
+
+
+   
+    TERCEIRO COMANDO:
+    O pedido final é wlan show profile nume_retea key=clear para 
+    exibir a tecla Wi-Fi. Em vez de nume_reţea Preencha o nome da 
+    rede para a qual você deseja encontrar a senha.
+
+_____________________________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+    https://pt.videotutorial.ro/comanda-afisare-parole-wi-fi-in-cmd-pe-orice-windows/
+    https://docs.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-contexts
+    http://underpop.online.fr/w/windows/ntcmdsw/netsh.htm
+    http://urs.bira.nom.br/informatica/comandos_shell_msdos/visao_geral_sobre_os_comandos_netsh.htm

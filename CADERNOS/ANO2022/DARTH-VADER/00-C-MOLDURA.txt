@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <Windows.h>
+#include <unistd.h>
+#include <conio.h>
+
+void gotoxy(int x, int y);
+
+int main()
+{
+    system("title JANELA DO GAME EM C");
+    int i;
+    // loop infinito inicio
+    for(;;)
+    {
+    //=================[ LINHA SUPERIOR ]===============
+    for(i=0; i<50; i++)
+    {
+        system("color 1d");
+        gotoxy(i,0);
+        printf("%c",219);
+        usleep(1*01);
+    }
+    //=================[ COLUNA DIREITA ]===============
+    for(i=0; i<20; i++)
+    {
+        system("color 38");
+        gotoxy(50,i);
+        printf("%c",219);
+        usleep(1*01);
+    }
+    //=================[ LINHA INFERIOR ]===============
+    for(i=50; i>=0; i--)
+    {
+        system("COLOR 61");
+        gotoxy(i,20);
+        printf("%c",219);
+        usleep(1*01);
+    }
+    //=================[ COLUNA ESQUERDA ]===============
+    for(i=20; i>0; i--)
+    {
+        system("COLOR 16");
+        gotoxy(0,i);
+        printf("%c",219);
+        usleep(10*01);
+    }
+    //=================[ FIM COLUNAS ]===================
+    Sleep(5000);          // pausa para recomeçar
+    system("cls");     // limpa a tela
+
+   }
+   // fim loop infinito
+    return 0;
+}
+void gotoxy(int x, int y)
+{
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),(COORD){x,y});
+}

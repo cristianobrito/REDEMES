@@ -1,0 +1,109 @@
+                        [ DARTH VADER ]
+
+
+
+
+
+
+
+    HEADER FILES:
+    O prototipo vai em um arquivo .h
+    a definição vai em um arquivo .cpp 
+    E nesse arquivo de definição .cpp 
+    vai o include .h 
+    E no main voce tambem inclui o .h
+
+
+    RESUMINDO:
+    Os dois arquivos .cpp devem fazer o
+    include do arquivo .h
+    que nada mais é que o prototipo da
+    função.
+
+
+    DISSECANDO:
+    main.cpp
+
+    #include <iostream>
+    #include "nome.h"        // include .h
+    using namespace std;
+
+    int main()
+    {
+         int n;
+         n = somar(15, 15);
+         cout << "O RESULTADO E: " << n << endl;
+         return 0;
+    }
+
+
+
+
+
+    nome.cpp
+
+    #ifndef NOME_CPP_INCLUDED
+    #define NOME_CPP_INCLUDED
+    #include "nome.h"        // include .h
+    // DEFINIÇÃO
+    int somar(int a, int b)
+    {
+         int c;
+         c=a+b;
+         return c;
+    }
+
+    #endif // NOME_CPP_INCLUDED
+
+
+
+
+
+    nome.h
+
+    #ifndef NOME_H_INCLUDED
+    #define NOME_H_INCLUDED
+
+    // PROTOTIPO
+    int somar(int a, int b);
+
+    #endif // NOME_H_INCLUDED
+
+    
+
+  
+
+
+    ANATOMIA:
+    #include <iostream>
+    using namespace std;
+  
+    //PTOTOTIPO 
+    //O QUE A FUNÇÃO RECEBE E O QUE ELA RETORNA
+    int somar(int a, int b);
+  
+    int main()
+    {
+         int n;
+         //CHAMADA DA FUNÇÃO
+         n = somar(15, 15);
+         cout << "O RESULTADO E: " << n << endl;
+         return 0;
+    }
+ 
+    //DEFINIÇÃO O QUE A FUNÇÃO FAZ
+    int somar(int a, int b)
+    {
+         int c;
+         c=a+b;
+         return c;
+    }
+
+
+
+    Em arquivo unico fica assim.
+_____________________________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+    https://www.youtube.com/watch?v=qaGzc56Rekg&t=1026s
+  
+    

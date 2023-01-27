@@ -1,0 +1,57 @@
+#include <Windows.h>
+
+
+void gotoxy(int x, int y);
+
+char c;
+int x = 30, y = 10;
+
+void main(void)
+{
+  int x = 30, y = 10;
+  char c;
+  gotoxy(x,y);
+  printf("\xdb\xdb");
+  while(1)
+  {
+    c = getch();
+    switch(c)
+    {
+      case 75:
+          x--;
+          break;
+      case 77:
+          x++;
+          break;
+      case 72:
+          y--;
+          break;
+      case 80:
+          y++;
+          break;
+      case 27:
+        exit(0);
+      case 's':
+         exit(0);
+    }
+    if(x==0){
+       printf("game over");
+       system("pause");
+    }
+        if(y==0){
+       printf("game over");
+       system("pause");
+    }
+    system("cls");
+    gotoxy(x,y);
+    printf("\xdb\xdb");
+  }
+};
+
+void gotoxy(int x, int y)
+{
+  COORD c;
+  c.X = x;
+  c.Y = y;
+  SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), c);
+}

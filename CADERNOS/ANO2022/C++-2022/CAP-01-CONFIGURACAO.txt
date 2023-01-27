@@ -1,0 +1,44 @@
+                                   [ C++ ]   
+
+                                 CAPÍTULO 01 
+                              CRIAÇÃO DE JANELA                                        
+___________________________________________________________________________________________________
+1. CONFIGURAÇÃO
+   
+   criar um projeto
+   assistente do windows desktop                 [ c++ windows area de trabalho console biblioteca ]
+   nomei-e o projeto                             [ repare a localização ]
+   aplicativo da area de trabalho (.exe)         [ projeto do windows desktop ] [ projeto vazio ]
+
+___________________________________________________________________________________________________
+2. CRIANDO UM PROGRAMA
+
+   click direito arquivos de origem → adicionar → novo item     [ ctrl + shift + a ]
+   
+   na janela que se abre escolha
+   visual c++ → arquivo do c++ → nomei-e
+___________________________________________________________________________________________________
+3. MODIFICAR A TABELA DE CARACTERES
+   
+   de um click na janela do codigo onde inserimos os codigos e depois va em 
+   menu → projeto → propriedades de [ aqui va estar o nome do projeto ]
+   propriedades de configuração → avançado → propriedades avançadas → conjunto de caracteres → não definido
+   
+___________________________________________________________________________________________________
+  estamos prontos para começar
+___________________________________________________________________________________________________
+   BIBLIOGRAFIA:
+   https://docs.microsoft.com/en-us/windows/win32/winprog/using-the-windows-headers
+
+
+___________________________________________________________________________________________________
+
+      ====================================================================
+                   **************************************** 
+                   *          AUTOR: CRISTIANO            *
+                   *          DATA: 12/02/2022            *
+                   *                                      *
+                   *           DEUS SE LOUVADO            *
+                   *                                      *            
+                   ****************************************  
+      ====================================================================                                     

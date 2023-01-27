@@ -1,0 +1,51 @@
+               [ CRIAR JSON SERVER ]
+___________________________________________________________________________________________________
+   
+1. COMANDOS
+   mkdir API
+   cd API
+   npm init
+   npm install
+   
+2. CRIE UM ARQUIVO JSON NA RAIZ DO PROJETO
+   cd API
+   db.json
+
+3. ESTRUTURA DO PROJETO
+   API
+    |——— db.json
+    |——— package.json
+
+___________________________________________________________________________________________________
+4. arquivo db.json 
+
+   {
+    "cadastro": [
+      { "id": 1, "nome": "carlos", "sobrenome": "Gomes" }
+    ],
+    "comentarios": [
+      { "id": 1, "body": "COMENTARIOS", "postId": 1 }
+    ],
+    "perfil": { "nome": "typicode" }
+   }
+
+___________________________________________________________________________________________________
+5.   INSTALANDO O SERVIDOR 
+     npm install -g json-server
+   
+5.1  SE QUISER SUBIR POR UMA PORTA DIFERENTE DA 3000
+     json-server --watch db.json --port 3333
+
+5.2  SE QUISER VERIFICAR SE A PORTA ESTA DISPONIVEL
+     netstat -ano | findstr 3000
+     netstat -o -n -a | find "3000"
+     netstat -na | find "3000"
+     OBS: se o retorno for vazio a porta esta aberta.
+
+___________________________________________________________________________________________________
+6. ACESSANDO API-FAKE va no navegador
+   http://localhost:3333/cadastro
+
+___________________________________________________________________________________________________
+                    *** FIM ***
+                     11/02/2022

@@ -1,0 +1,53 @@
+                          GRADLE
+
+
+
+                        INSTALAÇÃO
+                        
+
+
+
+    Inicio:
+           1.0 Procure por gradle build tool 
+               https://gradle.org/install/
+               https://gradle.org/
+
+           1.1 Escolha instalando manualmente
+               e escolha a opção binário
+
+           1.2 extraia o conteudo dessa pasta
+               para a raiz do pc no caso C:
+               depois de extraido fica:
+               C:\gradle-7.4.1
+
+           1.3 adicione o caminho da pasta bin
+               as variáveis de ambiente
+               C:\gradle-7.4.1\bin
+
+        
+
+
+
+    PROJETO 1:
+              1.0 Use este turorial além de procurar
+                  na internet:
+                  https://help.gnome.org/users/glade/stable/introduction.html.en
+                  https://help.gnome.org/users/glade/stable/getting-started.html.en
+                  https://help.gnome.org/users/glade/stable/working-with-projects.html.en
+
+              1.1 Digite um codigo e salve em .c
+                  navegue até a pasta desse codigo
+                  usando o msys2 ou o prompt
+                  digite o nome do programa.gradle
+
+
+
+===========================================================
+
+
+
+    __________________________________________________
+
+                          Autor:
+                    Cristiano Oliveira
+                        19/03/2022

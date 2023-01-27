@@ -1,0 +1,113 @@
+
+                      EXEMPLOS DE CÓDIGO C
+                             [EX13]
+
+EX13
+===========================================================
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+/*
+  EX13
+      Colocando icone no arquivo exe
+      personalizando o arquivo.
+      o programa abaixo sorteia numeros
+      aleatorios do dado.
+      rand()%6);
+      rand()%6 + 1);
+      o trecho de codigo modificado acima é
+      para acabar com o erro de zero pois
+      não existe face zero no dado então
+      somamos 1 para sempre levar em conta 1 face
+
+
+*/
+
+int main()
+{
+
+    printf("Jogo do dado: \n");
+    srand(time(NULL));
+    printf("Face: %d\n\n\n", rand()%6 + 1);
+    printf("aperte qualquer tecla para sair!!!");
+    getch();
+    return 0;
+}
+                                                      [fim]
+===========================================================
+                                                      
+
+ex13a.rc
+MAINICON ICON "Icon.ico"
+
+                                                      [fim]
+===========================================================
+                                                      
+
+
+    EXPLICAÇÕES:
+
+         0.1 Depois de ter iniciado um projeto.
+             no codeblocks la emcima no menu 
+             File - new empty file - 
+             tecle yes(sim) na opção que aparece
+             do you want to add this new file in the
+             active project(has to be saved first)
+             gostaria de adicionar esse arquivo ao
+             projeto ativo. sim é isso que queremos.
+         0.2 de um nome e salve com a extensão .rc
+         0.3 digite nesse arquivo o codigo abaixo:
+             MAINICON ICON "Icon.ico"
+             onde "Icon.ico" é o nome do nosso icone
+
+         1.0 ESTRUTURA DE ARQUIVOS:
+                .
+            JANELA_ICONE
+                |
+                |——— bin
+                |    |——— Debug
+                |         |——— JANELA_ICONE.exe
+                |
+                |——— obj
+                |    |——— Debug
+                |         |——— ex13a.res
+                |         |——— main.o
+                | 
+                |——— ex13a.rc
+                |——— Icon.ico
+                |——— JANELA_ICONE.cbp
+                |——— JANELA_ICONE.depend
+                |——— main.c
+
+
+         1.1 Com a estrutura acima podemos observar que:
+             1.1.0 JANELA_ICONE.exe depois de compilar é
+                   aqui que o icone vai aparecer no exe
+             1.1.1 O arquivo .rc deve estar na mesma raiz
+                   do nosso main.c
+             1.1.2 No codeblocks devemos vincular ao 
+                   projeto ativo.
+             1.1.3 Note que não basta só criar um
+                   arquivo .rc e colocar na mesma raiz
+                   do main. esse arquivo precisa ser
+                   adicionado ao projeto existente.
+             1.1.4 No codeblocks voce pode clicar
+                   com o direito sobre o nome do projeto
+                   e escolher a opção add files...
+                   e com isso dentro do codeblocks note 
+                   que uma pasta resources é gerada.
+                   mas se olharmos nos diretorios ela 
+                   não aparece é assim mesmo está certo.
+             1.1.5 Entre na pasta bin e mande o icone do
+                   seu executavel pra onde quiser e click
+                   para executar.ou seja enviar para area
+                   de trabalho criar atalho. 
+                   
+
+
+
+    _______________________________________________________
+                             Autor:
+                       Cristiano Oliveira
+                           15/03/2022

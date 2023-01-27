@@ -1,0 +1,100 @@
+                             [ ENVIAR DADOS DO FORM ]
+                                    [ NODEJS ]
+___________________________________________________________________________________________________
+1. INSTALAÇÃO 
+   mkdir SERVER
+   cd SERVER
+   npm init 
+   npm install express --save
+   npm install body-parser --save
+   npm install express-handlebars --save
+   npm install nodemon --save
+   npm unistall nome-do-pacote desinstalar
+   
+2. ESTRUTURA DE PASTAS E ARQUIVOS NOTE DIRETORIOS NÃO TEM A EXTENSÃO
+   SERVER
+     |——— views
+     |      |——— layouts
+     |      |      |——— main.handlebars
+     |      |
+     |      |——— formulario.handlebars
+     |
+     |——— index.js
+     |——— package-lock.json
+     |——— package.json
+
+_____________________________________________________________________________
+3. ARQUIVO index.js 
+   
+   const express    = require('express')
+   const app        = express()
+   const handlebars = require('express-handlebars')
+   const bodyParser = require('body-parser')
+
+   app.engine('handlebars', handlebars.engine({ defaultLayout:'main' }))  
+   app.set('view engine', 'handlebars')
+
+   app.get('/cadastro', function(req, res) {
+     res.render('formulario')
+   })
+
+   app.post('/recebe', function(req, res){
+     res.send('DADOS RECEBIDOS')
+   })
+
+   app.listen(3000)
+
+===============================================================================
+4. ARQUIVO main.handlebars 
+   
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>PEGANDO DADOS DO FORM</title>
+   </head>
+   <body>
+   	 {{{ body }}}
+   </body>
+   </html>
+
+===============================================================================
+5. ARQUIVO formulario.handlebars
+
+   <form action="/recebe" method="POST" style="margin: auto; width: 220px;"r>
+    	<p>CADASTRO</p>
+    	<input type="text" name="nome" placeholder="digite nome" /> 
+    	<br><br>
+    	<input type="text" name="sobrenome" placeholder="digite sobrenome"/> 
+    	<br><br>
+    	<button type="submit">ENVIAR</button>
+   </form>
+
+================================================================================
+6. EXECUTANDO
+   cd SERVER
+   nodemon index.js 
+
+================================================================================
+7. ABRINDO
+   va no navegador e digite:
+   http://localhost:3000/cadastro
+
+==============================================================================
+*** OBS ***
+    1. [ index.js ]
+    adicionamos a rota /recebe que é o nome do nosso action do form, atravez do methodo POST
+    app.post('/recebe', function(req, res){
+     res.send('DADOS RECEBIDOS')
+    })
+
+    2. [ formulario.handlebars ]
+    Mudamos só essa linha no form, passando a rota /recebe e o method POST
+    action="/recebe" method="POST"
+
+
+==============================================================================
+                    *** FIM ***
+                     15/02/2022

@@ -1,0 +1,62 @@
+                                  [ NODEJS ]       
+___________________________________________________________________________________________________
+ ESTRUTURA
+     .
+     AULA-NODE
+     |
+     |————— app.js
+     |
+     |
+     |
+ 
+     [ 1 diretorio e 1 arquivo ]
+
+___________________________________________________________________________________________________
+1. app.js
+
+   var http = require('http')
+
+   http.createServer(function(req, res){
+    res.end('SERVIDOR  ATIVO')
+   }).listen(3000)
+
+   console.log('SERVIDOR RODANDO')
+
+___________________________________________________________________________________________________
+2. VERIFICAR SE A PORTA ESTA DISPONIVEL PARA USO:
+   netstat -ano | findstr 3000
+   netstat -o -n -a | find "3000"
+   netstat -na | find "3000"
+
+   OBS: se o retorno for vazio a porta esta aberta.
+   SAIDA:
+   C:\Users\brito>netstat -ano | findstr 3000
+   C:\Users\brito>
+
+___________________________________________________________________________________________________
+3. EXECUTANDO:
+   
+  C:\Users\brito\Desktop\AULA-NODE>node app.js
+  SERVIDOR RODANDO
+  ^C
+  C:\Users\brito\Desktop\AULA-NODE>node app.js
+  SERVIDOR RODANDO
+___________________________________________________________________________________________________
+4. NA URL:
+   http://localhost:3000/
+   SAIDA:
+   a pagina exibe a mensagem servidor ativo
+   
+___________________________________________________________________________________________________
+  
+***************************************************************************************************
+                           
+                    *******************************
+                    *     CRISTIANO OLIVEIRA      *
+                    *        16/02/2022           *
+                    *            DEUS             *
+                    *        SEJA LOUVADO         *
+                    *******************************
+
+***************************************************************************************************
+                                      

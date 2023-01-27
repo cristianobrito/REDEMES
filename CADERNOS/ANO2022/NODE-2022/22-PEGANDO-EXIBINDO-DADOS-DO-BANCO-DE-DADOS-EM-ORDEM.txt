@@ -1,0 +1,213 @@
+                                  [ NODEJS ]   
+                     [ PEGANDO DADOS DO BANCO DE DADOS EM ORDEM ]   
+___________________________________________________________________________________________________
+     ESTRUTURA:
+        .
+     AULA-NODE
+     |
+     |————— index.js
+     |
+     |————— models
+     |      |————— db.js
+     |      |————— Post.js
+     |
+     |
+     |————— views
+     |       |———— layouts
+     |       |        |————— main.handlebars
+     |       |      
+     |       |
+     |       |————— home.handlebars
+     |       |————— formulario.hsndlebars
+     |
+     |————— node_modules
+     |————— package-lock.json
+     |————— package.json
+ 
+     [ 5 diretorios e 8 arquivos ]
+___________________________________________________________________________________________________
+    MYSQL:
+    inicie o xampp
+    C:\Users\brito>mysql -h localhost -u root -p
+
+    mysql> show tables;
+    mysql> describe postagens;
+________________________________________________________________________________________________
+    db.js
+
+    const Sequelize  = require('sequelize')
+
+    // conexão ao banco de dados:
+    // 'nome do banco de dados', 'usuario', 'senha'
+    const sequelize = new Sequelize('postapp', 'root', '', {
+    host:    'localhost',
+    dialect: 'mysql'
+    }) 
+
+    // exportando
+    module.exports = {
+      Sequelize: Sequelize,
+      sequelize: sequelize
+    }
+___________________________________________________________________________________________________
+    Post.js
+
+    const db = require('./db')
+
+    const Post = db.sequelize.define('postagens', {
+    titulo: {
+        type: db.Sequelize.STRING
+    },
+    conteudo: {
+        type: db.Sequelize.TEXT
+    }
+    })
+
+    //Post.sync({force: true})
+    module.exports = Post
+___________________________________________________________________________________________________
+   index.js 
+
+    const express    = require('express')
+    const app        = express()
+    const handlebars = require('express-handlebars')
+    const bodyParser = require('body-parser')
+    const Post       = require('./models/Post')
+
+    // config
+    // template engine
+    app.engine('handlebars', handlebars.engine({defaultLayout: 'main'}))
+    app.set('view engine', 'handlebars')
+   
+    // body-parser
+    app.use(bodyParser.urlencoded({extended: false}))
+    app.use(bodyParser.json())
+
+    //ROTAS:
+    app.get('/', function(req, res){
+        Post.findAll({order: [['id', 'DESC']]}).then(function(posts){
+        res.render('home', {posts: posts}) 
+       })
+    })
+
+    app.get('/cad', function(req, res){
+       res.render('formulario')
+    })
+
+    app.post('/add', function(req, res){
+      Post.create({
+          titulo: req.body.titulo,
+          conteudo: req.body.conteudo
+      }).then(function(){
+          res.redirect('/')
+      }).catch(function(erro){
+          res.send("Houve um erro: " + erro)
+      })
+    })
+
+    app.listen(3000, function(){
+    console.log('SERVIDOR ATIVO')
+    })
+___________________________________________________________________________________________________
+    home.handlebars
+
+    <h1 style="text-align: center;">LISTA DE POST</h1>
+    {{#each posts}}
+    <small>{{dataValues.createdAt}}</small>
+    <h1>{{dataValues.titulo}}</h1>
+    <p>{{dataValues.conteudo}}</p>
+    <hr>
+    {{/each}}
+___________________________________________________________________________________________________
+    EXECUTANDO:
+
+    C:\Users\brito\Desktop\AULA-NODE>nodemon index.js
+    [nodemon] 2.0.15
+    [nodemon] to restart at any time, enter `rs`
+    [nodemon] watching path(s): *.*
+    [nodemon] watching extensions: js,mjs,json
+    [nodemon] starting `node index.js`
+    SERVIDOR ATIVO
+
+    
+___________________________________________________________________________________________________
+    DEPENDENCIAS:
+     "body-parser": "^1.19.2",
+     "express": "^4.17.3",
+     "express-handlebars": "^6.0.2",
+     "mysql2": "^2.3.3",
+     "nodemon": "^2.0.15",
+     "sequelize": "^6.16.2"
+___________________________________________________________________________________________________
+ 
+___________________________________________________________________________________________________
+    formulario.handlebars
+
+    <form action="/add" method="POST" style="text-align: center;">
+    <p>TITULO: </p>
+    <input type="text" name="titulo">
+    <p>CONTEUDO: </p>
+    <textarea name="conteudo"></textarea><br>
+    <hr>
+    <button type="submit">Cadastrar postagens</button>
+    </form>
+
+___________________________________________________________________________________________________
+    main.handlebars
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANDLEBARS</title>
+    </head>
+    <body>
+    {{{ body }}}
+    </body>
+    </html>
+___________________________________________________________________________________________________
+    EXECUTANDO:
+
+    C:\Users\brito\Desktop\AULA-NODE>nodemon index.js
+    [nodemon] 2.0.15
+    [nodemon] to restart at any time, enter `rs`
+    [nodemon] watching path(s): *.*
+    [nodemon] watching extensions: js,mjs,json
+    [nodemon] starting `node index.js`
+    SERVIDOR ATIVO
+    Executing (default): INSERT INTO `postagens` (`id`,`titulo`,`conteudo`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?);
+    [nodemon] restarting due to changes...
+    [nodemon] starting `node index.js`
+    SERVIDOR ATIVO
+___________________________________________________________________________________________________
+    MYSQL:
+
+___________________________________________________________________________________________________
+    NA URL:
+    http://localhost:3000/cad
+___________________________________________________________________________________________________
+    EXPLICAÇÕES:
+
+    Post.findAll({order: [['id', 'DESC']]})
+    DESC do mais novo pro mais antigo
+    ASC do mais antigo para o mais novo
+___________________________________________________________________________________________________
+    BIBLIOGRAFIA E REFERENCIAS:
+    https://sequelize.org/v7/manual/getting-started.html
+    https://sequelize.org/master/manual/model-querying-basics.html
+    https://www.npmjs.com/package/sequelize
+    https://sequelize.org/master/  
+
+***************************************************************************************************
+                           
+                    *******************************
+                    *     CRISTIANO OLIVEIRA      *
+                    *        23/02/2022           *
+                    *            DEUS             *
+                    *        SEJA LOUVADO         *
+                    *******************************
+
+***************************************************************************************************
+      

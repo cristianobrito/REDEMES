@@ -1,0 +1,36 @@
+
+                      EXEMPLOS DE CÓDIGO C
+                             [EX06]
+
+EX06
+===========================================================
+#include <stdio.h>
+#include <stdlib.h>
+/*
+    EX06:
+         Leitura de caracteres
+         função getc();
+         getc pode ler de outros arquivos como de texto
+         stdin diz para a função que a leitura deve ser
+         feita apartir da entrada padrão
+         e não de outros lugares
+
+*/
+
+int main()
+{
+    char letra;
+    printf("Digite um caractere: ");
+    letra = getc(stdin);
+    printf("Caracter lido: %c\n", letra);
+    return 0;
+}
+===========================================================
+                                                      [FIM]
+
+
+
+    _______________________________________________________
+                             Autor:
+                       Cristiano Oliveira
+                           17/03/2022

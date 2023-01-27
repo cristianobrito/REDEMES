@@ -1,0 +1,31 @@
+                     [ DARTH VADER ]
+
+
+                          Autor:
+                     Cristiano Oliveira
+                         19/03/2022
+
+
+                                           [Página II]
+    __________________________________________________
+    INSTALAÇÕES E INSTRUÇÕES:
+         
+         ANO: 2022
+         
+
+
+
+
+
+    Eclipse
+    site: https://www.eclipse.org/
+    opção: ECLIPSE IDE FOR C/C++ DEVELOPERS
+    versão do jdk: 17
+    local: C:\Users\brito\eclipse\cpp-2022-03
+           NOTA: esse é o local padrão da 
+                 instalação.onde está o .exe
+    local do workspace: 
+         C:\Users\brito\eclipse-workspace 
+    
+                 
+    

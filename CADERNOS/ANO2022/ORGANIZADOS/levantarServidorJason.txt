@@ -1,0 +1,70 @@
+https://www.fabricadecodigo.com/json-server/
+https://dfilitto.com.br/desenvolvimento/criando-um-rest-api-com-json-server/
+https://www.npmjs.com/package/json-server#getting-started
+
+como criar um servidor .json
+
+1. instalação
+   npm install -g json-server
+
+2. criando o arquivo do banco de dados
+   A. crie um arquivo chamado db.json em qualquer pasta do seu computador
+   B. digite o conteudo abaixo nesse arquivo pra testar
+      {
+  "posts": [
+    { "id": 1, "title": "json-server", "author": "typicode" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}
+
+3.1. como aws rotas serão compostas?
+     As rotas vão ser compostas pelo endereço base (localhost:3000) 
+     mais o recurso que você quer acessar com por exemplo "posts","comments","profile".
+     obs:exemplo GET http://localhost:3000/posts/
+                 Content-Type: application/json
+
+                 observe abaixo:
+                 GET /posts
+                 GET /posts/{id}
+                 POST /posts
+                 PUT /posts/{id}
+                 PATCH /posts/{id}
+                 DELETE /posts/{id}
+
+3.1.2. rode o comando
+       json-server --watch db.json
+       OBS: lembre-se que por padrão o servidor roda em http://localhost:3000
+            pegando dados http://localhost:3000/posts/1
+            retorno { "id": 1, "title": "json-server", "author": "typicode" }
+
+4. como rodar em outra porta?
+   json-server --watch db.json --port 3333
+   OBS: o numero da porta pode ser qualquer um que esteja vazio
+
+5. como saber se a porta esta vazia?
+   netstat -ano | findstr 3000
+   netstat -o -n -a | find "3000"
+   netstat -na | find "3000"
+   OBS: se o retorno for vazio a porta esta aberta.
+
+6. como fechar essa porta?
+   fechar taskkill /PID 11348
+
+7. OBSERVAÇÕES:
+   Além disso, ao fazer solicitações, é bom saber que:
+         Se você fizer solicitações POST, PUT, PATCH ou DELETE, 
+         as alterações serão salvas automaticamente e com segurança db.jsonusando lowdb .
+         O JSON do corpo da solicitação deve ser delimitado pelo objeto, 
+         assim como a saída GET. (por exemplo {"name": "Foobar"})
+         Os valores de ID não são mutáveis. Qualquer idvalor no corpo de sua solicitação PUT ou PATCH 
+         será ignorado. Apenas um valor definido em uma solicitação POST será respeitado, 
+         mas somente se ainda não for obtido.
+         Uma solicitação POST, PUT ou PATCH deve incluir um Content-Type: application/json 
+         cabeçalho para usar o JSON no corpo da solicitação. Caso contrário, retornará 
+         um código de status 2XX, mas sem alterações nos dados
+
+8. A MELHOR FONTE DE CONSULTA ESTA SENDO O SITE DE UMA OLHADA
+   https://www.npmjs.com/package/json-server#getting-started

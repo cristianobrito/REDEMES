@@ -1,0 +1,255 @@
+                                  [ NODEJS ]   
+                    [ DELETANDO DADOS DO BANCO DE DADOS ]   
+___________________________________________________________________________________________________
+     ESTRUTURA:
+        .
+     AULA-NODE
+     |
+     |————— index.js
+     |
+     |————— models
+     |      |————— db.js
+     |      |————— Post.js
+     |
+     |
+     |————— views
+     |       |———— layouts
+     |       |        |————— main.handlebars
+     |       |      
+     |       |
+     |       |————— home.handlebars
+     |       |————— formulario.hsndlebars
+     |
+     |————— node_modules
+     |————— package-lock.json
+     |————— package.json
+ 
+     [ 5 diretorios e 8 arquivos ]
+___________________________________________________________________________________________________
+    MYSQL:
+    inicie o xampp
+    C:\Users\brito>mysql -h localhost -u root -p
+
+    mysql> show tables;
+    mysql> describe postagens;
+________________________________________________________________________________________________
+    db.js
+
+    const Sequelize  = require('sequelize')
+
+    // conexão ao banco de dados:
+    // 'nome do banco de dados', 'usuario', 'senha'
+    const sequelize = new Sequelize('postapp', 'root', '', {
+    host:    'localhost',
+    dialect: 'mysql'
+    }) 
+
+    // exportando
+    module.exports = {
+      Sequelize: Sequelize,
+      sequelize: sequelize
+    }
+___________________________________________________________________________________________________
+    Post.js
+
+    const db = require('./db')
+
+    const Post = db.sequelize.define('postagens', {
+    titulo: {
+        type: db.Sequelize.STRING
+    },
+    conteudo: {
+        type: db.Sequelize.TEXT
+    }
+    })
+
+    //Post.sync({force: true})
+    module.exports = Post
+___________________________________________________________________________________________________
+   index.js 
+
+    const express    = require('express')
+    const app        = express()
+    const handlebars = require('express-handlebars')
+    const bodyParser = require('body-parser')
+    const Post       = require('./models/Post')
+
+    // config
+    // template engine
+    app.engine('handlebars', handlebars.engine({defaultLayout: 'main'}))
+    app.set('view engine', 'handlebars')
+   
+    // body-parser
+    app.use(bodyParser.urlencoded({extended: false}))
+    app.use(bodyParser.json())
+
+    //ROTAS:
+    app.get('/', function(req, res){
+        Post.findAll({order: [['id', 'DESC']]}).then(function(posts){
+        res.render('home', {posts: posts}) 
+       })
+    })
+
+    app.get('/cad', function(req, res){
+       res.render('formulario')
+    })
+
+    app.post('/add', function(req, res){
+      Post.create({
+          titulo: req.body.titulo,
+          conteudo: req.body.conteudo
+      }).then(function(){
+          res.redirect('/')
+      }).catch(function(erro){
+          res.send("Houve um erro: " + erro)
+      })
+    })
+
+    // rota que crecebe um parametro id
+    app.get('/deletar/:id', function(req, res){
+      Post.destroy({where: {'id': req.params.id}})
+      .then(function(){
+          res.send("Postagem deletada com sucesso! ")
+      }).catch(function(erro){
+          res.send("Esta postagem não existe! ")
+      })
+    })
+
+    app.listen(3000, function(){
+    console.log('SERVIDOR ATIVO')
+    })
+___________________________________________________________________________________________________
+    home.handlebars
+
+    <h1 style="text-align: center;">LISTA DE POST</h1>
+    {{#each posts}}
+    <small>{{dataValues.createdAt}}</small>
+    <h1>{{dataValues.titulo}}</h1>
+    <p>{{dataValues.conteudo}}</p>
+    <a href="/deletar/{{dataValues.id}}"><button>Deletar</button></a>
+    <hr>
+    {{/each}}
+__________________________________________________________________________________________________
+    DEPENDENCIAS:
+     "body-parser": "^1.19.2",
+     "express": "^4.17.3",
+     "express-handlebars": "^6.0.2",
+     "mysql2": "^2.3.3",
+     "nodemon": "^2.0.15",
+     "sequelize": "^6.16.2"
+___________________________________________________________________________________________________
+ 
+___________________________________________________________________________________________________
+    formulario.handlebars
+
+    <form action="/add" method="POST" style="text-align: center;">
+    <p>TITULO: </p>
+    <input type="text" name="titulo">
+    <p>CONTEUDO: </p>
+    <textarea name="conteudo"></textarea><br>
+    <hr>
+    <button type="submit">Cadastrar postagens</button>
+    </form>
+
+___________________________________________________________________________________________________
+    main.handlebars
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANDLEBARS</title>
+    </head>
+    <body>
+    {{{ body }}}
+    </body>
+    </html>
+___________________________________________________________________________________________________
+    EXECUTANDO:
+
+    C:\Users\brito\Desktop\AULA-NODE>nodemon index.js
+    [nodemon] 2.0.15
+    [nodemon] to restart at any time, enter `rs`
+    [nodemon] watching path(s): *.*
+    [nodemon] watching extensions: js,mjs,json
+    [nodemon] starting `node index.js`
+    SERVIDOR ATIVO
+    Executing (default): INSERT INTO `postagens` (`id`,`titulo`,`conteudo`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?);
+    [nodemon] restarting due to changes...
+    [nodemon] starting `node index.js`
+    SERVIDOR ATIVO
+___________________________________________________________________________________________________
+    MYSQL:
+    conferindo se foi deletado do banco de dados apos clicar no botão delete
+
+    mysql> select * from postagens;
+    +----+---------------------+--------------------------------------------------+---------------------+---------------------+
+    | id | titulo              | conteudo                                         | createdAt           | updatedAt           |
+    +----+---------------------+--------------------------------------------------+---------------------+---------------------+
+    |  1 | mil exemplos node   | livro que contem mais de 100 exemplos de node js | 2022-02-23 16:47:09 | 2022-02-23 16:47:09 |
+    |  2 | node2               | servidores ativos                                | 2022-02-23 17:05:51 | 2022-02-23 17:05:51 |
+    |  3 | node em foco        | livro feito por cristiano                        | 2022-02-23 17:11:11 | 2022-02-23 17:11:11 |
+    |  4 | react mil exemplos  | escrito por cristiano                            | 2022-02-23 17:38:04 | 2022-02-23 17:38:04 |
+    |  5 | react 1001 exemplos | escrito e testado                                | 2022-02-23 17:42:23 | 2022-02-23 17:42:23 |
+    |  6 | c++ mil exemplos    | linha do cristiano                               | 2022-02-23 17:45:03 | 2022-02-23 17:45:03 |
+    |  7 | c++ mil exemplos 2  | linha do cristiano                               | 2022-02-23 17:46:01 | 2022-02-23 17:46:01 |
+    |  8 | c++ 2022            | livro base                                       | 2022-02-23 17:54:34 | 2022-02-23 17:54:34 |
+    |  9 | c++ 2022            | livro base                                       | 2022-02-23 17:54:51 | 2022-02-23 17:54:51 |
+    | 10 | c++ 2022            | livro base                                       | 2022-02-23 17:55:47 | 2022-02-23 17:55:47 |
+    +----+---------------------+--------------------------------------------------+---------------------+---------------------+
+    10 rows in set (0.00 sec)
+
+    mysql> select * from postagens;
+    +----+---------------------+--------------------------------------------------+---------------------+---------------------+
+    | id | titulo              | conteudo                                         | createdAt           | updatedAt           |
+    +----+---------------------+--------------------------------------------------+---------------------+---------------------+
+    |  1 | mil exemplos node   | livro que contem mais de 100 exemplos de node js | 2022-02-23 16:47:09 | 2022-02-23 16:47:09 |
+    |  2 | node2               | servidores ativos                                | 2022-02-23 17:05:51 | 2022-02-23 17:05:51 |
+    |  3 | node em foco        | livro feito por cristiano                        | 2022-02-23 17:11:11 | 2022-02-23 17:11:11 |
+    |  4 | react mil exemplos  | escrito por cristiano                            | 2022-02-23 17:38:04 | 2022-02-23 17:38:04 |
+    |  5 | react 1001 exemplos | escrito e testado                                | 2022-02-23 17:42:23 | 2022-02-23 17:42:23 |
+    |  6 | c++ mil exemplos    | linha do cristiano                               | 2022-02-23 17:45:03 | 2022-02-23 17:45:03 |
+    |  7 | c++ mil exemplos 2  | linha do cristiano                               | 2022-02-23 17:46:01 | 2022-02-23 17:46:01 |
+    |  8 | c++ 2022            | livro base                                       | 2022-02-23 17:54:34 | 2022-02-23 17:54:34 |
+    | 10 | c++ 2022            | livro base                                       | 2022-02-23 17:55:47 | 2022-02-23 17:55:47 |
+    +----+---------------------+--------------------------------------------------+---------------------+---------------------+
+    9 rows in set (0.00 sec)
+
+    mysql>
+
+___________________________________________________________________________________________________
+    NA URL:
+    http://localhost:3000/cad
+___________________________________________________________________________________________________
+    EXPLICAÇÕES:
+
+    Post.destroy() para destruir um recurso
+    Post.destroy({where: {'id': req.params.id}}) destruindo um recurso especifico pelo numero de id
+    podemos destruir por qualquer outra coisa.
+    <a href="/deletar/{{id}}"><button>Deletar</button></a> devemos mandar o button deletar em alguma rota
+    nesse caso passamos a rota /deletar
+    /deletar/{{id}} não devemos esquecer o parametro que a rota recebe para deletar
+    /deletar/{{dataValues.id}} a linha deve ficar assim encontrei isso nos comentarios do video
+    se tudo der certo certo a pagina exibe Postagem deletada com sucesso!
+    
+___________________________________________________________________________________________________
+    BIBLIOGRAFIA E REFERENCIAS:
+    https://sequelize.org/v7/manual/getting-started.html
+    https://sequelize.org/master/manual/model-querying-basics.html
+    https://www.npmjs.com/package/sequelize
+    https://sequelize.org/master/  
+    https://www.youtube.com/watch?v=PiM-E4cDj0s&list=PLJ_KhUnlXUPtbtLwaxxUxHqvcNQndmI4B&index=26
+
+***************************************************************************************************
+                           
+                    *******************************
+                    *     CRISTIANO OLIVEIRA      *
+                    *        23/02/2022           *
+                    *            DEUS             *
+                    *        SEJA LOUVADO         *
+                    *******************************
+
+***************************************************************************************************
+      

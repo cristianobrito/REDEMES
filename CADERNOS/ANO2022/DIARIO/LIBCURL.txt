@@ -1,0 +1,228 @@
+                             [ C++ ]
+                       LIBCURL INSTALAÇÃO 
+    ESTRUTURA
+    C:\Users\brito\Desktop\C++\libCurl
+     .
+    C++
+     |
+     |——— libCurl
+           |
+           |——— bin
+           |——— include
+           |——— lib
+           |——— obj
+           |
+           |——— libCurl.cbp
+           |——— libCurl.depend
+           |——— libCurl.layout
+           |——— main.cpp
+
+
+    [ 4 diretorios 4 arquivos ]
+
+
+    os diretorios bin, include, lib, obj foram copiados da pasta curl-7.8.0.zip e colados 
+    no mesmo local(raiz) onde nosso main.cpp programa esta. C:\Users\brito\Desktop\C++\libCurl
+   
+___________________________________________________________________________________________________
+    C:\Users\brito\Desktop\C++\libCurl\bin
+    bin
+     |——— Debug
+     |     |——— libCurl.exe
+     |     |——— libcurl-x64.dll
+     |
+     |
+     |——— Release
+     |     |——— libCurl.exe
+     |     |——— libcurl-x64.dll
+     |
+     |
+     |——— curl.exe
+     |——— curl-ca-bundle.crt
+     |——— libcrypto-3-x64.dll
+     |——— libcurl-x64.def
+     |——— libcurl-x64.dll
+     |——— libgcc_s_seh-1.dll
+     |——— libssl-3-x64.dll
+     |——— libstdc++-6.dll
+     |——— libwinpthread-1.dll
+
+     [ 2 diretorios 9 arquivos ]
+ 
+___________________________________________________________________________________________________
+    C:\Users\brito\Desktop\C++\libCurl\include
+    include
+    |——— curl
+          |——— dentro dessa pasta tem varios arquivos .h 
+___________________________________________________________________________________________________
+    C:\Users\brito\Desktop\C++\libCurl\lib
+    lib
+     |——— libcurl.a
+     |——— libcurl.dll.a
+___________________________________________________________________________________________________
+    C:\Users\brito\Desktop\C++\libCurl\obj
+    obj
+     |——— Debug
+     |     |——— main.o
+     |
+     |——— Release
+     |     |——— main.o
+___________________________________________________________________________________________________
+                   [ TODO O TRECHO ACIMA DESCREVE A ESTRUTURA DE ARQUIVOS ]
+
+
+ 
+___________________________________________________________________________________________________
+    REFERENCIAS:
+    https://curl.se/
+    https://curl.se/windows/
+
+    o video base: 
+    https://www.youtube.com/watch?v=AYtgYH4eV-A
+    
+    API USADA:
+    https://rickandmortyapi.com/
+    https://rickandmortyapi.com/api/character/1
+    https://rickandmortyapi.com/api/character/5
+
+
+    retirei o "s" do https ficando http.isso foi feito dentro do meu arquivo main.cpp 
+    http://rickandmortyapi.com/api/character/1
+    http://rickandmortyapi.com/api/character/5
+    
+___________________________________________________________________________________________________
+    OBSERVAÇÕES:
+    1° observação é que devemos baixar a versão do codeblocks que ja tem o mingw.
+
+    2° devemos baixar a versão do libcurl compativel com a versão do nosso windows no meu caso 64 bits.
+
+    3° o projeto no exemplo foi de console application não sei se outros irão funcionar.
+
+    4° depois de extrair a pasta libcurl.zip copiamos as pastas bin, include e lib e colamos no mesmo 
+       lugar onde está a raiz do nosso projeto no caso onde esta o arquivo main.cpp e libCurl.cbp
+       no caso é o nome-do-projeto.cbp e main.cpp [ nesse caso libCurl é o nome do meu projeto ].
+
+    5° podemos obter exemplos simples https://curl.se/libcurl/c/example.html
+       e usamos esse exemplo https://curl.se/libcurl/c/simple.html
+
+    6° devemos incluir as dependencias do curl, como colamos as pastas na raiz devemos importar 
+       usando ""(aspas). ficando assim:  #include "include/curl/curl.h" 
+       esse "include/curl/curl.h" nada mais é do que o caminho para a pasta include que colamos até o 
+       arquivo curl.h ou seja é como se abrisse-mos a pasta include depois abrisse-mos a pasta curl e
+       por ultimo selecionasse-mos o arquivo curl.h
+       algumas pessoas chamam esse #include "include/curl/curl.h" como biblioteca do curl.
+       sintaxe: #include "caminho-até-o-arquivo" caminho absoluto.
+
+    7° como adicionamos as dependencias para acabar com os erros abaixo.
+       obj\Release\main.o:main.cpp:(.text.startup+0xd): undefined reference to '__imp_curl_easy_init'
+       obj\Release\main.o:main.cpp:(.text.startup+0x2b): undefined reference to '__imp_curl_easy_setopt'
+       obj\Release\main.o:main.cpp:(.text.startup+0x46): undefined reference to '__imp_curl_easy_perform'
+       obj\Release\main.o:main.cpp:(.text.startup+0x53): undefined reference to '__imp_curl_easy_cleanup'
+       obj\Release\main.o:main.cpp:(.text.startup+0x89): undefined reference to '__imp_curl_easy_strerror'
+
+       ADICIONANDO:
+         na esquerda da tela do codeblocks onde esta escrito Workspace clicamos sobre o nome do projeto
+         libCurl com o botão direito e escolhemos a opção Build options...
+         
+         na guia que abre Project build options novamente escolhemos clicamos no nome do nosso projeto
+         libCurl → CLICAMOS AQUI
+           |——— Debug
+           |——— Release
+         
+         depois de clicar no nome do projeto escolhemos a guia Linker settings clicamos am Add e vamos até a pasta lib
+         na pasta lib escolhemos os 2 arquivos dentro dela. libcurl.a e libcurl.dll.a lembrando que essa pasta lib foi a
+         que colamos no nosso diretorio raiz.
+
+                  
+     8°  buscando dependencias do sistema e outras da libcurl.
+         baixe o OpenSSL https://curl.se/windows/  compativel com sua versão do codeblocks e windows 64 bits            
+         depois de extrair essa pasta copiamos os arquivos libcrypto-3-x64.dll e libssl-3-x64.dll
+         preste atenção esses arquivos ficam dentro da pasta C:\Users\brito\Downloads\openssl-3.0.1-win64-mingw\bin
+         ficam na pasta bin. 
+         no video que vi esse caminho era a pasta lib como não achei eles na lib vi o nome dos 
+         arquivos copiei e colei mas no arquivo ssh que baixei esses arquivos estavam com esse nome e dentro da pasta bin.
+         esses dois arquivos foram colados em C:\Users\brito\Desktop\C++\libCurl\bin dentro da bin do projeto raiz.
+         resumindo copiei eles da pasta do download ssh e colei dentro da bin do meu projeto raiz.
+         
+         os dois arqivos abaixo no video foram copiados de dentro da pasta Release dentro do projeto raiz para a 
+         pasta bin dentro do projeto raiz. pra mim vale os dois no inicio tenho documentado as pastas e por isso 
+         na hora de fazer vamos olhar e colocar os arquivos no lugar certo. a regra aqui é a seguinte primeiramente
+         vamos fazer o projeto e a medida que precisar veremos se é de uma ou outra pasta que devemos copiar.
+         depois ainda colei dentro de: C:\Users\brito\Desktop\C++\libCurl\bin\Release
+         dentro da pasta Release colei libcurl-x64.dll
+
+         e tambem colei nesse caminho: C:\Users\brito\Desktop\C++\libCurl\bin\Debug
+         dentro da pasta Debug colei libcurl-x64.dll
+
+
+      9° Agora vamos em: C:\Program Files\CodeBlocks 
+         no nosso pc onde está instalado o codeblocks e copiamos as seguintes pastas:
+         libgcc_s_seh-1.dll 
+         libstdc++-6.dll
+         libwinpthread-1.dll
+         e colamos essas 3 dlls em nosso projeto raiz. C:\Users\brito\Desktop\C++\libCurl\bin
+         dentro da pasta bin.
+         no videos vemos ele mudar de Debug para Release no codeblocks. e no video ele cola essas 
+         3 dlls dentro de release C:\Users\brito\Desktop\C++\libCurl\bin\Release 
+         como mostrei acima não colei essas 3 dlls dentro dessa pasta no meu colei dentro da pasta bin do meu projeto.
+         e na pasta release do meu projeto está como mostrei acima. especificando 
+         dentro da minha release so tem:
+         Release
+          |——— libCurl.exe
+          |——— libcurl-x64.dll
+   
+     10° agora podemos executar o arquivo abaixo e depois de executar conseguimos os dados da api rick end morty
+         
+
+___________________________________________________________________________________________________
+main.cpp
+
+#include <stdio.h>
+#include <curl/curl.h>
+ 
+int main(void)
+{
+  CURL *curl;
+  CURLcode res;
+ 
+  curl = curl_easy_init();
+  if(curl) {
+    curl_easy_setopt(curl, CURLOPT_URL, "http://rickandmortyapi.com/api/character/12");
+    /* example.com is redirected, so we tell libcurl to follow redirection */
+    curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
+ 
+    /* Perform the request, res will get the return code */
+    res = curl_easy_perform(curl);
+    /* Check for errors */
+    if(res != CURLE_OK)
+      fprintf(stderr, "curl_easy_perform() failed: %s\n",
+              curl_easy_strerror(res));
+ 
+    /* always cleanup */
+    curl_easy_cleanup(curl);
+  }
+  return 0;
+}
+
+
+SAIDA:
+
+"http://rickandmortyapi.com/api/character/1"
+
+{"id":1,"name":"Rick Sanchez","status":"Alive","species":"Human","type":"","gender":"Male","origin":{"name":"Earth (C-137)","url":"https://rickandmortyapi.com/api/location/1"},"location":{"name":"Citadel of Ricks","url":"https://rickandmortyapi.com/api/location/3"},"image":"https://rickandmortyapi.com/api/character/avatar/1.jpeg","episode":["https://rickandmortyapi.com/api/episode/1","https://rickandmortyapi.com/api/episode/2","https://rickandmortyapi.com/api/episode/3","https://rickandmortyapi.com/api/episode/4","https://rickandmortyapi.com/api/episode/5","https://rickandmortyapi.com/api/episode/6","https://rickandmortyapi.com/api/episode/7","https://rickandmortyapi.com/api/episode/8","https://rickandmortyapi.com/api/episode/9","https://rickandmortyapi.com/api/episode/10","https://rickandmortyapi.com/api/episode/11","https://rickandmortyapi.com/api/episode/12","https://rickandmortyapi.com/api/episode/13","https://rickandmortyapi.com/api/episode/14","https://rickandmortyapi.com/api/episode/15","https://rickandmortyapi.com/api/episode/16","https://rickandmortyapi.com/api/episode/17","https://rickandmortyapi.com/api/episode/18","https://rickandmortyapi.com/api/episode/19","https://rickandmortyapi.com/api/episode/20","https://rickandmortyapi.com/api/episode/21","https://rickandmortyapi.com/api/episode/22","https://rickandmortyapi.com/api/episode/23","https://rickandmortyapi.com/api/episode/24","https://rickandmortyapi.com/api/episode/25","https://rickandmortyapi.com/api/episode/26","https://rickandmortyapi.com/api/episode/27","https://rickandmortyapi.com/api/episode/28","https://rickandmortyapi.com/api/episode/29","https://rickandmortyapi.com/api/episode/30","https://rickandmortyapi.com/api/episode/31","https://rickandmortyapi.com/api/episode/32","https://rickandmortyapi.com/api/episode/33","https://rickandmortyapi.com/api/episode/34","https://rickandmortyapi.com/api/episode/35","https://rickandmortyapi.com/api/episode/36","https://rickandmortyapi.com/api/episode/37","https://rickandmortyapi.com/api/episode/38","https://rickandmortyapi.com/api/episode/39","https://rickandmortyapi.com/api/episode/40","https://rickandmortyapi.com/api/episode/41","https://rickandmortyapi.com/api/episode/42","https://rickandmortyapi.com/api/episode/43","https://rickandmortyapi.com/api/episode/44","https://rickandmortyapi.com/api/episode/45","https://rickandmortyapi.com/api/episode/46","https://rickandmortyapi.com/api/episode/47","https://rickandmortyapi.com/api/episode/48","https://rickandmortyapi.com/api/episode/49","https://rickandmortyapi.com/api/episode/50","https://rickandmortyapi.com/api/episode/51"],"url":"https://rickandmortyapi.com/api/character/1","created":"2017-11-04T18:48:46.250Z"}
+Process returned 0 (0x0)   execution time : 0.266 s
+Press any key to continue.
+
+
+trocando o id: "http://rickandmortyapi.com/api/character/12"
+
+{"id":12,"name":"Alexander","status":"Dead","species":"Human","type":"","gender":"Male","origin":{"name":"Earth (C-137)","url":"https://rickandmortyapi.com/api/location/1"},"location":{"name":"Anatomy Park","url":"https://rickandmortyapi.com/api/location/5"},"image":"https://rickandmortyapi.com/api/character/avatar/12.jpeg","episode":["https://rickandmortyapi.com/api/episode/3"],"url":"https://rickandmortyapi.com/api/character/12","created":"2017-11-04T20:32:33.144Z"}
+Process returned 0 (0x0)   execution time : 0.359 s
+Press any key to continue.
+___________________________________________________________________________________________________
+                   +————————————————————————————————————————+
+                   |               24.02.2022               |
+                   |               CRISTIANO                |
+                   |               DEUS SEJA                |
+                   |                LOUVADO                 |
+                   +————————————————————————————————————————+

@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <windows.h>
+#define ANSI_COLOR_RED      "\x1b[31m" //cores em ANSI utilizadas
+#define ANSI_COLOR_GRAY     "\e[0;37m"
+#define VERMELHO     "\x1b[31m"
+#define VERDE        "\x1b[32m"
+#define AZUL         "\x1b[34m"
+#define RESET        "\x1b[0m"
+
+void gotoxy(int x, int y);
+
+int main()
+{
+    system("title JANELA  C");
+    system("color 61");
+    int i;
+    // loop infinito
+    for(;;)
+    {
+
+    // linha superior
+    for(i=0; i<20; i++)
+    {
+       //system("COLOR 5");
+       gotoxy(i,0);
+       printf(AZUL "%c" RESET,219);
+       usleep(1000*01);
+       //system("cls");
+    }
+    printf("\n");
+    // linha lateral
+    for(i=0; i<20; i++)
+    {
+       //system("COLOR 61");
+       gotoxy(20,i);
+       printf(VERDE "%c" RESET,219);
+       usleep(1000*01);
+       //system("cls");
+    }
+    // linha inferior
+    for(i=20; i>=0; i--)
+    {
+       //system("COLOR 61");
+       gotoxy(i,20);
+       printf(AZUL "%c" RESET,219);
+       usleep(1000*01);
+       //system("cls");
+    }
+    // linha lateral ESQUERDA
+    for(i=20; i>0; i--)
+    {
+       gotoxy(0,i);
+       printf(VERMELHO "%c" RESET,219);
+       usleep(1000*01);
+       //system("cls");
+    }
+    Sleep(100);
+    system("cls");
+    Sleep(100);
+    //system("color 38");
+  }// fim loop infinito
+    return 0;
+};
+void gotoxy(int x, int y)
+{
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),(COORD){x,y});
+}

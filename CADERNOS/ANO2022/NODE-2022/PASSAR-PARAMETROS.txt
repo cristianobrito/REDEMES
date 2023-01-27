@@ -1,0 +1,219 @@
+                               [ NODEJS CSS ]
+			         2° versão 
+___________________________________________________________________________________________________
+1. mkdir ROLA
+   cd ROLA
+   npm init
+   npm install express --save
+   npm install nodemon --save
+   npm install express-handlebars --save
+___________________________________________________________________________________________________
+2. ESTRUTURA DE ARQUIVOS
+   .
+  ROLA
+   |—— css
+   |   |———— style.css
+   |
+   |—— js
+   |   |———— soma.js
+   |
+   |—— views
+   |   |———— layouts
+   |   |     |———— main.handlebars
+   |   |
+   |   |———— index.handlebars
+   |
+   |—— index.js
+   |—— package.json
+   |—— package-lock.json
+   |—— node_modules
+
+   [ 5 diretorios e 7 arquivos ]
+___________________________________________________________________________________________________
+3. package.json
+
+{
+  "name": "rola",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "nodemon": "^2.0.15"
+  }
+}
+___________________________________________________________________________________________________
+4. style.css
+
+body{
+    text-align: center;
+    background: black;
+}
+
+h1{
+    color: aquamarine;
+}
+
+button{
+    background-color: black;
+    color: rgb(121, 255, 80);
+}
+
+input{
+    background-color: black;
+    text-align: center;
+    color: cyan;
+}
+
+a{
+    color: deeppink;
+}
+
+h3{
+    color: rgb(255, 192, 20);
+}
+___________________________________________________________________________________________________
+5. soma.js
+
+alert('ola')
+___________________________________________________________________________________________________
+6. index.handlebars
+
+<h1>FORMATANDO O NODEJS</h1>
+<h2>cris</h2>
+<a href="vai">VAI</a>
+<hr>
+<form>
+    <input type="text" placeholder="digite seu nome">
+    <button>ENVIAR</button>
+</form>
+{{id}}
+___________________________________________________________________________________________________
+7. main.handlebars
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>ESTUDANDO</title>
+</head>
+<body>
+    {{{body}}}
+    
+    <script src="/js/soma.js"></script>
+</body>
+</html>
+___________________________________________________________________________________________________
+8. index.js
+
+const express    = require('express')
+const handlebars = require('express-handlebars');
+const bodyParser = require('body-parser')
+const app        = express();
+
+app.engine("handlebars", handlebars.engine({ defaultLayout: 'main' }))
+app.set('view engine', 'handlebars')
+app.set('views', './views')
+app.use('/css', express.static('css'))
+app.use('/js', express.static('js'))
+
+app.get('/', function(req, res){
+    res.render('index')
+})
+app.get('/js',function(req, res){
+    res.sendFile(__dirname+'/js/somar.js')
+})
+ 
+app.listen(3000)
+
+___________________________________________________________________________________________________
+9. EXPLICAÇÕES
+   colocando '/:id' eu exijo que um parametro id seja passado. sendo assim se eu for na url e digitar
+   da erro. referencia tirada de:  https://www.youtube.com/watch?v=E3JRebg2gCs
+   para dar certo voce deve digitar na url um id ex: localhost:3000/23 
+   esse numero nos que colocamos pode ser qualquer um isso seria um id
+   app.get('/:id', function(req, res){
+    res.render('index')
+   })
+   
+   colocando o ponto de interrogação no fim o parametro fica opcional.ele aceita com ou sem id.
+   app.get('/:id?', function(req, res){
+    res.render('index')
+   })
+
+   como eu pego esse id? executando essa linha de codigo abaixo e passando um id na url nos 
+   podemos ve-lo no console.
+   app.get('/:id', function(req, res){
+    console.log(req.params.id)
+   })
+
+   como eu mando esse id para a minha pagina?
+   app.get('/:id', function(req, res){
+    res.render('index', {id:req.params.id})
+   })
+
+   adicionando esse id a pagina
+   <h1>FORMATANDO O NODEJS</h1>
+   <h2>cris</h2>
+   <a href="vai">VAI</a>
+   <hr>
+   <form>
+    <input type="text" placeholder="digite seu nome">
+    <button>ENVIAR</button>
+    </form>
+    <h3>{{id}}</h3>
+   
+   OBS: precisamos dessas 2 importações para usarmos os arquivos js e css
+   app.use('/css', express.static('css'))
+   app.use('/js', express.static('js'))
+   <link rel="stylesheet" href="/css/style.css">
+   <script src="/js/soma.js"></script>
+   
+   caso tivermos um diretorio de imagens
+   app.use('/img', express.static('img'))
+
+   essa parte pode ser removida isso é a segunda forma de importas e linkar os arquivos 
+   temos que escolher uma ou outra.
+   app.get('/js',function(req, res){
+    res.sendFile(__dirname+'/js/somar.js')
+   })
+___________________________________________________________________________________________________
+10. ESCLARECENDO A SEGUNDA MANEIRA DE LINKAR OS PROJETOS
+    
+    colocamos os nomes dos diretorios
+    <link rel="stylesheet" href="css">
+    <script src="js"></script>
+    
+    criamos duas rotas com o nome do diretorio e o caminho absoluto.
+    app.get('/js',function(req, res){
+    res.sendFile(__dirname+'/js/somar.js')
+    })
+    app.get('/css',function(req, res){
+    res.sendFile(__dirname+'/css/style.css')
+    })
+
+___________________________________________________________________________________________________
+11. EXECUTANDO
+    nodemon index.js
+    npm start
+
+___________________________________________________________________________________________________
+                                     
+                                +————————————+
+                                | 15/02/2022 |
+                                |    FIM     |
+                                +————————————+
+                             *********************
+                             * DEUS SEJA LOUVADO *
+                             *********************
+

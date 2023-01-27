@@ -1,0 +1,75 @@
+                  INICIANDO PROJETO EXPRESS
+
+
+#25
+===========================================================
+
+
+    INICIO:
+         Começe criando um projeto e instalando 
+         as dependencias>
+
+
+C:\Users\brito\Desktop>cd node-dark
+
+C:\Users\brito\Desktop\NODE-DARK>NPM INSTALL --SAVE EXPRESS
+Unknown command: "INSTALL"
+
+To see a list of supported npm commands, run:
+  npm help
+
+C:\Users\brito\Desktop\NODE-DARK>npm install --save express
+
+added 50 packages, and audited 51 packages in 7s
+
+2 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\brito\Desktop\NODE-DARK>npm install --save express-handlebars
+
+added 18 packages, and audited 69 packages in 8s
+
+3 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\brito\Desktop\NODE-DARK>npm install body-parser --save
+
+up to date, audited 69 packages in 1s
+
+3 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\brito\Desktop\NODE-DARK>npm install --save mongoose
+
+added 28 packages, and audited 97 packages in 17s
+
+7 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\brito\Desktop\NODE-DARK>
+
+===========================================================
+
+
+
+
+
+
+
+
+    __________________________________________________
+
+
+
+                           Autor:
+                    Cristiano Oliveira
+                   britonano@gmail.com
+                         22/03/2022

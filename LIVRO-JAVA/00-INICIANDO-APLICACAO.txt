@@ -1,0 +1,37 @@
+                   API REST JAVA SPRING BOOT
+
+
+
+    0.0  entre no site 
+         spring.io
+
+    0.1  acesse
+         https://start.spring.io/
+
+    0.2  depois de baixar o projeto descompactamos ele 
+         onde queremos.
+         coloquei em 
+         C:\Users\brito\eclipse-workspace
+
+    0.3  depois disso abra o eclipse e importe 
+         o projeto
+
+
+
+
+
+
+
+
+    =======================================================
+    bibliografia:
+         https://www.youtube.com/watch?v=bpBRFNKg8k4&list=PL8iIphQOyG-D2FP9wkg12AavzmVRWEcnJ
+
+         aula: https://www.youtube.com/watch?v=LmqVHTOqcxs&list=PL8iIphQOyG-D2FP9wkg12AavzmVRWEcnJ&index=2
+                   
+
+
+                   autor: cristiano oliveira
+                         28/06/2022
+                     britonano@gmail.com
+  

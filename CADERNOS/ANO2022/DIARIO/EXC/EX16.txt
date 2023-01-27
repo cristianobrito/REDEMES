@@ -1,0 +1,51 @@
+                      EXEMPLOS DE CÓDIGO C
+                             [EX16]
+
+EX16:
+===========================================================
+#include <stdio.h>
+#include <stdlib.h>
+/*
+    EX16:
+         SIZEOF:
+         sizeof(int)
+         sizeof(char)
+         sizeof(float)
+         sizeof(double)
+
+         4 * 8 = 32 bits
+         um inteiro ocupa 32 bits
+         de memoria
+         Um inteiro tem 32 caixinhas na
+         memoria para ultilizar-mos
+         ele guarda 32 lugares para
+         0 e 1 toda informação
+         é guardada assim no pc.
+         obs sizeof não é função
+         ele é um operador ou uma constante
+*/
+int main()
+{
+    float x = 1.0;
+    printf("Tamanho na memoria de um float: %d bytes\n", sizeof(float));
+    printf("Tamanho na memoria de uma variavel float:  %d bytes\n", sizeof x);
+    printf("Tamanho na memoria de uma variavel float : %d bytes\n", sizeof(x));
+    printf("Tamanho na memoria de um int: %d bytes\n", sizeof(int));
+
+    return 0;
+}
+===========================================================
+                                                      [FIM]
+
+
+
+
+
+
+    __________________________________________________
+                        
+
+                           Autor:
+                     Cristiano Oliveira 
+                  Email: britonano@gmail.com
+                         22/03/2022     

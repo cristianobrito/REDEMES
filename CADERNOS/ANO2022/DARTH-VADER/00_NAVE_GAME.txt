@@ -1,0 +1,472 @@
+#include <stdio.h>
+#include <string.h>
+#include <io.h>
+#include <ctype.h>
+//#define _WIN32_WINNT 0x0601
+#include <windows.h>
+#include <Wincon.h>
+ 
+//******************* BIBLIOTECA
+ 
+typedef struct _CONSOLE_SCREEN_BUFFER_INFOEX {
+  ULONG      cbSize;
+  COORD      dwSize;
+  COORD      dwCursorPosition;
+  WORD       wAttributes;
+  SMALL_RECT srWindow;
+  COORD      dwMaximumWindowSize;
+  WORD       wPopupAttributes;
+  BOOL       bFullscreenSupported;
+  COLORREF   ColorTable[16];
+} CONSOLE_SCREEN_BUFFER_INFOEX, *PCONSOLE_SCREEN_BUFFER_INFOEX;
+ 
+ 
+typedef struct _CONSOLE_FONT_INFOEX {
+  ULONG cbSize;
+  DWORD nFont;
+  COORD dwFontSize;
+  UINT  FontFamily;
+  UINT  FontWeight;
+  WCHAR FaceName[LF_FACESIZE];
+} CONSOLE_FONT_INFOEX, *PCONSOLE_FONT_INFOEX;
+ 
+ 
+BOOL WINAPI GetCurrentConsoleFontEx(HANDLE hConsoleOutput, BOOL bMaximumWindow, PCONSOLE_FONT_INFOEX lpConsoleCurrentFontEx);
+BOOL WINAPI SetCurrentConsoleFontEx(HANDLE hConsoleOutput, BOOL bMaximumWindow, PCONSOLE_FONT_INFOEX lpConsoleCurrentFontEx);
+BOOL WINAPI SetConsoleDisplayMode ( HANDLE hConsoleOutput , DWORD dwFlags , PCOORD lpNewScreenBufferDimensions ) ;
+ 
+void Hidecursor()
+{
+   HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+   CONSOLE_CURSOR_INFO info;
+   info.dwSize = 0;
+   info.bVisible = FALSE;
+   SetConsoleCursorInfo(consoleHandle, &info);
+}
+ 
+int ConsoleRedimensione(int y, int x)
+{
+    HANDLE console= GetStdHandle(STD_OUTPUT_HANDLE);
+    SMALL_RECT windows= { 0, 0, (y - 1), (x - 1) };
+    COORD screen= { y, x };
+ 
+    //BOOL acesso= SetConsoleScreenBufferSize(console, screen);
+    SetConsoleScreenBufferSize(console, screen);
+    BOOL retorn= SetConsoleWindowInfo(console, 1, &windows);
+ 
+    return retorn;
+}
+ 
+COORD GetConsoleCursorPosition()
+{
+    HANDLE hConsoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
+ 
+    CONSOLE_SCREEN_BUFFER_INFO cbsi;
+ 
+    if (GetConsoleScreenBufferInfo(hConsoleOutput, &cbsi))
+    {
+        return cbsi.dwCursorPosition;
+    }
+ 
+        // The function failed. Call GetLastError() for details.
+    COORD invalid = { 0, 0 };
+    return invalid;
+ 
+}
+ 
+void SetNumLock( BOOL bState )
+{
+      BYTE keyState[256];
+ 
+      GetKeyboardState((LPBYTE)&keyState);
+      if( (bState && !(keyState[VK_NUMLOCK] & 1)) ||
+          (!bState && (keyState[VK_NUMLOCK] & 1)) )
+      {
+      // Simulate a key press
+         keybd_event( VK_NUMLOCK,
+                      0x45,
+                      KEYEVENTF_EXTENDEDKEY | 0,
+                      0 );
+ 
+      // Simulate a key release
+         keybd_event( VK_NUMLOCK,
+                      0x45,
+                      KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP,
+                      0);
+      }
+}
+ 
+ 
+void Gotoxy(int x, int y)
+{
+    HANDLE hCon;
+    COORD dwPos;
+ 
+    dwPos.X = x;
+    dwPos.Y = y;
+    hCon = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleCursorPosition(hCon,dwPos);
+}
+ 
+int GetFontSize(HANDLE windowHandle, COORD *size)
+    {
+     CONSOLE_FONT_INFOEX font = { sizeof(CONSOLE_FONT_INFOEX) };
+ 
+    if (!GetCurrentConsoleFontEx(windowHandle, 0, &font))
+        {
+        return 0;
+        }
+ 
+    *size = font.dwFontSize;
+ 
+    return 1;
+    }
+ 
+int SetFontSize(HANDLE windowHandle, COORD size)
+    {
+    CONSOLE_FONT_INFOEX font = { sizeof(CONSOLE_FONT_INFOEX) };
+ 
+    if (!GetCurrentConsoleFontEx(windowHandle, 0, &font))
+        {
+        return 0;
+        }
+ 
+    font.dwFontSize = size;
+ 
+    if (!SetCurrentConsoleFontEx(windowHandle, 0, &font))
+        {
+        return 0;
+        }
+ 
+    return 1;
+    }
+ 
+void Retangulo( int ho, int vo, int larg, int alt )
+{
+    int h, v;
+     // Linhas horizontais
+     for(h=ho; h < ho+larg; h++){
+        Gotoxy (h, vo); printf ("%c", 205);
+        Gotoxy(h, vo+alt); printf ("%c", 205);
+     }
+ 
+     // Linhas verticais
+     for( v=vo; v < vo+alt; v++){
+        Gotoxy (ho,v);  printf ("%c", 186);
+        Gotoxy(ho+larg,v);  printf ("%c", 186);
+     }
+ 
+     // Cantos
+     Gotoxy  (ho,vo);    printf ("%c", 201);
+     Gotoxy (ho,vo+alt);    printf ("%c", 200);
+     Gotoxy (ho+larg,vo);    printf ("%c", 187);
+     Gotoxy(ho+larg,vo+alt);    printf ("%c", 188);
+}
+ 
+void SetWindow( int mode )
+{
+ 
+    HANDLE Handle = GetStdHandle(STD_OUTPUT_HANDLE);
+ 
+    SetConsoleDisplayMode( Handle, mode, 0 );     // Get Handle
+ 
+    if (mode==2) //janela
+    {
+        ConsoleRedimensione(80, 25);
+    }
+ 
+}
+ 
+void SetColor( unsigned int color )
+{
+ 
+    SetConsoleTextAttribute( GetStdHandle( STD_OUTPUT_HANDLE ), color );
+ 
+ 
+}
+ 
+//************* JOGO AQUI
+ 
+typedef struct{
+ 
+    int posx;
+    int posy;
+    int vely;
+    int oldx;
+    int oldy;
+    int state;
+    int tipo;
+ 
+} Sprite;
+ 
+#define MAXTIROS 30
+#define MAXMETEO 200
+ 
+static Sprite nave;
+ 
+static Sprite tiro[MAXTIROS];
+ 
+static Sprite meteoro[MAXMETEO];
+ 
+static int score;
+ 
+static int game_state;
+ 
+ 
+void VerificaTeclado()
+{
+    int i, j, result;
+ 
+    char letras[]={ 'M', 'K', 'Q', ' ',  0 };
+ 
+    for ( i=0;  letras[i] ; i++ )
+    {
+        result = GetAsyncKeyState( letras[i] );
+ 
+        if(result == -32767)
+        {
+                //printf("%c", i);
+            if (letras[i]=='M')
+            {
+                nave.oldx = nave.posx;
+                nave.oldy = nave.posy;
+                //nave.posx+=1;
+                if ( nave.posy < 25 )
+                    nave.posy+=1;
+ 
+            }
+ 
+            if (letras[i]=='K')
+            {
+                nave.oldx = nave.posx;
+                nave.oldy = nave.posy;
+                //nave.posx+=1;
+                if ( nave.posy > 0 )
+                    nave.posy-=1;
+            }
+ 
+            if (letras[i]==' ')
+            {
+                for ( j=0; j<MAXTIROS; j++ )
+                {
+                    if ( tiro[j].state==0 )
+                    {
+                        tiro[j].posy=nave.posy;
+                        tiro[j].posx=nave.posx;
+                        tiro[j].state=1;
+ 
+                        break;
+                    }
+                }
+ 
+            }
+ 
+            if ( letras[i]=='Q')
+            {
+                exit(0);
+            }
+        }
+    }
+ 
+}
+ 
+void DesenhaTela()
+{
+ 
+    int j;
+ 
+ 
+ 
+    Gotoxy( 20, 27 );
+    printf("SCORE: %04d", score );
+ 
+    if (game_state==1)
+    {
+        Gotoxy( 20, 29 );
+        printf("GAME OVER");
+    }
+ 
+    Gotoxy( nave.oldx, nave.oldy );
+ 
+    printf("  ");
+ 
+ 
+    Gotoxy( nave.posx, nave.posy );
+ 
+    //SetColor(5);
+    printf(">=");
+ 
+    for ( j=0; j<MAXTIROS; j++ )
+    {
+        if ( tiro[j].state )
+        {
+            //tiro[j].posy=nave.posy;
+            tiro[j].oldy = tiro[j].posy;
+            tiro[j].oldx = tiro[j].posx;
+ 
+            //tiro[j].state=1;
+            if ( tiro[j].posx > 80 || tiro[j].state>1 )
+            {
+                Gotoxy( tiro[j].oldx, tiro[j].oldy );
+                printf(" ");
+                tiro[j].state=0;
+                tiro[j].posx=0;
+                tiro[j].posy=0;
+                continue;
+            }
+ 
+            tiro[j].posx += 2;
+ 
+            Gotoxy( tiro[j].oldx, tiro[j].oldy );
+            printf(" ");
+            Gotoxy( tiro[j].posx, tiro[j].posy );
+            printf("*");
+ 
+        }
+    }
+ 
+ 
+ 
+    for ( j=0; j<MAXMETEO; j++ )
+    {
+        if ( meteoro[j].state )
+        {
+            //meteoro[j].posy=nave.posy;
+            meteoro[j].oldy = meteoro[j].posy;
+            meteoro[j].oldx = meteoro[j].posx;
+ 
+            //meteoro[j].state=1;
+            if ( meteoro[j].posx <= 0 || meteoro[j].posy<=0 || meteoro[j].posy>=25 || meteoro[j].state>1 )
+            {
+                Gotoxy( meteoro[j].oldx, meteoro[j].oldy );
+                printf(" ");
+                meteoro[j].state=0;
+                meteoro[j].posx=0;
+                meteoro[j].posy=0;
+                continue;
+            }
+ 
+            meteoro[j].posx -= 1;
+ 
+ 
+            Gotoxy( meteoro[j].oldx, meteoro[j].oldy );
+            printf(" ");
+            Gotoxy( meteoro[j].posx, meteoro[j].posy );
+            printf("0");
+ 
+ 
+        }
+    }
+}
+ 
+void CriaMeteoro()
+{
+    int i;
+ 
+    for (i=0;i<MAXMETEO;i++)
+    {
+        if ( meteoro[i].state==0 )
+        {
+            meteoro[i].state=1;
+            meteoro[i].posx=80;
+            meteoro[i].posy=rand()%25;
+ 
+            break;
+        }
+    }
+}
+ 
+void VerificaTiro()
+{
+    int i, j;
+ 
+    for (i=0;i<MAXTIROS;i++)
+    {
+        for (j=0;j<MAXMETEO;j++)
+        {
+            if ( meteoro[j].state==1 && tiro[i].state==1 )
+            if ( abs( meteoro[j].posx - tiro[i].posx ) <= 1 )
+            {
+                if (  abs( meteoro[j].posy - tiro[i].posy ) == 0 )
+                {
+                    tiro[i].state=2;
+ 
+                    meteoro[j].state=2;
+ 
+                    score++;
+ 
+                    break;
+ 
+                }
+            }
+        }
+    }
+}
+ 
+void VerificaColisao()
+{
+    int j;
+ 
+    for (j=0;j<MAXMETEO;j++)
+    {
+        if ( meteoro[j].state==1 )
+        {
+            if ( meteoro[j].state==1 && meteoro[j].posy == nave.posy && (abs( nave.posx - meteoro[j].posx)<=1) )
+            {
+                game_state=1;
+                return;
+            }
+        }
+    }
+}
+ 
+int main()
+{
+    int cont;
+ 
+    SetWindow(1);
+    Hidecursor();
+    SetColor(1);
+    system("cls");
+    Gotoxy( 20, 29 );
+    printf("APERTE TECLA PARA INICIAR");
+    getch();
+ 
+    nave.posy = nave.oldy = 10;
+    nave.posx = nave.oldx = 20;
+ 
+    cont =0;
+ 
+    do
+    {
+ 
+        CriaMeteoro();
+ 
+        VerificaTeclado();
+ 
+        VerificaTiro();
+ 
+        VerificaColisao();
+ 
+        DesenhaTela();
+ 
+        Sleep(20);
+    }
+    while(game_state==0);
+ 
+    system("cls");
+ 
+    Gotoxy( 20, 27 );
+    printf("SCORE: %04d", score );
+ 
+    Gotoxy( 20, 29 );
+    printf("GAME OVER");
+ 
+    do
+    {
+ 
+    } while ( getch() != 'q');
+ 
+ 
+    return 0;
+}

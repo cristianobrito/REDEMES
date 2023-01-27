@@ -1,0 +1,76 @@
+
+                      EXEMPLOS DE CÓDIGO C
+                             [EX09]
+
+EX09
+===========================================================
+#include <stdio.h>
+#include <stdlib.h>
+#include <Windows.h>
+#include <unistd.h>
+#include <conio.h>
+
+#define ANSI_COLOR_RED      "\x1b[31m"
+#define ANSI_COLOR_GRAY     "\e[0;37m"
+#define VERMELHO     "\x1b[31m"
+#define VERDE        "\x1b[32m"
+#define AZUL         "\x1b[34m"
+#define C_YELLOW    "\033[33m"
+#define C_MAGENTA   "\033[35m"
+#define C_CYAN      "\033[36m"
+#define UNDERSCORE  "\033[4m"
+#define BOLD        "\033[1m"
+#define REVERSE     "\033[7m"
+#define BG_MAGENTA  "\033[45m"
+#define RESET        "\x1b[0m"
+
+/*
+    EX09:
+         LEITURA DE caracteres:
+         lendo 2 caracteres
+         fazendo a limpeza do buffer do teclado.
+
+*/
+void gotoxy(int x, int y);
+
+int main()
+{
+    system("title EX09 LIMPEZA DO BUFFER");
+    int i;
+    char a, b;
+
+    printf(C_YELLOW"Digite duas letras: "C_YELLOW);
+    scanf("%c %c", &a, &b);
+    // espaçon é o comando para o computador desconsiderar
+    // o enter o tab e o espaço
+    printf(C_CYAN "Primeira letra: %c\nSegunda letra: %c\n"C_CYAN, a, b);
+
+
+
+    printf(VERMELHO "\n\n\t\t\t\t\t    ATENCAO" VERMELHO);
+    printf("\n\n\n");
+    printf(VERDE"\n\t\t\t\tAPERTE QUALQUER TECLA PRA SAIR"VERDE);
+    getch();
+    return 0;
+}
+void gotoxy(int x, int y)
+{
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),(COORD){x,y});
+
+     //funcao para deixar o cursor invisivel
+     HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+     CONSOLE_CURSOR_INFO info;
+     info.dwSize = 100;
+     info.bVisible = FALSE;
+     SetConsoleCursorInfo(consoleHandle, &info);
+}
+===========================================================
+                                                      [FIM]
+
+
+
+
+    _______________________________________________________
+                             Autor:
+                       Cristiano Oliveira
+                           18/03/2022

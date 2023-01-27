@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <Windows.h>
+#include <unistd.h>
+#include <conio.h>
+
+// PROTOTIPO
+void mgotoxy(int x, int y);
+// variaveis globais
+int x,d=2,seta=2,cx[300]={1,2},cy[300]={7,7},t=1,mx,my;
+char tecla ='a';
+// =================
+int main ()
+{
+     system("title CORES");
+     //for(;;)
+     {
+
+
+            for( x=0; x<10; x++)
+            {
+                system("color 1d");
+                mgotoxy(0,x);
+                printf("%c",219);
+
+            };
+            // ==================
+            for( x=0; x<20; x++)
+            {
+                system("color 38");
+                mgotoxy(x,0);
+                printf("%c",219);
+
+            };
+            // ==================
+            for( x=0; x<10; x++)
+            {
+                system("COLOR 61");
+                mgotoxy(20,x);
+                printf("%c",219);
+
+            };
+            // ==================
+            for( x=0; x<21; x++)
+            {
+                system("COLOR 61");
+                mgotoxy(x,10);
+                printf("%c",219);
+
+            };
+            // ==================
+
+  //}// LOOP INFINITO
+   return 0;
+ }
+};
+
+// definição da função
+void mgotoxy(int x, int y)
+{
+  SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),(COORD){x,y});
+}
+/*    0 = Preto        8 = Cinza
+      1 = Azul         9 = Azul claro
+      2 = Verde        A = Verde claro
+      3 = Verde-água   B = Verde-água claro
+      4 = Vermelho     C = Vermelho claro
+      5 = Roxo         D = Lilás
+      6 = Amarelo      E = Amarelo claro
+      7 = Branco       F = Branco brilhante
+*/
+// / a beep b espaço f limpa tela n newline r fim de linha t tab v tab vertical
+// gotoxy(coluna, linha);

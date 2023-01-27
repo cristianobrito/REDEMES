@@ -1,0 +1,167 @@
+                                  [ NODEJS ]   
+                                     ORM
+                                SEQUELIZE MODELS
+___________________________________________________________________________________________________
+   ESTRUTURA:
+        .
+     AULA-NODE
+     |
+     |————— app.js
+     |
+     |————— app2.js
+     |
+     |————— html
+     |      |————— index.html
+     |      |————— home.js
+     |
+     |————— node_modules
+     |————— package-lock.json
+     |————— package.json
+ 
+     [ 3 diretorios e 6 arquivos ]
+___________________________________________________________________________________________________
+   package.json
+
+   {
+   "dependencies": {
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.16.2"
+   }
+   }    
+   
+   // ignore as outras dependencias preste atenção apenas ao sequelize
+
+___________________________________________________________________________________________________
+   app2.js
+
+   const Sequelize = require('sequelize')
+   // 'nome do banco de dados', 'usuario', 'senha'
+   const sequelize = new Sequelize('sistemaDeCadastro', 'root', '', {
+    host:    'localhost',
+    dialect: 'mysql'
+   })
+
+   sequelize.authenticate()
+   .then(function(){
+      console.log("CONECTADO AO BD")
+   })
+   .catch(function(erro){
+      console.log("FALHA NÃO CONECTADO"+erro)
+   })
+    
+   // define um modelo uma tabela
+   const Postagem = sequelize.define('postagens',{
+        titulo: {
+            type: Sequelize.STRING
+        },
+         conteudo: {
+            type: Sequelize.TEXT
+        }
+   })
+   // sincronizando com o mysql
+   Postagem.sync({force: true})
+___________________________________________________________________________________________________
+   EXECUTANDO:
+   C:\Users\brito\Desktop\AULA-NODE>nodemon app2.js
+   [nodemon] 2.0.15
+   [nodemon] to restart at any time, enter `rs`
+   [nodemon] watching path(s): *.*
+   [nodemon] watching extensions: js,mjs,json
+   [nodemon] starting `node app2.js`
+   Executing (default): SELECT 1+1 AS result
+   Executing (default): DROP TABLE IF EXISTS `postagens`;
+   CONECTADO AO BD
+   Executing (default): CREATE TABLE IF NOT EXISTS `postagens` (`id` INTEGER NOT NULL auto_increment , `titulo` VARCHAR(255), `conteudo` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+   Executing (default): SHOW INDEX FROM `postagens`
+   [nodemon] clean exit - waiting for changes before restart
+___________________________________________________________________________________________________
+   NO PROMPT DO MYSQL:
+
+================================
+   mysql> show databases;
+   +--------------------+
+   | Database           |
+   +--------------------+
+   | crud               |
+   | information_schema |
+   | lojarj             |
+   | mysql              |
+   | performance_schema |
+   | phpmyadmin         |
+   | sistemadecadastro  |
+   | stone              |
+   | test               |
+   +--------------------+
+   9 rows in set (0.00 sec)
+
+================================
+   mysql> use sistemaDeCadastro;
+   Database changed
+
+=================================
+  mysql> show tables;
+   +-----------------------------+
+   | Tables_in_sistemadecadastro |
+   +-----------------------------+
+   | usuarios                    |
+   +-----------------------------+
+   1 row in set (0.00 sec)
+
+   mysql> show tables;
+   +-----------------------------+
+   | Tables_in_sistemadecadastro |
+   +-----------------------------+
+   | postagens                   |
+   | usuarios                    |
+   +-----------------------------+
+   2 rows in set (0.00 sec)
+
+   mysql>
+
+==================================
+   mysql> desc postagens;
+   +-----------+--------------+------+-----+---------+----------------+
+   | Field     | Type         | Null | Key | Default | Extra          |
+   +-----------+--------------+------+-----+---------+----------------+
+   | id        | int(11)      | NO   | PRI | NULL    | auto_increment |
+   | titulo    | varchar(255) | YES  |     | NULL    |                |
+   | conteudo  | text         | YES  |     | NULL    |                |
+   | createdAt | datetime     | NO   |     | NULL    |                |
+   | updatedAt | datetime     | NO   |     | NULL    |                |
+   +-----------+--------------+------+-----+---------+----------------+
+   5 rows in set (0.07 sec)
+
+   mysql>
+
+==================================
+   mysql> desc usuarios;
+   +-------+--------------+------+-----+---------+-------+
+   | Field | Type         | Null | Key | Default | Extra |
+   +-------+--------------+------+-----+---------+-------+
+   | nome  | varchar(50)  | YES  |     | NULL    |       |
+   | email | varchar(100) | YES  |     | NULL    |       |
+   | idade | int(11)      | YES  |     | NULL    |       |
+   +-------+--------------+------+-----+---------+-------+
+   3 rows in set (0.06 sec)
+
+   mysql>
+
+___________________________________________________________________________________________________
+   EXPLICAÇOES:
+   acima temos dois momentos da tabela uma antes do comando e outra depois 
+   quando é criada uma nova tabela.
+   
+___________________________________________________________________________________________________
+  
+***************************************************************************************************
+                           
+                    *******************************
+                    *     CRISTIANO OLIVEIRA      *
+                    *        18/02/2022           *
+                    *            DEUS             *
+                    *        SEJA LOUVADO         *
+                    *******************************
+
+***************************************************************************************************
+                                      

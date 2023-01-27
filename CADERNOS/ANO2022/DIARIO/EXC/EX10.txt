@@ -1,0 +1,145 @@
+
+                      EXEMPLOS DE CÓDIGO C
+                             [EX10]
+
+
+EX10
+===========================================================
+
+/*
+    EX10
+        Esse codigo faz um loop infinito contando e 
+        mudando a cor das palavras e do plano de fundo
+        obs: a contagem não serve como cronometro ela
+        é só uma contagem de uma função não de cronometro
+        o sistema de cores está no fim da pagina.
+        por fim tornamos o cursor invisivel.
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <Windows.h>
+#include <unistd.h>
+#include <conio.h>
+
+
+#define ANSI_COLOR_RED  "\x1b[31m" //cores em ANSI utilizadas
+#define ANSI_COLOR_GRAY "\e[0;37m"
+#define VERMELHO     "\x1b[31m"
+#define VERDE        "\x1b[32m"
+#define AZUL         "\x1b[34m"
+#define C_YELLOW     "\033[33m"
+#define UNDERSCORE   "\033[4m"
+#define BOLD         "\033[1m"
+#define REVERSE      "\033[7m"
+#define BG_MAGENTA   "\033[45m"
+#define RESET        "\x1b[0m"
+
+void gotoxy(int x, int y);
+
+
+
+int main()
+{
+    system("title JANELA DO GAME EM C");
+    int i;
+    // loop infinito inicio
+    for(;;)
+    {
+
+      gotoxy(50,10);
+      printf(VERMELHO "CONTANDO 0"VERMELHO);
+      Sleep(500);           // pausa para recomeçar
+      system("cls");        // limpa a tela
+
+      gotoxy(50,10);
+      printf(VERDE "CONTANDO 1"VERDE);
+      Sleep(500);
+      system("cls");
+
+      gotoxy(50,10);
+      printf(AZUL "CONTANDO 2"AZUL);
+      Sleep(500);
+      system("cls");
+
+
+      gotoxy(50,10);
+      printf(C_YELLOW "CONTANDO 3"C_YELLOW);
+      Sleep(500);
+      system("cls");
+
+      gotoxy(50,10);
+      printf(BG_MAGENTA "CONTANDO 4"RESET);
+      Sleep(500);
+      system("cls");
+
+
+   }
+   // fim loop infinito
+    getch();
+    return 0;
+}
+void gotoxy(int x, int y)
+{
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),(COORD){x,y});
+
+     //funcao para deixar o cursor invisivel
+     HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+     CONSOLE_CURSOR_INFO info;
+     info.dwSize = 100;
+     info.bVisible = FALSE;
+     SetConsoleCursorInfo(consoleHandle, &info);
+}
+
+
+
+===========================================================
+                                                      [FIM]
+
+
+OBS: O CODIGO ACABA ENCIMA A SEGUIR SÃO ALGUMAS COISAS
+     QUE PODEMOS USAR.
+
+// ANOTAÇÕES:
+// https://pt.stackoverflow.com/questions/157898/como-destacar-texto-mudar-cor-em-c-ansi
+
+/*****************************EFECTS***************************************/
+#define NONE        "\033[0m"
+#define BOLD        "\033[1m"
+#define HALFBRIGHT  "\033[2m"
+#define UNDERSCORE  "\033[4m"
+#define BLINK       "\033[5m"
+#define REVERSE     "\033[7m"
+
+/*****************************COLORS***************************************/
+#define C_BLACK     "\033[30m"
+#define C_RED       "\033[31m"
+#define C_GREEN     "\033[32m"
+#define C_YELLOW    "\033[33m"
+#define C_BLUE      "\033[34m"
+#define C_MAGENTA   "\033[35m"
+#define C_CYAN      "\033[36m"
+#define C_GRAY      "\033[37m"
+
+/***************************BACKGROUNDS************************************/
+#define BG_BLACK    "\033[40m"
+#define BG_RED      "\033[41m"
+#define BG_GREEN    "\033[42m"
+#define BG_YELLOW   "\033[43m"
+#define BG_BLUE     "\033[44m"
+#define BG_MAGENTA  "\033[45m"
+#define BG_CYAN     "\033[46m"
+#define BG_GRAY     "\033[47m"
+
+
+   
+
+
+
+
+
+    _______________________________________________________
+                             Autor:
+                       Cristiano Oliveira
+                           15/03/2022

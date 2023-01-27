@@ -1,0 +1,100 @@
+
+                      EXEMPLOS DE CÓDIGO C
+                             [EX03]
+
+EX03
+===========================================================
+#include <stdio.h>
+#include <stdlib.h>
+/*
+   EX03
+        Lendo numeros reais
+        float armazena numeros reais ou seja numeros
+        com virgula.
+        %f marcador de posição
+        por padrão é exibido com 6 casas decimais
+
+*/
+
+int main()
+{
+    // tipo float
+    float numero = 13.1415;
+    printf("O valor da variavel e: %f\n", numero);
+
+
+    printf("\nPressione qualquer tecla para sair\n");
+    getchar();
+    return 0;
+}
+
+
+
+EX03A
+===========================================================
+#include <stdio.h>
+#include <stdlib.h>
+/*
+   EX03A
+       Formatando um numero decimal:
+       %.4f o 4 indica quantas casas quero mostrar
+       depois da virgula.
+       usamos %.<numero-de-casas-que-queremos-depois-da-virgula>
+       %.3f
+       %.6f
+       %.5f
+       etc...
+
+*/
+
+int main()
+{
+    // tipo float
+    float numero = 3.1415;
+    printf("O valor da variavel e: %.4f\n", numero);
+
+
+    printf("\nPressione qualquer tecla para sair\n");
+    getchar();
+    return 0;
+}
+
+
+
+
+
+EX03B
+===========================================================
+#include <stdio.h>
+#include <stdlib.h>
+/*
+   EX03B
+       Lendo a entrada do usuario
+
+*/
+
+int main()
+{
+    // tipo float
+    float numero = 3.1415;
+    printf("O valor da variavel e: %.4f\n", numero);
+
+    printf("Digite um numero real: ");
+    // & passa o endereço fisico dessa variavel na memoria do pc
+    scanf("%f", &numero);
+
+    // formatamos a saida pra exibir só 3 numeros depois da virgula
+    printf("Valor lido: %.3f", numero);
+
+
+    printf("\nPressione qualquer tecla para sair\n");
+    getchar();
+    return 0;
+}
+===========================================================
+                                                      [FIM]
+
+    _______________________________________________________
+                             Autor:
+                       Cristiano Oliveira
+                           15/03/2022

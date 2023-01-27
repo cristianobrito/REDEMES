@@ -1,0 +1,24 @@
+
+    c: 
+    |——— Windows
+         |——— System32
+
+
+
+    1. click direto so a pasta e propriedades
+    2. opção segurança - Avançadas
+    3. Proprietario: TrustedInstaller Alterar
+       click em alterar
+    4. Digite o nome do objeto a ser selecionado(exemplos)
+       digite administradores e click em ok
+    5. marque a opção Subistituir o proprietario em 
+       subconteineres e objetos e click em aplicar
+    6. confirme todas as opções que forem aparecendo
+    7. ok ok
+    8. devolta em segurança - escolha Administradores(DESKTOP-NOME DO DESK)
+       escolha ele e click em editar
+    9. escolha a opção administradores(DESKTOP-NOME DO DESK)
+       permissoes de adminstradores em controle total 
+       click em permitir e depois em, aplicar
+   10. fim
+

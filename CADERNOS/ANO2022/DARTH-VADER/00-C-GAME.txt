@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <Windows.h>
+#include <unistd.h>
+
+
+// printf("O valor da variavel %c : %d\n",160,130, i);
+int main ()
+{
+     int i;
+     for(;;)
+     {
+
+
+     for( i=0; i<10; i++)
+     {
+
+         // / a beep b espaço f limpa tela n newline r fim de linha t tab v tab vertical
+         system("color 2");
+         printf("%c%\f\r",182);
+         usleep(1000*01);
+
+         for( i=0 ; i<20; i++)
+         {
+            system("color 3");
+            printf("\f%c%\t\r",215);
+            usleep(1000*01);
+
+            for(i=0;i<10;i++)
+            {
+                system("color 4");
+                 printf("%c%\r\n",204);
+                 usleep(1000*01);
+
+                  for(i=0;i<10;i++)
+                 {
+                     system("color 5");
+                     printf("   %c%\b",175);
+                     usleep(1000*01);
+
+                 }
+            }
+
+         }
+
+    }
+
+     return 0;
+}
+}

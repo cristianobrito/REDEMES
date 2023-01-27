@@ -1,0 +1,328 @@
+                        [ DARTH VADER ]
+
+
+
+                          CONSULTA DNS
+
+    PRIMEIRO VEMOS QUAIS SÃO OS DNS DISPONIVEIS:
+    C:\>cd whois
+
+    C:\WhoIs>whois recodepro.org.br
+
+    Whois v1.21 - Domain information lookup
+    Copyright (C) 2005-2019 Mark Russinovich
+    Sysinternals - www.sysinternals.com
+
+    Connecting to BR.whois-servers.net...
+
+    domain:      recodepro.org.br
+    owner:       COMITE PARA DEMOCRATIZACAO DA INFORMATICA
+    ownerid:     00.969.401/0001-54
+    responsible: Rodrigo Baggio
+    country:     BR
+    owner-c:     ROB332
+    tech-c:      ROB332
+    nserver:     ns1-08.azure-dns.com       [ ACHAMOS O 1° ]
+    nsstat:      20220228 AA
+    nslastaa:    20220228
+    nserver:     ns2-08.azure-dns.net       [ ACHAMOS O 2° ]
+    nsstat:      20220228 AA
+    nslastaa:    20220228
+    nserver:     ns3-08.azure-dns.org       [ ACHAMOS O 3° ]
+    nsstat:      20220228 AA
+    nslastaa:    20220228
+    nserver:     ns4-08.azure-dns.info      [ ACHAMOS O 4° ]
+    nsstat:      20220228 AA
+    nslastaa:    20220228
+    saci:        yes
+    created:     20200518 #21052682
+    changed:     20200522
+    expires:     20220518
+    status:      published
+
+    nic-hdl-br:  ROB332
+    person:      Rodrigo Baggio
+    e-mail:      wagner@cdi.org.br
+    country:     BR
+    created:     20010822
+    changed:     20200518
+
+    % Security and mail abuse issues should also be addressed to
+    % cert.br, http://www.cert.br/ , respectivelly to cert@cert.br
+    % and mail-abuse@cert.br
+    %
+    % whois.registro.br accepts only direct match queries. Types
+    % of queries are: domain (.br), registrant (tax ID), ticket,
+    % provider, CIDR block, IP and ASN.
+
+    Connecting to ecodepro.org.br...
+    Este host nÒo Ú conhecido.
+
+    C:\WhoIs>
+
+
+    VERIFICAR ENTRADAS DNS:
+    nslookup [dominio.com.br] [dns]
+
+    C:\WINDOWS\system32>nslookup www.recodepro.org.br ns1-08.azure-dns.com
+    0.0.0.0.1.6.0.1.3.0.6.2.ip6.arpa        nameserver = ns4-04.azure-dns.info
+    0.0.0.0.1.6.0.1.3.0.6.2.ip6.arpa        nameserver = ns3-04.azure-dns.org
+    0.0.0.0.1.6.0.1.3.0.6.2.ip6.arpa        nameserver = ns2-04.azure-dns.net
+    0.0.0.0.1.6.0.1.3.0.6.2.ip6.arpa        nameserver = ns1-04.azure-dns.com
+    Servidor:  UnKnown
+    Address:  2603:1061::8
+
+    Nome:    www.recodepro.org.br
+
+
+    C:\WINDOWS\system32>
+
+
+    OUTRAS TENTATIVAS:
+    C:\WINDOWS\system32>nslookup www.recodepro.org.br ns2-08.azure-dns.net
+    c.e.8.0.c.e.1.0.0.2.6.2.ip6.arpa        nameserver = ns4-05.azure-dns.info
+    c.e.8.0.c.e.1.0.0.2.6.2.ip6.arpa        nameserver = ns3-05.azure-dns.org
+    c.e.8.0.c.e.1.0.0.2.6.2.ip6.arpa        nameserver = ns2-05.azure-dns.net
+    c.e.8.0.c.e.1.0.0.2.6.2.ip6.arpa        nameserver = ns1-05.azure-dns.com
+    Servidor:  UnKnown
+    Address:  2620:1ec:8ec::8
+
+    Nome:    www.recodepro.org.br
+
+
+    C:\WINDOWS\system32>nslookup www.recodepro.org.br ns1-05.azure-dns.com
+    Servidor:  UnKnown
+    Address:  2603:1061::5
+
+    *** UnKnown não encontrou www.recodepro.org.br: Query refused
+
+    C:\WINDOWS\system32>nslookup www.recodepro.org.br ns2-05.azure-dns.net
+    Servidor:  ns2-05.azure-dns.net
+    Address:  2620:1ec:8ec::5
+
+    *** ns2-05.azure-dns.net não encontrou www.recodepro.org.br: Query refused
+
+    C:\WINDOWS\system32>nslookup www.recodepro.org.br ns3-05.azure-dns.org
+    Servidor:  UnKnown
+    Address:  2a01:111:4000::5
+
+    *** UnKnown não encontrou www.recodepro.org.br: Query refused
+
+    C:\WINDOWS\system32>nslookup www.recodepro.org.br ns4-05.azure-dns.info
+    Servidor:  UnKnown
+    Address:  2620:1ec:bda::5
+
+    *** UnKnown não encontrou www.recodepro.org.br: Query refused
+
+    C:\WINDOWS\system32>nslookup www.recodepro.org.br ns3-08.azure-dns.org
+    Servidor:  UnKnown
+    Address:  2a01:111:4000::8
+
+    Nome:    www.recodepro.org.br
+
+
+    C:\WINDOWS\system32>nslookup www.recodepro.org.br ns4-08.azure-dns.info
+    a.d.b.0.c.e.1.0.0.2.6.2.ip6.arpa        nameserver = ns4-09.azure-dns.info
+    a.d.b.0.c.e.1.0.0.2.6.2.ip6.arpa        nameserver = ns3-09.azure-dns.org
+    a.d.b.0.c.e.1.0.0.2.6.2.ip6.arpa        nameserver = ns2-09.azure-dns.net
+    a.d.b.0.c.e.1.0.0.2.6.2.ip6.arpa        nameserver = ns1-09.azure-dns.com
+    Servidor:  UnKnown
+    Address:  2620:1ec:bda::8
+
+    Nome:    www.recodepro.org.br
+ 
+
+    C:\WINDOWS\system32>
+
+
+
+
+    PARA SABER QUAL IP O SERVIDOR DNS ESTÁ DIRECIONANDO:
+    nslookup www.teste.com.br ns1.servidor200.com.br
+
+
+    SE ESTIVER CONFIGURADO CORRETAMENTE:
+    Server:   [servidor]
+    Address:  [numero IP que o DNS está apontando]
+
+
+
+    SABER QUAL IP ESTA SENDO RETORNADO NOS SERVIDORES DNS:
+    nslookup www.recodepro.org.br
+     
+    C:\WINDOWS\system32>nslookup www.recodepro.org.br
+    Servidor:  UnKnown
+    Address:  2804:14d:1:0:181:213:132:2
+
+    Não é resposta autoritativa:
+    Nome:    recodepro.org.br
+    Address:  200.95.188.82
+    Aliases:  www.recodepro.org.br
+
+
+    C:\WINDOWS\system32>
+
+
+
+
+
+
+    TESTANDO USANDO O DNS DO GOOGLE:
+    nslookup www.recodepro.org.br 8.8.8.8
+
+    C:\WINDOWS\system32>nslookup www.recodepro.org.br 8.8.8.8
+    Servidor:  dns.google
+    Address:  8.8.8.8
+
+    Não é resposta autoritativa:
+    Nome:    recodepro.org.br
+    Address:  200.95.188.82
+    Aliases:  www.recodepro.org.br
+
+
+    C:\WINDOWS\system32>
+
+
+
+
+
+
+    FAZENDO UMA QUERY PARA SABER AS ENTRADAS QUE SÃO
+    RETORNADAS PELO DNS:
+    exemplo, em um DNS é muito comum ter configurado 
+    entradas do tipo MX que são utilizadas para indicar 
+    qual o servidor de recebimento de e-mails desse domínio.
+
+    nslookup
+    set q=mx
+
+
+    C:\WINDOWS\system32>nslookup
+    Servidor PadrÒo:  UnKnown
+    Address:  2804:14d:1:0:181:213:132:2
+
+    > set q=mx
+    > gmail.com
+    Servidor:  UnKnown
+    Address:  2804:14d:1:0:181:213:132:2
+
+    Não é resposta autoritativa:
+    gmail.com       MX preference = 40, mail exchanger = alt4.gmail-smtp-in.l.google.com      [ esses são os emails que queremos ]
+    gmail.com       MX preference = 30, mail exchanger = alt3.gmail-smtp-in.l.google.com      [ esses são os emails que queremos ]
+    gmail.com       MX preference = 20, mail exchanger = alt2.gmail-smtp-in.l.google.com      [ esses são os emails que queremos ]
+    gmail.com       MX preference = 10, mail exchanger = alt1.gmail-smtp-in.l.google.com      [ esses são os emails que queremos ]
+    gmail.com       MX preference = 5, mail exchanger = gmail-smtp-in.l.google.com            [ esses são os emails que queremos ]
+
+    gmail.com       nameserver = ns2.google.com
+    gmail.com       nameserver = ns4.google.com
+    gmail.com       nameserver = ns3.google.com
+    gmail.com       nameserver = ns1.google.com
+    alt2.gmail-smtp-in.l.google.com AAAA IPv6 address = 2a00:1450:4025:401::1a
+    ns1.google.com  AAAA IPv6 address = 2001:4860:4802:32::a
+    ns2.google.com  AAAA IPv6 address = 2001:4860:4802:34::a
+    ns3.google.com  AAAA IPv6 address = 2001:4860:4802:36::a
+    ns4.google.com  AAAA IPv6 address = 2001:4860:4802:38::a
+    ns1.google.com  internet address = 216.239.32.10
+    ns2.google.com  internet address = 216.239.34.10
+    ns3.google.com  internet address = 216.239.36.10
+    ns4.google.com  internet address = 216.239.38.10
+    >
+
+
+
+
+
+    PESQUISAR ENTRADAS DO TIPO "A" NO DOMINIO GMAIL:
+    set q=a
+    gmail.com
+
+
+    > set q=a
+    > gmail.com
+    Servidor:  UnKnown
+    Address:  2804:14d:1:0:181:213:132:2
+
+    Não é resposta autoritativa:
+    Nome:    gmail.com
+    Address:  172.217.162.165
+
+    >
+
+
+    
+
+
+    EXPLICAÇÕES:
+    Entendendo o processo de resolução de DNS para envio de e-mail
+    Quando alguém utiliza o site do hotmail para enviar um e-mail 
+    para “teste@gmail.com” o servidor de envio (hotmail) precisa 
+    abrir uma conexão com o servidor de destino (gmail.com) para 
+    transferir a mensagem, mas para isso é necessário descobrir 
+    qual é o servidor responsável por receber a mensagem, então 
+    são realizados os seguintes passos:
+
+    O servidor de origem (hotmail.com) extrai do endereço do e-mail
+    (teste@gmail.com) a parte referente ao o domínio, nesse caso: 
+    “gmail.com”
+    O servidor de origem faz uma pesquisa de DNS procurando pelas 
+    entradas do tipo “MX” para esse domínio, esse é o tipo de 
+    entrada que indica os servidores para envio de e-mail
+    O servidor de DNS retornará as entradas MX contendo o endereço 
+    do servidor para envio de e-mail, por exemplo: 
+    “gmail-smtp-in.l.google.com”
+    Então o servidor de origem (hotmail.com) abre uma conexão na 
+    porta 25 com o servidor destino (gmail-smtp-in.l.google.com) 
+    e transfere a mensagem.
+
+
+
+    
+
+
+
+    LISTANDO O CACHE DNS LOCAL:
+    ipconfig/displaydns
+
+
+
+    LIMPAR O CACHE DNS:
+    ipconfig/flushdns
+
+
+
+    MAIS EFETIVO LISTANDO:
+    C:\WINDOWS\system32>nslookup -type=ns recodepro.org.br
+    Servidor:  UnKnown
+    Address:  2804:14d:1:0:181:213:132:2
+
+    Não é resposta autoritativa:
+    recodepro.org.br        nameserver = ns4-08.azure-dns.info
+    recodepro.org.br        nameserver = ns3-08.azure-dns.org
+    recodepro.org.br        nameserver = ns1-08.azure-dns.com
+    recodepro.org.br        nameserver = ns2-08.azure-dns.net
+
+    ns1-08.azure-dns.com    AAAA IPv6 address = 2603:1061::8
+    ns2-08.azure-dns.net    AAAA IPv6 address = 2620:1ec:8ec::8
+    ns3-08.azure-dns.org    AAAA IPv6 address = 2a01:111:4000::8
+    ns1-08.azure-dns.com    internet address = 40.90.4.8
+    ns2-08.azure-dns.net    internet address = 64.4.48.8
+    ns3-08.azure-dns.org    internet address = 13.107.24.8
+    ns4-08.azure-dns.info   internet address = 13.107.160.8
+
+    C:\WINDOWS\system32>
+
+
+
+
+
+
+
+    REINICIAR DNS:
+    
+    
+    
+
+_____________________________________________________________________
+    REFERENCIAS BIBLIOGRAFICAS:
+    https://educoutinho.com.br/windows/como-testar-configuracao-do-servidor-dns-usando-nslookup/
+    https://www.hostinger.com.br/tutoriais/verificar-nome-do-servidor-dominio   
