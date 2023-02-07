@@ -1,0 +1,38 @@
+#include <GL/glu.h>
+#include <GL/glut.h>
+
+void MyInit()
+{
+    glClearColor(0,0,0,1);                       // FUNÇÃO PARAS AS CORES DA JANELA
+    glColor3f(1,0,0);                            // RECEBE VALORES FLOAT PARA DAR COR A JANELA
+}
+void Draw()                                      // FUNÇÃO CRIADA PARA ATENDER O PEDIDA DA OUTRA FUNÇÃO glutDisplayFunc(Draw);
+{
+    glClear(GL_COLOR_BUFFER_BIT);                // LIMPPANDO O BUFFER DA COR DE BACKGROUND
+
+    /** DESENHANDO UM RETANGULO **/
+    //glPointSize(5);                            // TAMANHO DO RETANGULO
+    glBegin(GL_POLYGON);                         // INICIA O RETANGULO
+    glVertex2d(-0.5, 0.5);                       // CADA PAR DE VALOR REPRESENTA AS COORDENADAS NO PLANO CARTESIANO
+    glVertex2d( 0.5, 0.5);
+    glVertex2d( 0.5,-0.5);
+    glVertex2d(-0.5,-0.5);
+    glEnd();                                     // TERMINA O RETANGULO
+    glFlush();                                   // ATUALIZA OS PIXELS
+}
+int main(int C, char *V[])
+{
+    glutInit(&C,V);
+    glutInitWindowPosition(250,50);              // POSIÇÃO DA JANELA
+    glutInitWindowSize(600,600);                 // TAMANHO E LARGURA DA JANELA
+    glutInitDisplayMode(GLUT_RGB | GLUT_SINGLE); // CORES DA JANELA A COR PADRÃO É BRANCO PODEMOS MUDAR
+    // INICIALIZANDO
+    glutCreateWindow("BASIC WINDOW OPENGL");     // TITULO DA JANELA
+    MyInit();                                    // CRIANDO NOSSA FUNÇÃO
+    glutDisplayFunc(Draw);
+    glutMainLoop();                              // FUNÇÃO OBRIGATORIA
+    return 0;
+}
+
+// https://www.youtube.com/watch?v=wG_VaSr6a6c&t=1254s
+// parada 20:55
