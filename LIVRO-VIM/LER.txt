@@ -1,0 +1,26 @@
+===================================================================================================
+
+                                   CONFIGURAÇÕES DO VIM E NVIM
+
+===================================================================================================
+
+
+LINK:
+	https://www.youtube.com/watch?v=lm7y2hI6zME
+	PARADA: 54:56
+
+JANELAS ABERTAS:
+	https://www.manualdocodigo.com.br/vim-python/
+	https://github.com/sainnhe/sonokai
+	https://github.com/ManualDoCodigo/website
+
+NOTEPAD:
+	Aberto nos arquivos:
+	C:\Users\brito\AppData\Local\nvim\init.vim
+	C:\Users\brito\.vimrc
+
+LIBREOFFICE:
+	VIM-2023.odg
+
+TERMINAL:
+	WINDOWS TERMINAL ABERTO
