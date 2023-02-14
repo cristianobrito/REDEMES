@@ -1,0 +1,20 @@
+{
+    "languageserver": {
+    },
+	
+	"explorer.width": 30,
+	"explorer.icon.enableNerdfont": true,
+	"explorer.previewAction.onHover": false,
+	"explorer.keyMapping.global": {
+		"<cr>": ["expandable?" "expand", "open"],
+		"v": "open:vsplit",
+		"h": "open:split"
+	},
+	"explorer.git.enable": true,
+    "snippets.ultisnips.pythonPrompt": false
+}
+
+
+================================================================
+
+esse arquivo serve para os dois vim e nvim
