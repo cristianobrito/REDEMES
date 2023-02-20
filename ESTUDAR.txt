@@ -1,0 +1,50 @@
+---------------------------------------------------------------------------------------------------
+                                        ESTUDAR
+---------------------------------------------------------------------------------------------------
+
+	ASSEMBLER:
+		https://www.youtube.com/watch?v=zEuvNYe7WG0&t=4949s
+                https://www.youtube.com/watch?v=4vua8Fxbs1A&list=PLZ8dBTV2_5HQd6f4IaoO50L6oToxQMFYt
+		https://www.youtube.com/watch?v=L1ung0wil9Y&t=847s
+		https://www.youtube.com/watch?v=gfmRrPjnEw4
+							
+	SDL:
+		https://www.youtube.com/watch?v=B4BXpiQASpA&t=3776s
+
+	GNU GCC: 
+		https://www.youtube.com/watch?v=GNIQYU9_0Qs&list=PLmHNaEMKsdtTgxZTfXzJLaCZVK5UnYYf7
+		
+	GNU MAKE:
+		LER A DOCUMENTAÇÃO DE TODOS ELES E VER VIDEOS
+		https://www.gnu.org/software/make/
+		https://www.gnu.org/software/make/manual/make.html
+		https://gnuwin32.sourceforge.net/packages/make.htm
+		https://pt.wikipedia.org/wiki/Make
+		https://www.incredibuild.com/integrations/gnu-make
+
+	GNU PROGRAMAR:
+		https://godbolt.org/
+		https://gcc.gnu.org/
+		https://www.gnu.org/gnu/thegnuproject.html
+		https://gcc.gnu.org/wiki/cauldron2022
+
+	GNU DOC:
+		https://gcc.gnu.org/onlinedocs/
+		https://gcc.gnu.org/onlinedocs/gcc-12.2.0/gcc/
+
+	POWERSHELL:
+		https://learn.microsoft.com/pt-br/powershell/scripting/install/installing-powershell?view=powershell-7.3
+		https://learn.microsoft.com/pt-br/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3
+		https://learn.microsoft.com/pt-br/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3#winget
+		https://www.powershellgallery.com/
+		https://learn.microsoft.com/pt-br/powershell/scripting/gallery/overview?view=powershell-7.3
+		
+	LEARN.MICROSOFT: 
+		https://learn.microsoft.com/pt-br/shows/java-for-beginners/introduction-to-the-series
+		https://www.youtube.com/playlist?list=PLlrxD0HtieHgX3ExVDMlKjdN8LJsks2CM
+		https://learn.microsoft.com/pt-br/shows/beginners-series-to-microsoft-graph/
+		https://learn.microsoft.com/pt-br/shows/dotnet-maui-for-beginners/
+		https://learn.microsoft.com/pt-br/docs/
+		https://learn.microsoft.com/pt-br/
+		https://learn.microsoft.com/pt-br/training/student-hub/
+				
