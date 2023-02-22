@@ -47,4 +47,23 @@
 		https://learn.microsoft.com/pt-br/docs/
 		https://learn.microsoft.com/pt-br/
 		https://learn.microsoft.com/pt-br/training/student-hub/
-				
+	
+	COMPILADORES:
+		https://www.youtube.com/watch?v=jgI711CrnnY&list=PLX6Nyaq0ebfhI396WlWN6WlBm-tp7vDtV
+		https://www.youtube.com/watch?v=lJHQhfJwGp0&list=PLaPmgS59eMSEKNRIBxuBK4mJr-8pFP3lW
+		https://www.youtube.com/watch?v=8rB8Dvczc1g&list=PL0Z-gyL9saMcajYH26KWKQG0nH2C2fsMQ
+		https://www.youtube.com/watch?v=aW8nLIyi1Vk&t=1097s
+		https://www.youtube.com/watch?v=u8Fw4_Ty2Es&list=PLnzT8EWpmbkbhjiGmqGh0lbpZLsLpBeLY
+		https://www.youtube.com/watch?v=Uw-AYhHDCJM&list=PLqlIQgAFrQ14VmHe8VbIVUkBv5Hziv86-
+		https://www.youtube.com/watch?v=D60k4gxc9oI&list=PLzQ6XQkjUvZ-_oJbCrOplrsooavy1FqDj
+		
+
+	EXPRESSÕES REGULARES:
+		https://www.youtube.com/watch?v=5Tvrq9G2t68
+		https://www.youtube.com/watch?v=d2uqo6PhdM4&t=366s
+		https://www.youtube.com/watch?v=rejqIp7ExXA&list=PLbIBj8vQhvm0Yfx1JMCEOM-BB-WOCOUE1
+	
+	HACKERRANK:
+		https://www.hackerrank.com/challenges/sum-numbers-c/problem?isFullScreen=true
+		https://www.hackerrank.com/challenges/pointer-in-c/problem?h_r=next-challenge&h_v=zen	
+		https://www.hackerrank.com/domains/c?filters%5Bstatus%5D%5B%5D=unsolved&filters%5Bskills%5D%5B%5D=C%20%28Basic%29&filters%5Bdifficulty%5D%5B%5D=easy&badge_type=c					
