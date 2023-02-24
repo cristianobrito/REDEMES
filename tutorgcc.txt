@@ -1,0 +1,43 @@
+	tutorial do gcc
+		
+                https://access.redhat.com/documentation/pt-br/red_hat_enterprise_linux/8/html/developing_c_and_cpp_applications_in_rhel_8/using-a-dynamic-library-with-gcc_using-libraries-with-gcc
+		https://klebermota.eti.br/2013/03/11/usando-o-gcc-e-o-make-para-compilar-lincar-e-criar-aplicacoes-cc/
+		https://access.redhat.com/documentation/pt-br/red_hat_enterprise_linux/8/html/developing_c_and_cpp_applications_in_rhel_8/using-a-library-with-gcc_using-libraries-with-gcc
+		https://gcc.gnu.org/gcc-12/
+		https://gcc.gnu.org/git.html
+		https://gcc.gnu.org/mirrors.html
+		https://gcc.gnu.org/install/finalinstall.html
+		https://gcc.gnu.org/git/gitweb.cgi?p=gcc.git
+		https://gcc.gnu.org/install/download.html
+		https://gcc.gnu.org/gcc-12/buildstat.html	
+		https://gcc.gnu.org/gcc-12/
+		
+	ler:
+		https://sourceware.org/binutils/docs-2.40/
+		https://sourceware.org/binutils/binutils-porting-guide.txt
+		https://www.gnu.org/software/binutils/
+		https://gcc.gnu.org/
+
+	OPÇÕES:
+		https://gcc.gnu.org/buildstat.html
+		https://www.mingw-w64.org/downloads/
+
+	DLL:
+		https://cygwin.com/pipermail/cygwin-announce/2023-February/010943.html
+
+	LISTA DE DISCUSSÃO:
+		https://sourceware.org/cygwin/cygwin-ug-net.html
+		https://sourceware.org/cygwin/lists.html
+		https://sourceware.org/cygwin/lists.html
+		https://sourceware.org/cygwin/lists.html#cygwin
+
+
+	ESTUDAR SDL:
+		https://www.libsdl.org/
+		https://wiki.libsdl.org/SDL2/FrontPage
+		https://discourse.libsdl.org/
+		https://www.libsdl.org/mailing-list.php
+		https://github.com/libsdl-org
+		https://github.com/libsdl-org/SDL/releases/tag/release-2.26.3
+		
+		
