@@ -40,4 +40,69 @@
 		https://github.com/libsdl-org
 		https://github.com/libsdl-org/SDL/releases/tag/release-2.26.3
 		
-		
+
+	GCC:
+		https://www.rapidtables.com/code/linux/gcc/gcc-o.html#output%20file
+		https://www.rapidtables.com/code/linux/gcc.html
+		https://gcc.gnu.org/onlinedocs/gcc-4.7.2/gcc/Overall-Options.html#Overall-Options
+		https://linux.die.net/man/1/gcc
+		https://linux.die.net/man/1/gcc
+		https://www.programacaoprogressiva.net/2014/09/Pipes-em-C-Comunicao-entre-Processos-IPC-Interprocess-Communication.html#:~:text=O%20primeiro%20passo%20%C3%A9%20criar,s%C3%B3%20vai%20escrever%20no%20pipe.
+		https://www.programacaoprogressiva.net/2014/09/Pipes-em-C-Sincronismo-entre-processos-com-mais-de-um-pipe.html
+		https://www.programacaoprogressiva.net/2014/09/Pipes-em-C-Comunicao-entre-Processos-IPC-Interprocess-Communication.html#:~:text=O%20primeiro%20passo%20%C3%A9%20criar,s%C3%B3%20vai%20escrever%20no%20pipe.
+		https://www.programacaoprogressiva.net/2014/09/A-Chamada-de-Sistema-fork-Como-Criar-e-Gerenciar-Processos.html
+		https://www.programacaoprogressiva.net/p/curso-de-c-completo-gratuito-e-online.html
+		https://www.programacaoprogressiva.net/2014/09/A-Chamada-de-Sistema-fork-Como-Criar-e-Gerenciar-Processos.html
+		https://www.programacaoprogressiva.net/2014/09/O-que-sao-Chamadas-de-Sistema-para-que-servem-Exemplos-de-System-Calss.html
+		https://www.programacaoprogressiva.net/p/curso-de-c-completo-gratuito-e-online.html
+		https://learn.microsoft.com/pt-br/windows/win32/procthread/creating-processes
+		https://www.programacaoprogressiva.net/2014/09/Pipes-em-C-Sincronismo-entre-processos-com-mais-de-um-pipe.html
+		https://www.dca.ufrn.br/~adelardo/cursos/DCA409/node75.html
+		https://embarcados.com.br/pipes/
+		https://embarcados.com.br/pipes/
+		https://github.com/NakedSolidSnake/Raspberry_fork_exec_daemon
+		https://github.com/NakedSolidSnake/Raspberry_lib_hardware
+		https://embarcados.com.br/fork-exec-e-daemon/
+		https://daemoniolabs.wordpress.com/2012/08/12/usando-pipes-em-c-no-linux/
+		https://www.dcc.fc.up.pt/~ricroc/aulas/1718/so/praticas/trabI.html
+		https://www.ppgia.pucpr.br/pt/arquivos/techdocs/linux/foca-iniciante/ch-redir.html#:~:text=Envia%20ao%20mesmo%20tempo%20o,com%20o%20pipe%20%22%7C%22.&text=Exemplo%3A%20ls%20%2Dla%20%7C%20tee,tempo%20gravada%20no%20arquivo%20listagem.
+		https://www.programacaoprogressiva.net/p/curso-de-c-completo-gratuito-e-online.html
+		https://learn.microsoft.com/pt-br/cpp/c-language/system-function?view=msvc-170
+
+	BRUTE-FORCE EM C:
+		https://github.com/LorhanSohaky/BruteForce
+		https://medium.com/@walderlansena/hash-blade-brute-force-com-c-6c4943ecd51e
+		https://github.com/WalderlanSena/hashblade
+		http://forum.guiadohacker.com.br/vb5/forum/equipe-guia-do-hacker/programas-e-utilit-rios/36282-brute-force-em-c#post232907
+		https://www.mentebinaria.com.br/forums/topic/230-ftpbrute-realize-brute-force-em-servidores-ftp-com-shellscript/
+		https://github.com/WalderlanSena/ftpbrute
+
+	THREADS:
+		https://www.di.ubi.pt/~operativos/praticos/html/9-threads.html
+
+	==================================================================================================
+	$ gcc nome_do_arquivo.c -o nome_de_saída
+
+	$ g++ nome_do_arquivo.cpp -o nome_de_saída
+
+
+	REFERÊNCIAS:
+		0.0 PIPE:
+			resolvi o erro do pipe usando o GNU_CYGWIN_WIN64
+			pois o pipe não é compativel com o windows. abaixo mostro como fiz.
+			no menu do codeblocks: Settings
+					       |
+					       |--- Compiler
+						    |
+						    |--- Toolchain executables
+							 |
+							 |--- C:\Users\brito\Downloads\GNU_CYGWIN_WIN64\GNU_CYGWIN_WIN64
+
+
+		0.1 PASSOS:
+			Coloquei como caminho para o compilador a pasta do gnu_cgwin_win64 que se encontra em downloads
+			ou seja estou usando como compilador o cygwin 
+			
+                        0.2 achei isso nesse link de tutorial:
+			    https://stackoverflow.com/questions/8819673/undefined-reference-to-fork-in-codeblocks-editor-in-windows-os
+ 
