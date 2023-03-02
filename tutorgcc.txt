@@ -80,6 +80,15 @@
 	THREADS:
 		https://www.di.ubi.pt/~operativos/praticos/html/9-threads.html
 
+
+	WGET:
+		https://www.gnu.org/software/wget/manual/wget.html
+		https://www.gnu.org/software/wget/
+		baixar e instalar nao deu certo a primeira tentativa
+
+	FTP:
+		estudar o uso e os comandos 
+		https://vocepergunta.com/library/artigo/read/321804-como-fazer-download-de-um-arquivo-via-prompt-de-comando
 	==================================================================================================
 	$ gcc nome_do_arquivo.c -o nome_de_saída
 
@@ -106,3 +115,6 @@
                         0.2 achei isso nesse link de tutorial:
 			    https://stackoverflow.com/questions/8819673/undefined-reference-to-fork-in-codeblocks-editor-in-windows-os
  
+
+
+continuar

@@ -66,4 +66,9 @@
 	HACKERRANK:
 		https://www.hackerrank.com/challenges/sum-numbers-c/problem?isFullScreen=true
 		https://www.hackerrank.com/challenges/pointer-in-c/problem?h_r=next-challenge&h_v=zen	
-		https://www.hackerrank.com/domains/c?filters%5Bstatus%5D%5B%5D=unsolved&filters%5Bskills%5D%5B%5D=C%20%28Basic%29&filters%5Bdifficulty%5D%5B%5D=easy&badge_type=c					
+		https://www.hackerrank.com/domains/c?filters%5Bstatus%5D%5B%5D=unsolved&filters%5Bskills%5D%5B%5D=C%20%28Basic%29&filters%5Bdifficulty%5D%5B%5D=easy&badge_type=c
+
+
+	C:
+		http://www.br-c.org/doku.php?id=write
+		http://www.br-c.org/doku.php?id=write&idx=wiki					

@@ -1,0 +1,32 @@
+---------------------------------------------------------------------------------------------------
+			HACKER NANO 2023
+===================================================================================================
+
+SITES:
+	WORDLIST:
+		http://labs.siteblindado.com/2020/06/wordlist-com-celw.html
+		https://www.ethicalhacker.com.br/site/2012/08/criando-wordlists-com-o-crunch/
+
+		RECEITA PARA WORDLIST:
+		  0.0 - criar um arquivo .txt
+		  0.1 - 
+
+
+
+
+
+
+
+
+
+
+
+===================================================================================================
+REFERENCIAS:
+
+	0.0 criar arquivos em c
+	    https://www.inf.pucrs.br/~pinho/LaproI/Arquivos/Arquivos.htm
+	    https://daemoniolabs.wordpress.com/2011/08/24/quebrador-de-senhas-em-c/
+	    https://www.google.com/search?q=John+The+Rippe&sourceid=chrome&ie=UTF-8
+	    https://www.openwall.com/john/
+            
