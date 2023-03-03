@@ -118,3 +118,5 @@
 
 
 continuar
+
+	http://www.w3big.com/pt/linux/linux-shell.html#gsc.tab=0
